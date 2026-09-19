@@ -216,8 +216,29 @@ except Exception as ex:
     errors.append(f"strategy_mutation: {ex}")
     print(f"  FAIL strategy_mutation: {ex}")
 
+# 18. autopilot
+try:
+    from hydra.core.autopilot import AutopilotEngine
+
+    ap = AutopilotEngine()
+    print(f"  autopilot: OK")
+    modules.append("autopilot")
+except Exception as ex:
+    errors.append(f"autopilot: {ex}")
+    print(f"  FAIL autopilot: {ex}")
+
+# 19. __main__ (CLI)
+try:
+    from hydra.__main__ import main, COMMANDS
+
+    print(f"  cli (__main__): OK ({len(COMMANDS)} commands)")
+    modules.append("cli")
+except Exception as ex:
+    errors.append(f"cli: {ex}")
+    print(f"  FAIL cli: {ex}")
+
 print(f"\n{'=' * 60}")
-print(f"RESULT: {len(modules)}/17 modules loaded OK")
+print(f"RESULT: {len(modules)}/19 modules loaded OK")
 if errors:
     print(f"ERRORS ({len(errors)}):")
     for e in errors:
