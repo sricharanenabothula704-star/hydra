@@ -31,6 +31,10 @@ class PlaywrightMcpConfigTests(unittest.TestCase):
         }
         self.assertFalse(unsafe_options.intersection(command))
 
+    def test_default_model_is_left_to_opencode(self):
+        self.assertNotIn("model", self.config)
+        self.assertNotIn("small_model", self.config)
+
     def test_browser_commands_are_scope_gated_and_non_evasive(self):
         commands = self.config["command"]
         browser_check = commands["browser-check"]["template"].lower()

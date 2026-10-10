@@ -19,8 +19,7 @@
     "border": "#1E2936",
     "borderActive": "#2EE6A8"
   },
-  "model": "openrouter/moonshotai/kimi-k2",
-  "small_model": "openrouter/google/gemini-2.0-flash",
+  // Leave model selection to OpenCode; choose an available model with /connect and /models.
   "lsp": true,
   "instructions": [
     "__HOME__/.config/opencode/common/SKILL_ROUTING.md"

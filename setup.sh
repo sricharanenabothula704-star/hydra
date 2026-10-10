@@ -185,8 +185,8 @@ else
   echo " OpenCode is not on PATH yet; review its installer and rerun setup with --install-opencode."
 fi
 echo ""
-echo " Optional env keys:"
-echo "   export OPENROUTER_API_KEY=sk-or-...   (or NVIDIA_NIM_API_KEY=...)"
+echo " Model/provider access is managed by OpenCode: use /connect and /models in its TUI."
+echo " Optional environment-key providers (for example OpenRouter or NVIDIA NIM) remain supported."
 echo " Add authorized domains to: $OC_DIR/SCOPE_ALLOWLIST.txt"
 echo " If hydra is not on PATH, run: export PATH=\"\$HOME/.local/bin:\$PATH\""
 echo " Preflight: hydra doctor (or $HOME/.local/bin/hydra doctor)"

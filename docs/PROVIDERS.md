@@ -1,11 +1,23 @@
 # 🧠 Model Providers — HYDRA speaks 75+
 
-HYDRA runs on **any** OpenAI-compatible model. opencode auto-discovers
-providers when their env key is present — no config editing required.
+HYDRA leaves model selection to OpenCode by default. Use `/connect` to
+authenticate with a provider and `/models` to inspect or select an available
+model. Environment-key providers and local model servers are optional
+alternatives.
 
-## Quick-start (pick one)
+## Default path: choose through OpenCode
 ```bash
-export OPENROUTER_API_KEY=...   # 300+ models, one key
+opencode
+# In the TUI: /connect, then /models
+```
+
+OpenCode Zen is a curated provider, but using its hosted models may require a
+separate account/API key and paid credits. HYDRA does not require an OpenRouter
+key for its default setup.
+
+## Optional environment-key providers
+```bash
+export OPENROUTER_API_KEY=...   # optional alternative
 export GROQ_API_KEY=...         # fastest free tier
 export GEMINI_API_KEY=...       # generous free tier
 ollama serve                    # 100% local & free

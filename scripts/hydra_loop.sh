@@ -43,7 +43,11 @@ doctor(){
   else echo "[✗] timeout/gtimeout MISSING"; FAIL=1; fi
   [ -f "$HOME/.config/opencode/opencode.jsonc" ] && echo "[✓] config rendered" || { echo "[✗] no config — run setup.sh first"; FAIL=1; }
   if [ -s "$HOME/.config/opencode/SCOPE_ALLOWLIST.txt" ]; then echo "[✓] scope allowlist present"; else echo "[✗] allowlist empty — loop refuses to start"; FAIL=1; fi
-  if [ -n "${OPENROUTER_API_KEY:-}" ] || [ -n "${NVIDIA_NIM_API_KEY:-}" ]; then echo "[✓] model key present"; else echo "[✗] NO MODEL KEY → cycle 1 will die instantly"; FAIL=1; fi
+  if [ -n "${OPENROUTER_API_KEY:-}${NVIDIA_NIM_API_KEY:-}" ]; then
+    echo "[i] optional provider env key detected"
+  else
+    echo "[i] provider/model auth is managed by OpenCode; verify with /connect and /models"
+  fi
   local FREE_KB FREE_GB
   FREE_KB=$(df -Pk "$HOME" | awk 'NR==2 {print $4}')
   FREE_GB=$((${FREE_KB:-0} / 1024 / 1024))

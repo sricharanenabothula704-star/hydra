@@ -52,7 +52,8 @@ grep -vE '^#|^\s*$' "$HOME/.config/opencode/SCOPE_ALLOWLIST.txt" 2>/dev/null | h
 
 # ---- MODEL ----
 hdr " BRAIN"
-[ -n "${OPENROUTER_API_KEY:-}" ] && printf "  🟢 openrouter\n"
-[ -n "${NVIDIA_NIM_API_KEY:-}" ] && printf "  🟢 nvidia-nim\n"
-[ -z "${OPENROUTER_API_KEY:-}${NVIDIA_NIM_API_KEY:-}" ] && printf "  ${R}🔴 no key in shell${G}\n"
+MODEL=$(sed -nE 's/^[[:space:]]*"model":[[:space:]]*"([^"]+)".*/\1/p' "$HOME/.config/opencode/opencode.jsonc" 2>/dev/null | head -1)
+if [ -n "$MODEL" ]; then printf "  model: %s\n" "$MODEL"; else printf "  model selection: managed by OpenCode (/connect, /models)\n"; fi
+[ -n "${OPENROUTER_API_KEY:-}" ] && printf "  optional env provider: openrouter\n"
+[ -n "${NVIDIA_NIM_API_KEY:-}" ] && printf "  optional env provider: nvidia-nim\n"
 printf "\n${B}  q=quit · updates every 2s${G}\n"

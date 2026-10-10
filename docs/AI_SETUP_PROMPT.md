@@ -28,8 +28,10 @@ Setup steps:
 - Check prerequisites and explain anything missing.
 - If I approve, run the repository setup command with my chosen handle and
   contact email; preserve my existing configuration by backing it up first.
-- Configure the selected model provider only after I choose it. Do not assume
-  that a local gateway is running.
+- Let OpenCode manage model selection unless I ask otherwise. If provider
+  authentication is needed, explain `/connect` and ask me to choose a provider;
+  do not request or paste any API key into the chat. Do not assume that a local
+  gateway is running.
 - Verify the install with the documented health/status command, validate the
   generated config, and report exactly what changed.
 - Do not start a hunt or contact any external target as part of installation.

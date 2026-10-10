@@ -227,10 +227,14 @@ Strategic attack planning · Recon execution methodology · OSINT targets refere
 git clone https://github.com/sricharanenabothula704-star/hydra.git
 cd hydra
 bash setup.sh --handle YOUR_HANDLE --email you@example.com
-export OPENROUTER_API_KEY=YOUR_KEY   # set locally; never paste into chat or commit
-hydra doctor                        # verify config, provider key and scope file
+hydra doctor                        # verify config and scope file
 # bash install-tools.sh          # optional: recon toolchain
 ```
+
+HYDRA leaves the model unset so OpenCode manages model selection. In the TUI,
+use `/connect` to authenticate with a provider and `/models` to inspect or change
+models. OpenCode Zen is one option (it may require an account/API key and paid
+credits); OpenRouter remains optional, not a setup requirement.
 
 If OpenCode is not installed, rerun setup with `--install-opencode` after
 reviewing and approving the official installer. If an OpenCode config already
