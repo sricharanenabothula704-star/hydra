@@ -1,0 +1,24 @@
+{
+  "best_version": "2",
+  "versions": {
+    "0": {
+      "validation_score": 0.0,
+      "train_score": 0.0,
+      "timestamp": "2026-07-06T19:14:59.553709",
+      "parent": null
+    },
+    "1": {
+      "validation_score": 0.4283333333333334,
+      "train_score": 0.5775000000000001,
+      "timestamp": "2026-07-06T19:14:59.561823",
+      "parent": "0"
+    },
+    "2": {
+      "validation_score": 0.0,
+      "train_score": 0.0,
+      "timestamp": "2026-07-20T21:45:00",
+      "parent": "1",
+      "notes": "Added BYPASS_DATABASE.md (20,938 lines, 908KB) - comprehensive payload/technique database compiled from PayloadsAllTheThings + WAF Product Matrix + Cloud metadata URLs. 21 categories, 50+ subcategories, 20,000+ bypass techniques."
+    }
+  }
+}

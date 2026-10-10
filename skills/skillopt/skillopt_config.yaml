@@ -1,0 +1,32 @@
+skill_name: bug-bounty
+optimizer:
+  learning_rate: 0.1
+  validation_split: 0.2
+  max_edits_per_epoch: 5
+  validator: bug_bounty
+seed_skill: |
+  # Bug Bounty Hunting Skill
+  
+  ## reconnaissance
+  - Enumerate subdomains using subfinder, amass, assetfinder
+  - Use dnsx to resolve and filter live subdomains
+  - Check for subdomain takeover opportunities
+  
+  ## port_scanning
+  - Run nmap -sS -T4 --top-ports 1000 on live hosts
+  - Identify web services (80, 443, 8080, 8443, etc.)
+  
+  ## web_enumeration
+  - Run nuclei with cves/ and vulnerabilities/ templates
+  - Check for common misconfigurations
+  - Directory brute force with ffuf
+  
+  ## vulnerability_analysis
+  - Test for OWASP Top 10 vulnerabilities
+  - Focus on: XSS, SSRF, IDOR, RCE, SQLi
+  - Validate findings with proof-of-concept
+  
+  ## reporting
+  - Document steps to reproduce
+  - Include impact assessment
+  - Provide remediation guidance
