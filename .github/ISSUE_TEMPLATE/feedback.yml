@@ -1,0 +1,48 @@
+name: 🧪 Review / Feedback
+description: Test-drive HYDRA and tell us what breaks, what's missing, what's overhyped
+title: "[Review] "
+labels: ["review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing HYDRA! Critical reviews are the most valuable —
+        tell us where it breaks, not just what works. Verbatim quotes may be
+        featured in the README/site (with credit, unless you say otherwise).
+  - type: dropdown
+    id: depth
+    attributes:
+      label: How deep did you test?
+      options:
+        - Read-only (README/code)
+        - Ran setup.sh
+        - Full hunt against an authorized target
+        - Extended use (multiple sessions)
+    validations:
+      required: true
+  - type: textarea
+    id: works
+    attributes:
+      label: What worked well?
+  - type: textarea
+    id: broke
+    attributes:
+      label: What broke or disappointed you?
+      description: Be brutal. This is the most useful section.
+    validations:
+      required: true
+  - type: dropdown
+    id: trust
+    attributes:
+      label: Would you trust its verified findings enough to submit them?
+      options:
+        - Yes
+        - With manual re-checks
+        - No
+    validations:
+      required: true
+  - type: input
+    id: quote_ok
+    attributes:
+      label: OK to quote you publicly?
+      description: "yes/no — if yes, preferred handle"

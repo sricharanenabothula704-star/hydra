@@ -1,0 +1,63 @@
+name: security-guardrails
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Secret pattern scan
+        run: |
+          # Fail the build if anything secret-shaped is committed.
+          PATTERNS=(
+            'AIza[0-9A-Za-z_-]{35}'                 # Google API keys
+            'AKIA[0-9A-Z]{16}'                      # AWS access keys
+            'ghp_[A-Za-z0-9]{36}'                   # GitHub tokens
+            'github_pat_[A-Za-z0-9_]{20,}'          # GitHub fine-grained PATs
+            'sk_live_[0-9a-zA-Z]{16,}'              # Stripe live keys
+            'xox[baprs]-[A-Za-z0-9-]{10,}'          # Slack tokens
+            '^-----BEGIN (RSA|EC|OPENSSH|DSA|PGP) PRIVATE KEY-----[[:space:]]*$'
+            '[A-Za-z0-9._%+-]+@(gmail|outlook|yahoo)\.[a-z]{2,}'  # personal emails
+          )
+          VIOLATIONS=0
+          for p in "${PATTERNS[@]}"; do
+            HITS=$( { grep -rnE -e "$p" . \
+              --exclude-dir=.git --exclude-dir=node_modules \
+              --exclude="*.lock" --exclude="package-lock.json" 2>/dev/null \
+              | grep -vE 'EXAMPLE|X{6,}|EXPOSEDKEY|YOUR[_-]|<your|placeholder'; } || true )
+            if [ -n "$HITS" ]; then
+              echo "::error::Secret-pattern match ($p):"
+              echo "$HITS" | head -5
+              VIOLATIONS=1
+            fi
+          done
+          [ "$VIOLATIONS" -eq 0 ] && echo "✅ No secret-shaped content found." || exit 1
+
+      - name: Bash syntax check
+        run: |
+          FAIL=0
+          while IFS= read -r f; do
+            bash -n "$f" || { echo "::error::Syntax error in $f"; FAIL=1; }
+          done < <(find . -name "*.sh" -not -path "./.git/*")
+          [ "$FAIL" -eq 0 ] && echo "✅ All shell scripts parse." || exit 1
+
+      - name: Python compile check
+        run: |
+          FAIL=0
+          while IFS= read -r f; do
+            python3 -m py_compile "$f" 2>/dev/null || { echo "::error::Compile error in $f"; FAIL=1; }
+          done < <(find . -name "*.py" -not -path "./.git/*")
+          [ "$FAIL" -eq 0 ] && echo "✅ All Python files compile." || exit 1
+
+      - name: Agent frontmatter check
+        run: |
+          FAIL=0
+          for f in agents/*.md; do
+            head -1 "$f" | grep -q '^---' || { echo "::error::$f missing YAML frontmatter"; FAIL=1; }
+          done
+          [ "$FAIL" -eq 0 ] && echo "✅ All agent definitions valid." || exit 1

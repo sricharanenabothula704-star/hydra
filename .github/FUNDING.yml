@@ -1,0 +1,6 @@
+community:
+  stkoverflow:
+    - "hydra"
+  reddit:
+    - "r/bugbounty"
+    - "r/netsec"
