@@ -79,6 +79,14 @@
       "description": "Generate BugBase-format vulnerability report",
       "template": "Generate a BugBase-format report for the verified finding at $ARGUMENTS. Use the exact BugBase template from ~/.config/opencode/agents/reporter.md. Include: scope, vuln type, severity, CVSS, description, impact, steps to reproduce with curl commands, recommendations. Save to ~/recon_reports/bugbase_reports/. Reporter: __HANDLE__, Email: __EMAIL__."
     },
+    "playwright-setup": {
+      "description": "Guided, approval-based setup of optional Playwright MCP",
+      "template": "Read docs/AI_PLAYWRIGHT_MCP_SETUP_PROMPT.md and follow it for this repository. Do not navigate to any target during installation. Explain planned commands and config changes first, back up the existing OpenCode config before editing, and ask before npm/browser downloads or config changes. Keep the MCP disabled until I explicitly approve enabling it. This is for ordinary authorized browser validation, never bot-detection evasion."
+    },
+    "browser-check": {
+      "description": "Validate an authorized web target in a normal browser",
+      "template": "Follow mandatory skill routing. Confirm that written authorization includes browser testing of the exact requested host. Run bash ~/scripts/scope_check.sh \"$ARGUMENTS\" before navigation; if denied or uncertain, stop. If Playwright MCP is disabled or unavailable, explain that and do not enable/install it automatically. Use normal browser rendering and read-only inspection by default. Do not conceal automation, spoof fingerprints, rotate proxies, solve CAPTCHAs, or bypass bot challenges/rate limits/access controls. Stop and report any challenge. Do not submit forms or make state changes without explicit authorization and approval."
+    },
     "debug": {
       "description": "Debug an issue, fix errors, update agent memory",
       "template": "Debug the following issue: $ARGUMENTS. Read the relevant agent memory from ~/.config/opencode/agent_memory/. Identify root cause, fix the issue, update agent memory with the lesson learned. Use ~/.config/opencode/agents/debug.md methodology."
@@ -105,6 +113,20 @@
         "MOONMCP_BLOCK_PRIVATE": "1",
         "MOONMCP_RATE_LIMIT": "10"
       }
+    },
+    "playwright": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@playwright/mcp@0.0.83",
+        "--headless",
+        "--isolated",
+        "--browser",
+        "chromium",
+        "--block-service-workers"
+      ],
+      "enabled": false
     }
   }
 }

@@ -238,6 +238,12 @@ exists, setup backs it up and asks before replacing it. For an AI-assisted,
 step-by-step setup, copy [`docs/AI_SETUP_PROMPT.md`](docs/AI_SETUP_PROMPT.md)
 into your coding agent.
 
+For the optional browser MCP, use the `/playwright-setup` OpenCode command or
+the second, dedicated prompt in
+[`docs/AI_PLAYWRIGHT_MCP_SETUP_PROMPT.md`](docs/AI_PLAYWRIGHT_MCP_SETUP_PROMPT.md).
+The `/browser-check` command is for ordinary, scope-checked browser validation;
+neither command enables bot-detection evasion.
+
 Add only written-authorized hosts to `~/.config/opencode/SCOPE_ALLOWLIST.txt`.
 For one safe request, run `hydra scan https://your-authorized-host` (HTTP
 security headers only). For the agent workflow, run `opencode` and then type:
@@ -262,12 +268,21 @@ hydra pipeline run recon --target https://your-authorized-host --execute
 `pipeline run` and `chains run` show a plan by default. `--execute` is required
 to hand it to OpenCode, and the target must pass the local scope allowlist.
 
+### Optional browser validation (Playwright MCP)
+
+The Playwright MCP entry is disabled by default. It can help inspect rendered
+pages and validate client-side behavior on local or explicitly authorized
+targets; it does **not** bypass bot detection or enforce HYDRA's scope
+allowlist. To enable and use it safely, follow
+[`docs/PLAYWRIGHT_MCP.md`](docs/PLAYWRIGHT_MCP.md). Stop if a site presents a
+CAPTCHA, bot challenge, rate limit, or access denial.
+
 ## 🛡️ Safety Model
 
-- **CI guardrails on every push**: secret-pattern scanning, shell/python syntax checks, agent validation — nobody can leak secrets into this repo, including future-you
-- **Verifier agent kills false positives** before they reach a triage queue
+- **CI checks on every push**: secret-pattern scanning, shell/Python syntax checks, index consistency, and agent validation; these reduce risk but cannot guarantee that every secret or defect is caught
+- **Verifier reviews candidate findings** with heuristic checks; humans must reproduce findings and review evidence before reporting
 - **`.gitignore` blocks recon output** and secret-shaped files by design
-- Findings stay local under `~/recon_reports/` — never committed
+- Findings are stored locally by default under `~/recon_reports/`; optional integrations may transmit data, so inspect their configuration before enabling them
 
 ## 📁 Repository Layout
 
