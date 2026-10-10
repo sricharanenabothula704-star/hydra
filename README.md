@@ -11,7 +11,7 @@
 
 # 🐉 HYDRA
 
-**THE 7-HEADED AI BUG BOUNTY SYSTEM · 979 SKILLS · FULL METHODOLOGY · ONE-COMMAND SETUP**
+**THE 7-HEADED AI BUG BOUNTY SYSTEM · 1,179 SKILLS · FULL METHODOLOGY · ONE-COMMAND SETUP**
 
 👤 **Author:** `sricharanenabothula704-star`
 
@@ -20,7 +20,7 @@
 <a href="https://sricharanenabothula704-star.github.io"><img src="https://img.shields.io/badge/🌐_WEBSITE-LIVE-00E5FF?style=for-the-badge&logo=githubpages&logoColor=white"></a>
 <a href="#-quickstart"><img src="https://img.shields.io/badge/SETUP-ONE%20COMMAND-00FF41?style=for-the-badge"></a>
 <a href="#-the-agent-pipeline"><img src="https://img.shields.io/badge/AGENTS-7-FF003C?style=for-the-badge"></a>
-<a href="#skills"><img src="https://img.shields.io/badge/SKILL%20MODULES-979-9D00FF?style=for-the-badge"></a>
+<a href="#skills"><img src="https://img.shields.io/badge/SKILL%20MODULES-1179-9D00FF?style=for-the-badge"></a>
 <a href="#-methodology-library"><img src="https://img.shields.io/badge/METHODOLOGY%20DOCS-27-00E5FF?style=for-the-badge"></a>
 <a href="#scripts"><img src="https://img.shields.io/badge/AUTOMATION-35%20SCRIPTS-FF6D00?style=for-the-badge"></a>
 <a href="#-safety-model"><img src="https://img.shields.io/badge/CI%20GUARDRAILS-ACTIVE-00FF41?style=for-the-badge&logo=githubactions&logoColor=white"></a>
@@ -58,9 +58,9 @@
 
 | Metric | Count |
 |--------|:-----:|
-| 🗂️ Tracked files | **246+** |
+| 🗂️ Tracked files | **4,856** |
 | 🤖 AI agents | **7** |
-| 🧩 Skill modules | **979** |
+| 🧩 Skill modules | **1,179** |
 | 📖 Methodology playbooks | **27** |
 | ⚙️ Automation tools | **35** |
 | 🗺️ Strategy documents | **8** |
@@ -111,19 +111,22 @@ Each of the seven files is a complete operating manual, not a prompt stub:
 All seven also carry: **TODO-list discipline** (plan before acting, live status updates) and the **Self-Rescue Protocol** (parallel websearch + primary-source fetch + 2-source cross-verification when stuck).
 
 <a id="skills"></a>
-## 🧩 Skill Modules — 979
+## 🧩 Skill Modules — 1,179
 
 Machine-indexed in [`skills/index.json`](skills/index.json) so agents route programmatically:
 
 | Category | Count | Highlights |
 |----------|:-----:|------------|
-| 🌐 Web exploitation | **38** | XSS, SQLi, SSRF, SSTI (+ error-based), request smuggling (+ modern desync), GraphQL, prototype pollution, ORM filter injection |
-| 🖥️ Platform attacks | **16** | Linux/Windows/macOS privesc, Active Directory (kerberos, ACL abuse, AD CS), k8s, containers |
-| ⚙️ Binary exploitation | **11** | Heap, ROP, format string, kernel, V8, sandbox escapes |
-| 🔍 Recon | **9** | Subdomain takeover, DNS rebinding, source-control leaks, JS analysis |
-| 🔐 Crypto | **6** | RSA, lattice, symmetric, hash attacks |
-| 📱 Mobile | **3** | Android, iOS, SSL pinning bypass |
-| 🤖 AI security | **2** | LLM prompt injection, AI/ML supply chain |
+| 🌐 Web exploitation | **284** | XSS, SQLi, SSRF, SSTI, GraphQL, API authorization, and web-specific CVE playbooks |
+| 🛡️ Forensics & defense | **167** | Incident response, malware analysis, threat hunting, and detection engineering |
+| 🖥️ Platform attacks | **69** | Linux/Windows/macOS, Active Directory, cloud, containers, and platform CVEs |
+| ⚙️ Binary exploitation | **14** | Heap, ROP, format strings, memory safety, and binary analysis |
+| 🔍 Recon | **17** | Subdomain and DNS research, source-control exposure, and JavaScript analysis |
+| 🔐 Crypto | **18** | TLS, key management, cryptographic attacks, and implementation reviews |
+| 📱 Mobile | **11** | Android, iOS, mobile APIs, and application security |
+| 🤖 AI security | **10** | LLM, prompt injection, agentic systems, and ML supply chain |
+| 🧰 Other security skills | **389** | Specialized security assessment and defensive engineering guides |
+| 🧪 CVE & specialized playbooks | **200** | CVE-, CWE-, framework-, and scenario-specific guides |
 
 **2025–2026 state of the art included:** Next.js middleware bypass (CVE-2025-29927) · XS-Leaks (ETag length oracle) · CSS exfiltration · web timing attacks · 0.CL desync · error-based blind SSTI.
 
@@ -273,7 +276,7 @@ to hand it to OpenCode, and the target must pass the local scope allowlist.
 
 ```
 ├── agents/            7 agent definitions (context-rich prompts + protocols)
-├── skills/            979 security skill modules + index.json
+├── skills/            1,179 security skill modules + index.json
 ├── common/            27 methodology playbooks
 ├── docs/              strategy library (planning, Tor, case study...)
 ├── templates/         BugBase report template

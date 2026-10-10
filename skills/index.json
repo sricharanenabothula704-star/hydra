@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "generated": "2026-10-10",
+  "generated": "2026-10-11",
   "skills": [
     {
       "name": "401-403-bypass-techniques",
@@ -4005,6 +4005,30 @@
       "category": "crypto"
     },
     {
+      "name": "detecting-active-directory-dns-zone-transfer-exposure",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Unrestricted DNS zone transfers (AXFR) against AD-integrated zones hand a complete host, service, and SRV record inventory to an unauthenticated client with no credential use.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-adcs-esc1-vulnerable-certificate-template",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "ESC1 occurs when an AD CS certificate template lets a low-privileged enrollee specify an arbitrary subject and any SAN, yielding a certificate that authenticates as a domain controller.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-adcs-esc8-ntlm-relay-web-enrollment",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "ESC8 is an NTLM relay into the AD CS web enrollment role, turning a coerced or relayed authentication into a domain controller certificate usable for full takeover.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "detecting-ai-model-prompt-injection-attacks",
       "files": [
         "SKILL.md"
@@ -4022,6 +4046,14 @@
         "AML.T0056"
       ],
       "category": "forensics-defense"
+    },
+    {
+      "name": "detecting-android-intent-redirect-component-abuse",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect exported components, intent redirection, and task hijacking in Android applications.",
+      "category": "cve-specialized"
     },
     {
       "name": "detecting-anomalies-in-industrial-control-systems",
@@ -4062,6 +4094,46 @@
       "category": "web"
     },
     {
+      "name": "detecting-apache-mod-proxy-path-normalization-bypass",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect Apache mod_proxy path handling where normalization differs between frontend and backend.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-apache-solr-velocity-template-injection",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect Apache Solr Velocity template injection through untrusted query parameters and data directories.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-api-authorization-bypass-tenant-boundary",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect cross-tenant data access and privilege escalation across organization boundaries in multi-tenant APIs.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-api-cache-poisoning-authorization-header",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect web cache poisoning where Authorization or identity headers are ignored in the cache key.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-api-documentation-swagger-endpoint-exposure",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Public OpenAPI/Swagger documents hand attackers the full endpoint map, parameter names, auth scheme, and internal hostnames in one request.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "detecting-api-enumeration-attacks",
       "files": [
         "SKILL.md"
@@ -4079,6 +4151,54 @@
         "rate-limiting"
       ],
       "category": "web"
+    },
+    {
+      "name": "detecting-api-error-message-sensitive-data-leak",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect sensitive data disclosure through verbose API errors, stack traces, debug modes, and framework pages.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-api-graphql-batch-query-amplification",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect GraphQL query-cost, depth, and alias-based amplification attacks against an API.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-api-mass-assignment-role-escalation",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect privilege escalation through unbound request fields that set roles, status, or ownership.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-api-pagination-parameter-resource-exhaustion",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect unbounded limit, offset, page, and cursor parameters that exhaust backend resources.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-api-rate-limit-bypass-ipv6-header-spoof",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect API rate-limit bypass via forwarded-header spoofing and IPv6 address rotation.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-api-secret-embedded-in-frontend-bundle",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Find API keys, tokens, and service credentials shipped inside frontend JS bundles and mobile web assets.",
+      "category": "cve-specialized"
     },
     {
       "name": "detecting-arp-poisoning-in-network-traffic",
@@ -4136,6 +4256,14 @@
         "MEASURE-2.7"
       ],
       "category": "forensics-defense"
+    },
+    {
+      "name": "detecting-auth-token-replay-not-session-bound",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect bearer token theft and replay where tokens are not bound to client, session, or device context.",
+      "category": "cve-specialized"
     },
     {
       "name": "detecting-aws-cloudtrail-anomalies",
@@ -4290,6 +4418,14 @@
       "category": "forensics-defense"
     },
     {
+      "name": "detecting-blob-storage-public-read-misconfiguration",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Assess object storage buckets and containers for anonymous read exposure, permissive ACLs, and policy gaps that publish private data.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "detecting-bluetooth-low-energy-attacks",
       "files": [
         "SKILL.md"
@@ -4307,6 +4443,14 @@
         "replay-attack"
       ],
       "category": "forensics-defense"
+    },
+    {
+      "name": "detecting-broken-object-level-authorization-bola",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect Broken Object Level Authorization where an API authenticates the caller but fails to verify they own or may access the specific object ID requested (OWASP API1).",
+      "category": "cve-specialized"
     },
     {
       "name": "detecting-broken-object-property-level-authorization",
@@ -4366,6 +4510,22 @@
       "category": "forensics-defense"
     },
     {
+      "name": "detecting-clickjacking-missing-frame-options",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect clickjacking by finding pages that lack X-Frame-Options and frame-ancestors CSP, allowing a malicious site to iframe and overlay a victim into unintended clicks.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-cloud-storage-bucket-listing-anonymous-access",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Buckets with permissive ACLs or policy grant anonymous ListBucket, exposing every object name, size, and owner across an entire storage prefix.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "detecting-cloud-threats-with-guardduty",
       "files": [
         "SKILL.md"
@@ -4383,6 +4543,14 @@
         "GV.SC-06"
       ],
       "category": "forensics-defense"
+    },
+    {
+      "name": "detecting-cloudflare-worker-subdomain-takeover",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detecting Cloudflare Worker, Pages, and workers.dev subdomain takeover through dangling CNAME/NS records and unclaimed routes. Covers DNS enumeration, fingerprinting the Cloudflare error signature, safe confirmation, and record hygiene to prevent re-occurrence.",
+      "category": "cve-specialized"
     },
     {
       "name": "detecting-command-and-control-over-dns",
@@ -4499,6 +4667,22 @@
       "category": "forensics-defense"
     },
     {
+      "name": "detecting-cors-preflight-misconfiguration-wildcard",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect CORS misconfigurations — wildcard origins, origin reflection with credentials, and broken preflight handling — that let arbitrary sites read authenticated API responses.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-coupon-discount-stackable-business-logic-abuse",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Test discount engine invariants for stacking, exclusivity, expiry, and reuse defects that let clients exceed intended pricing rules.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "detecting-credential-dumping-techniques",
       "files": [
         "SKILL.es.md",
@@ -4519,6 +4703,14 @@
       "category": "forensics-defense"
     },
     {
+      "name": "detecting-crlf-injection-in-log-entries",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Find response-splitting and header/log-forging vectors where CR and LF reach HTTP response construction or log sinks, and validate the sanitization that blocks them.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "detecting-cryptomining-in-cloud",
       "files": [
         "SKILL.md"
@@ -4536,6 +4728,22 @@
         "GV.SC-06"
       ],
       "category": "forensics-defense"
+    },
+    {
+      "name": "detecting-cve-2020-1472-zerologon-exposure",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detecting exposure and exploitation of Zerologon (CVE-2020-1472) — a NULL-session flaw in Netlogon allowing a domain controller's machine account to be set to an empty password. Covers domain controller build fingerprinting, Netlogon event correlation, and the credential-rotation aftermath.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-cve-2021-34527-printnightmare-printer-rce",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detecting PrintNightmare (CVE-2021-34527) — remote code execution as SYSTEM via the Windows Print Spooler `PrintDrivers` RPC interface. Covers spooler state validation, driver-directory artifact hunting, SMB/IPC$ telemetry, and the Microsoft mitigation of disabling the spooler.",
+      "category": "cve-specialized"
     },
     {
       "name": "detecting-data-and-model-poisoning",
@@ -4595,6 +4803,14 @@
       "category": "forensics-defense"
     },
     {
+      "name": "detecting-default-credentials-on-exposed-services",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Factory-shipped usernames and passwords on internet-reachable consoles grant immediate administrative access without any exploitation.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "detecting-dependency-confusion",
       "files": [
         "SKILL.md"
@@ -4612,6 +4828,14 @@
         "namespace-hijacking"
       ],
       "category": "forensics-defense"
+    },
+    {
+      "name": "detecting-directory-listing-exposure-sensitive-files",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Autoindex-enabled web roots publish the full filename inventory of a directory, exposing internal naming, backup artifacts, and versioned source files.",
+      "category": "cve-specialized"
     },
     {
       "name": "detecting-dll-sideloading-attacks",
@@ -4669,6 +4893,14 @@
         "iodine"
       ],
       "category": "forensics-defense"
+    },
+    {
+      "name": "detecting-drupal-config-sync-service-account-exposure",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect exposed Drupal config-sync service accounts, API keys, and JSON:API config import endpoints.",
+      "category": "cve-specialized"
     },
     {
       "name": "detecting-email-account-compromise",
@@ -4747,6 +4979,14 @@
       "category": "forensics-defense"
     },
     {
+      "name": "detecting-excessive-data-exposure-api-response-leak",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detecting over-fetching APIs that return more fields than the UI needs (OWASP API3). Covers PII/secret leakage in JSON responses and testing by diffing API output vs rendered UI.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "detecting-exfiltration-over-dns-with-zeek",
       "files": [
         "SKILL.md"
@@ -4764,6 +5004,62 @@
         "PR.DS-02"
       ],
       "category": "forensics-defense"
+    },
+    {
+      "name": "detecting-expired-or-self-signed-certificate-misconfiguration",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Expired, self-signed, wrong-hostname, or weak-chain certificates break trust and push users toward browser warnings and TLS-stripping downgrade attacks.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-exposed-backup-archive-file-download",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Dump files and archives left in the web root let anyone download entire databases, site trees, or source without credentials.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-exposed-database-admin-panel-portal",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Internet-reachable phpMyAdmin, pgAdmin, Adminer, and similar consoles expose full database control to anyone who finds them.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-exposed-devops-tooling-ci-cd-endpoint",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Exposed Jenkins, GitLab Runner, Argo CD, Drone, Gitea, or CI dashboards hand attackers build execution, secret stores, and deployment keys.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-exposed-environment-file-secret-leak",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "A dotenv or env file served as static content hands attackers database credentials, API keys, and signing secrets with no authentication.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-exposed-git-repository-source-disclosure",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "An internet-reachable .git directory exposes full source history, deleted secrets, and commit metadata without any authentication.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-exposed-monitoring-dashboard-public-access",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Grafana, Kibana, Prometheus, and similar telemetry consoles leak infrastructure topology, query history, and often credentials when reachable anonymously.",
+      "category": "cve-specialized"
     },
     {
       "name": "detecting-fileless-attacks-on-endpoints",
@@ -4804,6 +5100,22 @@
       "category": "forensics-defense"
     },
     {
+      "name": "detecting-ftp-telnet-anonymous-access-legacy-protocol",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Anonymous FTP and exposed Telnet on port 23 grant cleartext unauthenticated access to file shares and interactive shells over an unencrypted channel.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-github-actions-workflow-injection",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detecting GitHub Actions workflow script injection via untrusted `${{ github.event.* }}` interpolation into `run:` blocks. Covers the pull_request_target/workflow_run/issue_comment privilege-escalation patterns, static analysis, runtime canary confirmation, and workflow hardening.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "detecting-golden-ticket-attacks-in-kerberos-logs",
       "files": [
         "SKILL.md"
@@ -4842,6 +5154,86 @@
       "category": "forensics-defense"
     },
     {
+      "name": "detecting-graphql-deep-nesting-resource-exhaustion-cost",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detecting GraphQL query-cost abuse: deep nesting, batching, and complexity-based DoS. Covers alias-based amplification, query complexity limits, and safe load-controlled testing.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-graphql-endpoint-schema-enumeration-recon",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "GraphQL introspection returns the entire type system, queries, mutations, and internal directives in one unauthenticated request, collapsing endpoint discovery.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-graphql-federation-service-tenant-escape",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detecting authorization boundaries that break across GraphQL Federation subgraphs. Covers `_entities`/`_service` exposure, missing propagation of auth context, and cross-tenant data via federation.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-graphql-schema-introspection-disabled-bypass",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect GraphQL schemas where introspection is disabled but the API surface remains fully enumerable.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-graphql-subscription-authorization-bypass",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect unauthorized access to GraphQL subscriptions and WebSocket channels over long-lived connections.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-haproxy-forwarded-header-smuggling",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect header-based request smuggling and cache poisoning through HAProxy's X-Forwarded-* handling.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-hardcoded-credentials-mobile-binary",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Find hardcoded API keys, tokens, and secrets inside Android and iOS application binaries.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-http-parameter-pollution-filter-bypass",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect HTTP Parameter Pollution where duplicated parameters are parsed differently by the WAF/proxy and the backend, letting an attacker smuggle payloads past input filters.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-http-security-header-misconfiguration",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Audit missing, weak, or malformed HTTP security headers (CSP, HSTS, X-Content-Type-Options, Referrer-Policy, Permissions-Policy) and cookie flags across an application's responses.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-idor-sequential-identifier-enumeration",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect Insecure Direct Object Reference via predictable sequential identifiers that let an attacker enumerate and access other users' resources without authorization.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "detecting-indirect-prompt-injection",
       "files": [
         "SKILL.md"
@@ -4859,6 +5251,14 @@
         "owasp-llm"
       ],
       "category": "forensics-defense"
+    },
+    {
+      "name": "detecting-insecure-direct-object-reference-graphql",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect IDOR within GraphQL resolvers, where nested nodes and arguments expose objects without an ownership check even when the top-level query is authorized.",
+      "category": "cve-specialized"
     },
     {
       "name": "detecting-insider-data-exfiltration-via-dlp",
@@ -4918,6 +5318,62 @@
       "category": "forensics-defense"
     },
     {
+      "name": "detecting-inventory-race-condition-oversell",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Find and confirm non-atomic stock reservation paths where concurrent checkouts can decrement inventory below zero or fulfill orders that exceed supply.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-ios-webview-javascript-bridge-exposure",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect exposed WKWebView message handlers, JS bridges, and unsafe URL loading in iOS applications.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-java-deserialization-gadget-chain-without-rce",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Identify Java deserialization gadget chains in a classpath without ever detonating one, using passive classpath analysis, gadget-chain mapping, and non-executing probes.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-jboss-http-invoker-deserialization",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect JBoss HTTP Invoker and JMXInvoker endpoints that deserialize untrusted input.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-joomla-ace-editor-code-injection",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect Joomla code editor plugins that expose arbitrary PHP file write from the web interface.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-json-mass-assignment-overposting",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect mass assignment/overposting where a JSON API binds extra client-supplied fields (role, isAdmin, price, balance) to the data model, enabling privilege or price tampering.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-jwt-key-confusion-rs256-hs256",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect JWT algorithm-confusion / key-type confusion where an RS256 token is replayed as HS256 signed with the public key, plus alg:none and unverified-claims flaws.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "detecting-kerberoasting-attacks",
       "files": [
         "SKILL.md"
@@ -4935,6 +5391,14 @@
         "Application Protocol Command Analysis"
       ],
       "category": "forensics-defense"
+    },
+    {
+      "name": "detecting-kerberos-preauthentication-disabled-asrep-roast",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Accounts with Kerberos preauthentication disabled can be cracked offline from any captured AS-REP request without ever contacting a domain controller with a credential.",
+      "category": "cve-specialized"
     },
     {
       "name": "detecting-lateral-movement-in-network",
@@ -4994,6 +5458,54 @@
       "category": "forensics-defense"
     },
     {
+      "name": "detecting-ldap-anonymous-bind-directory-enumeration",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Anonymous binds against LDAP let unauthenticated clients read directory data and probe every account for existence; used for AD recon before credential attacks.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-ldap-channel-binding-ldap-signing-disabled",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Without LDAP signing and channel binding, an intercepted LDAP session is replayable and a captured NTLM token can be relayed to authenticate as the victim elsewhere.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-linux-core-dump-credential-exposure",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Core dumps, `su`/`sudo` failure logs, and crash artefacts often contain cleartext process memory — hashed passwords, session keys, and private keys — readable without any further exploitation.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-linux-exposed-service-binary-path-hijack",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Services that run with an unqualified binary name, a user-writable working directory, or a hijackable library/environment variable let a local user execute code as the service account.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-linux-sudo-misconfiguration-privesc",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Overly broad sudoers rules (NOPASSWD: ALL, wildcard command arguments, writable sudoers.d files) let any unprivileged account become root without a password.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-linux-world-writable-file-permission-privesc",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "World-writable files and directories, writable PATH components, or unprotected script/config files let any local user inject code that a privileged process later executes.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "detecting-living-off-the-land-attacks",
       "files": [
         "SKILL.md"
@@ -5032,6 +5544,22 @@
       "category": "forensics-defense"
     },
     {
+      "name": "detecting-log-injection-log-forging-prevention-bypass",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Assess whether untrusted input reaching log sinks can forge, truncate, or hide records, and verify the controls that neutralize control characters and delimiters.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-magento-admin-remote-code-execution",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect Magento admin RCE paths including template block injection, layout XML injection, and REST web API flaws.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "detecting-malicious-npm-packages",
       "files": [
         "SKILL.md"
@@ -5068,6 +5596,14 @@
         "Process Termination"
       ],
       "category": "forensics-defense"
+    },
+    {
+      "name": "detecting-mfa-fatigue-push-bombing-session-hijack",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Assess MFA challenge flows for push-bombing resistance, number matching, replay, and session binding, so an attacker holding a password cannot ride a legitimate user's approval.",
+      "category": "cve-specialized"
     },
     {
       "name": "detecting-mimikatz-execution-patterns",
@@ -5184,6 +5720,14 @@
       "category": "forensics-defense"
     },
     {
+      "name": "detecting-moveit-transfer-internal-api-indicators",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detection and hunting guidance for MOVEit Transfer deployments: internal API abuse, staging tables, webshell artifacts, anomalous admin activity, and exfiltration signals. Deliberately CVE-agnostic so it also covers post-patch and custom-variant abuse.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "detecting-network-anomalies-with-zeek",
       "files": [
         "SKILL.md"
@@ -5222,6 +5766,22 @@
       "category": "forensics-defense"
     },
     {
+      "name": "detecting-nginx-off-by-slash-alias-misconfiguration",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect nginx `location`/`alias` off-by-slash misconfigurations that expose parent-directory contents.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-nodejs-vulnerable-gadget-libraries",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Identify which npm packages in a Node.js dependency tree can serve as prototype-pollution, child_process, or deserialization gadget amplifiers, without executing any gadget.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "detecting-ntlm-relay-with-event-correlation",
       "files": [
         "SKILL.md"
@@ -5239,6 +5799,62 @@
         "LDAP-signing"
       ],
       "category": "forensics-defense"
+    },
+    {
+      "name": "detecting-oauth-state-parameter-missing-csrf",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect OAuth/OIDC login flows that omit or fail to validate the `state` parameter (or `nonce`/PKCE), enabling login CSRF where an attacker forces a victim to authenticate into the attacker's account.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-oauth2-authorization-code-pkce-downgrade",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect OAuth 2.0 authorization servers and clients that skip, weaken, or bypass PKCE during code exchange.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-open-redirect-in-authentication-flows",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Open redirect detection in login/SSO/logout flows. Covers parameter discovery, allowlist bypass, and the phishing+AATO escalation (redirecting OAuth tokens).",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-open-ssh-regresshion-cve-2024-6387",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detecting regreSSHion / CVE-2024-6387 OpenSSH signal-handler race RCE. Covers version fingerprinting, glibc/fflush preconditions, and detection without crashing the service.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-openidconnect-redirect-validation-bypass",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detecting OAuth/OIDC `redirect_uri` validation bypass. Covers exact-match requirements, wildcards, fragment-injection, subdomain matching, and the account-takeover impact when auth codes leak.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-origin-server-bypass-cdn-security-misconfig",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "An origin reachable by direct IP or unproxied hostname skips the CDN's WAF, rate limiting, IP reputation, and DDoS scrubbing entirely.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-package-typosquatting-and-hallucinated-dependencies",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect typosquat packages and AI-hallucinated dependencies in lockfiles and manifests using edit-distance analysis, registry metadata heuristics, and install-time execution checks.",
+      "category": "cve-specialized"
     },
     {
       "name": "detecting-pass-the-hash-attacks",
@@ -5277,6 +5893,30 @@
         "Token Binding"
       ],
       "category": "forensics-defense"
+    },
+    {
+      "name": "detecting-password-hashing-algorithm-weakness",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Identify insecure password storage by locating hashing primitives, cost parameters, salt handling, and upgrade paths in authentication code and existing credential stores.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-password-reset-account-enumeration-timing",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect user enumeration in password reset and recovery flows through response differences, status codes, body content, redirects, and timing side channels.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-petty-confusion-in-azure-ad-privesc",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detecting Azure AD / Microsoft Graph application-role confusion privilege escalation. Covers confusing-deputy app registrations, Graph app-role over-permission, credential add/update on service principals, and the tenant-takeover chain (add credential to Azure AD PowerShell → global admin). Read-only Graph hunting.",
+      "category": "cve-specialized"
     },
     {
       "name": "detecting-port-scanning-with-fail2ban",
@@ -5393,6 +6033,22 @@
       "category": "forensics-defense"
     },
     {
+      "name": "detecting-race-condition-in-payment-checkout-flow",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect TOCTOU race conditions in checkout, payment, coupon, and balance-spend flows where concurrent requests bypass a check-then-act sequence and cause double spending or discount abuse.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-race-condition-two-factor-token-reuse",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detecting OTP/TOTP replay and race conditions. Covers one-time-token reuse windows, concurrent verification bypasses, and time-window edge cases.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "detecting-ransomware-encryption-behavior",
       "files": [
         "SKILL.md"
@@ -5450,6 +6106,14 @@
       "category": "forensics-defense"
     },
     {
+      "name": "detecting-refund-to-different-payment-method-abuse",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Test refund flows for destination substitution, amount inflation, and replay, where a refund is redirected to an instrument other than the charge or exceeds the captured amount.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "detecting-rootkit-activity",
       "files": [
         "SKILL.md"
@@ -5486,6 +6150,22 @@
         "PR.IR-01"
       ],
       "category": "forensics-defense"
+    },
+    {
+      "name": "detecting-saml-assertion-signature-bypass",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect SAML weaknesses where assertions are accepted without signature validation, signatures cover only the response (not the assertion), or an attacker-signed assertion is trusted due to embedded-certificate trust.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-secret-management-hardcoded-config-files",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Locate credentials embedded in source, config, build artifacts, and history, and assess whether rotation and detection controls exist for what is found.",
+      "category": "cve-specialized"
     },
     {
       "name": "detecting-secure-boot-bypass",
@@ -5545,6 +6225,14 @@
       "category": "forensics-defense"
     },
     {
+      "name": "detecting-session-token-predictability-brute-force",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Evaluate session identifier entropy, lifetime, rotation, invalidation, and fixation resistance, and quantify offline versus online guessing feasibility.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "detecting-shadow-api-endpoints",
       "files": [
         "SKILL.md"
@@ -5583,6 +6271,30 @@
       "category": "forensics-defense"
     },
     {
+      "name": "detecting-smb-signing-disabled-relay-exposure",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Hosts that neither require nor enable SMB signing accept relayed NTLM authentication, turning a coerced or captured request into an authenticated session on a second protocol.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-smtp-header-injection-email-spoofing",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect email header (CRLF) injection that lets user input add Bcc/Cc/Subject or extra recipients, enabling spam relay and spoofed-mail abuse.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-snmp-default-community-string-exposure",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "SNMP v1/v2c transmits the community string in cleartext, so a default value such as public or private grants unauthenticated read and often write access to an entire device.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "detecting-spearphishing-with-email-gateway",
       "files": [
         "SKILL.md"
@@ -5600,6 +6312,14 @@
         "PR.AT-01"
       ],
       "category": "forensics-defense"
+    },
+    {
+      "name": "detecting-spring-boot-actuator-misconfiguration",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect exposed Spring Boot Actuator endpoints that leak configuration, secrets, and administrative functions.",
+      "category": "cve-specialized"
     },
     {
       "name": "detecting-sql-injection-via-waf-logs",
@@ -5621,6 +6341,30 @@
       "category": "forensics-defense"
     },
     {
+      "name": "detecting-ssrf-in-websocket-upgrade-handshake",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect server-side request forgery where attacker-controlled data in a WebSocket Upgrade request makes the server open a connection to an internal or arbitrary host.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-ssti-in-vue-angular-client-templates",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Client-side template injection in Vue/Angular (CSTI) and server-side rendering template injection. Covers Angular's bypassSanitization, Vue template compilation sinks, and SSR SSTI.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-struts2-ognl-classloader-access",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect Apache Struts OGNL injection paths, especially `%{...}` ClassLoader access through parameters.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "detecting-stuxnet-style-attacks",
       "files": [
         "SKILL.md"
@@ -5638,6 +6382,14 @@
         "apt"
       ],
       "category": "forensics-defense"
+    },
+    {
+      "name": "detecting-subdomain-takeover-dangling-dns-record",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "A CNAME or NS pointing at a deprovisioned third-party service lets anyone register the target resource and serve content under the victim's domain.",
+      "category": "cve-specialized"
     },
     {
       "name": "detecting-supply-chain-attacks-in-ci-cd",
@@ -5697,6 +6449,14 @@
       "category": "forensics-defense"
     },
     {
+      "name": "detecting-svg-and-image-parser-vulnerability-pilfering",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detecting image/SVG parser vulnerabilities in server-side rasterizers (ImageMagick, libvips, librsvg). Covers command injection via SVG/MSL delegates, ImageTragick, Ghostscript, and safe fuzzing of upload pipelines.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "detecting-t1003-credential-dumping-with-edr",
       "files": [
         "SKILL.md"
@@ -5754,6 +6514,30 @@
       "category": "forensics-defense"
     },
     {
+      "name": "detecting-time-based-blind-sql-injection-waf-bypass",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detecting and confirming time-based blind SQLi, including WAF-evading variants and avoiding noisy load on the target. Covers SLEEP/WAITFOR/pg_sleep/benchmark and timing hygiene.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-tls-certificate-pinning-bypass-mobile",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Assess mobile certificate pinning strength across Android and iOS, validate trust coverage, and determine whether pinning can be defeated by userland hooks.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-tomcat-ghostcat-ajp-file-inclusion",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect GhostCat (CVE-2020-1938) AJP file inclusion and insecure AJP listener configuration in Tomcat.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "detecting-typosquatting-packages",
       "files": [
         "SKILL.md"
@@ -5792,6 +6576,78 @@
       "category": "forensics-defense"
     },
     {
+      "name": "detecting-unicode-normalization-filter-bypass",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detecting security-filter bypass via Unicode normalization, homoglyphs, and bidirectional text. Covers WAF/allowlist evasion, confusable usernames, and RTL override display spoofing.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-unsafe-reflection-java-gadget-invocation",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detecting Java reflection/Class.forName invocations of attacker-controlled class names (RCE gadget paths). Covers reflection sinks, Spring parameter binding gadgets, and safe fingerprinting.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-user-registration-email-verification-bypass",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Find registration flows that grant authenticated or privileged access before email ownership is proven, or where the verification step can be skipped, replayed, or swapped.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-vulnerable-outbound-ssl-certificate-validation",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detecting disabled TLS certificate validation in outbound requests (InsecureSkipVerify, verify=False, rejectUnauthorized:false). Covers language-specific sinks, mass-exposure impact, and remediation.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-weak-cryptographic-randomness-token-generation",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detecting weak randomness (Math.random, rand, mt_rand) used for security tokens, session IDs, nonces, and password resets. Covers predictability analysis, impact, and secure alternatives per language.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-weak-random-value-generation-tokens",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Audit token, nonce, and identifier generation for predictable or low-entropy randomness that enables session hijacking, password reset abuse, or ID enumeration.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-weak-tls-cipher-suites-tls-downgrade",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Legacy cipher suites (RC4, DES, 3DES, EXPORT, MD5-based MACs, small RSA keys) and missing protocol pinning leave TLS traffic passively decryptable or actively downgradeable.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-weblogic-deserialization-remote-code-execution",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect unsafe Java deserialization and T3/IIOP exposure in Oracle WebLogic Server.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-websocket-message-injection-command-channel",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detecting injection and authorization gaps in WebSocket message handling. Covers missing auth on upgrade, JSON message injection, command dispatch abuse, and cross-frame hijacking defense-in-depth.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "detecting-wmi-persistence",
       "files": [
         "SKILL.md"
@@ -5809,6 +6665,22 @@
         "dfir"
       ],
       "category": "forensics-defense"
+    },
+    {
+      "name": "detecting-wordpress-rest-api-authorization-bypass",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detect WordPress REST API authorization bypass flaws that expose or mutate content without authentication.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "detecting-xz-utils-sshd-backdoor-cve-2024-3094",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Detecting the xz-utils / liblzma SSH backdoor (CVE-2024-3094) supply-chain compromise. Covers build-time indicators, the malicious strings, and CI/image scanning.",
+      "category": "cve-specialized"
     },
     {
       "name": "dns-rebinding-attacks",
@@ -6082,6 +6954,14 @@
       "category": "other"
     },
     {
+      "name": "exploiting-alignment-misconfiguration-memory-bug",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Exploits layout and alignment disagreements — packed structs, type punning, and unaligned atomics — that reinterpret memory at offsets the sender and receiver disagree about.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "exploiting-api-injection-vulnerabilities",
       "files": [
         "SKILL.md"
@@ -6101,6 +6981,22 @@
       "category": "web"
     },
     {
+      "name": "exploiting-asp-net-viewstate-validation-bypass",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Abusing ASP.NET file upload controls and their ViewState round-trip to bypass postback validation, reach the upload handler, and chain into code execution or web shell placement.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-aws-imdsv1-ssrf-credential-exposure",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Assess and demonstrate SSRF-to-IMDS credential exposure on EC2 workloads, including IMDSv1 fallback, hop-limit enforcement, and IMDSv2 token enforcement.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "exploiting-aws-with-pacu",
       "files": [
         "SKILL.md"
@@ -6118,6 +7014,14 @@
         "red-team"
       ],
       "category": "other"
+    },
+    {
+      "name": "exploiting-azure-metadata-service-managed-identity-ssrf",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Assess SSRF exposure of the Azure Instance Metadata Service and managed identity token retrieval, including required request headers and local-vs-remote identity scope.",
+      "category": "cve-specialized"
     },
     {
       "name": "exploiting-bgp-hijacking-vulnerabilities",
@@ -6177,6 +7081,22 @@
       "category": "other"
     },
     {
+      "name": "exploiting-ci-cd-pipeline-script-injection",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Identify and validate code injection in CI/CD pipelines, focusing on GitHub Actions expression expansion in untrusted context, unpinned third-party actions, and self-hosted runner exposure.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cloud-storage-bucket-misconfiguration-exposure",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Identify and validate public-read exposure and weak ACLs on S3, GCS, and Azure Blob storage, using read-only listing and retrieval as the proof standard.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "exploiting-constrained-delegation-abuse",
       "files": [
         "SKILL.md"
@@ -6194,6 +7114,270 @@
         "Application Protocol Command Analysis"
       ],
       "category": "other"
+    },
+    {
+      "name": "exploiting-container-runtime-socket-mount-rce",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Assess and demonstrate privilege escalation through mounted container runtime sockets such as /var/run/docker.sock, containerd, and CRI sockets.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cors-origin-reflection-with-credentials",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Exploiting CORS origin reflection with credentials. Covers reflected Origin + Access-Control-Allow-Credentials, subdomain XSS→CORS chains, and reading authenticated API data cross-origin.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-crlf-injection-http-response-splitting",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Exploit CRLF injection to split HTTP responses, inject arbitrary headers, set attacker cookies, or poison caches by controlling newline characters in reflected output.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-crypto-implementation-logic-fault-attack",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Timing and fault attacks on cryptographic implementations. Covers timing side channels, RSA/CRT fault injection (Bellcore), padding oracles (Bleichenbacher), and when these are practical.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-119-buffer-overflow-stack",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Stack buffer overflow exploitation: overflowing fixed-size stack buffers, defeating stack canaries, and turning control-flow hijack into a ROP chain instead of raw shellcode.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-120-classic-buffer-overflow",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Classic non-PIE stack overflows: fixed absolute addresses, direct return-address overwrite, and shellcode injection into a writable stack - the 2003-era exploit that still works on forgotten firmware and embedded targets.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-125-oob-read-info-leak",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Out-of-bounds reads as an info leak: reading past a buffer or array to harvest stack canaries, heap and libc pointers, ASLR bases, and in-process secrets - the first half of most modern exploit chains.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-1321-prototype-pollution-node-rce",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Prototype pollution to RCE in Node.js. Covers __proto__/constructor.prototype pollution, gadget chains to child_process/RCE, and how pollution becomes a finding vs needing a gadget.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-134-format-string-both-stack",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Format string bugs on the stack: the %p/%x leak that defeats ASLR, positional and width specifiers that build arbitrary write primitives, and why a read and a write are the same bug.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-190-integer-overflow-memory-corruption",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Native integer overflow leading to heap/stack corruption. Covers width truncation, signedness confusion, off-by-one size calc, and using ASan/fuzzing to locate, then bridging to control-flow hijack.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-1902-dns-rebinding-ssrf-bypass",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "DNS rebinding to bypass SSRF filters: a hostname that resolves to an allowed public IP at validation time and to an internal address at connection time, defeating IP allowlists and \"no private ranges\" checks.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-200-server-side-information-exposure",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Server-side information exposure via error pages, debug endpoints, directory listings, and metadata leakage. Covers fingerprinting leaks and escalating leaked info (stack traces, internal hosts, keys) to impact.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-22-nginx-alias-path-traversal",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "nginx alias/location off-by-slash traversal. Covers the missing-trailing-slash config bug that enables arbitrary file read with a single extra slash, plus prefix vs alias misconfigurations.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-22-path-traversal-in-file-serves",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Path traversal (CWE-22) in file download/serve endpoints. Covers parameter discovery, encoding-bypass ladders, and detecting traversal despite normalization.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-22-zip-slip-archive-extraction",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Zip Slip (CWE-22 in archive extraction) — arbitrary file write via ../ entries or absolute paths in tar/zip extraction. Covers detection, safe proof, and RCE via overwriting startup locations.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-287-broken-authentication-session-fixation",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Broken authentication and session fixation. Covers session ID predictability, missing rotation on privilege change, JWT alg/claim trust issues, and password-reset token flaws.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-33-path-cve-older-cgi-libc",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Path traversal in legacy CGI handlers and older libc-based path code: PATH_INFO/PATH_TRANSLATED abuse, null-byte and double-encoding tricks, and canonicalization gaps in long-retired CGI servers.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-352-cross-site-request-forgery-tokens",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "CSRF token bypass and SameSite/Origin validation gaps. Covers missing tokens, weak/reflected tokens, header-based bypass (X-Forwarded-Host), JSON/Simple POST bypasses, and CORS-confused CSRF chains.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-362-race-condition-bypass-limits",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Race conditions to bypass one-time-use and rate limits: winning concurrent requests to consume a single-use token twice, beat a per-user quota, or slip past a lockout counter.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-367-toctou-race-condition-web",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "TOCTOU race conditions in web applications: the check-then-act gap between validating a file, path, or permission and acting on it, exploited by winning the timing window between two operations.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-415-double-free-heap-corruption",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Double-free heap corruption specific to glibc. Covers how double-free corrupts tcache/fastbin bins, the UAF equivalence, and turning corrupted bin metadata into an arbitrary write.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-416-use-after-free-binary",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Use-after-free and double-free in native binaries. Covers tcache/fastbin poisoning, UAF read/write primitives, and heap grooming to hijack control flow.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-434-unrestricted-file-upload-to-rce",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Unrestricted file upload to RCE. Covers extension/content-type/filename blacklists, double extensions, null bytes, and placing executable content in web-served, auto-executed, or LFI-included directories.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-457-use-of-uninitialized-variable",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Use of uninitialized memory: stack and heap garbage leaking into output, uninitialized pointers causing jumps to attacker-influenced addresses, and uninit padding in packets sent on the wire.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-476-null-pointer-dereference-dos",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "NULL pointer dereference DoS: honest triage of a crash bug, why it is usually availability-only, and the narrow set of conditions where it becomes memory corruption on legacy platforms.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-502-insecure-deserialization-rce",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Java/.NET insecure deserialization RCE via gadget chains. Covers ObjectInputStream, Jackson polymorphic typing, ysoserial-style gadget discovery, and safe confirmation without executing host commands.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-590-free-on-non-heap-address",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Free of an invalid or non-heap address: freeing stack, static, or mmap pointers, double-freeing a pointer whose provenance was lost, and how glibc turns it into heap metadata corruption.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-611-xxe-in-xml-parsers",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "XML External Entity (XXE) injection. Covers in-band vs blind XXE, parameter entities for OOB exfiltration, and safe file-read confirmation across Java/.NET/PHP/Python.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-787-oob-write-memory-corruption",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Out-of-bounds write primitives: index confusion, off-by-one and off-by-many, length-vs-size confusion, and how an OOB write escalates to a controlled arbitrary write.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-79-cross-site-scripting-reflection-sinks",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Reflected and DOM XSS via dangerous sink contexts. Covers HTML/attribute/JS/URL sink differences, encoding evasion, and blind-XSS escalation to admin-facing reports.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-89-sql-injection-in-orm-raw-queries",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "SQL injection through ORM raw queries, string-interpolated filters, and order-by clauses. Covers ORM-escape bypasses, second-order injection, and boolean/time-based confirmation.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-918-server-side-request-forgery",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Server-Side Request Forgery core playbook. Covers internal-only service access, cloud metadata exposure, protocol smuggling, and the blind-vs-in-band decision tree.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-cwe-94-code-injection-in-template-eval",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Code injection via eval/exec and dynamic expression evaluation. Covers eval(), Function(), exec(), SpEL, OGNL, MVEL, and Python/JSP eval sinks with safe confirmation.",
+      "category": "cve-specialized"
     },
     {
       "name": "exploiting-deeplink-vulnerabilities",
@@ -6215,6 +7399,38 @@
       "category": "other"
     },
     {
+      "name": "exploiting-dependency-confusion-private-package-takeover",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Assess whether internal package names resolve to attacker-controlled public registries, and how to detect and remediate dependency confusion in npm, PyPI, and Maven estates.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-django-secret-key-leak-session-forgery",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Django SECRET_KEY disclosure leading to session/cookie forgery and password-reset token forgery. Covers common leak sources (tracebacks, debug pages, git, error emails) and forging signed cookies.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-dotnet-viewstate-mac-forgery",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "ASP.NET ViewState MAC bypass, validation-mode downgrade, and BinaryFormatter deserialization to forge server-side state and achieve gadget-chain RCE.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-elf-binary-rop-gadget-enumeration",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Builds and filters a ROP gadget inventory from ELF binaries with ROPgadget, ropper and r2, including ret2csu fallbacks for stripped static targets.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "exploiting-excessive-data-exposure-in-api",
       "files": [
         "SKILL.md"
@@ -6234,6 +7450,70 @@
       "category": "other"
     },
     {
+      "name": "exploiting-expressjs-template-injection",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Server-side template injection in Express apps using EJS, Pug/Jade, Handlebars, Nunjucks, or Mustache where user input reaches the template compiler.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-gcp-metadata-service-ssrf-oauth-tokens",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Assess SSRF-driven exposure of the GCP metadata service, Metadata-Flavor header requirements, and OAuth2 access token retrieval from attached service accounts.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-go-template-injection-ssti",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Go text/template and html/template server-side template injection. Covers the difference between the two packages (html/template auto-escapes, text/template does not), and the sandboxed-template escape.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-got-overwrite-partial-rop-libc-leak",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Recovers a libc base from a GOT entry via full leak or partial overwrite, then redirects control flow into libc or a one-gadget.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-graphql-depth-limit-denial-of-service",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Exploit missing query depth, complexity, and alias limits in GraphQL to exhaust server resources through nested selections and amplified fan-out.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-graphql-introspection-authorization-bypass",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Exploit GraphQL introspection and missing field-level authorization to enumerate the schema and read or mutate resolver fields that should be restricted.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-heap-unlink-exploit-primitive",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Turns glibc's unsafe unlink chunk removal into an arbitrary write primitive by forging fake fd/bk pointers in a doubly-linked bin.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-host-header-injection-password-reset-poisoning",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Exploit Host and X-Forwarded-Host header injection to poison absolute URLs in emails, hijacking password resets, cache keys, and OAuth redirects.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "exploiting-http-request-smuggling",
       "files": [
         "SKILL.md"
@@ -6251,6 +7531,22 @@
         "ID.RA-01"
       ],
       "category": "web"
+    },
+    {
+      "name": "exploiting-http-request-smuggling-cl-te-conflicts",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Exploit CL.TE request smuggling desyncs where a front-end trusts Content-Length while the back-end trusts Transfer-Encoding, poisoning the shared connection queue.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-http-request-smuggling-te-cl-conflicts",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Exploit TE.CL request smuggling desyncs where the front-end trusts Transfer-Encoding chunking while the back-end trusts Content-Length, producing cross-connection request poisoning.",
+      "category": "cve-specialized"
     },
     {
       "name": "exploiting-idor-vulnerabilities",
@@ -6310,6 +7606,14 @@
       "category": "other"
     },
     {
+      "name": "exploiting-integer-signedness-comparison-flaw",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Bypasses defensive bounds checks that are dead code because an unsigned operand makes every negative comparison vacuously true.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "exploiting-ipv6-vulnerabilities",
       "files": [
         "SKILL.md"
@@ -6365,6 +7669,38 @@
         "Application Protocol Command Analysis"
       ],
       "category": "other"
+    },
+    {
+      "name": "exploiting-kubernetes-api-server-rbac-authorization-bypass",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Identify and validate weaknesses in Kubernetes RBAC and API server authorization, including kubelet endpoints, service account token exposure, and permission over-grant patterns.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-laravel-debug-mode-remote-code-execution",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Laravel Ignition/APP_DEBUG remote code execution. Covers CVE-2021-3129 debug-mode RCE, facade format-string to RCE, and detection of exposed debug pages.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-ldap-injection-in-authentication-queries",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Exploit LDAP filter injection in authentication and search queries to bypass login logic or dump directory data via wildcard and boolean manipulation.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-linux-container-escape-capability-abuse",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Enumerate and validate Linux container escapes that rely on granted capabilities, privileged mode, dangerous sysctls, or writable host mounts.",
+      "category": "cve-specialized"
     },
     {
       "name": "exploiting-mass-assignment-in-rest-apis",
@@ -6424,6 +7760,14 @@
       "category": "other"
     },
     {
+      "name": "exploiting-nosql-injection-operator-injection",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Exploit NoSQL operator injection in MongoDB-style backends to bypass authentication, manipulate query semantics, or exfiltrate document fields via JSON parameter pollution.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "exploiting-nosql-injection-vulnerabilities",
       "files": [
         "SKILL.md"
@@ -6462,6 +7806,30 @@
       "category": "web"
     },
     {
+      "name": "exploiting-off-by-one-null-byte-heap-corruption",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Shrinks a neighboring chunk's size field by one null byte so free() consolidation produces overlapping chunks and heap metadata control.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-php-object-injection-read-chain",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "PHP object injection via unserialize() of attacker-controlled data, escalating through __destruct/__wakeup/toString gadgets to file read, SSRF, or RCE.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-php-type-juggling-authentication-bypass",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "PHP loose comparison and magic hash bypasses where `==`, `strcmp()`, or `in_array()` let an attacker defeat password, token, or signature checks.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "exploiting-prototype-pollution-in-javascript",
       "files": [
         "SKILL.md"
@@ -6479,6 +7847,14 @@
         "server-side-pollution"
       ],
       "category": "web"
+    },
+    {
+      "name": "exploiting-python-pickle-yaml-unsafe-load-rce",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Python pickle and PyYAML unsafe deserialization to RCE. Covers __reduce__ gadgets, yaml.load vs safe_load, and detection in ML/model-pickling pipelines.",
+      "category": "cve-specialized"
     },
     {
       "name": "exploiting-race-condition-vulnerabilities",
@@ -6500,6 +7876,30 @@
       "category": "other"
     },
     {
+      "name": "exploiting-rails-secret-key-base-session-forgery",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Ruby on Rails secret_key_base disclosure leading to session cookie forgery. Covers Rails 4/5/7 signing (Marshal+HMAC vs encrypted cookies) and forging an admin session.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-return-oriented-programming-bypass-canary",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Chains return-oriented gadgets to bypass stack canaries, NX and PIE by reusing existing instruction tails instead of injecting shellcode.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-ruby-rails-unsafe-deserialization-marshal",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Ruby Marshal.load and Psych unsafe deserialization to RCE. Covers gadget chains for Rails/Gemfile contexts and the historical CVEs that made this exploitable.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "exploiting-server-side-request-forgery",
       "files": [
         "SKILL.md"
@@ -6519,6 +7919,38 @@
       "category": "other"
     },
     {
+      "name": "exploiting-server-side-request-forgery-via-url-fetchers",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "SSRF through application URL-fetch features: webhook testers, PDF/image renderers, link previews, and import-by-URL. Covers parameter discovery, redirect-based filter bypass, and OOB confirmation.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-serverless-function-event-injection-lambda",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Assess serverless function handlers for attacker-controlled event injection that leads to SSRF, credential theft, deserialization, or code execution.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-shellcode-vm-detect-evasion",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Writes position-independent x86-64 shellcode that evades emulators, sandboxes and debuggers by defeating CPUID, timing, and VM-port artifact checks.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-sign-extension-arithmetic-bug",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Triggers out-of-bounds access when a signed value is silently extended or truncated, producing a huge length or negative index that bypasses a bounds check.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "exploiting-smb-vulnerabilities-with-metasploit",
       "files": [
         "SKILL.md"
@@ -6536,6 +7968,22 @@
         "ID.AM-03"
       ],
       "category": "other"
+    },
+    {
+      "name": "exploiting-spring-cloud-function-spel-rce",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Spring Cloud Function SpEL injection in functional HTTP/routing headers leading to remote code execution via RoutingFunction.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-spring-security-authorization-bypass",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Bypassing Spring Security filter-chain rules through matcher ordering, path normalization gaps, and trailing-slash/semicolon tricks to reach protected endpoints.",
+      "category": "cve-specialized"
     },
     {
       "name": "exploiting-sql-injection-vulnerabilities",
@@ -6576,6 +8024,30 @@
       "category": "other"
     },
     {
+      "name": "exploiting-ssti-in-template-engines",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Server-Side Template Injection (SSTI) across Jinja2, Twig, Freemarker, Velocity, ERB, and Thymeleaf. Covers detection arithmetic, engine fingerprinting, and safe RCE confirmation.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-supply-chain-container-image-backdoor-triage",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Triage container images for backdoored or tampered base layers by verifying digest provenance, diffing against a trusted upstream, and hunting for injected persistence and hidden filesystems.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-svg-upload-script-execution-xss",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Stored XSS and SSRF via malicious SVG upload. Covers SVG as active content (script, onload, foreignObject), CSS/namespace bypasses of sanitizers, and impact when SVGs are served inline.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "exploiting-template-injection-vulnerabilities",
       "files": [
         "SKILL.md"
@@ -6593,6 +8065,22 @@
         "ID.RA-01"
       ],
       "category": "other"
+    },
+    {
+      "name": "exploiting-thread-race-condition-tsan-detection",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Finds and weaponises check-then-act and non-atomic update races, and uses ThreadSanitizer, Helgrind and jcstress to make the interleaving reproducible instead of theoretical.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-type-confusion-memory-safety",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Exploits the reuse of a memory region as a type different from the one it was created as, turning virtual dispatch or field access into an attacker-controlled offset.",
+      "category": "cve-specialized"
     },
     {
       "name": "exploiting-type-juggling-vulnerabilities",
@@ -6633,6 +8121,30 @@
       "category": "other"
     },
     {
+      "name": "exploiting-web-cache-deception-authenticated-content",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Exploit web cache deception by requesting an authenticated path with a static-file extension so the cache stores a personalized response and serves it to other users.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-web-cache-poisoning-unkeyed-headers",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Exploit web cache poisoning where a shared cache keys on the URL alone, so attacker-influenced headers (Host, X-Forwarded-Host, X-Forwarded-Proto) become stored responses served to other users.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "exploiting-websocket-cross-site-hijacking-weak-origin",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Exploit Cross-Site WebSocket Hijacking (CSWSH) where a WebSocket handshake checks no Origin or a falsifiable one, letting a malicious page act as the authenticated user over the live socket.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "exploiting-websocket-vulnerabilities",
       "files": [
         "SKILL.md"
@@ -6650,6 +8162,14 @@
         "ID.RA-01"
       ],
       "category": "web"
+    },
+    {
+      "name": "exploiting-xpath-injection-in-xml-queries",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Exploit XPath injection to bypass authentication, bypass XML authorization checks, or extract document node values using boolean and error-based techniques.",
+      "category": "cve-specialized"
     },
     {
       "name": "exploiting-zerologon-vulnerability-cve-2020-1472",
@@ -15490,6 +17010,14 @@
       "category": "forensics-defense"
     },
     {
+      "name": "reverse-engineering-obfuscated-javascript-loader-analysis",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Recovers readable source from obfuscated JavaScript loaders by decoding string-array rotators, undoing control-flow flattening, and unpinning self-defending anti-debug traps.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "reverse-engineering-ransomware-encryption-routine",
       "files": [
         "SKILL.md"
@@ -15526,6 +17054,14 @@
         "DE.AE-02"
       ],
       "category": "forensics-defense"
+    },
+    {
+      "name": "reverse-engineering-vm-protected-binary-bytecode-dispatch",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Identifies custom bytecode interpreters and recovers opcode semantics by mapping the dispatch table and tracing handlers in Unicorn, angr or Ghidra.",
+      "category": "cve-specialized"
     },
     {
       "name": "reverse-shell-techniques",
@@ -16644,6 +18180,70 @@
       "category": "other"
     },
     {
+      "name": "validating-cve-2021-26855-exchange-server-side-request-forgery",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Validating ProxyLogon (CVE-2021-26855) — Exchange Server SSRF chained with an auth bypass to drop a webshell and run PowerShell. Covers passive build fingerprinting, non-mutating SSRF confirmation, ECP token-header forensics, and the mandatory post-patch webshell sweep.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "validating-cve-2021-26855-exchange-ssrf-ntlm-bypass",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "ProxyNotShell / CVE-2021-26855 Exchange Server SSRF to NTLM relay bypass. Covers SSRF to backend XSS, NTLM credential capture, and detection of exposed Exchange.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "validating-cve-2021-44228-log4shell-jndi-lookup",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Validating CVE-2021-44228 Log4Shell JNDI lookup exposure. Covers WAF-bypassed DNS callback payloads, non-invasive version fingerprinting, and correct classification of the 45046/45105/23302 variants.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "validating-cve-2022-22965-spring4shell-class-deser",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Validating Spring4Shell (CVE-2022-22965) — Java data binding that reaches Tomcat internals via class.module.classLoader. Covers preconditions, passive fingerprinting, non-mutating sentinel probes, OOB confirmation, and the blast radius of the TomcAt webshell variant.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "validating-cve-2023-34362-moveit-transfer-sql",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Validating MOVEit Transfer CVE-2023-34362 — unauthenticated SQL injection in the aspx handler leading to auth bypass, webshell RCE, and mass data exfiltration. Covers fingerprinting, non-mutating SQLi confirmation, unauthorized-account detection, and credential rotation scope.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "validating-cve-2023-4966-citrix-session-token-leak",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Validating Citrix Bleed (CVE-2023-4966) — NetScaler ADC / Gateway `nsclmsg_auth` static-key session token leak enabling offline session hijack and MFA bypass. Covers firmware fingerprinting, config checks for unset auth_key, token forensic triage, and forced re-rotation.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "validating-cve-2024-3094-xz-backdoor-sshd",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Validating the xz-utils / liblzma backdoor (CVE-2024-3094) that patched sshd's libcrypto via a trojaned release tarball. Covers package provenance verification, tarball forensics, runtime string/behavioral detection, egress hunting, and the full credential-rotation blast radius.",
+      "category": "cve-specialized"
+    },
+    {
+      "name": "validating-cve-2024-6387-regal-openbsd-rce-signal",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Validating regreSSHion (CVE-2024-6387) — pre-auth remote code execution in OpenSSH sshd via the SIGALRM signal handler race on glibc. Covers distro-aware version fingerprinting, crash/IPC artifact detection, network-based pre-auth probing signatures, and the hardening controls that survive a missed patch.",
+      "category": "cve-specialized"
+    },
+    {
       "name": "validating-tpm-measured-boot-attestation",
       "files": [
         "SKILL.md"
@@ -16792,11 +18392,12 @@
     "web": 284,
     "forensics-defense": 167,
     "platform": 69,
-    "crypto": 18,
+    "ai": 10,
     "recon": 17,
     "binary": 14,
     "mobile": 11,
-    "ai": 10
+    "crypto": 18,
+    "cve-specialized": 200
   },
-  "total": 979
+  "total": 1179
 }

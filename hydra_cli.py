@@ -259,6 +259,36 @@ def cmd_stats(_args=None):
     return 0
 
 
+def cmd_skills(args=None):
+    args = args or []
+    if not args or args[0] != "route":
+        print('Usage: hydra skills route --task "describe the assignment" [--limit 5]')
+        return 2
+    task = None
+    forwarded = []
+    i = 1
+    while i < len(args):
+        if args[i] == "--task" and i + 1 < len(args):
+            task = args[i + 1]
+            i += 2
+        else:
+            forwarded.append(args[i])
+            i += 1
+    if not task:
+        print("[-] Missing required --task text.")
+        return 2
+    router = ROOT / "scripts" / "hydra_skill_router.py"
+    if not router.is_file():
+        print(f"[-] Skill router is missing: {router}")
+        return 2
+    result = subprocess.run(
+        [sys.executable, str(router), "--task", task, *forwarded],
+        cwd=str(ROOT),
+        check=False,
+    )
+    return result.returncode
+
+
 def cmd_help(_args=None):
     print(__doc__)
     return 0
@@ -273,6 +303,7 @@ COMMANDS = {
     "pipeline": cmd_pipeline,
     "history": cmd_history,
     "stats": cmd_stats,
+    "skills": cmd_skills,
     "help": cmd_help,
 }
 

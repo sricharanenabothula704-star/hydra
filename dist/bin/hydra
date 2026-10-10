@@ -22,6 +22,7 @@ HYDRA commands:
   hydra pipeline list|show|run ...    Show or explicitly run a named pipeline
   hydra chains list|show|run ...      Show or explicitly run an attack chain
   hydra validate <finding.json>       Run the evidence validation gate
+  hydra skills route --task "..."      Select skills for any agent task
   hydra history | stats | version
 
 Only test targets you are explicitly authorized to assess.
@@ -43,7 +44,7 @@ case "${1:-help}" in
     shift
     exec bash "$ROOT/scripts/hydra_loop.sh" "$@"
     ;;
-  hunt|scan|validate|chains|pipeline|history|stats|status)
+  hunt|scan|validate|chains|pipeline|history|stats|status|skills)
     exec python3 "$ROOT/hydra_cli.py" "$@"
     ;;
   help|-h|--help)

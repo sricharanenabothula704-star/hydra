@@ -23,7 +23,7 @@
   "small_model": "openrouter/google/gemini-2.0-flash",
   "lsp": true,
   "instructions": [
-    "__HOME__/.config/opencode/agents/hunter.md"
+    "__HOME__/.config/opencode/common/SKILL_ROUTING.md"
   ],
   "agent": {
     "build":   { "mode": "primary", "permission": { "edit": "allow", "bash": "allow" } },
