@@ -1,0 +1,121 @@
+{
+  // ============================================================
+  // AI Bug Bounty System — opencode configuration
+  // setup.sh fills __HOME__, __HANDLE__ and __EMAIL__ for you.
+  // ============================================================
+  "$schema": "https://opencode.ai/config.json",
+  "theme": {
+    "primary": "#2EE6A8",
+    "secondary": "#58A6FF",
+    "accent": "#F0B429",
+    "error": "#FF5C5C",
+    "warning": "#F0B429",
+    "success": "#2EE6A8",
+    "info": "#58A6FF",
+    "text": "#E7EEF5",
+    "textMuted": "#93A1B3",
+    "background": "#0A0E13",
+    "backgroundPanel": "#111823",
+    "border": "#1E2936",
+    "borderActive": "#2EE6A8"
+  },
+  "model": "omniroute/auto",
+  "small_model": "omniroute/fast",
+  "lsp": true,
+  "instructions": [
+    "__HOME__/.config/opencode/hunter.md"
+  ],
+  "agent": {
+    "build":   { "mode": "primary", "permission": { "edit": "allow", "bash": "allow" } },
+    "hunter":  { "mode": "primary" },
+    "auditor": { "mode": "primary" },
+    "recon":   { "mode": "subagent" },
+    "verifier":{ "mode": "primary" },
+    "reporter":{ "mode": "primary" },
+    "plan":    { "mode": "primary" },
+    "debug":   { "mode": "primary" }
+  },
+  "provider": {
+    // Local/remote OpenAI-compatible gateway (OpenRouter, LM Studio, ollama, etc.)
+    "omniroute": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "OpenAI-compatible Gateway",
+      "options": {
+        "baseURL": "http://localhost:20128/v1",
+        "apiKey": "{env:OPENROUTER_API_KEY}",
+        "apiMode": "chat",
+        "stripOpenCodeSystemPrompt": false
+      }
+    },
+    "nvidia_nim": {
+      "options": {
+        "apiKey": "{env:NVIDIA_NIM_API_KEY}"
+      },
+      "models": {
+        "moonshotai/kimi-k2.6": {
+          "name": "Kimi K2.6",
+          "reasoning": true,
+          "tool_call": true,
+          "options": {
+            "temperature": 0.2,
+            "max_tokens": 16384,
+            "chat_template_kwargs": { "thinking": true }
+          }
+        }
+      }
+    }
+  },
+  "command": {
+    "recon": {
+      "description": "Run full recon on a target domain",
+      "template": "Run full reconnaissance on $ARGUMENTS. Enumerate subdomains, check DNS, fingerprint tech, find endpoints. Save results."
+    },
+    "hunt": {
+      "description": "Start bug hunting using the full bug bounty methodology",
+      "template": "Start bug bounty hunting on $ARGUMENTS using the Unified Bug Bounty Master Framework (skills/bug-bounty/SKILL.md). Follow Phase 1-6 workflow: Recon -> Attack Surface Mapping -> Vulnerability Discovery -> Exploitation & Chaining -> Verification -> Reporting. Run continuous probing cycles. Save findings to recon_reports/companies/<target>/. Use ~/scripts/urlfuzzer.sh for quick pipeline."
+    },
+    "audit": {
+      "description": "Run security audit on codebase",
+      "template": "Run a full security code audit on $ARGUMENTS. Check dependencies, static analysis, auth flaws, config issues, and business logic bugs. Report findings with severity and fix recommendations."
+    },
+    "plan": {
+      "description": "Plan attack strategy for a target with internet research",
+      "template": "Plan the attack strategy for $ARGUMENTS. Research the target on the internet first (websearch + webfetch). Identify tech stack, check for bug bounty programs, map attack surface, prioritize vectors (P0-P3). Create a step-by-step plan using ~/.config/opencode/agents/plan.md methodology. Save plan to ~/recon_reports/plans/."
+    },
+    "verify": {
+      "description": "Verify a finding - re-check, cross-check, confirm or reject",
+      "template": "Verify the finding at $ARGUMENTS using the Verifier agent protocol from ~/.config/opencode/agents/verifier.md. Re-request 3 times, response diff analysis, check for false positives, assign CVSS, score confidence. Save verified to ~/recon_reports/verified_findings/ or rejected to ~/recon_reports/rejected_findings/."
+    },
+    "report": {
+      "description": "Generate BugBase-format vulnerability report",
+      "template": "Generate a BugBase-format report for the verified finding at $ARGUMENTS. Use the exact BugBase template from ~/.config/opencode/agents/reporter.md. Include: scope, vuln type, severity, CVSS, description, impact, steps to reproduce with curl commands, recommendations. Save to ~/recon_reports/bugbase_reports/. Reporter: __HANDLE__, Email: __EMAIL__."
+    },
+    "debug": {
+      "description": "Debug an issue, fix errors, update agent memory",
+      "template": "Debug the following issue: $ARGUMENTS. Read the relevant agent memory from ~/.config/opencode/agent_memory/. Identify root cause, fix the issue, update agent memory with the lesson learned. Use ~/.config/opencode/agents/debug.md methodology."
+    },
+    "loop": {
+      "description": "♾️ Enter autonomous LOOP MODE — endless hunting, no stopping",
+      "template": "Read and fully follow the LOOP PROTOCOL at ~/.config/opencode/common/LOOP_MODE.md. Enter LOOP MODE now on $ARGUMENTS and do not exit until the user says STOP."
+    },
+    "memory": {
+      "description": "View or update agent memory files",
+      "template": "Manage agent memory for $ARGUMENTS. Read from ~/.config/opencode/agent_memory/. Show current memory, append new learnings, or update existing entries. Available agents: hunter, verifier, reporter, plan, debug."
+    }
+  },
+  "mcp": {
+    "moonmcp": {
+      "type": "local",
+      "command": [
+        "__HOME__/.local/bin/moonmcp"
+      ],
+      "enabled": false,
+      "environment": {
+        "MOONMCP_SCOPE": "example.com, *.example.com",
+        "MOONMCP_ALLOW_INTRUSIVE": "0",
+        "MOONMCP_BLOCK_PRIVATE": "1",
+        "MOONMCP_RATE_LIMIT": "10"
+      }
+    }
+  }
+}

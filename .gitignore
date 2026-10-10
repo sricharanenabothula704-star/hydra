@@ -1,0 +1,48 @@
+# --- secrets & personal data (NEVER commit these) ---
+.env
+*.env
+!*.env.example
+credentials*
+*token*
+secrets*
+
+# --- recon output (may contain private program data) ---
+recon_reports/
+scans/
+reports/
+nmap-out/
+*.xml
+!nuclei-templates/**/*.xml
+subs.txt
+subdomains*.txt
+targets.txt
+urls.txt
+params.txt
+ip.txt
+naabu.txt
+live.txt
+resolved.txt
+
+# --- python / node ---
+__pycache__/
+*.pyc
+node_modules/
+.venv/
+venv/
+
+# --- logs & temp ---
+*.log
+/tmp/
+.DS_Store
+
+# --- editor / agent state ---
+.claude/
+.gemini/
+.opencode/session*
+agent_flashback*
+session-ses_*.md
+
+# --- HYDRA runtime state (never commit engagement data) ---
+sessions/
+*.db
+.hydra_data/
