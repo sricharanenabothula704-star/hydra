@@ -11,7 +11,7 @@
 
 # 🐉 HYDRA
 
-**THE 7-HEADED AI BUG BOUNTY SYSTEM · 928 SKILLS · FULL METHODOLOGY · ONE-COMMAND SETUP**
+**THE 7-HEADED AI BUG BOUNTY SYSTEM · 989 SKILLS · FULL METHODOLOGY · ONE-COMMAND SETUP**
 
 👤 **Author:** `sricharan996`
 
@@ -22,7 +22,7 @@
 <a href="#-the-agent-pipeline"><img src="https://img.shields.io/badge/AGENTS-7-FF003C?style=for-the-badge"></a>
 <a href="#skills"><img src="https://img.shields.io/badge/SKILL%20MODULES-989-9D00FF?style=for-the-badge"></a>
 <a href="#-methodology-library"><img src="https://img.shields.io/badge/METHODOLOGY%20DOCS-26-00E5FF?style=for-the-badge"></a>
-<a href="#scripts"><img src="https://img.shields.io/badge/AUTOMATION-16%20SCRIPTS-FF6D00?style=for-the-badge"></a>
+<a href="#scripts"><img src="https://img.shields.io/badge/AUTOMATION-35%20SCRIPTS-FF6D00?style=for-the-badge"></a>
 <a href="#-safety-model"><img src="https://img.shields.io/badge/CI%20GUARDRAILS-ACTIVE-00FF41?style=for-the-badge&logo=githubactions&logoColor=white"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/LICENSE-MIT-FFD500?style=for-the-badge"></a>
 
@@ -61,8 +61,8 @@
 | 🗂️ Tracked files | **246+** |
 | 🤖 AI agents | **7** |
 | 🧩 Skill modules | **989** |
-| 📖 Methodology playbooks | **26** |
-| ⚙️ Automation tools | **26** |
+| 📖 Methodology playbooks | **27** |
+| ⚙️ Automation tools | **35** |
 | 🗺️ Strategy documents | **8** |
 
 ---
@@ -111,7 +111,7 @@ Each of the seven files is a complete operating manual, not a prompt stub:
 All seven also carry: **TODO-list discipline** (plan before acting, live status updates) and the **Self-Rescue Protocol** (parallel websearch + primary-source fetch + 2-source cross-verification when stuck).
 
 <a id="skills"></a>
-## 🧩 Skill Modules — 928
+## 🧩 Skill Modules — 989
 
 Machine-indexed in [`skills/index.json`](skills/index.json) so agents route programmatically:
 
@@ -250,11 +250,11 @@ export OPENROUTER_API_KEY=sk-or-...   # any OpenAI-compatible provider
 
 ```
 ├── agents/            7 agent definitions (context-rich prompts + protocols)
-├── skills/            931 security skill modules + index.json
-├── common/            26 methodology playbooks
+├── skills/            989 security skill modules + index.json
+├── common/            27 methodology playbooks
 ├── docs/              strategy library (planning, Tor, case study...)
 ├── templates/         BugBase report template
-├── scripts/           16 automation tools
+├── scripts/           35 automation tools
 ├── .github/workflows/ CI security guardrails
 ├── setup.sh           one-command installer
 └── install-tools.sh   recon toolchain installer
