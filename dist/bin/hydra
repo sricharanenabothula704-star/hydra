@@ -1,16 +1,57 @@
 #!/usr/bin/env bash
-# ╔══════════════════════════════════╗
-#   🐉 HYDRA — AI Bug Bounty System
-#   7 heads · 989 skills · one hunt
-# ╚══════════════════════════════════╝
-# Distribution launcher — engine: pinned opencode
-if ! command -v opencode >/dev/null; then
-  echo "🐉 engine missing — installing…"
-  curl -fsSL https://opencode.ai/install | bash
-  export PATH="$HOME/.opencode/bin:$PATH"
-fi
-case "${1:-}" in
-  version|--version) echo "🐉 HYDRA v0.3 (engine: $(opencode --version 2>/dev/null))"; exit 0;;
-  doctor) bash "$(dirname "$0")/../scripts/hydra_loop.sh" doctor; exit $?;;
+set -euo pipefail
+
+# Resolve symlinks so the launcher continues to find its checkout after setup
+# links ~/.local/bin/hydra to this file.
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ]; do
+  DIR="$(cd -P "$(dirname "$SOURCE")" >/dev/null 2>&1 && pwd)"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ "$SOURCE" = /* ]] || SOURCE="$DIR/$SOURCE"
+done
+ROOT="$(cd -P "$(dirname "$SOURCE")/../.." >/dev/null 2>&1 && pwd)"
+
+usage() {
+  cat <<'EOF'
+HYDRA commands:
+  hydra init [setup options]          Install HYDRA with config backup/consent
+  hydra doctor                        Check loop prerequisites
+  hydra hunt <target>                 Run OpenCode hunter (scope allowlist required)
+  hydra scan <url>                    One-request scoped HTTP-header audit
+  hydra loop <targets.txt> [minutes]  Run scope-checked continuous loop
+  hydra pipeline list|show|run ...    Show or explicitly run a named pipeline
+  hydra chains list|show|run ...      Show or explicitly run an attack chain
+  hydra validate <finding.json>       Run the evidence validation gate
+  hydra history | stats | version
+
+Only test targets you are explicitly authorized to assess.
+EOF
+}
+
+case "${1:-help}" in
+  version|--version)
+    echo "HYDRA v0.3.0"
+    ;;
+  init)
+    shift
+    exec bash "$ROOT/setup.sh" "$@"
+    ;;
+  doctor)
+    exec bash "$ROOT/scripts/hydra_loop.sh" doctor
+    ;;
+  loop)
+    shift
+    exec bash "$ROOT/scripts/hydra_loop.sh" "$@"
+    ;;
+  hunt|scan|validate|chains|pipeline|history|stats|status)
+    exec python3 "$ROOT/hydra_cli.py" "$@"
+    ;;
+  help|-h|--help)
+    usage
+    ;;
+  *)
+    echo "Unknown HYDRA command: $1" >&2
+    usage >&2
+    exit 2
+    ;;
 esac
-exec opencode "$@"

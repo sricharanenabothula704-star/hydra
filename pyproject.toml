@@ -1,21 +1,21 @@
 [build-system]
 requires = ["setuptools>=61.0"]
-build-backend = "setuptools.backends._legacy:_Backend"
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "hydra-bounty"
-version = "0.1.0"
+version = "0.3.0"
 description = "HYDRA — AI-Powered Bug Bounty System"
 requires-python = ">=3.9"
 dependencies = [
-    "pyautogui",
-    "pyperclip",
-    "psutil",
-    "requests",
+    "requests>=2.31,<3",
 ]
 
 [project.scripts]
-hydra = "hydra.cli:main"
+hydra = "hydra_cli:main"
+
+[tool.setuptools]
+py-modules = ["hydra_cli"]
 
 [tool.setuptools.packages.find]
-include = ["hydra*"]
+include = ["core*"]

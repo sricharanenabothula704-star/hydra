@@ -29,8 +29,8 @@ One honest critical review beats ten "cool project!" replies. Ask specific quest
 > - Is the verifier's 3-request/confidence gate sound?
 > - What's missing that you'd demand before trusting it?
 >
-> Repo: https://github.com/sricharan996/hydra
-> Site: https://sricharan996.github.io
+> Repo: https://github.com/sricharanenabothula704-star/hydra
+> Site: https://sricharanenabothula704-star.github.io
 >
 > If you write up thoughts (even 5 bullet points), I'll feature them in the
 > README's reviews section — critical takes especially.

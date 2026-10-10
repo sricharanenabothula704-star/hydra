@@ -10,7 +10,8 @@
 # usage: scope_check.sh <domain-or-url>
 set -uo pipefail
 RAW="${1:?usage: $0 <domain-or-url>}"
-D="${RAW##*://}"; D="${D%%/*}"; D="${D%%\?*}"; D="${D%%\#*}"; D="${D%%:*}"; D="${D,,}"; D="${D%.}"
+D="${RAW##*://}"; D="${D%%/*}"; D="${D%%\?*}"; D="${D%%\#*}"; D="${D%%:*}"
+D="$(printf '%s' "$D" | tr '[:upper:]' '[:lower:]')"; D="${D%.}"
 if [[ "$D" == *@* || -z "$D" ]]; then
   echo "DENY: malformed target hostname"
   exit 1
@@ -38,9 +39,9 @@ match_labels(){
   return 0
 }
 while IFS= read -r line; do
-  line="${line%%#*}"; line="$(echo "$line" | tr -d '[:space:]')"
+  line="${line%%#*}"; line="$(printf '%s' "$line" | tr -d '[:space:]')"
   [ -z "$line" ] && continue
-  line="${line,,}"
+  line="$(printf '%s' "$line" | tr '[:upper:]' '[:lower:]')"
   # A leading *. matches one or more complete labels; embedded * matches
   # within exactly one label (e.g. onboarding-*.cloud.com).
   if [[ "$line" == \*.* ]]; then

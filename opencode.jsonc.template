@@ -19,11 +19,11 @@
     "border": "#1E2936",
     "borderActive": "#2EE6A8"
   },
-  "model": "omniroute/auto",
-  "small_model": "omniroute/fast",
+  "model": "openrouter/moonshotai/kimi-k2",
+  "small_model": "openrouter/google/gemini-2.0-flash",
   "lsp": true,
   "instructions": [
-    "__HOME__/.config/opencode/hunter.md"
+    "__HOME__/.config/opencode/agents/hunter.md"
   ],
   "agent": {
     "build":   { "mode": "primary", "permission": { "edit": "allow", "bash": "allow" } },
@@ -36,17 +36,6 @@
     "debug":   { "mode": "primary" }
   },
   "provider": {
-    // Local/remote OpenAI-compatible gateway (OpenRouter, LM Studio, ollama, etc.)
-    "omniroute": {
-      "npm": "@ai-sdk/openai-compatible",
-      "name": "OpenAI-compatible Gateway",
-      "options": {
-        "baseURL": "http://localhost:20128/v1",
-        "apiKey": "{env:OPENROUTER_API_KEY}",
-        "apiMode": "chat",
-        "stripOpenCodeSystemPrompt": false
-      }
-    },
     "nvidia_nim": {
       "options": {
         "apiKey": "{env:NVIDIA_NIM_API_KEY}"
@@ -68,11 +57,11 @@
   "command": {
     "recon": {
       "description": "Run full recon on a target domain",
-      "template": "Run full reconnaissance on $ARGUMENTS. Enumerate subdomains, check DNS, fingerprint tech, find endpoints. Save results."
+      "template": "Before any network request, run bash ~/scripts/scope_check.sh $ARGUMENTS. If denied or uncertain, stop. If allowed, run passive-first reconnaissance on $ARGUMENTS, record only actual tool output, and save results locally."
     },
     "hunt": {
       "description": "Start bug hunting using the full bug bounty methodology",
-      "template": "Start bug bounty hunting on $ARGUMENTS using the Unified Bug Bounty Master Framework (skills/bug-bounty/SKILL.md). Follow Phase 1-6 workflow: Recon -> Attack Surface Mapping -> Vulnerability Discovery -> Exploitation & Chaining -> Verification -> Reporting. Run continuous probing cycles. Save findings to recon_reports/companies/<target>/. Use ~/scripts/urlfuzzer.sh for quick pipeline."
+      "template": "Before any network request, run bash ~/scripts/scope_check.sh $ARGUMENTS. If denied or uncertain, stop. For allowed targets, follow the Unified Bug Bounty Master Framework (skills/bug-bounty/SKILL.md): recon, attack-surface mapping, vulnerability discovery, authorized validation, and reporting. Run only tools allowed by the written scope. Never claim a scan, exploit, or finding unless the tool actually ran and produced evidence. Save findings to ~/recon_reports/companies/<target>/."
     },
     "audit": {
       "description": "Run security audit on codebase",

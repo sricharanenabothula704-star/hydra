@@ -13,15 +13,15 @@
 
 **THE 7-HEADED AI BUG BOUNTY SYSTEM · 979 SKILLS · FULL METHODOLOGY · ONE-COMMAND SETUP**
 
-👤 **Author:** `sricharan996`
+👤 **Author:** `sricharanenabothula704-star`
 
 <br>
 
-<a href="https://sricharan996.github.io"><img src="https://img.shields.io/badge/🌐_WEBSITE-LIVE-00E5FF?style=for-the-badge&logo=githubpages&logoColor=white"></a>
+<a href="https://sricharanenabothula704-star.github.io"><img src="https://img.shields.io/badge/🌐_WEBSITE-LIVE-00E5FF?style=for-the-badge&logo=githubpages&logoColor=white"></a>
 <a href="#-quickstart"><img src="https://img.shields.io/badge/SETUP-ONE%20COMMAND-00FF41?style=for-the-badge"></a>
 <a href="#-the-agent-pipeline"><img src="https://img.shields.io/badge/AGENTS-7-FF003C?style=for-the-badge"></a>
 <a href="#skills"><img src="https://img.shields.io/badge/SKILL%20MODULES-979-9D00FF?style=for-the-badge"></a>
-<a href="#-methodology-library"><img src="https://img.shields.io/badge/METHODOLOGY%20DOCS-26-00E5FF?style=for-the-badge"></a>
+<a href="#-methodology-library"><img src="https://img.shields.io/badge/METHODOLOGY%20DOCS-27-00E5FF?style=for-the-badge"></a>
 <a href="#scripts"><img src="https://img.shields.io/badge/AUTOMATION-35%20SCRIPTS-FF6D00?style=for-the-badge"></a>
 <a href="#-safety-model"><img src="https://img.shields.io/badge/CI%20GUARDRAILS-ACTIVE-00FF41?style=for-the-badge&logo=githubactions&logoColor=white"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/LICENSE-MIT-FFD500?style=for-the-badge"></a>
@@ -221,20 +221,43 @@ Strategic attack planning · Recon execution methodology · OSINT targets refere
 **1 — In your shell** (install + configure):
 
 ```bash
-git clone https://github.com/sricharan996/hydra.git
-cd hydra && bash setup.sh        # asks handle + email, installs everything
-source ~/.bashrc                 # pick up freshly installed binaries
-export OPENROUTER_API_KEY=sk-or-...   # any OpenAI-compatible provider
+git clone https://github.com/sricharanenabothula704-star/hydra.git
+cd hydra
+bash setup.sh --handle YOUR_HANDLE --email you@example.com
+export OPENROUTER_API_KEY=YOUR_KEY   # set locally; never paste into chat or commit
+hydra doctor                        # verify config, provider key and scope file
 # bash install-tools.sh          # optional: recon toolchain
 ```
 
-**2 — Inside the opencode session** (run `opencode` first, then type these):
+If OpenCode is not installed, rerun setup with `--install-opencode` after
+reviewing and approving the official installer. If an OpenCode config already
+exists, setup backs it up and asks before replacing it. For an AI-assisted,
+step-by-step setup, copy [`docs/AI_SETUP_PROMPT.md`](docs/AI_SETUP_PROMPT.md)
+into your coding agent.
+
+Add only written-authorized hosts to `~/.config/opencode/SCOPE_ALLOWLIST.txt`.
+For one safe request, run `hydra scan https://your-authorized-host` (HTTP
+security headers only). For the agent workflow, run `opencode` and then type:
 
 ```
 /hunt example.com                # ONLY on authorized targets!
 /verify <finding-file>
 /report <verified-finding>
 ```
+
+The installed CLI also provides one-request HTTP-header checks and scoped
+OpenCode runs:
+
+```bash
+hydra doctor
+hydra scan https://your-authorized-host
+hydra hunt https://your-authorized-host
+hydra pipeline list
+hydra pipeline run recon --target https://your-authorized-host --execute
+```
+
+`pipeline run` and `chains run` show a plan by default. `--execute` is required
+to hand it to OpenCode, and the target must pass the local scope allowlist.
 
 ## 🛡️ Safety Model
 
@@ -264,7 +287,7 @@ export OPENROUTER_API_KEY=sk-or-...   # any OpenAI-compatible provider
 
 ## 🔗 Related
 
-- [bug-bounty-research](https://github.com/sricharan996/bug-bounty-research) — companion research workspace mirror
+- [HYDRA knowledge base](https://github.com/sricharanenabothula704-star/hydra/tree/main/knowledge_base) — searchable security research notes
 
 ## 📜 Credits & License
 
