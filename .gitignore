@@ -41,3 +41,8 @@ venv/
 .opencode/session*
 agent_flashback*
 session-ses_*.md
+
+# --- HYDRA runtime state (never commit engagement data) ---
+sessions/
+*.db
+.hydra_data/
