@@ -118,7 +118,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "Agentic AI and MCP (Model Context Protocol) security playbook. Use when assessing AI agent systems \u2014 tool poisoning, confused-deputy attacks, MCP server trust boundaries, excessive agency, session confusion, and multi-agent escalation paths.",
+      "description": "Agentic AI and MCP (Model Context Protocol) security playbook. Use when assessing AI agent systems — tool poisoning, confused-deputy attacks, MCP server trust boundaries, excessive agency, session confusion, and multi-agent escalation paths.",
       "category": "ai"
     },
     {
@@ -134,7 +134,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "LLM red-teaming playbook with garak and PyRIT. Use when testing AI systems for prompt injection, jailbreaks, data leakage, hallucination classes, or model abuse \u2014 automated probing harness setup, probe selection, result triage, and reporting.",
+      "description": "LLM red-teaming playbook with garak and PyRIT. Use when testing AI systems for prompt injection, jailbreaks, data leakage, hallucination classes, or model abuse — automated probing harness setup, probe selection, result triage, and reporting.",
       "category": "ai"
     },
     {
@@ -617,7 +617,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "'Analyze malicious Linux ELF binaries \u2014 botnets, cryptominers, ransomware,",
+      "description": "'Analyze malicious Linux ELF binaries — botnets, cryptominers, ransomware,",
       "version": "1.0.0",
       "tags": [
         "malware",
@@ -3713,7 +3713,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "CSS injection and data exfiltration playbook. Use when HTML/style injection is possible but JavaScript is blocked \u2014 attribute-selector oracles, unicode-range font exfiltration, CSS custom properties, and modern style-token exfil chains.",
+      "description": "CSS injection and data exfiltration playbook. Use when HTML/style injection is possible but JavaScript is blocked — attribute-selector oracles, unicode-range font exfiltration, CSS custom properties, and modern style-token exfil chains.",
       "category": "other"
     },
     {
@@ -3729,7 +3729,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "Dangling markup injection playbook. Use when HTML injection is possible but JavaScript execution is blocked (CSP, sanitizer strips event handlers, WAF blocks script tags) \u2014 exfiltrate CSRF tokens, session data, and page content by injecting unclosed HTML tags that capture subsequ",
+      "description": "Dangling markup injection playbook. Use when HTML injection is possible but JavaScript execution is blocked (CSP, sanitizer strips event handlers, WAF blocks script tags) — exfiltrate CSRF tokens, session data, and page content by injecting unclosed HTML tags that capture subsequ",
       "category": "web"
     },
     {
@@ -6143,7 +6143,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "Tests API parameters, headers, and request bodies for injection flaws \u2014 SQL injection, NoSQL injection, OS command injection, LDAP injection, and SSRF \u2014 by crafting payloads tailored to the target backend to extract data, execute commands, or reach internal services, mapped to OW",
+      "description": "Tests API parameters, headers, and request bodies for injection flaws — SQL injection, NoSQL injection, OS command injection, LDAP injection, and SSRF — by crafting payloads tailored to the target backend to extract data, execute commands, or reach internal services, mapped to OW",
       "version": "1.0.0",
       "tags": [
         "api-security",
@@ -6162,7 +6162,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "Runs the Pacu AWS exploitation framework end-to-end \u2014 session and credential setup, IAM enumeration, automated privilege-escalation scanning via iam__privesc_scan, and persistence/backdooring modules like iam__backdoor_users_keys. Use for authorized AWS penetration tests or red-t",
+      "description": "Runs the Pacu AWS exploitation framework end-to-end — session and credential setup, IAM enumeration, automated privilege-escalation scanning via iam__privesc_scan, and persistence/backdooring modules like iam__backdoor_users_keys. Use for authorized AWS penetration tests or red-t",
       "version": "1.0",
       "tags": [
         "pacu",
@@ -7056,7 +7056,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "HTTP Host header injection and routing abuse playbook. Use when the application trusts the Host header for generating URLs, routing requests, or access control \u2014 enabling password reset poisoning, web cache poisoning, SSRF via routing, and virtual host bypass.",
+      "description": "HTTP Host header injection and routing abuse playbook. Use when the application trusts the Host header for generating URLs, routing requests, or access control — enabling password reset poisoning, web cache poisoning, SSRF via routing, and virtual host bypass.",
       "category": "web"
     },
     {
@@ -7072,7 +7072,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "HTTP/2 protocol-specific attack playbook. Use when the target supports HTTP/2 and you need to exploit binary framing, HPACK compression, h2c upgrade smuggling, pseudo-header injection, stream multiplexing abuse, or H2\u2192H1 downgrade translation flaws.",
+      "description": "HTTP/2 protocol-specific attack playbook. Use when the target supports HTTP/2 and you need to exploit binary framing, HPACK compression, h2c upgrade smuggling, pseudo-header injection, stream multiplexing abuse, or H2→H1 downgrade translation flaws.",
       "category": "web"
     },
     {
@@ -7517,7 +7517,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "Detects process injection techniques (MITRE T1055) \u2014 including",
+      "description": "Detects process injection techniques (MITRE T1055) — including",
       "version": "1.0",
       "tags": [
         "process-injection",
@@ -9008,7 +9008,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "Implements GDPR (EU 2016/679) technical and organizational measures \u2014 privacy by design/default, DPIAs, data subject rights management, 72-hour breach notification, and cross-border transfer mechanisms (SCCs, BCRs, adequacy). Use when designing or auditing GDPR controls, building",
+      "description": "Implements GDPR (EU 2016/679) technical and organizational measures — privacy by design/default, DPIAs, data subject rights management, 72-hour breach notification, and cross-border transfer mechanisms (SCCs, BCRs, adequacy). Use when designing or auditing GDPR controls, building",
       "version": "1.0",
       "tags": [
         "compliance",
@@ -9084,7 +9084,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "Configures Google Workspace advanced phishing and malware protection settings in the Admin Console \u2014 pre-delivery message scanning, attachment protection, spoofing/impersonation detection, and Enhanced Safe Browsing enforcement. Use when hardening Gmail against phishing, spoofing",
+      "description": "Configures Google Workspace advanced phishing and malware protection settings in the Admin Console — pre-delivery message scanning, attachment protection, spoofing/impersonation detection, and Enhanced Safe Browsing enforcement. Use when hardening Gmail against phishing, spoofing",
       "version": "1.0",
       "tags": [
         "google-workspace",
@@ -11200,7 +11200,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "LLM guardrail bypass testing and evaluation playbook. Use when an AI system has safety filters, content moderation layers, or policy guardrails that need adversarial validation \u2014 bypass techniques, eval harness design, and regression test creation.",
+      "description": "LLM guardrail bypass testing and evaluation playbook. Use when an AI system has safety filters, content moderation layers, or policy guardrails that need adversarial validation — bypass techniques, eval harness design, and regression test creation.",
       "category": "ai"
     },
     {
@@ -11451,7 +11451,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "Next.js attack playbook. Use when targets run Next.js/React Server Components \u2014 middleware authorization bypasses, cache poisoning chains, Server Action SSRF, internal endpoint disclosure, and framework-specific CVE hunting.",
+      "description": "Next.js attack playbook. Use when targets run Next.js/React Server Components — middleware authorization bypasses, cache poisoning chains, Server Action SSRF, internal endpoint disclosure, and framework-specific CVE hunting.",
       "category": "other"
     },
     {
@@ -11492,7 +11492,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "Practical advanced red team operations guide: OPSEC discipline, C2 infrastructure design, living-off-the-land techniques, lateral movement, persistence, data exfiltration, and evading modern defenses. Use for planning advanced red team engagements or understanding APT TTPs.",
       "category": "other"
     },
     {
@@ -11500,7 +11500,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "AI/LLM security offensive checklist: prompt injection, jailbreaking, model extraction, training data poisoning, adversarial inputs, LLM-assisted attack automation, and AI system reconnaissance. Use when assessing AI/ML systems, red-teaming LLMs, or researching AI attack vectors.",
       "category": "other"
     },
     {
@@ -11508,7 +11508,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "Week 5 exploit development curriculum. Foundational exploitation techniques: controlling EIP/RIP, ROP chain construction, ret2libc, shellcode injection, heap spraying, bypass techniques for ASLR/NX/stack canaries. Use when building initial PoCs or understanding classic exploitation primitives.",
       "category": "other"
     },
     {
@@ -11516,7 +11516,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "\"Bluetooth Low Energy (BLE) attack methodology \u2014 GATT enumeration, characteristic read/write without auth, pairing downgrade (Just Works forced), LE Secure Connections bypass, MITM via active relay, sniffing with Sniffle (TI CC1352) / Ubertooth / Frontline, encryption key extract",
+      "description": "\"Bluetooth Low Energy (BLE) attack methodology — GATT enumeration, characteristic read/write without auth, pairing downgrade (Just Works forced), LE Secure Connections bypass, MITM via active relay, sniffing with Sniffle (TI CC1352) / Ubertooth / Frontline, encryption key extract",
       "category": "other"
     },
     {
@@ -11524,7 +11524,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "\"Bluetooth Classic (BR/EDR) attack methodology \u2014 device discovery, service enumeration via SDP, LMP/L2CAP layer attacks, legacy PIN cracking (BlueBorne / KNOB), Bluetooth file-transfer abuse (BlueSnarfing legacy), unauthenticated profile abuse (HSP, HFP, OPP), and modern relevanc",
+      "description": "\"Bluetooth Classic (BR/EDR) attack methodology — device discovery, service enumeration via SDP, LMP/L2CAP layer attacks, legacy PIN cracking (BlueBorne / KNOB), Bluetooth file-transfer abuse (BlueSnarfing legacy), unauthenticated profile abuse (HSP, HFP, OPP), and modern relevanc",
       "category": "other"
     },
     {
@@ -11532,7 +11532,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "Systematic bug identification methodology: source code review patterns, black-box testing strategies, taint analysis, dangerous function hunting, data flow tracing, and automated scanning setup. Use for code audits, bug bounty triage, or building vulnerability identification pipelines.",
       "category": "other"
     },
     {
@@ -11556,7 +11556,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "Week 4 exploit development curriculum. Crash triage and analysis methodology: WinDbg/GDB analysis, ASAN/MSAN output interpretation, exploitability assessment, register/stack trace reading, root cause identification. Use when analyzing crash dumps, assessing exploitability, or understanding...",
       "category": "other"
     },
     {
@@ -11564,7 +11564,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "\"Deauthentication and disassociation attacks against 802.11 networks \u2014 targeted single-client deauth for handshake capture, broadcast deauth for DoS (with authorization), action-frame attacks bypassing 802.11w (PMF), beacon flooding, mdk4 / aireplay-ng tooling, and rate-limit / P",
+      "description": "\"Deauthentication and disassociation attacks against 802.11 networks — targeted single-client deauth for handshake capture, broadcast deauth for DoS (with authorization), action-frame attacks bypassing 802.11w (PMF), beacon flooding, mdk4 / aireplay-ng tooling, and rate-limit / P",
       "category": "web"
     },
     {
@@ -11572,7 +11572,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "Insecure deserialization attack checklist: identifying deserialization sinks, Java/PHP/.NET/Python deserialization exploitation, ysoserial gadget chains, magic method abuse, and detection evasion. Use when testing deserialization endpoints or developing deserialization exploits.",
       "category": "other"
     },
     {
@@ -11580,7 +11580,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "EDR evasion offensive checklist: hook unhooking (user/kernel), direct syscalls, PPID spoofing, process injection variants, AMSI bypass, ETW patching, memory encryption, and behavior-based evasion. Use when planning EDR bypass during red team engagements or researching AV/EDR evasion techniques.",
       "category": "other"
     },
     {
@@ -11588,7 +11588,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "\"Evil Twin / KARMA / Mana access point methodology \u2014 rogue AP construction with hostapd-mana / wifiphisher / airgeddon, KARMA universal probe response, Mana selective probe response, captive portal phishing, deauth-driven client coercion to attacker AP, MAC randomization defeat v",
+      "description": "\"Evil Twin / KARMA / Mana access point methodology — rogue AP construction with hostapd-mana / wifiphisher / airgeddon, KARMA universal probe response, Mana selective probe response, captive portal phishing, deauth-driven client coercion to attacker AP, MAC randomization defeat v",
       "category": "other"
     },
     {
@@ -11596,7 +11596,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "Full exploit development course roadmap and syllabus: weekly topics, recommended reading, lab setup, and learning path from vulnerability classes through advanced exploitation. Use to structure exploit dev training or onboard new researchers.",
       "category": "other"
     },
     {
@@ -11604,7 +11604,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "Exploit development operational guide: environment setup, debugging workflow, PoC development lifecycle, writing reliable exploits, using pwntools/pwndbg, heap exploitation techniques, and weaponization considerations. Use when actively developing exploits or setting up an exploit dev environment.",
       "category": "other"
     },
     {
@@ -11612,7 +11612,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "Speed-optimized offensive checklist for rapid assessment: quick-win vulnerability patterns, fast recon shortcuts, automated scanner configurations, and triage shortcuts. Use for time-boxed assessments, CTF-speed engagements, or initial rapid surface mapping.",
       "category": "other"
     },
     {
@@ -11620,7 +11620,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "File upload vulnerability checklist: MIME type bypass, extension bypass, magic byte manipulation, path traversal in filenames, stored XSS via SVG/HTML upload, server-side processing attacks, and race conditions. Use for assessing file upload endpoints in web app pentests or bug bounty.",
       "category": "web"
     },
     {
@@ -11636,7 +11636,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "Week 2 of the exploit development curriculum. Covers fuzzing methodology: target selection, corpus generation, coverage-guided fuzzing with AFL++/libFuzzer, structured fuzzing, and triage/deduplication. Use when setting up fuzz campaigns, selecting harness strategies, or triaging fuzzer output.",
       "category": "other"
     },
     {
@@ -11644,7 +11644,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "GraphQL security testing checklist: introspection abuse, batching attacks, query depth/complexity DoS, field suggestion enumeration, IDOR via GraphQL, injection through arguments, authorization bypass. Use when assessing GraphQL endpoints in web app tests or bug bounty.",
       "category": "web"
     },
     {
@@ -11652,7 +11652,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "IDOR (Insecure Direct Object Reference) testing checklist: object ID enumeration, horizontal/vertical privilege escalation, GUID predictability, indirect references via hashes, chained IDOR, and API endpoint IDOR. Use for web app pentests and bug bounty IDOR discovery.",
       "category": "web"
     },
     {
@@ -11660,7 +11660,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "Initial access techniques checklist: phishing (spear/smishing), credential stuffing, exposed service exploitation, supply chain attacks, watering hole, VPN/RDP brute force, public-facing application exploitation. Maps to MITRE ATT&CK TA0001. Use when planning initial access phases of red team...",
       "category": "other"
     },
     {
@@ -11676,7 +11676,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "\"JWT attack methodology for penetration testers. Covers algorithm confusion (alg:none, RS256\u2192HS256), weak HMAC secret brute force, kid parameter injection (SQLi, path traversal), jku/x5u/jwk header injection, JWKS cache poisoning, JWS/JWE confusion, timing attacks, and mobile JWT",
+      "description": "\"JWT attack methodology for penetration testers. Covers algorithm confusion (alg:none, RS256→HS256), weak HMAC secret brute force, kid parameter injection (SQLi, path traversal), jku/x5u/jwk header injection, JWKS cache poisoning, JWS/JWE confusion, timing attacks, and mobile JWT",
       "category": "web"
     },
     {
@@ -11684,7 +11684,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "Low-level keylogger architecture design: kernel driver hooks (WH_KEYBOARD_LL, SetWindowsHookEx), ETW-based input capture, user-mode vs kernel-mode approaches, stealth techniques, and data exfiltration. Use for understanding input capture mechanisms, EDR evasion research, or malware architecture...",
       "category": "other"
     },
     {
@@ -11692,7 +11692,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "\"KRACK (CVE-2017-13077..082) and FragAttacks (CVE-2020-24586..588 + 26139-26147) \u2014 key reinstallation, fragmentation, and aggregation attacks against WPA2 supplicants. Covers Vanhoef's test scripts, viability against modern patched stacks (mostly mitigated post-2021), residual un",
+      "description": "\"KRACK (CVE-2017-13077..082) and FragAttacks (CVE-2020-24586..588 + 26139-26147) — key reinstallation, fragmentation, and aggregation attacks against WPA2 supplicants. Covers Vanhoef's test scripts, viability against modern patched stacks (mostly mitigated post-2021), residual un",
       "category": "other"
     },
     {
@@ -11700,7 +11700,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "\"LoRaWAN and sub-GHz (433 / 868 / 915 MHz) attack methodology \u2014 LoRaWAN ABP/OTAA join attack, network/session key reuse, frame counter replay, downlink injection on TTN/Helium-style networks, sub-GHz protocol replay (KeeLoq garage doors, fixed-code remotes, TPMS spoofing, smart p",
+      "description": "\"LoRaWAN and sub-GHz (433 / 868 / 915 MHz) attack methodology — LoRaWAN ABP/OTAA join attack, network/session key reuse, frame counter replay, downlink injection on TTN/Helium-style networks, sub-GHz protocol replay (KeeLoq garage doors, fixed-code remotes, TPMS spoofing, smart p",
       "category": "other"
     },
     {
@@ -11708,7 +11708,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "Security mitigation reference and bypass catalog: ASLR, DEP/NX, RELRO, stack canaries, CFI, sandboxing, seccomp. Covers both detection of enabled mitigations and known bypass techniques. Use when assessing target hardening or planning exploit mitigation bypasses.",
       "category": "other"
     },
     {
@@ -11724,7 +11724,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "OAuth 2.0 attack checklist: authorization code interception, redirect_uri bypass, CSRF on OAuth flow, state parameter abuse, open redirector chaining, token leakage via Referer, PKCE bypass, and scope escalation. Use when testing OAuth implementations in web apps or bug bounty.",
       "category": "web"
     },
     {
@@ -11732,7 +11732,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "Open redirect vulnerability checklist: parameter identification, bypass techniques (URL encoding, double slashes, CRLF injection, protocol handlers), chaining with OAuth/SSRF, and impact escalation paths. Use for web app testing and bug bounty open redirect discovery.",
       "category": "web"
     },
     {
@@ -11748,7 +11748,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "Structured OSINT methodology framework: target definition, source selection, collection workflows, data correlation, timeline reconstruction, and reporting. Use to guide systematic OSINT campaigns or teach OSINT methodology.",
       "category": "other"
     },
     {
@@ -11756,7 +11756,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "HTTP parameter pollution (HPP) checklist: duplicate parameter injection, backend vs frontend parsing differences, WAF bypass via HPP, server-side vs client-side HPP, and practical exploitation patterns. Use when testing web applications for parameter handling flaws.",
       "category": "web"
     },
     {
@@ -11764,7 +11764,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "Race condition (TOCTOU) testing checklist: identifying timing windows, Burp Suite Turbo Intruder, Last-Byte sync technique, rate limit bypass, double-spend attacks, and concurrent request exploitation. Use for web app race condition testing or bug bounty time-of-check-to-time-of-use bugs.",
       "category": "other"
     },
     {
@@ -11772,7 +11772,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "Remote Code Execution testing checklist: OS command injection, SSTI-to-RCE, deserialization RCE, file upload RCE, XXE with SSRF to RCE, RCE via dependency confusion, and CVE-based RCE patterns. Use for web app pentests and bug bounty RCE discovery.",
       "category": "other"
     },
     {
@@ -11788,7 +11788,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "HTTP request smuggling checklist: CL.TE, TE.CL, TE.TE variants, detection with timing and differential responses, WAF bypass, cache poisoning, credential hijacking, and request smuggling via HTTP/2. Use when testing reverse proxy/load balancer configurations.",
       "category": "web"
     },
     {
@@ -11812,7 +11812,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "Server-Side Request Forgery testing checklist: SSRF discovery, blind SSRF with out-of-band, cloud metadata endpoints (AWS/GCP/Azure), SSRF filter bypass techniques (IP encoding, DNS rebinding, redirect chains), and SSRF to RCE escalation. Use for web app SSRF testing and bug bounty.",
       "category": "web"
     },
     {
@@ -11820,7 +11820,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "Server-Side Template Injection testing checklist: template engine identification (Jinja2, Twig, Freemarker, Pebble, Velocity), polyglot detection payloads, engine-specific RCE payloads, blind SSTI, and filter bypass. Use when testing web apps for template injection vulnerabilities.",
       "category": "web"
     },
     {
@@ -11836,7 +11836,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "Exploit development curriculum covering core vulnerability classes with real-world CVE case studies: stack/heap buffer overflows, use-after-free, integer overflows, format strings, type confusion, and race conditions. Use when learning or teaching vuln classes, researching specific CVE patterns,...",
       "category": "other"
     },
     {
@@ -11844,7 +11844,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "WAF bypass techniques checklist: encoding bypass (URL/HTML/Unicode/double encoding), case variation, comment injection, HTTP header manipulation, chunked encoding, IP rotation, timing attacks, and payload obfuscation per WAF vendor. Use when WAF is blocking payloads during web app tests.",
       "category": "other"
     },
     {
@@ -11860,7 +11860,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "\"Wi-Fi reconnaissance methodology \u2014 adapter selection, monitor mode and packet injection setup, regulatory domain handling, multi-band airspace mapping, hidden SSID discovery, BSSID/ESSID/channel/PMF/encryption fingerprinting, client probe analysis, vendor OUI lookup, war-driving",
+      "description": "\"Wi-Fi reconnaissance methodology — adapter selection, monitor mode and packet injection setup, regulatory domain handling, multi-band airspace mapping, hidden SSID discovery, BSSID/ESSID/channel/PMF/encryption fingerprinting, client probe analysis, vendor OUI lookup, war-driving",
       "category": "recon"
     },
     {
@@ -11868,7 +11868,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "Windows security boundary taxonomy and attack surface enumeration: kernel/user boundary, sandbox boundaries (LPAC, AppContainer), COM/RPC boundaries, hypervisor boundary, trust level transitions. Use when planning privilege escalation paths, sandbox escapes, or understanding Windows security...",
       "category": "platform"
     },
     {
@@ -11876,7 +11876,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "Deep-dive on Windows exploit mitigations: ASLR, DEP/NX, CFG, CET/Shadow Stack, SEHOP, Heap Guard, ACG, Arbitrary Code Guard. Covers both the protection mechanism and known bypass techniques. Use when researching Windows exploit mitigations, planning bypass strategies, or understanding protection...",
       "category": "platform"
     },
     {
@@ -11884,7 +11884,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "\"WPA/WPA2/WPA3-Enterprise (802.1X / EAP) attack methodology \u2014 EAP method identification (PEAP-MSCHAPv2, EAP-TTLS, EAP-TLS, EAP-GTC, EAP-PWD, EAP-FAST), evil-twin RADIUS attacks with eaphammer for credential capture, MSCHAPv2 challenge-response cracking, EAP-TLS client certificate",
+      "description": "\"WPA/WPA2/WPA3-Enterprise (802.1X / EAP) attack methodology — EAP method identification (PEAP-MSCHAPv2, EAP-TTLS, EAP-TLS, EAP-GTC, EAP-PWD, EAP-FAST), evil-twin RADIUS attacks with eaphammer for credential capture, MSCHAPv2 challenge-response cracking, EAP-TLS client certificate",
       "category": "other"
     },
     {
@@ -11892,7 +11892,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "\"WPA/WPA2-PSK attack methodology \u2014 four-way handshake capture via targeted deauthentication, PMKID attacks (no client required), hcxdumptool / hcxpcapngtool conversion to hashcat hc22000 format, GPU-accelerated cracking with dictionary, mask, and rule-based attacks, vendor defaul",
+      "description": "\"WPA/WPA2-PSK attack methodology — four-way handshake capture via targeted deauthentication, PMKID attacks (no client required), hcxdumptool / hcxpcapngtool conversion to hashcat hc22000 format, GPU-accelerated cracking with dictionary, mask, and rule-based attacks, vendor defaul",
       "category": "other"
     },
     {
@@ -11900,7 +11900,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "\"WPA3 / SAE (Simultaneous Authentication of Equals) attack methodology \u2014 transition-mode (mixed WPA2/WPA3) downgrade, Dragonblood side-channel attacks (CVE-2019-9494, 9495, 13377, 13456), SAE auth flooding for AP CPU exhaustion, Hash-to-Element (H2E) timing analysis, group downgr",
+      "description": "\"WPA3 / SAE (Simultaneous Authentication of Equals) attack methodology — transition-mode (mixed WPA2/WPA3) downgrade, Dragonblood side-channel attacks (CVE-2019-9494, 9495, 13377, 13456), SAE auth flooding for AP CPU exhaustion, Hash-to-Element (H2E) timing analysis, group downgr",
       "category": "other"
     },
     {
@@ -11908,7 +11908,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "\"WPS (Wi-Fi Protected Setup) PIN attack methodology \u2014 Pixie Dust offline attack against vulnerable chipsets (Ralink, Realtek, Broadcom, MediaTek), online PIN brute-force with reaver/bully, lockout handling, time-of-day evasion, WPS push-button vulnerability windows, and PIN-to-PS",
+      "description": "\"WPS (Wi-Fi Protected Setup) PIN attack methodology — Pixie Dust offline attack against vulnerable chipsets (Ralink, Realtek, Broadcom, MediaTek), online PIN brute-force with reaver/bully, lockout handling, time-of-day evasion, WPS push-button vulnerability windows, and PIN-to-PS",
       "category": "other"
     },
     {
@@ -11916,7 +11916,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "Cross-Site Scripting testing checklist: stored/reflected/DOM/blind XSS discovery, polyglot payloads, CSP bypass, XSS filter bypass, event handler injection, DOM clobbering, mutation XSS, and impact escalation (session hijack, phishing, keylogging). Use for web app XSS testing and bug bounty.",
       "category": "web"
     },
     {
@@ -11924,7 +11924,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "",
+      "description": "XML External Entity injection testing checklist: classic XXE, blind XXE (out-of-band), XXE via file upload (SVG/docx), XXE in SOAP/REST, error-based XXE, XInclude attacks, and XXE filter bypass. Use for web app XXE testing and bug bounty.",
       "category": "web"
     },
     {
@@ -11932,7 +11932,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "\"Z-Wave attack methodology \u2014 sniffing with Z-Force / EZ-Wave / RTL-SDR + ZniffMobile, S0 (legacy) network-key derivation flaw and key reuse, S2 (modern) ECDH commissioning analysis, replay/injection on unauthenticated nodes, default-key brute-force on test deployments, and home-a",
+      "description": "\"Z-Wave attack methodology — sniffing with Z-Force / EZ-Wave / RTL-SDR + ZniffMobile, S0 (legacy) network-key derivation flaw and key reuse, S2 (modern) ECDH commissioning analysis, replay/injection on unauthenticated nodes, default-key brute-force on test deployments, and home-a",
       "category": "other"
     },
     {
@@ -11940,7 +11940,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "\"Zigbee, Thread, and Matter mesh-protocol attack methodology \u2014 IEEE 802.15.4 sniffing with TI CC2531 / CC2540 / Sonoff Zigbee Dongle E, KillerBee toolkit, Touchlink commissioning abuse with the well-known transport key, replay/injection attacks, Zigbee Cluster Library command abu",
+      "description": "\"Zigbee, Thread, and Matter mesh-protocol attack methodology — IEEE 802.15.4 sniffing with TI CC2531 / CC2540 / Sonoff Zigbee Dongle E, KillerBee toolkit, Touchlink commissioning abuse with the well-known transport key, replay/injection attacks, Zigbee Cluster Library command abu",
       "category": "other"
     },
     {
@@ -12032,7 +12032,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "ORM leak / relational filter injection playbook. Use when apps spread client input into ORM query filters or expose generic filtering/search DSLs \u2014 hidden-field lookups, password-column oracles, mass data extraction without raw SQLi.",
+      "description": "ORM leak / relational filter injection playbook. Use when apps spread client input into ORM query filters or expose generic filtering/search DSLs — hidden-field lookups, password-column oracles, mass data extraction without raw SQLi.",
       "category": "web"
     },
     {
@@ -12040,7 +12040,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "Parse Windows forensic artifacts\u2014$MFT/$J (MFTECmd), Prefetch (PECmd), registry hives (RECmd), shellbags, and Amcache\u2014into normalized CSV/JSON with Eric Zimmerman's EZ Tools, then load results into Timeline Explorer for analysis. Use during DFIR/incident-response investigations, a",
+      "description": "Parse Windows forensic artifacts—$MFT/$J (MFTECmd), Prefetch (PECmd), registry hives (RECmd), shellbags, and Amcache—into normalized CSV/JSON with Eric Zimmerman's EZ Tools, then load results into Timeline Explorer for analysis. Use during DFIR/incident-response investigations, a",
       "version": "1.0",
       "tags": [
         "digital-forensics",
@@ -12257,7 +12257,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "Perform systematic alert triage in Elastic Security SIEM\u2014classifying,",
+      "description": "Perform systematic alert triage in Elastic Security SIEM—classifying,",
       "version": "1.0",
       "tags": [
         "elastic",
@@ -12390,7 +12390,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "Build a multi-factor asset criticality scoring model\u2014incorporating data",
+      "description": "Build a multi-factor asset criticality scoring model—incorporating data",
       "version": "1.0",
       "tags": [
         "asset-criticality",
@@ -15422,7 +15422,7 @@
         "KNOWN_GADGETS.md",
         "SKILL.md"
       ],
-      "description": "Advanced prototype pollution playbook \u2014 server-side RCE, client-side gadgets, filter bypasses, and detection techniques. Companion to ../prototype-pollution/ for basics. Use when you've confirmed pollution and need to escalate to code execution or find framework-specific gadgets.",
+      "description": "Advanced prototype pollution playbook — server-side RCE, client-side gadgets, filter bypasses, and detection techniques. Companion to ../prototype-pollution/ for basics. Use when you've confirmed pollution and need to escalate to code execution or find framework-specific gadgets.",
       "category": "web"
     },
     {
@@ -15551,7 +15551,7 @@
         "MODERN_DESYNC_2025.md",
         "SKILL.md"
       ],
-      "description": "HTTP request smuggling and desynchronization testing. Use when front proxies, CDNs, or load balancers disagree with the origin on message framing (Content-Length vs Transfer-Encoding), on HTTP/2\u2192HTTP/1 translation, or when exploring client-side desync via browser fetch pipelines.",
+      "description": "HTTP request smuggling and desynchronization testing. Use when front proxies, CDNs, or load balancers disagree with the origin on message framing (Content-Length vs Transfer-Encoding), on HTTP/2→HTTP/1 translation, or when exploring client-side desync via browser fetch pipelines.",
       "category": "web"
     },
     {
@@ -16104,7 +16104,7 @@
         "skillopt_config.yaml",
         "skillopt_optimizer.py"
       ],
-      "description": "",
+      "description": "This skill implements Microsoft's SkillOpt methodology for training reusable natural-language skills for frozen LLM agents through trajectory-driven edits, validation-gated updates, and deployable `best_skill.md` artifacts.",
       "category": "other"
     },
     {
@@ -16782,7 +16782,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "PHP type juggling and weak comparison (`==`) bypass. Use when authentication, HMAC/signature checks, or token validation uses loose equality, numeric coercion, or hash comparisons without strict types \u2014 common in legacy PHP and CTF-style code paths.",
+      "description": "PHP type juggling and weak comparison (`==`) bypass. Use when authentication, HMAC/signature checks, or token validation uses loose equality, numeric coercion, or hash comparisons without strict types — common in legacy PHP and CTF-style code paths.",
       "category": "crypto"
     },
     {
@@ -16891,7 +16891,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "Web timing attack playbook. Use when measuring server-side processing time reveals secrets \u2014 blind injection confirmation, token/username enumeration, hidden route discovery, and statistical timing oracle methodology.",
+      "description": "Web timing attack playbook. Use when measuring server-side processing time reveals secrets — blind injection confirmation, token/username enumeration, hidden route discovery, and statistical timing oracle methodology.",
       "category": "other"
     },
     {
@@ -16935,7 +16935,7 @@
       "files": [
         "SKILL.md"
       ],
-      "description": "Cross-Site Leaks playbook. Use when hunting information-disclosure oracles that leak data cross-origin without XSS \u2014 response size/timing/ETag oracles, redirect leaks, connection-pool attacks, and frame-counting techniques.",
+      "description": "Cross-Site Leaks playbook. Use when hunting information-disclosure oracles that leak data cross-origin without XSS — response size/timing/ETag oracles, redirect leaks, connection-pool attacks, and frame-counting techniques.",
       "category": "other"
     },
     {
