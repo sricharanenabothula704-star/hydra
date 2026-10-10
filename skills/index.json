@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "generated": "2026-08-23",
+  "generated": "2026-10-10",
   "skills": [
     {
       "name": "401-403-bypass-techniques",
@@ -3806,25 +3806,6 @@
       "category": "other"
     },
     {
-      "name": "deploying-active-directory-honeytokens",
-      "files": [
-        "SKILL.md"
-      ],
-      "description": "'Deploys deception-based honeytokens in Active Directory including fake",
-      "version": "1.0",
-      "tags": [
-        "active-directory",
-        "honeytokens",
-        "kerberoasting",
-        "deception",
-        "detection",
-        "bloodhound",
-        "gpo",
-        "DE.CM-01"
-      ],
-      "category": "platform"
-    },
-    {
       "name": "deploying-cloud-deception-with-decoy-resources",
       "files": [
         "SKILL.md"
@@ -3899,25 +3880,6 @@
         "MEASURE-2.7"
       ],
       "category": "other"
-    },
-    {
-      "name": "deploying-honeytokens-and-canarytokens",
-      "files": [
-        "SKILL.md"
-      ],
-      "description": "Plants Canarytokens-based decoy artifacts (honey credentials, DNS tokens, web-bug URLs, AWS keys, documents, kubeconfigs) using Thinkst's open-source Canarytokens project and alerts via email or webhook when a token is touched. Use for high-fidelity intrusion detection in low-tel",
-      "version": "1.0",
-      "tags": [
-        "deception-technology",
-        "canarytokens",
-        "honeytokens",
-        "breach-detection",
-        "threat-detection",
-        "d3fend",
-        "decoy-credentials",
-        "intrusion-detection"
-      ],
-      "category": "forensics-defense"
     },
     {
       "name": "deploying-osquery-for-endpoint-monitoring",
@@ -5277,25 +5239,6 @@
         "LDAP-signing"
       ],
       "category": "forensics-defense"
-    },
-    {
-      "name": "detecting-oauth-token-theft",
-      "files": [
-        "SKILL.md"
-      ],
-      "description": "Detect and respond to OAuth token theft and replay in Microsoft Entra ID (Azure AD), covering access token theft, refresh token replay, Primary Refresh Token (PRT) abuse, pass-the-cookie attacks, and Token Protection conditional access policies. Use for impossible-travel or anoma",
-      "version": "1.0.0",
-      "tags": [
-        "oauth",
-        "token-theft",
-        "azure-ad",
-        "entra-id",
-        "conditional-access",
-        "token-replay",
-        "identity-security",
-        "PRT"
-      ],
-      "category": "web"
     },
     {
       "name": "detecting-pass-the-hash-attacks",
@@ -7760,25 +7703,6 @@
       "category": "other"
     },
     {
-      "name": "hunting-saas-sso-token-abuse",
-      "files": [
-        "SKILL.md"
-      ],
-      "description": "Hunts for stolen-session and OAuth/PRT token replay (T1550.001) by correlating Microsoft Entra ID SigninLogs SessionId/UniqueTokenIdentifier fields and Okta System Log sso/session events to spot impossible travel, refresh-token reuse, and token use from anomalous ASNs. Use when h",
-      "version": "1.0",
-      "tags": [
-        "threat-hunting",
-        "sso",
-        "oauth",
-        "token-theft",
-        "pass-the-cookie",
-        "entra-id",
-        "okta",
-        "detection-engineering"
-      ],
-      "category": "other"
-    },
-    {
       "name": "idor-broken-object-authorization",
       "files": [
         "SKILL.md"
@@ -8300,25 +8224,6 @@
       "category": "other"
     },
     {
-      "name": "implementing-canary-tokens-for-network-intrusion",
-      "files": [
-        "SKILL.md"
-      ],
-      "description": "'Deploys DNS, HTTP, and AWS API key canary tokens across network infrastructure",
-      "version": "1.0",
-      "tags": [
-        "canary-tokens",
-        "intrusion-detection",
-        "deception",
-        "network-security",
-        "honeytokens",
-        "breach-detection",
-        "DE.CM-01",
-        "RS.MA-01"
-      ],
-      "category": "forensics-defense"
-    },
-    {
       "name": "implementing-cisa-zero-trust-maturity-model",
       "files": [
         "SKILL.md"
@@ -8603,25 +8508,6 @@
         "volumetric-attack"
       ],
       "category": "other"
-    },
-    {
-      "name": "implementing-deception-based-detection-with-canarytoken",
-      "files": [
-        "SKILL.md"
-      ],
-      "description": "Deploys and monitors Canary Tokens via the Thinkst Canary REST API for",
-      "version": "1.0",
-      "tags": [
-        "canarytoken",
-        "deception",
-        "honeytokens",
-        "breach-detection",
-        "Thinkst-Canary",
-        "tripwire",
-        "early-warning",
-        "DE.CM-01"
-      ],
-      "category": "forensics-defense"
     },
     {
       "name": "implementing-delinea-secret-server-for-pam",
@@ -9190,25 +9076,6 @@
         "deception",
         "File Metadata Consistency Validation",
         "Content Format Conversion"
-      ],
-      "category": "forensics-defense"
-    },
-    {
-      "name": "implementing-honeytokens-for-breach-detection",
-      "files": [
-        "SKILL.md"
-      ],
-      "description": "'Deploys canary tokens and honeytokens (fake AWS credentials, DNS canaries,",
-      "version": "1.0",
-      "tags": [
-        "deception-technology",
-        "honeytokens",
-        "canary-tokens",
-        "breach-detection",
-        "dns-canary",
-        "security-operations",
-        "DE.CM-01",
-        "RS.MA-01"
       ],
       "category": "forensics-defense"
     },
@@ -11134,14 +11001,6 @@
       ],
       "description": "JavaScript bundle analysis for API endpoints, secrets, and application logic",
       "category": "recon"
-    },
-    {
-      "name": "jwt-oauth-token-attacks",
-      "files": [
-        "SKILL.md"
-      ],
-      "description": "JWT and OAuth token attack playbook. Use when validating token trust, signing algorithms, key handling, claim abuse, bearer flows, and OAuth account-binding weaknesses.",
-      "category": "web"
     },
     {
       "name": "kernel-exploitation",
@@ -16382,25 +16241,6 @@
       "category": "web"
     },
     {
-      "name": "testing-for-json-web-token-vulnerabilities",
-      "files": [
-        "SKILL.md"
-      ],
-      "description": "Tests JWT implementations for algorithm confusion, \"none\" algorithm bypass,",
-      "version": "1.0",
-      "tags": [
-        "jwt",
-        "json-web-token",
-        "algorithm-confusion",
-        "authentication-bypass",
-        "token-forgery",
-        "kid-injection",
-        "jku-attack",
-        "PR.PS-01"
-      ],
-      "category": "other"
-    },
-    {
       "name": "testing-for-open-redirect-vulnerabilities",
       "files": [
         "SKILL.md"
@@ -16527,25 +16367,6 @@
         "xml-injection",
         "owasp",
         "web-security",
-        "burpsuite",
-        "PR.PS-01",
-        "ID.RA-01"
-      ],
-      "category": "web"
-    },
-    {
-      "name": "testing-jwt-token-security",
-      "files": [
-        "SKILL.md"
-      ],
-      "description": "Assessing JSON Web Token implementations for cryptographic weaknesses,",
-      "version": "1.0",
-      "tags": [
-        "penetration-testing",
-        "jwt",
-        "authentication",
-        "web-security",
-        "token-security",
         "burpsuite",
         "PR.PS-01",
         "ID.RA-01"
@@ -16967,15 +16788,15 @@
     }
   ],
   "summary": {
-    "other": 391,
-    "web": 287,
-    "forensics-defense": 171,
-    "platform": 70,
+    "other": 389,
+    "web": 284,
+    "forensics-defense": 167,
+    "platform": 69,
     "crypto": 18,
     "recon": 17,
     "binary": 14,
     "mobile": 11,
     "ai": 10
   },
-  "total": 989
+  "total": 979
 }

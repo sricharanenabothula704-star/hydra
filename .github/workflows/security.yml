@@ -54,6 +54,9 @@ jobs:
           done < <(find . -name "*.py" -not -path "./.git/*")
           [ "$FAIL" -eq 0 ] && echo "✅ All Python files compile." || exit 1
 
+      - name: Skill index consistency
+        run: python3 scripts/validate_skill_index.py
+
       - name: Agent frontmatter check
         run: |
           FAIL=0
