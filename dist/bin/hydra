@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# ╔══════════════════════════════════╗
+#   🐉 HYDRA — AI Bug Bounty System
+#   7 heads · 989 skills · one hunt
+# ╚══════════════════════════════════╝
+# Distribution launcher — engine: pinned opencode
+if ! command -v opencode >/dev/null; then
+  echo "🐉 engine missing — installing…"
+  curl -fsSL https://opencode.ai/install | bash
+  export PATH="$HOME/.opencode/bin:$PATH"
+fi
+case "${1:-}" in
+  version|--version) echo "🐉 HYDRA v0.3 (engine: $(opencode --version 2>/dev/null))"; exit 0;;
+  doctor) bash "$(dirname "$0")/../scripts/hydra_loop.sh" doctor; exit $?;;
+esac
+exec opencode "$@"
