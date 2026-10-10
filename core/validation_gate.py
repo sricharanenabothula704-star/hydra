@@ -86,58 +86,123 @@ class ValidationResult:
 
     def auto_validate(self):
         f = self.finding
-        # Q1: Real vulnerability?
-        if f.get("evidence") or f.get("proof") or f.get("status") == "verified":
+        evidence = f.get("evidence")
+        proof = f.get("proof_capsule") or f.get("replay_command")
+
+        # Missing facts are unknown, not implicit approval.
+        if evidence and f.get("oracle_verified") is True:
             self.answer_question(
-                1, GateResult.PASS, "Evidence provided or oracle-verified"
+                1, GateResult.PASS, "Evidence is marked oracle-verified"
             )
         else:
-            self.answer_question(1, GateResult.NEEDS_WORK, "No evidence provided")
-        # Q2: Exploitable now?
-        if f.get("exploitable", True):
-            self.answer_question(2, GateResult.PASS, "Exploitable with standard tools")
+            self.answer_question(
+                1,
+                GateResult.NEEDS_WORK,
+                "Requires evidence plus oracle_verified=true",
+            )
+
+        if f.get("exploitable") is False:
+            self.answer_question(
+                2, GateResult.FAIL, "Finding is marked not exploitable"
+            )
+        elif f.get("exploitable") is True and proof:
+            self.answer_question(
+                2, GateResult.PASS, "Exploitability and replay proof supplied"
+            )
         else:
-            self.answer_question(2, GateResult.FAIL, "Requires special conditions")
-        # Q3: Proof?
-        if f.get("proof_capsule") or f.get("replay_command"):
-            self.answer_question(3, GateResult.PASS, "Replay-able proof provided")
-        elif f.get("evidence"):
-            self.answer_question(3, GateResult.PASS, "Evidence provided")
+            self.answer_question(
+                2,
+                GateResult.NEEDS_WORK,
+                "Requires explicit exploitable=true and a replayable proof",
+            )
+
+        if proof:
+            self.answer_question(3, GateResult.PASS, "Replayable proof provided")
         else:
-            self.answer_question(3, GateResult.NEEDS_WORK, "Need raw response or PoC")
-        # Q4: In scope?
-        if f.get("in_scope", True):
-            self.answer_question(4, GateResult.PASS, "Target is in scope")
+            self.answer_question(
+                3, GateResult.NEEDS_WORK, "Requires proof_capsule or replay_command"
+            )
+
+        if f.get("in_scope") is False:
+            self.answer_question(4, GateResult.FAIL, "Target is marked out of scope")
+        elif f.get("in_scope") is True and (
+            f.get("scope_verified") is True or f.get("scope_evidence")
+        ):
+            self.answer_question(
+                4, GateResult.PASS, "Scope explicitly verified with supporting evidence"
+            )
         else:
-            self.answer_question(4, GateResult.FAIL, "Target is out of scope")
-        # Q5: Duplicate?
-        if f.get("is_duplicate", False):
+            self.answer_question(
+                4,
+                GateResult.NEEDS_WORK,
+                "Requires explicit in_scope=true and scope verification evidence",
+            )
+
+        if f.get("is_duplicate") is True:
             self.answer_question(5, GateResult.FAIL, "Already reported")
+        elif f.get("is_duplicate") is False and f.get("duplicate_checked") is True:
+            self.answer_question(5, GateResult.PASS, "Duplicate check completed")
         else:
-            self.answer_question(5, GateResult.PASS, "Not a known duplicate")
-        # Q6: Impact?
-        cvss = f.get("cvss_score", 0)
-        if cvss >= 7.0:
-            self.answer_question(6, GateResult.PASS, f"High impact (CVSS {cvss})")
-        elif cvss >= 4.0:
-            self.answer_question(6, GateResult.PASS, f"Medium impact (CVSS {cvss})")
+            self.answer_question(
+                5,
+                GateResult.NEEDS_WORK,
+                "Requires a completed duplicate check; unknown is not a pass",
+            )
+
+        try:
+            cvss = float(f.get("cvss_score"))
+        except (TypeError, ValueError):
+            cvss = -1
+        if 7.0 <= cvss <= 10.0:
+            impact_result, impact_text = GateResult.PASS, f"High impact (CVSS {cvss:g})"
+        elif 4.0 <= cvss < 7.0:
+            impact_result, impact_text = (
+                GateResult.PASS,
+                f"Medium impact (CVSS {cvss:g})",
+            )
+        elif 0.0 <= cvss < 4.0:
+            impact_result, impact_text = (
+                GateResult.NEEDS_WORK,
+                f"Low impact (CVSS {cvss:g})",
+            )
         else:
-            self.answer_question(6, GateResult.NEEDS_WORK, f"Low impact (CVSS {cvss})")
-        # Q7: Worth reporting?
-        severity = f.get("severity", "low")
-        if severity in ("critical", "high"):
+            impact_result, impact_text = (
+                GateResult.NEEDS_WORK,
+                "Requires a valid CVSS score from 0 to 10",
+            )
+        self.answer_question(6, impact_result, impact_text)
+
+        severity = str(f.get("severity", "")).lower()
+        expected = (
+            "critical"
+            if cvss >= 9
+            else "high"
+            if cvss >= 7
+            else "medium"
+            if cvss >= 4
+            else "low"
+            if cvss >= 0
+            else "unknown"
+        )
+        if expected == "unknown" or not severity:
+            self.answer_question(
+                7, GateResult.NEEDS_WORK, "Requires severity and a valid CVSS score"
+            )
+        elif severity != expected:
             self.answer_question(
                 7,
-                GateResult.PASS,
-                f"{severity.title()} severity - definitely worth reporting",
+                GateResult.NEEDS_WORK,
+                f"Severity {severity} does not match CVSS-derived {expected}",
             )
-        elif severity == "medium":
+        elif severity in ("critical", "high", "medium"):
             self.answer_question(
-                7, GateResult.PASS, "Medium severity - worth reporting"
+                7, GateResult.PASS, f"{severity.title()} severity matches CVSS"
             )
         else:
             self.answer_question(
-                7, GateResult.NEEDS_WORK, "Low severity - consider if worth reporting"
+                7,
+                GateResult.NEEDS_WORK,
+                "Low severity: justify why a report is worthwhile",
             )
         return {
             "overall": self.overall_result.value,
@@ -148,7 +213,7 @@ class ValidationResult:
     def render(self):
         lines = ["7-QUESTION VALIDATION GATE", "=" * 50]
         for q in self.questions:
-            icon = {"pass": "PASS", "fail": "FAIL", "needs_work": "????"}[
+            icon = {"pass": "PASS", "fail": "FAIL", "needs_work": "TODO"}[
                 q.result.value
             ]
             lines.append(f"  Q{q.number}: [{icon}] {q.question}")

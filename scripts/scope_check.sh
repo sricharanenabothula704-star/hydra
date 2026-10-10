@@ -10,7 +10,11 @@
 # usage: scope_check.sh <domain-or-url>
 set -uo pipefail
 RAW="${1:?usage: $0 <domain-or-url>}"
-D="${RAW##*://}"; D="${D%%/*}"; D="${D%%:*}"; D="${D,,}"
+D="${RAW##*://}"; D="${D%%/*}"; D="${D%%\?*}"; D="${D%%\#*}"; D="${D%%:*}"; D="${D,,}"; D="${D%.}"
+if [[ "$D" == *@* || -z "$D" ]]; then
+  echo "DENY: malformed target hostname"
+  exit 1
+fi
 AL="$HOME/.config/opencode/SCOPE_ALLOWLIST.txt"
 
 if [ ! -s "$AL" ]; then
@@ -19,15 +23,35 @@ if [ ! -s "$AL" ]; then
   exit 1
 fi
 
-match(){ case "$D" in $1) return 0;; *) return 1;; esac; }
+match_labels(){
+  local host="$1" rule="$2" i
+  local -a host_parts rule_parts
+  IFS='.' read -r -a host_parts <<< "$host"
+  IFS='.' read -r -a rule_parts <<< "$rule"
+  [ "${#host_parts[@]}" -eq "${#rule_parts[@]}" ] || return 1
+  for ((i=0; i<${#host_parts[@]}; i++)); do
+    case "${host_parts[$i]}" in
+      ${rule_parts[$i]}) ;;
+      *) return 1 ;;
+    esac
+  done
+  return 0
+}
 while IFS= read -r line; do
   line="${line%%#*}"; line="$(echo "$line" | tr -d '[:space:]')"
   [ -z "$line" ] && continue
   line="${line,,}"
-  # strip leading *. for glob matching (*.dev.example matches foo.dev.example)
-  if [[ "$line" == \** ]]; then pat="${line#\*.}"; case "$D" in *"$pat") echo "PASS: '$D' matches wildcard '$line'"; exit 0;; esac
-  fi
-  if match "$line" || match "*.$line" && [ "${D%."$line"}" != "$D" ]; then
+  # A leading *. matches one or more complete labels; embedded * matches
+  # within exactly one label (e.g. onboarding-*.cloud.com).
+  if [[ "$line" == \*.* ]]; then
+    pat="${line#\*.}"
+    [[ "$pat" == *.* && "$pat" != *\** ]] || continue
+    case "$D" in *."$pat") echo "PASS: '$D' matches wildcard '$line'"; exit 0;; esac
+  elif [[ "$line" == *\** ]]; then
+    if match_labels "$D" "$line"; then
+      echo "PASS: '$D' matches label pattern '$line'"; exit 0
+    fi
+  elif [ "$D" = "$line" ] || [[ "$D" == *."$line" ]]; then
     echo "PASS: '$D' is covered by '$line'"; exit 0
   fi
 done < "$AL"

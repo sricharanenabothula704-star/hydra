@@ -1,25 +1,15 @@
-"""Multi-Stage Attack Chain — Recon → Exploit → Pivot → Persist
+"""Multi-stage attack-chain plans (DAGs), rendered for OpenCode execution.
 
-Inspired by: CVE-2026-32882 attack chain (libheif → OpenAI forum → SSO → internal repos)
-What it does: Chain multiple attack stages into a complete kill chain
-
-How it works:
-1. Recon stage: map attack surface (subdomains, ports, services)
-2. Vulnerability stage: identify exploitable vulns
-3. Exploitation stage: gain initial access
-4. Pivoting stage: move laterally from compromised host
-5. Persistence stage: maintain access
-6. Exfiltration stage: extract data (proof only in bug bounty)
-
-Each stage produces outputs that feed the next stage.
-The chain is stored as a DAG (directed acyclic graph).
+This module defines stage order and dependencies. It does not execute the
+commands itself; execution is delegated through the scope-gated CLI to the
+configured OpenCode agent.
 """
 
 import json
 import time
 from enum import Enum
 from pathlib import Path
-from typing import Optional
+from typing import List, Optional
 
 
 class StageType(Enum):
@@ -48,7 +38,7 @@ class ChainStage:
         name: str,
         stage_type: StageType,
         command: str = "",
-        depends_on: list[str] = None,
+        depends_on: Optional[List[str]] = None,
     ):
         self.name = name
         self.stage_type = stage_type
@@ -94,7 +84,7 @@ class AttackChain:
         name: str,
         stage_type: StageType,
         command: str = "",
-        depends_on: list[str] = None,
+        depends_on: Optional[List[str]] = None,
     ):
         """Add a stage to the chain."""
         self.stages[name] = ChainStage(name, stage_type, command, depends_on)
@@ -168,7 +158,7 @@ class AttackChain:
 
 
 class AttackChainEngine:
-    """Manages and executes attack chains."""
+    """Stores, retrieves, and renders attack-chain plans."""
 
     def __init__(self, data_dir: Optional[Path] = None):
         self.data_dir = data_dir or Path.home() / ".hydra_data" / "chains"
@@ -223,7 +213,7 @@ class AttackChainEngine:
             ["vuln_scan", "sqli_test", "xss_test"],
         )
         web_chain.add_stage("report", StageType.REPORTING, "auto", ["exploit"])
-        self.chains["web_app"] = web_chain
+        self.chains[web_chain.name] = web_chain
 
         # Cloud Chain
         cloud_chain = AttackChain(
@@ -241,7 +231,7 @@ class AttackChainEngine:
             "exploit", StageType.EXPLOITATION, "auto", ["s3_enum", "k8s_scan"]
         )
         cloud_chain.add_stage("report", StageType.REPORTING, "auto", ["exploit"])
-        self.chains["cloud"] = cloud_chain
+        self.chains[cloud_chain.name] = cloud_chain
 
         # API Chain
         api_chain = AttackChain("api_pentest", "{target}", "API security testing")
@@ -260,7 +250,7 @@ class AttackChainEngine:
             "exploit", StageType.EXPLOITATION, "auto", ["idor_test", "injection_test"]
         )
         api_chain.add_stage("report", StageType.REPORTING, "auto", ["exploit"])
-        self.chains["api"] = api_chain
+        self.chains[api_chain.name] = api_chain
 
         # CVE Exploitation Chain (like the OpenAI attack)
         cve_chain = AttackChain(

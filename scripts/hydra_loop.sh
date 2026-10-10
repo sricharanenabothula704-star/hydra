@@ -79,6 +79,12 @@ while true; do
   T="${TARGETS[$((IDX % ${#TARGETS[@]}))]:-}"
   if [ -z "$T" ]; then IDX=$((IDX+1)); sleep 5; continue; fi
   IDX=$((IDX+1))
+  # Re-check immediately before every cycle; allowlists may change while the
+  # loop is running. Stop rather than probing if authorization was revoked.
+  if ! bash "$HERE/scope_check.sh" "$T" >/dev/null 2>&1; then
+    log "[SCOPE-DENY] '$T' is no longer authorized — stopping loop."
+    exit 1
+  fi
   HINT="${HINTS[$((IDX % ${#HINTS[@]}))]}"
   log "── cycle start · target=$T · hint='$HINT'"
   date +%s > "$HB"

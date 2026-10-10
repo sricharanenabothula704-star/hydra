@@ -1,7 +1,8 @@
-"""HYDRA Autopilot - Full Autonomous Bug Bounty Hunting Loop
+"""HYDRA hunt state tracker.
 
-Modeled after Agentic Bug Hunter's autonomous pipeline but with
-deterministic gates, self-healing, and strategy mutation.
+Actual tool execution is delegated to the configured OpenCode agents. This
+module records state and deliberately blocks unconfigured phases rather than
+pretending scans or exploitation occurred.
 """
 
 import json
@@ -45,9 +46,11 @@ class HuntTarget:
 
 
 class HuntResult:
-    def __init__(self, target):
+    def __init__(self, target, hunt_id=""):
+        self.hunt_id = hunt_id
         self.target = target
         self.phase = HuntPhase.INIT
+        self.paused_phase = None
         self.findings = []
         self.endpoints_discovered = []
         self.subdomains_found = []
@@ -71,6 +74,7 @@ class HuntResult:
 
     def to_dict(self):
         return {
+            "hunt_id": self.hunt_id,
             "target": self.target.to_dict(),
             "phase": self.phase.value,
             "findings_count": len(self.findings),
@@ -87,7 +91,7 @@ class HuntResult:
 
 
 class AutopilotEngine:
-    """Full autonomous hunting loop with deterministic gates."""
+    """Hunt state tracker. Actual tool execution is delegated to OpenCode."""
 
     def __init__(self, data_dir=None):
         self.data_dir = data_dir or Path.home() / ".hydra_data" / "hunts"
@@ -116,10 +120,10 @@ class AutopilotEngine:
         self, target_name, domain, scope=None, program_url=None, bounty_range=None
     ):
         target = HuntTarget(target_name, domain, scope, program_url, bounty_range)
-        result = HuntResult(target)
+        hunt_id = f"hunt_{int(time.time())}_{target_name.replace(' ', '_').lower()}"
+        result = HuntResult(target, hunt_id)
         result.phase = HuntPhase.INIT
         result.log("hunt_started", f"Target: {target_name} ({domain})")
-        hunt_id = f"hunt_{int(time.time())}_{target_name.replace(' ', '_').lower()}"
         self.active_hunts[hunt_id] = result
         return hunt_id, result
 
@@ -157,52 +161,76 @@ class AutopilotEngine:
         return {"status": "ok", "next_phase": "recon", "target": result.target.name}
 
     def _phase_recon(self, result):
-        # Placeholder for actual recon - would call subdomain_enum, port_scan, etc.
-        result.phase = HuntPhase.ENUMERATION
-        result.log("recon_complete", "Subdomains and ports discovered")
-        return {"status": "ok", "next_phase": "enumeration"}
+        return self._execution_unavailable(result, "recon")
 
     def _phase_enumeration(self, result):
-        result.phase = HuntPhase.VULN_SCAN
-        result.log("enumeration_complete", "Endpoints and parameters discovered")
-        return {"status": "ok", "next_phase": "vuln_scan"}
+        return self._execution_unavailable(result, "enumeration")
 
     def _phase_vuln_scan(self, result):
-        result.phase = HuntPhase.EXPLOITATION
-        result.log("vuln_scan_complete", "Vulnerability candidates identified")
-        return {"status": "ok", "next_phase": "exploitation"}
+        return self._execution_unavailable(result, "vulnerability scan")
 
     def _phase_exploitation(self, result):
-        result.phase = HuntPhase.VALIDATION
-        result.log("exploitation_complete", "Exploits attempted, results collected")
-        return {"status": "ok", "next_phase": "validation"}
+        return self._execution_unavailable(result, "exploitation")
+
+    def _execution_unavailable(self, result, phase_name):
+        """Never claim a scan/exploit completed when no adapter ran."""
+        result.paused_phase = result.phase
+        result.phase = HuntPhase.PAUSED
+        message = (
+            f"No native {phase_name} adapter is configured. Use the OpenCode-backed "
+            "hydra hunt command to run real tools; no target traffic was sent."
+        )
+        result.log("phase_blocked", message)
+        return {"status": "blocked", "phase": phase_name, "message": message}
 
     def _phase_validation(self, result):
-        # Run 7-question gate on all findings
+        if not result.findings:
+            return self._execution_unavailable(
+                result, "validation (there are no findings)"
+            )
+        # The deterministic gate can review supplied findings, but does not
+        # fabricate evidence or scope approval on their behalf.
+        try:
+            from .validation_gate import ValidationResult
+        except ImportError:
+            from core.validation_gate import ValidationResult
+        outcomes = []
+        for finding in result.findings:
+            outcome = ValidationResult(finding).auto_validate()
+            finding["validation_result"] = outcome
+            finding["validated"] = outcome["overall"] == "pass"
+            outcomes.append(outcome["overall"])
+        validated = sum(outcome == "pass" for outcome in outcomes)
+        if validated != len(result.findings):
+            result.phase = HuntPhase.PAUSED
+            result.paused_phase = HuntPhase.VALIDATION
+            result.log(
+                "validation_needs_work",
+                f"{validated}/{len(result.findings)} passed; remaining findings need evidence",
+            )
+            return {
+                "status": "needs_work",
+                "validated": validated,
+                "total": len(result.findings),
+            }
         result.phase = HuntPhase.REPORTING
-        validated = [f for f in result.findings if f.get("validated", False)]
         result.log(
             "validation_complete",
-            f"{len(validated)}/{len(result.findings)} findings validated",
+            f"{validated}/{len(result.findings)} findings passed the gate",
         )
-        return {"status": "ok", "next_phase": "reporting", "validated": len(validated)}
+        return {"status": "ok", "next_phase": "reporting", "validated": validated}
 
     def _phase_reporting(self, result):
-        result.phase = HuntPhase.COMPLETE
-        result.completed_at = time.time()
-        result.duration = result.completed_at - result.started_at
-        result.log(
-            "hunt_complete",
-            f"Duration: {result.duration:.0f}s, Findings: {len(result.findings)}",
+        return self._execution_unavailable(
+            result, "report generation (use the OpenCode reporter agent)"
         )
-        self.completed_hunts.append(result.to_dict())
-        self._save_completed()
-        return {"status": "complete", "result": result.to_dict()}
 
     def pause_hunt(self, hunt_id):
         if hunt_id in self.active_hunts:
-            self.active_hunts[hunt_id].phase = HuntPhase.PAUSED
-            self.active_hunts[hunt_id].log("hunt_paused", "Manually paused")
+            result = self.active_hunts[hunt_id]
+            result.paused_phase = result.phase
+            result.phase = HuntPhase.PAUSED
+            result.log("hunt_paused", "Manually paused")
             return True
         return False
 
@@ -210,7 +238,8 @@ class AutopilotEngine:
         if hunt_id in self.active_hunts:
             r = self.active_hunts[hunt_id]
             if r.phase == HuntPhase.PAUSED:
-                r.phase = HuntPhase.RECON
+                r.phase = r.paused_phase or HuntPhase.RECON
+                r.paused_phase = None
                 r.log("hunt_resumed", "Resumed from pause")
                 return True
         return False
@@ -219,7 +248,7 @@ class AutopilotEngine:
         if hunt_id in self.active_hunts:
             return self.active_hunts[hunt_id].to_dict()
         for h in self.completed_hunts:
-            if h.get("target", {}).get("name") == hunt_id:
+            if h.get("hunt_id") == hunt_id:
                 return h
         return None
 
@@ -237,7 +266,7 @@ class AutopilotEngine:
             "active_hunts": len(self.active_hunts),
             "completed_hunts": len(self.completed_hunts),
             "total_findings": sum(
-                len(h.get("findings", [])) for h in self.completed_hunts
+                h.get("findings_count", 0) for h in self.completed_hunts
             ),
         }
 

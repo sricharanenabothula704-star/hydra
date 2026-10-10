@@ -172,7 +172,7 @@ stack trace
 #### Payload 12
 
 ```javascript
-AKIAJRT6BUQHIPYENYWQ
+AKIAIOSFODNN7EXAMPLE
 ```
 
 **Context:** HTTP header

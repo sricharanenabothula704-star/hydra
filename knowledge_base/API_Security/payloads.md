@@ -118,7 +118,7 @@ https://3d.cs.money/item/0UkWN8vh2R
 #### Payload 9
 
 ```javascript
-'https://firebasedynamiclinks.googleapis.com/v1/shortLinks?key=AIzaSyAw-SpLHVTIP3IFEIkckCuEmIhnUrY9OrQ';
+'https://firebasedynamiclinks.googleapis.com/v1/shortLinks?key=YOUR_GOOGLE_API_KEY';
 ```
 
 **Context:** HTTP header

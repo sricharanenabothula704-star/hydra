@@ -27,9 +27,14 @@ jobs:
           VIOLATIONS=0
           for p in "${PATTERNS[@]}"; do
             HITS=$( { grep -rnE -e "$p" . \
-              --exclude-dir=.git --exclude-dir=node_modules \
+              --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=__pycache__ \
               --exclude="*.lock" --exclude="package-lock.json" 2>/dev/null \
               | grep -vE 'EXAMPLE|X{6,}|EXPOSEDKEY|YOUR[_-]|<your|placeholder'; } || true )
+            # This is the project's intentionally public reporting contact,
+            # not a credential. Keep the exception exact; do not allowlist a domain.
+            if [[ "$p" == *"gmail"* ]]; then
+              HITS=$(printf '%s\n' "$HITS" | grep -vF 'sricharan996@gmail.com' || true)
+            fi
             if [ -n "$HITS" ]; then
               echo "::error::Secret-pattern match ($p):"
               echo "$HITS" | head -5
@@ -56,6 +61,9 @@ jobs:
 
       - name: Skill index consistency
         run: python3 scripts/validate_skill_index.py
+
+      - name: Core unit tests
+        run: python3 -m unittest discover -s tests -v
 
       - name: Agent frontmatter check
         run: |
