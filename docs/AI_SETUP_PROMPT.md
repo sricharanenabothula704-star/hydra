@@ -5,7 +5,20 @@ designed to make setup understandable and recoverable, not to silently run
 commands.
 
 ```text
-Help me install and configure HYDRA from this repository.
+Help me install and configure HYDRA, the AI-assisted security-testing workflow.
+
+Project identity:
+- GitHub repository: sricharanenabothula704-star/hydra
+- Canonical URL: https://github.com/sricharanenabothula704-star/hydra
+- Canonical clone command: `git clone https://github.com/sricharanenabothula704-star/hydra.git`
+- Setup entry point: `setup.sh` at the root of that repository.
+
+First verify that the current workspace is this repository by checking its
+`README.md`, root `setup.sh`, and (when available) `git remote get-url origin`.
+Do not assume a different folder or similarly named project is HYDRA. If the
+repository is not already available, show the canonical clone command and ask
+for approval before cloning or downloading it. If the origin points elsewhere,
+stop and ask me what to do.
 
 Safety and change-control rules:
 1. Start by checking my OS, shell, Python, Git, OpenCode, and repository path.

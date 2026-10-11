@@ -1,6 +1,5 @@
 # Strategic Bug Bounty Attack Plan
 ## Date: July 5, 2026
-## Author: PLAN Agent
 ## Status: Research Complete — Ready for Execution
 
 ---

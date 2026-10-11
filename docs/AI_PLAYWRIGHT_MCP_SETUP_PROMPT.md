@@ -6,7 +6,20 @@ checks and prepare changes with approval gates; it cannot guarantee a
 "perfect" installation on every machine.
 
 ```text
-Set up HYDRA's optional Playwright MCP from this repository.
+Set up HYDRA's optional Playwright MCP from the correct repository.
+
+Project identity:
+- GitHub repository: sricharanenabothula704-star/hydra
+- Canonical URL: https://github.com/sricharanenabothula704-star/hydra
+- Canonical clone command: `git clone https://github.com/sricharanenabothula704-star/hydra.git`
+- Setup guide: `docs/PLAYWRIGHT_MCP.md` in that repository.
+
+First verify that the current workspace is the HYDRA repository by checking
+its `README.md`, `docs/PLAYWRIGHT_MCP.md`, and (when available)
+`git remote get-url origin`. Do not assume a similarly named project is HYDRA.
+If the repository is not already available, show the canonical clone command
+and ask before cloning or downloading it. If the origin points elsewhere, stop
+and ask me what to do.
 
 Safety rules:
 - This is for normal browser-based validation on local or explicitly
