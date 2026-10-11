@@ -75,3 +75,19 @@ jobs:
             head -1 "$f" | grep -q '^---' || { echo "::error::$f missing YAML frontmatter"; FAIL=1; }
           done
           [ "$FAIL" -eq 0 ] && echo "✅ All agent definitions valid." || exit 1
+
+      - name: Skill supply-chain scan
+        # The skill corpus executes with implicit trust, so new critical
+        # patterns are blocked. Known-intentional matches are suppressed in
+        # .skill-scan-suppressions.json with a written reason per file+rule.
+        run: python3 scripts/skill_supply_chain_scan.py --fail-on critical
+
+      - name: Enforcement gate evaluation
+        # Guards the published 43/43 number against silent regression.
+        run: |
+          OUT="$(python3 -m core.evaluation_harness)"
+          echo "$OUT"
+          echo "$OUT" | grep -q "FAILED" && { echo "::error::enforcement gates regressed"; exit 1; }
+          echo "$OUT" | grep -q "OVERALL     43/43" \
+            || { echo "::error::expected 43/43; update docs/ENFORCEMENT.md if intentionally changed"; exit 1; }
+          echo "✅ Enforcement gates at published baseline."

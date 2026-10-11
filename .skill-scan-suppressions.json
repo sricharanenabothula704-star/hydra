@@ -1,0 +1,136 @@
+{
+  "_comment": [
+    "Reviewed suppressions for scripts/skill_supply_chain_scan.py.",
+    "",
+    "A pattern scanner cannot tell a tool that HUNTS a dangerous construct from",
+    "a tool that IS one. Every entry below was triaged by hand and is scoped to",
+    "one file plus one rule id. Suppressions are never wildcarded and line",
+    "numbers are not pinned, so an unrelated new finding in the same file is",
+    "still reported. Re-review these when the file changes.",
+    "",
+    "Honest limitation: these are reviewer judgements, not proofs. A suppressed",
+    "path can acquire a genuine defect later without tripping the gate."
+  ],
+  "suppressions": [
+    {
+      "path": "skills/performing-credential-access-with-lazagne/scripts/agent.py",
+      "rule_id": "CRED-SSH-KEY-READ",
+      "reason": "This module IS a credential-recovery tool. Browser profile and SSH key paths are its declared target inventory, not an exfiltration path introduced by this repo."
+    },
+    {
+      "path": "skills/detecting-supply-chain-attacks-in-ci-cd/scripts/agent.py",
+      "rule_id": "EXEC-CURL-PIPE-SHELL",
+      "reason": "The `curl | sh` string appears inside the CI scanner's detection predicate. It is the signature being hunted, not a shell invocation."
+    },
+    {
+      "path": "skills/performing-container-image-hardening/scripts/agent.py",
+      "rule_id": "EXEC-CURL-PIPE-SHELL",
+      "reason": "Dockerfile `RUN curl ... | sh` is the pattern this hardening module detects and reports. The match is the detection logic."
+    },
+    {
+      "path": "skills/detecting-ai-model-prompt-injection-attacks/scripts/agent.py",
+      "rule_id": "EXEC-CURL-PIPE-SHELL",
+      "reason": "The pipe-to-shell alternation is part of a regex describing prompt-injection command chaining. It is data in a detection rule."
+    },
+    {
+      "path": "skills/auditing-mcp-servers-for-tool-poisoning/scripts/agent.py",
+      "rule_id": "EXEC-CURL-PIPE-SHELL",
+      "reason": "Sample install command quoted inside a list of known-risky installation patterns used for auditing third-party MCP servers."
+    },
+    {
+      "path": "skills/scanning-container-images-with-grype/scripts/agent.py",
+      "rule_id": "EXEC-CURL-PIPE-SHELL",
+      "reason": "Install hint printed as guidance text. No pipe-to-shell execution occurs in this module."
+    },
+    {
+      "path": "skills/securing-container-registry-images/scripts/agent.py",
+      "rule_id": "EXEC-CURL-PIPE-SHELL",
+      "reason": "Install hint printed as guidance text. No pipe-to-shell execution occurs in this module."
+    },
+    {
+      "path": "skills/auditing-mcp-servers-for-tool-poisoning/scripts/agent.py",
+      "rule_id": "CRED-SSH-KEY-READ",
+      "reason": "Credential-path substrings appear inside the audit signature table used to detect malicious MCP tool descriptions."
+    },
+    {
+      "path": "skills/analyzing-linux-elf-malware/scripts/agent.py",
+      "rule_id": "CRED-SSH-KEY-READ",
+      "reason": "Indicators searched for in malware samples during triage; the module reads a sample, not a user credential store."
+    },
+    {
+      "path": "skills/testing-for-sensitive-data-exposure/scripts/agent.py",
+      "rule_id": "CRED-SSH-KEY-READ",
+      "reason": "Filesystem paths listed as detection targets for a sensitive-data-exposure audit."
+    },
+    {
+      "path": "skills/implementing-envelope-encryption-with-aws-kms/scripts/process.py",
+      "rule_id": "CRED-SSH-KEY-READ",
+      "reason": "Credential-file guidance text in a key-management playbook. No credential is read by this module."
+    },
+    {
+      "path": "skills/implementing-rsa-key-pair-management/scripts/agent.py",
+      "rule_id": "CRED-SSH-KEY-READ",
+      "reason": "`id_rsa` appears as a default OUTPUT filename for a key-generation tool, not as a read path."
+    },
+    {
+      "path": "skills/analyzing-linux-system-artifacts/scripts/agent.py",
+      "rule_id": "NET-HARDENED-BYPASS",
+      "reason": "Destructive commands appear as INDICATOR strings matched against collected shell history during forensics."
+    },
+    {
+      "path": "skills/analyzing-powershell-script-block-logging/scripts/agent.py",
+      "rule_id": "NET-HARDENED-BYPASS",
+      "reason": "Defender-disabling cmdlet appears inside a detection signature used to identify defense evasion in logs."
+    },
+    {
+      "path": "skills/detecting-fileless-malware-techniques/scripts/agent.py",
+      "rule_id": "NET-HARDENED-BYPASS",
+      "reason": "Defender-disabling cmdlet appears inside a detection signature used to identify defense evasion."
+    },
+    {
+      "path": "skills/analyzing-web-server-logs-for-intrusion/scripts/agent.py",
+      "rule_id": "EXEC-DESTRUCTIVE-UNGUARDED",
+      "reason": "`DROP TABLE` appears inside a log-grep detection signature, not as an executed statement."
+    },
+    {
+      "path": "skills/exploiting-api-injection-vulnerabilities/scripts/agent.py",
+      "rule_id": "EXEC-DESTRUCTIVE-UNGUARDED",
+      "reason": "SQLi payload strings are the module's test data for authorized injection testing; they are never executed locally."
+    },
+    {
+      "path": "skills/performing-soap-web-service-security-testing/scripts/agent.py",
+      "rule_id": "EXEC-DESTRUCTIVE-UNGUARDED",
+      "reason": "SQLi payload strings are the module's test data for authorized injection testing; they are never executed locally."
+    },
+    {
+      "path": "skills/performing-web-application-penetration-test/scripts/agent.py",
+      "rule_id": "EXEC-DESTRUCTIVE-UNGUARDED",
+      "reason": "SQLi payload strings are the module's test data for authorized injection testing; they are never executed locally."
+    },
+    {
+      "path": "skills/detecting-serverless-function-injection/scripts/agent.py",
+      "rule_id": "EXEC-SHELL-TRUE",
+      "reason": "`shell=True` appears inside detection regexes that FIND this vulnerability class, not in a subprocess call."
+    },
+    {
+      "path": "skills/auditing-foundry-smart-contract-security/scripts/agent.py",
+      "rule_id": "EXEC-SHELL-TRUE",
+      "reason": "Comment stating that subprocess is NEVER called with shell=True. The rule is documentation asserting the safe form."
+    },
+    {
+      "path": "skills/testing-for-xss-vulnerabilities-with-burpsuite/scripts/agent.py",
+      "rule_id": "EXEC-EVAL-UNTRUSTED",
+      "reason": "`eval()` appears in a finding message describing an unsafe-eval weakness the module reports, not as an eval call."
+    },
+    {
+      "path": "skills/testing-for-sensitive-data-exposure/references/api-reference.md",
+      "rule_id": "SEC-HARDCODED-SECRET",
+      "reason": "The PEM header appears in a documentation table describing what to look for, not as key material."
+    },
+    {
+      "path": "skills/analyzing-supply-chain-malware-artifacts/scripts/agent.py",
+      "rule_id": "EXEC-EVAL-UNTRUSTED",
+      "reason": "`exec(` and `eval(` are detection regex strings used to identify malicious code in samples under analysis. They are not executed here."
+    }
+  ]
+}

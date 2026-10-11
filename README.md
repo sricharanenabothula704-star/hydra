@@ -288,6 +288,31 @@ allowlist. To enable and use it safely, follow
 [`docs/PLAYWRIGHT_MCP.md`](docs/PLAYWRIGHT_MCP.md). Stop if a site presents a
 CAPTCHA, bot challenge, rate limit, or access denial.
 
+## 🔒 Supply-Chain Vetting
+
+A 1,179-module skill library is an attack surface, not only an asset. Research
+on 31,132 public agent skills found **26.1% contained vulnerabilities and 5.2%
+showed likely malicious intent** — skills execute with implicit trust.
+
+HYDRA vets its own corpus on every push:
+
+```bash
+python scripts/skill_supply_chain_scan.py --fail-on critical
+```
+
+First run against HYDRA returned **20 `critical` findings — almost all false
+positives**: a CI scanner's `if "curl" in x and "| sh" in x:` predicate is a
+*detection*, not a vulnerability. A pattern scanner cannot tell a tool that
+hunts a dangerous construct from a tool that is one. Rather than tune the
+rules into uselessness or hide the hits, suppressions are explicit, scoped to
+one file plus one rule, and each carries a written reason. Two tests fail the
+build if a suppression goes stale.
+
+The largest genuine finding: **166 instances of disabled TLS verification**
+(`verify=False`) in shipped modules. Tracked, not suppressed.
+
+Method, numbers, and limits: **[docs/SKILL_SUPPLY_CHAIN.md](docs/SKILL_SUPPLY_CHAIN.md)**
+
 ## 🛡️ Deterministic Enforcement
 
 **The model proposes. Deterministic code decides.** No gate in HYDRA reads
