@@ -124,6 +124,10 @@ if [ -n "$(find "$OC_DIR" -mindepth 1 -print -quit 2>/dev/null)" ]; then
   fi
 fi
 
+# ---------- install pinned, fail-closed BugBounty MCP -------------
+h_step "Installing the attributed BugBounty MCP server"
+bash "$REPO_DIR/scripts/install_bugbounty_mcp.sh" "$OC_DIR/mcp/bugbounty-mcp-server"
+
 h_step "Installing agents, skills, methodology"
 cp -r "$REPO_DIR/agents"    "$OC_DIR/"
 cp -r "$REPO_DIR/skills"    "$OC_DIR/"

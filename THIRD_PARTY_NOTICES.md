@@ -8,6 +8,16 @@ That project is distributed under the MIT License. Its required copyright
 and permission notice is preserved in
 [`LICENSES/BugBountySkills-MIT.txt`](LICENSES/BugBountySkills-MIT.txt).
 
+## BugBounty MCP Server
+
+HYDRA setup installs the upstream
+[gokulapap/bugbounty-mcp-server](https://github.com/gokulapap/bugbounty-mcp-server)
+at pinned commit `47b096fe7d18ffa2cf257d20a1a87ec0abebca20` as a separate local
+OpenCode MCP server. The upstream project's copyright and MIT permission notice
+are preserved in [`LICENSES/BugBountyMCP-MIT.txt`](LICENSES/BugBountyMCP-MIT.txt).
+The third-party server remains attributed to its upstream authors; HYDRA's
+installer, configuration, and documentation are the integration work.
+
 HYDRA-authored code and material remain under the root `LICENSE`. This notice
 does not claim ownership of unrelated third-party publications.
 

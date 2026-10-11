@@ -248,6 +248,13 @@ the second, dedicated prompt in
 The `/browser-check` command is for ordinary, scope-checked browser validation;
 neither command enables bot-detection evasion.
 
+Setup also connects the attributed, MIT-licensed
+[BugBounty MCP Server](https://github.com/gokulapap/bugbounty-mcp-server) to
+OpenCode over local stdio. It is pinned and fail-closed: `SAFE_MODE=true`,
+empty `ALLOWED_TARGETS`, and optional external scanners disabled. Read
+[`docs/BUGBOUNTY_MCP.md`](docs/BUGBOUNTY_MCP.md) before configuring any authorized
+network scope; this MCP server's scope setting is separate from HYDRA's list.
+
 Add only written-authorized hosts to `~/.config/opencode/SCOPE_ALLOWLIST.txt`.
 For one safe request, run `hydra scan https://your-authorized-host` (HTTP
 security headers only). For the agent workflow, run `opencode` and then type:

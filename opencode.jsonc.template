@@ -100,6 +100,28 @@
     }
   },
   "mcp": {
+    "bugbounty": {
+      "type": "local",
+      "command": [
+        "__HOME__/.config/opencode/mcp/bugbounty-mcp-server/.venv/bin/bugbounty-mcp",
+        "serve"
+      ],
+      "enabled": true,
+      "environment": {
+        "SAFE_MODE": "true",
+        "ALLOWED_TARGETS": "",
+        "BLOCKED_TARGETS": "",
+        "ALLOW_PRIVATE_TARGETS": "false",
+        "ENABLE_NUCLEI": "false",
+        "ENABLED_EXTERNAL_TOOLS": "",
+        "REQUESTS_PER_SECOND": "1",
+        "MAX_CONCURRENT_SCANS": "2",
+        "MAX_PORTS_PER_SCAN": "64",
+        "DATA_DIR": "__HOME__/.local/share/opencode/bugbounty-mcp/data",
+        "OUTPUT_DIR": "__HOME__/.local/share/opencode/bugbounty-mcp/output",
+        "LOG_LEVEL": "WARNING"
+      }
+    },
     "moonmcp": {
       "type": "local",
       "command": [

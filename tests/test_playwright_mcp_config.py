@@ -19,6 +19,22 @@ class PlaywrightMcpConfigTests(unittest.TestCase):
         self.assertIn("--headless", server["command"])
         self.assertIn("--block-service-workers", server["command"])
 
+    def test_bugbounty_mcp_is_local_and_fail_closed(self):
+        server = self.config["mcp"]["bugbounty"]
+        self.assertTrue(server["enabled"])
+        self.assertEqual(server["type"], "local")
+        self.assertEqual(server["command"][-1], "serve")
+        self.assertIn(
+            "bugbounty-mcp-server/.venv/bin/bugbounty-mcp", server["command"][0]
+        )
+        environment = server["environment"]
+        self.assertEqual(environment["SAFE_MODE"], "true")
+        self.assertEqual(environment["ALLOWED_TARGETS"], "")
+        self.assertEqual(environment["ALLOW_PRIVATE_TARGETS"], "false")
+        self.assertEqual(environment["ENABLE_NUCLEI"], "false")
+        self.assertEqual(environment["ENABLED_EXTERNAL_TOOLS"], "")
+        self.assertNotIn("streamable-http", server["command"])
+
     def test_config_does_not_enable_stealth_or_shared_browser_state(self):
         command = self.config["mcp"]["playwright"]["command"]
         unsafe_options = {
