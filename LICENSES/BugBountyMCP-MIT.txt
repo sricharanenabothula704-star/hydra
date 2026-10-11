@@ -23,6 +23,5 @@ SOFTWARE.
 SECURITY DISCLAIMER:
 This software is intended for authorized security testing and educational
 purposes only. Users are solely responsible for ensuring their use complies
-with applicable laws and regulations. Gokul (apgokul008@gmail.com) is not
-responsible for any misuse, damage, or illegal activities conducted with this
-software.
+with applicable laws and regulations. The upstream authors are not responsible
+for any misuse, damage, or illegal activities conducted with this software.
