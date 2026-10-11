@@ -288,6 +288,52 @@ allowlist. To enable and use it safely, follow
 [`docs/PLAYWRIGHT_MCP.md`](docs/PLAYWRIGHT_MCP.md). Stop if a site presents a
 CAPTCHA, bot challenge, rate limit, or access denial.
 
+## 🛡️ Deterministic Enforcement
+
+**The model proposes. Deterministic code decides.** No gate in HYDRA reads
+model output to decide whether to allow an action, and none can be argued
+out of a decision by a prompt.
+
+This matters because frontier models are measurably poor judges of validity.
+In a study of 9,942 disclosed HackerOne reports, GPT-5 reached 0.91 recall on
+valid reports but **0.28 on invalid ones** — accepting roughly 72% of invalid
+reports. In the same work, appending vendor scope text as prose made
+classification *worse*; only structured retrieval over real prior rejections
+helped. A gate that is a language model is not a gate.
+([arXiv:2511.18608](https://arxiv.org/abs/2511.18608))
+
+| Gate | Decides | Module |
+|---|---|---|
+| **Scope** | Is this host authorized? | `core/scope_policy.py` |
+| **Endpoint protection** | Is this path safe to touch? | `core/protected_endpoints.py` |
+| **Validation evidence** | Confirmed finding, or lead? | `core/validation_evidence.py` |
+| **Report contract** | Would a triager close this as N/A? | `core/report_contract.py` |
+| **Audit trail** | What did we do, and when? | `core/audit_trail.py` |
+
+Endpoint protection is the part most agents in this space lack. Scope
+allowlisting says a host is authorized; it says nothing about whether
+`/delete-account`, `/logout`, or `/reset-password` will destroy the account
+you are testing with. HYDRA blocks those paths by literal pattern, anchored
+so a query string or duplicate slash cannot smuggle a match.
+
+```bash
+hydra guard https://example.com/logout   # explain both gates, contact nothing
+hydra gates                              # run the offline evaluation
+hydra audit --verify                     # detect tampering
+```
+
+Measured, not asserted — deterministic, offline, reproducible anywhere:
+
+```
+scope      11/11  (100.0%)
+endpoint   19/19  (100.0%)
+evidence    7/7   (100.0%)
+report      6/6   (100.0%)
+OVERALL     43/43  (100.0%)
+```
+
+Full rationale, measured behaviour, and known limits: **[docs/ENFORCEMENT.md](docs/ENFORCEMENT.md)**
+
 ## 🛡️ Safety Model
 
 - **CI checks on every push**: secret-pattern scanning, shell/Python syntax checks, index consistency, and agent validation; these reduce risk but cannot guarantee that every secret or defect is caught

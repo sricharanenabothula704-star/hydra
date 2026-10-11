@@ -39,9 +39,89 @@ def _scope_gate(target):
     if not allowed:
         print(f"[SCOPE-DENY] {reason}")
         print(f"Add only an authorized domain to {DEFAULT_ALLOWLIST}.")
+        _audit().record("scope_check", target, "deny", reason)
         return False
+    decision = _endpoint_guard(target)
+    if decision is not None:
+        _audit().record("endpoint_guard", target, decision.action, decision.reason)
+        if not decision.allowed:
+            print(
+                f"[ENDPOINT-{decision.action.upper()}] {decision.reason}\n"
+                f"  {target}\n"
+                "This path is protected by deterministic rules and is not testable "
+                "without changing the account or session state."
+            )
+            return False
     print(f"[SCOPE-ALLOW] {reason}")
+    _audit().record("scope_check", target, "allow", reason)
     return True
+
+
+def _audit():
+    from core.audit_trail import AuditTrail
+
+    return AuditTrail()
+
+
+def _endpoint_guard(target):
+    from core.protected_endpoints import evaluate_endpoint
+
+    try:
+        return evaluate_endpoint(target)
+    except ValueError:
+        return None
+
+
+def cmd_guard(args=None):
+    """Explain the deterministic gates for a target without contacting it."""
+    target = _target_from(args or [])
+    if not target:
+        print("Usage: hydra guard <url>")
+        return 2
+    from core.protected_endpoints import evaluate_endpoint
+
+    allowed, reason = scope_decision(target)
+    decision = evaluate_endpoint(target)
+    payload = {
+        "target": target,
+        "scope": {"allowed": allowed, "reason": reason},
+        "endpoint": {
+            "action": decision.action,
+            "allowed": decision.allowed,
+            "reason": decision.reason,
+            "matched_pattern": decision.matched_pattern,
+        },
+    }
+    print(json.dumps(payload, indent=2))
+    _audit().record(
+        "guard_query",
+        target,
+        decision.action,
+        reason if not allowed else decision.reason,
+    )
+    return 0 if allowed and decision.allowed else 1
+
+
+def cmd_gates(args=None):
+    """Run the offline evaluation of HYDRA's deterministic gates."""
+    from core.evaluation_harness import run_all
+
+    print(run_all())
+    return 0
+
+
+def cmd_audit(args=None):
+    """Summarize the local enforcement audit trail."""
+    trail = _audit()
+    args = args or []
+    if "--verify" in args:
+        intact, bad = trail.verify()
+        print(f"Integrity: {'OK' if intact else 'TAMPERED'}")
+        if bad:
+            print(f"Tampered records at lines: {bad}")
+        return 0 if intact else 1
+    print(json.dumps(trail.summary(), indent=2))
+    return 0
 
 
 def _run_opencode(prompt):
@@ -304,6 +384,9 @@ COMMANDS = {
     "history": cmd_history,
     "stats": cmd_stats,
     "skills": cmd_skills,
+    "guard": cmd_guard,
+    "gates": cmd_gates,
+    "audit": cmd_audit,
     "help": cmd_help,
 }
 
