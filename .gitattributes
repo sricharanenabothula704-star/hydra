@@ -1,0 +1,23 @@
+# Normalize line endings on checkout. Shell scripts MUST be LF or they fail to
+# parse on Linux ("set: pipefail\r: invalid option name"). An audit found 30
+# tracked .sh files carrying CRLF, which silently breaks the scope gate.
+* text=auto
+
+*.sh    text eol=lf
+*.bash  text eol=lf
+*.py    text eol=lf
+*.json  text eol=lf
+*.jsonc text eol=lf
+*.md    text eol=lf
+*.txt   text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+*.toml  text eol=lf
+
+# Keep real binaries and build output untouched.
+*.png   binary
+*.jpg   binary
+*.pdf   binary
+*.pyc   binary
+*.zip   binary
+*.gz    binary

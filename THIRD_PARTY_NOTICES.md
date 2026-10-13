@@ -1,5 +1,33 @@
 # Third-party notices
 
+## Skill modules declaring Apache-2.0 — PROVENANCE UNRESOLVED
+
+**808 of the 1,179 modules in `skills/` declare `license: Apache-2.0` in their
+YAML frontmatter.** They are not covered by the repository's root MIT license.
+
+Apache-2.0 §4(a) requires that recipients receive a copy of the License. The
+required text is now included at
+[`LICENSES/Apache-2.0.txt`](LICENSES/Apache-2.0.txt).
+
+**What is still unresolved.** These 808 modules arrived in a bulk import. No
+record in this repository identifies the upstream project, its copyright
+holder, or whether it carried an attribution or NOTICE requirement. Unlike the
+`opencode-skills-cve.zip` import, there is no import note describing their
+origin.
+
+Redistributing them may require more than the license text: if the upstream
+included a NOTICE file or specific attribution wording, §4(c) and §4(d) oblige
+us to carry it forward too, and we cannot reproduce what we cannot identify.
+
+**Action required by the repository owner:** determine the upstream of these
+808 modules and either (a) add its NOTICE and attribution to this file, or
+(b) remove them. Until then, treat the Apache-licensed subset as
+redistribution-blocked.
+
+Any module in `skills/` whose frontmatter reads `license: Apache-2.0` is in
+scope for this notice. HYDRA-authored playbooks (`401-403-bypass-techniques`,
+the `offensive-*` set, the CVE-specialized set) are not.
+
 ## BugBountySkills
 
 Some HYDRA skill, checklist, and knowledge-base material incorporates
