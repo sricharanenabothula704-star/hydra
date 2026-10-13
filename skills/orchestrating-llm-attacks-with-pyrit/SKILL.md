@@ -19,6 +19,7 @@ nist_ai_rmf:
 atlas_techniques:
 - AML.T0051
 - AML.T0054
+author: mahipal
 ---
 # Orchestrating LLM Attacks with PyRIT
 

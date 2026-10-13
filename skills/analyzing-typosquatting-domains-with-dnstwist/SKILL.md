@@ -57,6 +57,7 @@ mitre_f3:
     name: Phishing
     tactic: initial-access
     source: attack
+author: mahipal
 ---
 # Analyzing Typosquatting Domains with DNSTwist
 

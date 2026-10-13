@@ -51,6 +51,7 @@ mitre_f3:
     name: Account Access Removal
     tactic: positioning
     source: attack
+author: mahipal
 ---
 
 # Auditing Kubernetes Cluster RBAC

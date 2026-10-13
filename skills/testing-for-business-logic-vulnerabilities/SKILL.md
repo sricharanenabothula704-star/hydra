@@ -27,6 +27,7 @@ mitre_attack:
 - T1505.003
 - T1083
 - T1068
+author: mahipal
 ---
 
 # Testing for Business Logic Vulnerabilities

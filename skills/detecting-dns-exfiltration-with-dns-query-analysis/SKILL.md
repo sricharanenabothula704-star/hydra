@@ -26,6 +26,7 @@ mitre_attack:
 - T1557
 - T1071
 - T1048
+author: mahipal
 ---
 
 # Detecting DNS Exfiltration with DNS Query Analysis

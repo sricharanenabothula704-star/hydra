@@ -28,6 +28,7 @@ mitre_attack:
 - T1537
 - T1580
 - T1071
+author: mahipal
 ---
 
 # Detecting Cloud Threats with GuardDuty

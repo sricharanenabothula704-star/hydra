@@ -28,6 +28,7 @@ mitre_attack:
 - T1550.003
 - T1558.003
 - T1078
+author: mahipal
 ---
 # Conducting Pass-the-Ticket Attack
 

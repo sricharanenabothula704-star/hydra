@@ -57,6 +57,7 @@ mitre_f3:
     name: Gather Customer Information
     tactic: reconnaissance
     source: f3
+author: mahipal
 ---
 # Performing Paste Site Monitoring for Credentials
 

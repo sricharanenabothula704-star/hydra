@@ -45,6 +45,7 @@ nist_csf:
 - RS.MA-02
 - RS.AN-03
 - RC.RP-01
+author: mahipal
 ---
 
 # Analyzing Security Logs with Splunk

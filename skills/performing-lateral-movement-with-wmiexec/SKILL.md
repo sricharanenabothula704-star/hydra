@@ -31,6 +31,7 @@ mitre_attack:
 - T1059
 - T1078
 - T1021
+author: mahipal
 ---
 # Performing Lateral Movement with WMIExec
 

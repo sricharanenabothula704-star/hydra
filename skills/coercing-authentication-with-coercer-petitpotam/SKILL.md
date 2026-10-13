@@ -18,6 +18,7 @@ nist_csf:
 - DE.CM-01
 mitre_attack:
 - T1187
+author: mahipal
 ---
 # Coercing Authentication with Coercer and PetitPotam
 

@@ -23,6 +23,7 @@ mitre_attack:
 - T1593
 - T1589
 - T1595
+author: mahipal
 ---
 
 # Performing OSINT with SpiderFoot

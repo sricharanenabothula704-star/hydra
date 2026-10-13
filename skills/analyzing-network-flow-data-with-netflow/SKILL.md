@@ -24,6 +24,7 @@ mitre_attack:
 - T1048
 - T1046
 - T1095
+author: mahipal
 ---
 
 

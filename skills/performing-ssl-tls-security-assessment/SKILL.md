@@ -30,6 +30,7 @@ mitre_attack:
 - T1557
 - T1071
 - T1553
+author: mahipal
 ---
 # Performing SSL/TLS Security Assessment
 

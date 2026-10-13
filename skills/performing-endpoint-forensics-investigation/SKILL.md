@@ -29,6 +29,7 @@ mitre_attack:
 - T1059
 - T1036
 - T1005
+author: mahipal
 ---
 # Performing Endpoint Forensics Investigation
 

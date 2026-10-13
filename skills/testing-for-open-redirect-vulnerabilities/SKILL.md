@@ -28,6 +28,7 @@ mitre_attack:
 - T1505.003
 - T1083
 - T1566
+author: mahipal
 ---
 
 # Testing for Open Redirect Vulnerabilities

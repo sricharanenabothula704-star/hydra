@@ -68,6 +68,7 @@ mitre_f3:
     name: 'Phone Number Spoofing: Official Phone Number Spoofing'
     tactic: stealth
     source: f3
+author: mahipal
 ---
 
 # Conducting Social Engineering Pretext Call

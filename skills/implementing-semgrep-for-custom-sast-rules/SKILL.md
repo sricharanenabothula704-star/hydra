@@ -22,6 +22,7 @@ mitre_attack:
 - T1195
 - T1554
 - T1059.004
+author: mahipal
 ---
 
 # Implementing Semgrep for Custom SAST Rules

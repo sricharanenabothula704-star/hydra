@@ -51,6 +51,7 @@ mitre_f3:
     name: Steal Web Session Cookie
     tactic: positioning
     source: attack
+author: mahipal
 ---
 # Configuring OAuth 2.0 Authorization Flow
 

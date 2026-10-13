@@ -18,6 +18,7 @@ nist_csf:
 - RS.AN-03
 mitre_attack:
 - T1112
+author: mahipal
 ---
 # Parsing Artifacts with Eric Zimmerman Tools
 

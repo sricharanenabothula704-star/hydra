@@ -54,6 +54,7 @@ mitre_f3:
     name: 'Account Takeover: Exposed Login Credential'
     tactic: initial-access
     source: f3
+author: mahipal
 ---
 
 

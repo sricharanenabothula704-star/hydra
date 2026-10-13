@@ -26,6 +26,7 @@ mitre_attack:
 - T1082
 - T1083
 - T1071
+author: mahipal
 ---
 
 # Hunting for Cobalt Strike Beacons

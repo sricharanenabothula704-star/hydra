@@ -33,6 +33,7 @@ mitre_attack:
 - T1059.007
 - T1505.003
 - T1083
+author: mahipal
 ---
 
 # Testing for Sensitive Data Exposure

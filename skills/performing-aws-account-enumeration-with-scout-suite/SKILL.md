@@ -28,6 +28,7 @@ mitre_attack:
 - T1530
 - T1537
 - T1580
+author: mahipal
 ---
 
 # Performing AWS Account Enumeration with ScoutSuite

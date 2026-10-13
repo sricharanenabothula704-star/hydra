@@ -22,6 +22,7 @@ nist_ai_rmf:
 - MEASURE-2.7
 atlas_techniques:
 - AML.T0057
+author: mahipal
 ---
 # Testing for System Prompt Leakage
 

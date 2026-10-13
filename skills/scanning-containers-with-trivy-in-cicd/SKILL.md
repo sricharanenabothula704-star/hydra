@@ -30,6 +30,7 @@ mitre_attack:
 - T1059.004
 - T1610
 - T1611
+author: mahipal
 ---
 
 # Scanning Containers with Trivy in CI/CD

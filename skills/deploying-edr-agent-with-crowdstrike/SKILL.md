@@ -40,6 +40,7 @@ mitre_attack:
 - T1059.001
 - T1486
 - T1071.001
+author: mahipal
 ---
 # Deploying EDR Agent with CrowdStrike
 

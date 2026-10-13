@@ -30,6 +30,7 @@ mitre_attack:
 - T1059
 - T1595
 - T1592
+author: mukul975
 ---
 
 # Implementing Attack Surface Management

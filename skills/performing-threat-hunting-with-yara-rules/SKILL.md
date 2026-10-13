@@ -31,6 +31,7 @@ mitre_attack:
 - T1082
 - T1083
 - T1005
+author: mahipal
 ---
 
 # Performing Threat Hunting with YARA Rules

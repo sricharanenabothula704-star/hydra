@@ -28,6 +28,7 @@ mitre_attack:
 - T1059.007
 - T1027
 - T1106
+author: mahipal
 ---
 
 # Analyzing Malicious PDF with peepdf

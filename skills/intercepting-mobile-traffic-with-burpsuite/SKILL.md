@@ -29,6 +29,7 @@ mitre_attack:
 - T1056
 - T1036
 - T1078
+author: mahipal
 ---
 # Intercepting Mobile Traffic with Burp Suite
 

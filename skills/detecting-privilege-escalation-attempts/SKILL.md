@@ -29,6 +29,7 @@ mitre_attack:
 - T1082
 - T1083
 - T1068
+author: mahipal
 ---
 
 # Detecting Privilege Escalation Attempts

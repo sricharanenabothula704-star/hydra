@@ -29,6 +29,7 @@ mitre_attack:
 - T1598
 - T1534
 - T1036
+author: mahipal
 ---
 # Performing DMARC Policy Enforcement Rollout
 

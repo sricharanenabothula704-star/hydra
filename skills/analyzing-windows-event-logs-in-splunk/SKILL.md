@@ -37,6 +37,7 @@ mitre_attack:
 - T1021.002
 - T1558.003
 - T1003.006
+author: mahipal
 ---
 # Analyzing Windows Event Logs in Splunk
 

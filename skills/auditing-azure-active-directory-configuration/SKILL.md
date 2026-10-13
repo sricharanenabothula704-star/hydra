@@ -28,6 +28,7 @@ mitre_attack:
 - T1556.006
 - T1069.003
 - T1526
+author: mahipal
 ---
 
 # Auditing Azure Active Directory Configuration

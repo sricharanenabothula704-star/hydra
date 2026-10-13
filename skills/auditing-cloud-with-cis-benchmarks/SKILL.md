@@ -26,6 +26,7 @@ mitre_attack:
 - T1098.003
 - T1685.002
 - T1580
+author: mahipal
 ---
 
 # Auditing Cloud with CIS Benchmarks

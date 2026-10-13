@@ -51,6 +51,7 @@ mitre_f3:
     name: Access with Stolen Session Cookie
     tactic: initial-access
     source: f3
+author: mahipal
 ---
 
 # Building Identity Federation with SAML Azure AD

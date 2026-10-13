@@ -29,6 +29,7 @@ mitre_attack:
 - T1053.005
 - T1047
 - T1543.003
+author: mahipal
 ---
 # Configuring Windows Event Logging for Detection
 

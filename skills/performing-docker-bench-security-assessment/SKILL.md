@@ -26,6 +26,7 @@ mitre_attack:
 - T1611
 - T1609
 - T1525
+author: mahipal
 ---
 # Performing Docker Bench Security Assessment
 

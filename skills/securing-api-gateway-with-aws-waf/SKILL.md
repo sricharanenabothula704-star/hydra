@@ -30,6 +30,7 @@ mitre_attack:
 - T1537
 - T1580
 - T0816
+author: mahipal
 ---
 
 # Securing API Gateway with AWS WAF

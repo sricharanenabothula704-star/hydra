@@ -33,6 +33,7 @@ mitre_attack:
 - T1596.002
 - T1590
 - T1596.001
+author: mahipal
 ---
 # Collecting Open-Source Intelligence
 

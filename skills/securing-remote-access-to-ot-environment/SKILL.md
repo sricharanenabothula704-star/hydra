@@ -31,6 +31,7 @@ mitre_attack:
 - T1059
 - T0816
 - T0836
+author: mahipal
 ---
 
 # Securing Remote Access to OT Environment

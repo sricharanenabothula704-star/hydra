@@ -53,6 +53,7 @@ mitre_f3:
     name: Device Fingerprint Spoofing
     tactic: stealth
     source: f3
+author: mahipal
 ---
 
 # Performing Service Account Credential Rotation

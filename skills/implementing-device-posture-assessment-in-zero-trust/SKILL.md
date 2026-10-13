@@ -28,6 +28,7 @@ mitre_attack:
 - T1078
 - T1190
 - T1059
+author: mahipal
 ---
 
 # Implementing Device Posture Assessment in Zero Trust

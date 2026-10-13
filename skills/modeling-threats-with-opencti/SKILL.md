@@ -18,6 +18,7 @@ nist_csf:
 - ID.RA-03
 mitre_attack:
 - T1589
+author: mahipal
 ---
 # Modeling Threats with OpenCTI
 

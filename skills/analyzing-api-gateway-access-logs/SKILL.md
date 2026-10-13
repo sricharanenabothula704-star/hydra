@@ -29,6 +29,7 @@ mitre_attack:
 - T1110.004
 - T1078.004
 - T1119
+author: mahipal
 ---
 
 # Analyzing API Gateway Access Logs

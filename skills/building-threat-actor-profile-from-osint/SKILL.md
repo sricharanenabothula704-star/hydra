@@ -24,6 +24,7 @@ mitre_attack:
 - T1589
 - T1593
 - T1590
+author: mahipal
 ---
 # Building Threat Actor Profile from OSINT
 

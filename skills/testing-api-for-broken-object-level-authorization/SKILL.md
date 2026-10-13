@@ -30,6 +30,7 @@ mitre_attack:
 - T1552.001
 - T1027
 - T1070
+author: mahipal
 ---
 # Testing API for Broken Object Level Authorization
 

@@ -31,6 +31,7 @@ mitre_attack:
 - T1003.001
 - T1486
 - T1547.001
+author: mahipal
 ---
 # Analyzing APT Group with MITRE ATT&CK Navigator
 

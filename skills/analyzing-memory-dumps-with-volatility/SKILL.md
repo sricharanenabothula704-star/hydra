@@ -26,6 +26,7 @@ nist_csf:
 - RS.AN-03
 - ID.RA-01
 - DE.CM-01
+author: mahipal
 ---
 
 # Analyzing Memory Dumps with Volatility

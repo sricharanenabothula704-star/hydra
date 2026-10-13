@@ -26,6 +26,7 @@ mitre_attack:
 - T1190
 - T1059
 - T1078
+author: mahipal
 ---
 # Executing Red Team Engagement Planning
 

@@ -32,6 +32,7 @@ mitre_attack:
 - T1078
 - T1190
 - T1059
+author: mahipal
 ---
 
 # Detecting Living Off the Land with LOLBAS

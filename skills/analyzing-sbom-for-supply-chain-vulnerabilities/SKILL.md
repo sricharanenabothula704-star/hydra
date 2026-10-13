@@ -41,6 +41,7 @@ mitre_attack:
 - T1195.002
 - T1554
 - T1190
+author: mukul975
 ---
 
 # Analyzing SBOM for Supply Chain Vulnerabilities

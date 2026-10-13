@@ -28,6 +28,7 @@ mitre_attack:
 - T1609
 - T1525
 - T1195
+author: mahipal
 ---
 
 # Securing Helm Chart Deployments

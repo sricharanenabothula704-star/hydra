@@ -26,6 +26,7 @@ mitre_attack:
 - T1078.004
 - T1548.005
 - T1484
+author: mahipal
 ---
 
 # Detecting AWS IAM Privilege Escalation

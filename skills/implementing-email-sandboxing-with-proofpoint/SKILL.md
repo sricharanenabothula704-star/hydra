@@ -26,6 +26,7 @@ mitre_attack:
 - T1534
 - T1036
 - T1027
+author: mahipal
 ---
 # Implementing Email Sandboxing with Proofpoint
 

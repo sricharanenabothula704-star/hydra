@@ -30,6 +30,7 @@ mitre_attack:
 - T1537
 - T1048
 - T1573
+author: mukul975
 ---
 # Implementing Data Loss Prevention with Microsoft Purview
 

@@ -37,6 +37,7 @@ mitre_attack:
 - T1685.002
 - T1685.005
 - T1566
+author: mahipal
 ---
 
 # Implementing MITRE ATT&CK Coverage Mapping

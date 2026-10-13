@@ -28,6 +28,7 @@ mitre_attack:
 - T1078.004
 - T1537
 - T1567.002
+author: mahipal
 ---
 
 # Auditing AWS S3 Bucket Permissions

@@ -33,6 +33,7 @@ mitre_attack:
 - T1609
 - T1525
 - T1068
+author: mahipal
 ---
 
 # Detecting Privilege Escalation in Kubernetes Pods

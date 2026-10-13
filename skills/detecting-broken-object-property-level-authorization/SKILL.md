@@ -27,6 +27,7 @@ mitre_attack:
 - T1190
 - T1213
 - T1212
+author: mahipal
 ---
 
 # Detecting Broken Object Property Level Authorization

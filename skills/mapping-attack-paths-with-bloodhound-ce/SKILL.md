@@ -18,6 +18,7 @@ nist_csf:
 - ID.AM-03
 mitre_attack:
 - T1069
+author: mahipal
 ---
 # Mapping Attack Paths with BloodHound CE
 

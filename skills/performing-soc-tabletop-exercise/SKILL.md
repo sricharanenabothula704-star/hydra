@@ -29,6 +29,7 @@ nist_csf:
 - DE.AE-02
 - RS.MA-01
 - DE.AE-06
+author: mahipal
 ---
 # Performing SOC Tabletop Exercise
 

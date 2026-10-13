@@ -39,6 +39,7 @@ mitre_attack:
 - T1059
 - T1486
 - T1490
+author: mahipal
 ---
 # Implementing Immutable Backup with Restic
 

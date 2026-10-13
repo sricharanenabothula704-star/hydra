@@ -30,6 +30,7 @@ mitre_attack:
 - T1552.001
 - T1078
 - T1071.001
+author: mahipal
 ---
 # Conducting API Security Testing
 

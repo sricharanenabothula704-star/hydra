@@ -24,6 +24,7 @@ mitre_attack:
 - T1598
 - T1534
 - T1036
+author: mahipal
 ---
 # Implementing DMARC, DKIM, and SPF Email Security
 

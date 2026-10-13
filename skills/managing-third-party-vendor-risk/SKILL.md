@@ -35,6 +35,7 @@ mitre_attack:
 - T1078
 - T1190
 - T1567
+author: andrewibrah
 ---
 
 # Managing Third-Party Vendor Risk

@@ -30,6 +30,7 @@ mitre_attack:
 - T1552.001
 - T1078.004
 - T1530
+author: mahipal
 ---
 
 # Implementing API Threat Protection with Apigee

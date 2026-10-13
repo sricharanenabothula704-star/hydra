@@ -29,6 +29,7 @@ mitre_attack:
 - T1059
 - T1048
 - T1041
+author: mahipal
 ---
 
 # Performing DNS Tunneling Detection

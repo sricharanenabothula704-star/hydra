@@ -29,6 +29,7 @@ mitre_attack:
 - T1550.003
 - T1003.001
 - T1021
+author: mahipal
 ---
 # Configuring Active Directory Tiered Model
 

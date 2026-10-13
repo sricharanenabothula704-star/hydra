@@ -23,6 +23,7 @@ mitre_attack:
 - T1021
 - T1556
 - T1078.004
+author: mahipal
 ---
 
 # Implementing Zero Trust with BeyondCorp

@@ -22,6 +22,7 @@ nist_csf:
 - ID.AM-03
 mitre_attack:
 - T1526
+author: mahipal
 ---
 # Enumerating Cloud with CloudFox
 

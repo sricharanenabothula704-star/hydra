@@ -27,6 +27,7 @@ mitre_attack:
 - T1059.007
 - T1552.001
 - T1110
+author: mahipal
 ---
 # Performing GraphQL Introspection Attack
 

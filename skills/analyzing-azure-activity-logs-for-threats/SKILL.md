@@ -28,6 +28,7 @@ mitre_attack:
 - T1538
 - T1556.009
 - T1580
+author: mahipal
 ---
 
 # Analyzing Azure Activity Logs for Threats

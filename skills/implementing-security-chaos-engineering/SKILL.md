@@ -36,6 +36,7 @@ mitre_attack:
 - T1059
 - T1027
 - T1070
+author: mahipal
 ---
 
 # Implementing Security Chaos Engineering

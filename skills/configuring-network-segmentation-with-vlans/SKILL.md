@@ -28,6 +28,7 @@ mitre_attack:
 - T1557.002
 - T1021
 - T1018
+author: mahipal
 ---
 # Configuring Network Segmentation with VLANs
 

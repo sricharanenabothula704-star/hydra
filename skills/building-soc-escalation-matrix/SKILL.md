@@ -26,6 +26,7 @@ mitre_attack:
 - T1078
 - T1071
 - T1041
+author: mahipal
 ---
 
 # Building SOC Escalation Matrix

@@ -35,6 +35,7 @@ mitre_attack:
 - T1082
 - T1083
 - T1055
+author: mahipal
 ---
 
 # Detecting Process Hollowing Technique

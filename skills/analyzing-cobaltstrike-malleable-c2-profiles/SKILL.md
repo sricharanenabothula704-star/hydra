@@ -24,6 +24,7 @@ mitre_attack:
 - T1001.003
 - T1090.004
 - T1102
+author: mahipal
 ---
 # Analyzing CobaltStrike Malleable C2 Profiles
 

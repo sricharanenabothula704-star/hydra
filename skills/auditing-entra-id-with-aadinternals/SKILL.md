@@ -18,6 +18,7 @@ nist_csf:
 - ID.AM-03
 mitre_attack:
 - T1606.002
+author: mahipal
 ---
 # Auditing Entra ID with AADInternals
 

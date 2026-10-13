@@ -28,6 +28,7 @@ mitre_attack:
 - T1609
 - T1525
 - T1068
+author: mahipal
 ---
 # Hardening Docker Containers for Production
 

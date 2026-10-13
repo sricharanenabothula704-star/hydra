@@ -30,6 +30,7 @@ mitre_attack:
 - T1135
 - T1025
 - T1070.004
+author: mahipal
 ---
 
 # Analyzing Windows Shellbag Artifacts

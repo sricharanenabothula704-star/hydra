@@ -38,6 +38,7 @@ mitre_attack:
 - T1537
 - T1580
 - T1610
+author: mahipal
 ---
 
 # Implementing Azure Defender for Cloud

@@ -41,6 +41,7 @@ mitre_attack:
 - T1685.005
 - T1566
 - T1021
+author: mahipal
 ---
 # Performing Lateral Movement Detection
 

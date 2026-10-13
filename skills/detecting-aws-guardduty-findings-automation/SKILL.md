@@ -29,6 +29,7 @@ mitre_attack:
 - T1580
 - T1530
 - T1110
+author: mahipal
 ---
 
 # Detecting AWS GuardDuty Findings Automation

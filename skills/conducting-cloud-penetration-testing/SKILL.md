@@ -42,6 +42,7 @@ mitre_attack:
 - T1580
 - T1530
 - T1538
+author: mahipal
 ---
 
 # Conducting Cloud Penetration Testing

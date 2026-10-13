@@ -52,6 +52,7 @@ mitre_f3:
     name: Indicator Removal
     tactic: stealth
     source: attack
+author: mahipal
 ---
 
 # Deploying Decoy Files for Ransomware Detection

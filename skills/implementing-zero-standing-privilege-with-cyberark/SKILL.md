@@ -23,6 +23,7 @@ mitre_attack:
 - T1556
 - T1098
 - T1078.004
+author: mahipal
 ---
 
 # Implementing Zero Standing Privilege with CyberArk

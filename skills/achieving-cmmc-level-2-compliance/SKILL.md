@@ -40,6 +40,7 @@ mitre_attack:
 - T1041
 - T1048
 - T1567
+author: andrewibrah
 ---
 
 # Achieving CMMC Level 2 Compliance

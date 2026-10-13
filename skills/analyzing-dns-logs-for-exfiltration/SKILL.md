@@ -32,6 +32,7 @@ mitre_attack:
 - T1048.003
 - T1071.004
 - T1567
+author: mahipal
 ---
 # Analyzing DNS Logs for Exfiltration
 

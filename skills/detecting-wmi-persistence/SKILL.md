@@ -33,6 +33,7 @@ mitre_attack:
 - T1546.003
 - T1047
 - T1059.001
+author: mahipal
 ---
 
 # Detecting WMI Persistence

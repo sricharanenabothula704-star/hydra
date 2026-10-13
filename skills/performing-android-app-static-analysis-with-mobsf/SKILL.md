@@ -30,6 +30,7 @@ mitre_attack:
 - T1056
 - T1036
 - T1078
+author: mahipal
 ---
 # Performing Android App Static Analysis with MobSF
 

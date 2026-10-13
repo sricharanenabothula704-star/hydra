@@ -33,6 +33,7 @@ mitre_attack:
 - T1027.010
 - T1620
 - T1105
+author: mahipal
 ---
 
 # Detecting Suspicious Powershell Execution

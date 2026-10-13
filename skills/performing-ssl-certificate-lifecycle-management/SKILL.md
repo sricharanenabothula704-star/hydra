@@ -25,6 +25,7 @@ mitre_attack:
 - T1573
 - T1553
 - T1040
+author: mahipal
 ---
 # Performing SSL Certificate Lifecycle Management
 

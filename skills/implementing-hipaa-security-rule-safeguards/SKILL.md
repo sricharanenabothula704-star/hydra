@@ -43,6 +43,7 @@ mitre_attack:
 - T1486
 - T1530
 - T1048
+author: andrewibrah
 ---
 
 # Implementing HIPAA Security Rule Safeguards

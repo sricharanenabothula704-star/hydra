@@ -67,6 +67,7 @@ mitre_f3:
     name: 'Brute Force:  Credential Stuffing'
     tactic: initial-access
     source: attack
+author: team-cybersecurity
 ---
 # Monitoring Dark Web Sources
 

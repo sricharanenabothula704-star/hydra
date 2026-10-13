@@ -30,6 +30,7 @@ mitre_attack:
 - T1547
 - T1070
 - T1055
+author: mahipal
 ---
 # Configuring Host-Based Intrusion Detection
 

@@ -28,6 +28,7 @@ mitre_attack:
 - T1190
 - T1552.001
 - T1580
+author: mahipal
 ---
 
 # Auditing Terraform Infrastructure for Security

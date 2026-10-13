@@ -23,6 +23,7 @@ mitre_attack:
 - T1547
 - T1059
 - T1036
+author: mahipal
 ---
 
 # Implementing File Integrity Monitoring with AIDE

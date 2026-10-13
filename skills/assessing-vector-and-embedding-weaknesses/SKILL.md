@@ -21,6 +21,7 @@ nist_ai_rmf:
 - MEASURE-2.7
 atlas_techniques:
 - AML.T0024
+author: mahipal
 ---
 # Assessing Vector and Embedding Weaknesses
 

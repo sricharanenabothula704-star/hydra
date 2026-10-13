@@ -30,6 +30,7 @@ mitre_attack:
 - T1059
 - T1003
 - T1110
+author: mahipal
 ---
 
 # Detecting Pass-the-Ticket Attacks

@@ -26,6 +26,7 @@ mitre_attack:
 - T1505.003
 - T1083
 - T1055
+author: mahipal
 ---
 
 # Testing for XML Injection Vulnerabilities

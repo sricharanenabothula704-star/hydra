@@ -23,6 +23,7 @@ mitre_attack:
 - T1609
 - T1525
 - T1553
+author: mahipal
 ---
 
 # Hardening Docker Daemon Configuration

@@ -30,6 +30,7 @@ mitre_attack:
 - T1059
 - T1036
 - T1573
+author: mahipal
 ---
 # Implementing Disk Encryption with BitLocker
 

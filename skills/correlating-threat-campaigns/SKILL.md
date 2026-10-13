@@ -33,6 +33,7 @@ mitre_attack:
 - T1587.001
 - T1583.001
 - T1588.002
+author: team-cybersecurity
 ---
 # Correlating Threat Campaigns
 

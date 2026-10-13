@@ -25,6 +25,7 @@ mitre_attack:
 - T1078
 - T1021
 - T1572
+author: mahipal
 ---
 
 # Deploying Tailscale for Zero Trust VPN

@@ -44,6 +44,7 @@ mitre_attack:
 - T1082
 - T1083
 - T1069
+author: mukul975
 ---
 
 # Detecting NTLM Relay with Event Correlation

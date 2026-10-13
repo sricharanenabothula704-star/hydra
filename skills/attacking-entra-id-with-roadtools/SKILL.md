@@ -22,6 +22,7 @@ nist_csf:
 - ID.AM-03
 mitre_attack:
 - T1087.004
+author: mahipal
 ---
 # Attacking Entra ID with ROADtools
 

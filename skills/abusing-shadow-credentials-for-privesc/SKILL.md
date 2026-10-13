@@ -18,6 +18,7 @@ nist_csf:
 - PR.AA-05
 mitre_attack:
 - T1098.005
+author: mahipal
 ---
 # Abusing Shadow Credentials for Privilege Escalation
 

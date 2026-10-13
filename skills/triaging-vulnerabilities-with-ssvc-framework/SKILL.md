@@ -28,6 +28,7 @@ mitre_attack:
 - T1190
 - T1203
 - T1068
+author: mahipal
 ---
 
 # Triaging Vulnerabilities with SSVC Framework

@@ -33,6 +33,7 @@ mitre_attack:
 - T1648
 - T1078.004
 - T1068
+author: mukul975
 ---
 # Detecting Serverless Function Injection
 

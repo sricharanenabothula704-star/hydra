@@ -23,6 +23,7 @@ mitre_attack:
 - T1190
 - T1083
 - T1087
+author: mahipal
 ---
 
 # Bypassing Authentication with Forced Browsing

@@ -26,6 +26,7 @@ mitre_attack:
 - T1566.002
 - T1204.001
 - T1598.003
+author: mahipal
 ---
 # Analyzing Malicious URL with URLScan
 

@@ -22,6 +22,7 @@ mitre_attack:
 - T1059.001
 - T1055
 - T1547
+author: mahipal
 ---
 
 # Building Threat Hunt Hypothesis Framework

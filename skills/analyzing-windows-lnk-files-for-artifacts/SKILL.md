@@ -25,6 +25,7 @@ mitre_attack:
 - T1005
 - T1025
 - T1074.001
+author: mahipal
 ---
 
 # Analyzing Windows LNK Files for Artifacts

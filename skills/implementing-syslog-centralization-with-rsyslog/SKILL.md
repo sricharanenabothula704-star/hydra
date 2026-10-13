@@ -28,6 +28,7 @@ mitre_attack:
 - T1059
 - T1573
 - T1486
+author: mahipal
 ---
 
 

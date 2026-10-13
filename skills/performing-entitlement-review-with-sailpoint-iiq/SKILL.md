@@ -54,6 +54,7 @@ mitre_f3:
     name: 'Account Manipulation: Enable Account Features'
     tactic: defense-impairment
     source: f3
+author: mahipal
 ---
 
 # Performing Entitlement Review with SailPoint IdentityIQ

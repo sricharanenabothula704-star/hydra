@@ -30,6 +30,7 @@ mitre_attack:
 - T1110.002
 - T1557
 - T1669
+author: mahipal
 ---
 # Conducting Wireless Network Penetration Test
 

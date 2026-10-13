@@ -27,6 +27,7 @@ mitre_attack:
 - T1082
 - T1083
 - T1003
+author: mahipal
 ---
 
 # Detecting Golden Ticket Attacks in Kerberos Logs

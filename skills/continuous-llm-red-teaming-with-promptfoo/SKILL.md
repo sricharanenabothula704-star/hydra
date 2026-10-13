@@ -18,6 +18,7 @@ nist_ai_rmf:
 - MANAGE-4.1
 atlas_techniques:
 - AML.T0051
+author: mahipal
 ---
 # Continuous LLM Red Teaming with Promptfoo
 

@@ -30,6 +30,7 @@ mitre_attack:
 - T1685.005
 - T1566
 - T1048
+author: mahipal
 ---
 # Investigating Insider Threat Indicators
 

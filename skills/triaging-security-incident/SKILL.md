@@ -31,6 +31,7 @@ nist_csf:
 - RS.MA-02
 - RS.AN-03
 - RC.RP-01
+author: mahipal
 ---
 
 # Triaging Security Incidents

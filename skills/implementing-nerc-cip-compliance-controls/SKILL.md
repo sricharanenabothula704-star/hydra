@@ -32,6 +32,7 @@ mitre_attack:
 - T1059
 - T1195
 - T1554
+author: mahipal
 ---
 
 # Implementing NERC CIP Compliance Controls

@@ -30,6 +30,7 @@ mitre_attack:
 - T1059
 - T0816
 - T0836
+author: mahipal
 ---
 
 # Implementing Network Segmentation for OT

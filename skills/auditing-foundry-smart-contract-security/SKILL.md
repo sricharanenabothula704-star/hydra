@@ -30,6 +30,7 @@ swc_registry: https://swcregistry.io/
 mitre_attack:
   - T1190
   - T1059
+author: devredious
 ---
 
 # Auditing Foundry Smart Contract Security

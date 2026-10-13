@@ -29,6 +29,7 @@ nist_csf:
 - PR.PS-02
 - DE.CM-01
 - PR.IR-01
+author: mahipal
 ---
 # Deploying Osquery for Endpoint Monitoring
 

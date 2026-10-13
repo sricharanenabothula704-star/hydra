@@ -35,6 +35,7 @@ mitre_attack:
 - T1552.001
 - T1003
 - T1110
+author: mahipal
 ---
 # Implementing API Key Security Controls
 

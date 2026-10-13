@@ -42,6 +42,7 @@ mitre_attack:
 - T1593
 - T1589
 - T1685.002
+author: mahipal
 ---
 
 # Performing Threat Emulation with Atomic Red Team

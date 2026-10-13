@@ -22,6 +22,7 @@ nist_csf:
 - ID.RA-01
 mitre_attack:
 - T1525
+author: mahipal
 ---
 # Scanning IaC and Images with Trivy
 

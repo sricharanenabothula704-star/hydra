@@ -23,6 +23,7 @@ mitre_attack:
 - T1071
 - T1105
 - T1041
+author: mahipal
 ---
 
 # Building Threat Intelligence Enrichment in Splunk

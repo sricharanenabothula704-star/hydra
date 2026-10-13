@@ -25,6 +25,7 @@ mitre_attack:
 - T1098.002
 - T1556.006
 - T1078.004
+author: mahipal
 ---
 
 # Analyzing Office 365 Audit Logs for Compromise

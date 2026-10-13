@@ -34,6 +34,7 @@ mitre_attack:
 - T1588.001
 - T1590.005
 - T1596
+author: team-cybersecurity
 ---
 # Automating IOC Enrichment
 

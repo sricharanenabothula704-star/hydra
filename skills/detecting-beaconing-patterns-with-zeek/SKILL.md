@@ -30,6 +30,7 @@ mitre_attack:
 - T1573
 - T1008
 - T1095
+author: mahipal
 ---
 
 # Detecting Beaconing Patterns with Zeek

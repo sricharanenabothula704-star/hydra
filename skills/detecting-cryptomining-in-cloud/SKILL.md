@@ -51,6 +51,7 @@ mitre_f3:
     name: Convert to Cryptocurrency
     tactic: monetization
     source: f3
+author: mahipal
 ---
 
 # Detecting Cryptomining in Cloud

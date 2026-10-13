@@ -26,6 +26,7 @@ mitre_attack:
 - T1557
 - T1071
 - T1595
+author: mahipal
 ---
 # Detecting Port Scanning with Fail2ban
 

@@ -23,6 +23,7 @@ mitre_attack:
 - T1583.001
 - T1588.002
 - T1071.001
+author: mahipal
 ---
 # Analyzing Campaign Attribution Evidence
 

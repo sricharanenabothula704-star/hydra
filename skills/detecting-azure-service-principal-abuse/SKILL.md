@@ -36,6 +36,7 @@ mitre_attack:
 - T1528
 - T1550.001
 - T1098.003
+author: mahipal
 ---
 
 # Detecting Azure Service Principal Abuse

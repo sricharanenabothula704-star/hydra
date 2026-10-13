@@ -30,6 +30,7 @@ nist_csf:
 - DE.AE-02
 - DE.AE-07
 - ID.RA-05
+author: mahipal
 ---
 
 # Analyzing Persistence Mechanisms in Linux

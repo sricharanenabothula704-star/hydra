@@ -22,6 +22,7 @@ nist_ai_rmf:
 - MEASURE-2.7
 atlas_techniques:
 - AML.T0051
+author: mahipal
 ---
 # Testing Prompt Injection in RAG Pipelines
 

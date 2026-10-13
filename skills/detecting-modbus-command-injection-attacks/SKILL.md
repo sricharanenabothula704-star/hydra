@@ -25,6 +25,7 @@ mitre_attack:
 - T1059
 - T1055
 - T0816
+author: mahipal
 ---
 
 # Detecting Modbus Command Injection Attacks

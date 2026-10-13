@@ -34,6 +34,7 @@ mitre_attack:
 - T1059
 - T1078
 - T1003
+author: mahipal
 ---
 
 # Performing Thick Client Application Penetration Test

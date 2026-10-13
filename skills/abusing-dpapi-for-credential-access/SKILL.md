@@ -18,6 +18,7 @@ nist_csf:
 - DE.CM-01
 mitre_attack:
 - T1555.004
+author: mahipal
 ---
 # Abusing DPAPI for Credential Access
 

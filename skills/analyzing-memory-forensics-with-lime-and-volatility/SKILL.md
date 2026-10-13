@@ -28,6 +28,7 @@ mitre_attack:
 - T1003.001
 - T1620
 - T1564.001
+author: mahipal
 ---
 
 # Analyzing Memory Forensics with LiME and Volatility

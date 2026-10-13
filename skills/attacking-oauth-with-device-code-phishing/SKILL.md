@@ -22,6 +22,7 @@ nist_csf:
 - PR.AA-03
 mitre_attack:
 - T1528
+author: mahipal
 ---
 # Attacking OAuth with Device-Code Phishing
 

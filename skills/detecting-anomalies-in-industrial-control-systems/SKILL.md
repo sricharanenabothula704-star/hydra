@@ -31,6 +31,7 @@ mitre_attack:
 - T0832
 - T0814
 - T0801
+author: mahipal
 ---
 
 # Detecting Anomalies in Industrial Control Systems

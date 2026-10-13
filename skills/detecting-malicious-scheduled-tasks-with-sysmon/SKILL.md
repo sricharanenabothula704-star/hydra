@@ -37,6 +37,7 @@ mitre_attack:
 - T1082
 - T1083
 - T1021
+author: mahipal
 ---
 # Detecting Malicious Scheduled Tasks with Sysmon
 

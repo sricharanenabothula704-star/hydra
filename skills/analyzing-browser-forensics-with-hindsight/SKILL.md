@@ -25,6 +25,7 @@ mitre_attack:
 - T1539
 - T1555.003
 - T1185
+author: mahipal
 ---
 
 # Analyzing Browser Forensics with Hindsight

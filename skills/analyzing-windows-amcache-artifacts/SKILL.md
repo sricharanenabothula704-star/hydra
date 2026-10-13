@@ -29,6 +29,7 @@ mitre_attack:
 - T1036.005
 - T1014
 - T1005
+author: mahipal
 ---
 
 # Analyzing Windows Amcache Artifacts

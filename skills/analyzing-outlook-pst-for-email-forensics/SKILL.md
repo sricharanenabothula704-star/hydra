@@ -28,6 +28,7 @@ mitre_attack:
 - T1114.001
 - T1564.008
 - T1070.008
+author: mahipal
 ---
 
 # Analyzing Outlook PST for Email Forensics

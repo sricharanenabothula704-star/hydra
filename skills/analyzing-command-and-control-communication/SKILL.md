@@ -29,6 +29,7 @@ mitre_attack:
 - T1571
 - T1008
 - T1095
+author: mahipal
 ---
 
 # Analyzing Command-and-Control Communication

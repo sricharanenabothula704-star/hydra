@@ -18,6 +18,7 @@ nist_csf:
 - DE.CM-09
 mitre_attack:
 - T1078.004
+author: mahipal
 ---
 # Detecting Entra Offensive Tools in Graph Logs
 

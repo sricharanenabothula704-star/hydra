@@ -28,6 +28,7 @@ mitre_attack:
 - T1059
 - T1078
 - T1591
+author: mahipal
 ---
 
 # Performing Wireless Network Penetration Test

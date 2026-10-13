@@ -31,6 +31,7 @@ mitre_attack:
 - T1059
 - T1078.004
 - T1530
+author: mahipal
 ---
 
 # Implementing BeyondCorp Zero Trust Access Model

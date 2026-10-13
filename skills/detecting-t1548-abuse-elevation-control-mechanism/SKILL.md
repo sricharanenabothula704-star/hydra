@@ -32,6 +32,7 @@ mitre_attack:
 - T1548.001
 - T1548.003
 - T1548.004
+author: mahipal
 ---
 
 # Detecting T1548 Abuse Elevation Control Mechanism

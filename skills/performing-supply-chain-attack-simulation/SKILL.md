@@ -30,6 +30,7 @@ mitre_attack:
 - T1059
 - T1195
 - T1554
+author: mahipal
 ---
 
 # Performing Supply Chain Attack Simulation

@@ -31,6 +31,7 @@ mitre_attack:
 - T1003.001
 - T1558.003
 - T1550.002
+author: mahipal
 ---
 # Building Attack Pattern Library from CTI Reports
 

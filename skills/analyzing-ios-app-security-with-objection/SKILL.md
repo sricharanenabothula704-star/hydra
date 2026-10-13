@@ -32,6 +32,7 @@ mitre_attack:
 - T1414
 - T1417.001
 - T1409
+author: mahipal
 ---
 # Analyzing iOS App Security with Objection
 

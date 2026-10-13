@@ -31,6 +31,7 @@ mitre_attack:
 - T1547.001
 - T1071.001
 - T1486
+author: team-cybersecurity
 ---
 # Analyzing Cyber Kill Chain
 

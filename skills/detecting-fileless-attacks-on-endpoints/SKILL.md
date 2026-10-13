@@ -29,6 +29,7 @@ mitre_attack:
 - T1059
 - T1036
 - T1053
+author: mahipal
 ---
 # Detecting Fileless Attacks on Endpoints
 

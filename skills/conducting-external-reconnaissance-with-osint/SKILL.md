@@ -21,6 +21,7 @@ mitre_attack:
 - T1592
 - T1589
 - T1590
+author: mahipal
 ---
 # Conducting External Reconnaissance with OSINT
 

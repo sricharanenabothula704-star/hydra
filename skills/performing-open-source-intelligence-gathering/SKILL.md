@@ -25,6 +25,7 @@ mitre_attack:
 - T1059
 - T1078
 - T1592
+author: mahipal
 ---
 # Performing Open Source Intelligence Gathering
 

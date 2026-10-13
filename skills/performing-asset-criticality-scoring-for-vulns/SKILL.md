@@ -26,6 +26,7 @@ mitre_attack:
 - T1190
 - T1203
 - T1068
+author: mahipal
 ---
 # Performing Asset Criticality Scoring for Vulns
 

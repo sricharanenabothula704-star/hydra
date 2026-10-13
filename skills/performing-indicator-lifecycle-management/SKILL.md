@@ -27,6 +27,7 @@ mitre_attack:
 - T1592
 - T1593
 - T1589
+author: mahipal
 ---
 # Performing Indicator Lifecycle Management
 

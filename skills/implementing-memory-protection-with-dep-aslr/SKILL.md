@@ -30,6 +30,7 @@ mitre_attack:
 - T1059
 - T1036
 - T1190
+author: mahipal
 ---
 # Implementing Memory Protection with DEP and ASLR
 

@@ -36,6 +36,7 @@ mitre_attack:
 - T1003.001
 - T1558.003
 - T1027.010
+author: mahipal
 ---
 
 # Analyzing PowerShell Empire Artifacts

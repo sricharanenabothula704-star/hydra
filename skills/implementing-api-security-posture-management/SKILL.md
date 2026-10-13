@@ -28,6 +28,7 @@ mitre_attack:
 - T1190
 - T1059.007
 - T1552.001
+author: mahipal
 ---
 
 # Implementing API Security Posture Management

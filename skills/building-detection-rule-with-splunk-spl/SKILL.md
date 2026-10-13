@@ -33,6 +33,7 @@ mitre_attack:
 - T1110.003
 - T1053.005
 - T1048
+author: mahipal
 ---
 
 # Building Detection Rules with Splunk SPL

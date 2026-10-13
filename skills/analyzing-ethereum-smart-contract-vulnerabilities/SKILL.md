@@ -23,6 +23,7 @@ nist_csf:
 mitre_attack:
 - T1190
 - T1059
+author: mahipal
 ---
 
 # Analyzing Ethereum Smart Contract Vulnerabilities

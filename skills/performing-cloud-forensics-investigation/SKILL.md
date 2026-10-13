@@ -27,6 +27,7 @@ mitre_attack:
 - T1119
 - T1070
 - T1078.004
+author: mahipal
 ---
 
 # Performing Cloud Forensics Investigation

@@ -28,6 +28,7 @@ mitre_attack:
 - T1110.003
 - T1078
 - T1556.006
+author: mahipal
 ---
 # Configuring Multi-Factor Authentication with Duo
 

@@ -29,6 +29,7 @@ mitre_attack:
 - T1133
 - T1526
 - T1213
+author: mahipal
 ---
 
 # Detecting Shadow API Endpoints

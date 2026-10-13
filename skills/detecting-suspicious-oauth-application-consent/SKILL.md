@@ -25,6 +25,7 @@ mitre_attack:
 - T1550.001
 - T1098.001
 - T1566.002
+author: mahipal
 ---
 
 # Detecting Suspicious OAuth Application Consent

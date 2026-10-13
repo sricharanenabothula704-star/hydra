@@ -32,6 +32,7 @@ mitre_attack:
 - T1059
 - T1078
 - T1068
+author: mahipal
 ---
 
 # Performing Active Directory BloodHound Analysis

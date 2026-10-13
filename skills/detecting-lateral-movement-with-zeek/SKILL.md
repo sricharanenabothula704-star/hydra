@@ -28,6 +28,7 @@ mitre_attack:
 - T1557
 - T1071
 - T1021
+author: mahipal
 ---
 
 # Detecting Lateral Movement with Zeek

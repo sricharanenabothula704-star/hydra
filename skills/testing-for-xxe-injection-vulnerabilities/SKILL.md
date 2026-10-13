@@ -25,6 +25,7 @@ mitre_attack:
 - T1505.003
 - T1083
 - T1048
+author: mahipal
 ---
 
 # Testing for XXE Injection Vulnerabilities

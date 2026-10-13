@@ -29,6 +29,7 @@ mitre_attack:
 - T1040
 - T1557
 - T1071
+author: mahipal
 ---
 
 # Implementing Network Intrusion Prevention with Suricata

@@ -28,6 +28,7 @@ mitre_attack:
 - T1613
 - T1078
 - T1552.007
+author: mahipal
 ---
 
 # Analyzing Kubernetes Audit Logs

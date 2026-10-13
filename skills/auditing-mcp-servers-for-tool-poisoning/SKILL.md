@@ -18,6 +18,7 @@ nist_ai_rmf:
 - MANAGE-2.2
 atlas_techniques:
 - AML.T0010
+author: mahipal
 ---
 # Auditing MCP Servers for Tool Poisoning
 

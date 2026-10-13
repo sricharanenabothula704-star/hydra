@@ -24,6 +24,7 @@ mitre_attack:
 - T1557.001
 - T1557.002
 - T1040
+author: mahipal
 ---
 # Conducting Man-in-the-Middle Attack Simulation
 

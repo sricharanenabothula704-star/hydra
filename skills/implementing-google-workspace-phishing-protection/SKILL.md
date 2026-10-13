@@ -56,6 +56,7 @@ mitre_f3:
     name: 'Create Fake Materials: Fake Website'
     tactic: resource-development
     source: f3
+author: mahipal
 ---
 # Implementing Google Workspace Phishing Protection
 

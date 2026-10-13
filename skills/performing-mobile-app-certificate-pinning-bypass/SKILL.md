@@ -30,6 +30,7 @@ mitre_attack:
 - T1036
 - T1078
 - T1027
+author: mahipal
 ---
 # Performing Mobile App Certificate Pinning Bypass
 

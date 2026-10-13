@@ -48,6 +48,7 @@ mitre_f3:
     name: Transfer of funds
     tactic: monetization
     source: f3
+author: mahipal
 ---
 
 # Analyzing Ransomware Network Indicators

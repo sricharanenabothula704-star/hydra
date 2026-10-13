@@ -34,6 +34,7 @@ mitre_attack:
 - T1195.002
 - T1608.001
 - T1554
+author: mukul975
 ---
 # Detecting Typosquatting Packages in npm and PyPI
 

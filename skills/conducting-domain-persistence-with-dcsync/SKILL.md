@@ -27,6 +27,7 @@ mitre_attack:
 - T1003.006
 - T1207
 - T1098
+author: mahipal
 ---
 # Conducting Domain Persistence with DCSync
 

@@ -29,6 +29,7 @@ mitre_attack:
 - T1547.009
 - T1204.002
 - T1059.001
+author: mahipal
 ---
 
 # Analyzing LNK File and Jump List Artifacts

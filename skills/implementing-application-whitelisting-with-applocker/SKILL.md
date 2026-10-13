@@ -29,6 +29,7 @@ mitre_attack:
 - T1059
 - T1036
 - T1027
+author: mahipal
 ---
 # Implementing Application Whitelisting with AppLocker
 

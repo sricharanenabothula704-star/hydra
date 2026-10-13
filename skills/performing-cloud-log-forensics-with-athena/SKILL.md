@@ -31,6 +31,7 @@ mitre_attack:
 - T1537
 - T1580
 - T1021
+author: mukul975
 ---
 
 # Performing Cloud Log Forensics with AWS Athena

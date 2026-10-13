@@ -38,6 +38,7 @@ mitre_attack:
 - T1190
 - T1486
 - T1021
+author: andrewibrah
 ---
 
 # Conducting a Cyber Risk Assessment with NIST SP 800-30

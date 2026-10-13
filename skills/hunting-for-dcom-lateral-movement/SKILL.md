@@ -40,6 +40,7 @@ mitre_attack:
 - T1082
 - T1083
 - T1021
+author: mukul975
 ---
 
 # Hunting for DCOM Lateral Movement

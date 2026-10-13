@@ -33,6 +33,7 @@ mitre_attack:
 - T1195.001
 - T1199
 - T1554
+author: mahipal
 ---
 
 # Detecting Supply Chain Attacks in CI/CD

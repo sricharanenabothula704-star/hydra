@@ -26,6 +26,7 @@ mitre_attack:
 - T1112
 - T1003.002
 - T1025
+author: mahipal
 ---
 
 # Analyzing Windows Registry for Artifacts

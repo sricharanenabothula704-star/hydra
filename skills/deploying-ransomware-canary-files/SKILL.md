@@ -40,6 +40,7 @@ mitre_f3:
     name: 'Electronic Funds Transfer: Wire Transfer'
     tactic: monetization
     source: f3
+author: mahipal
 ---
 # Deploying Ransomware Canary Files
 

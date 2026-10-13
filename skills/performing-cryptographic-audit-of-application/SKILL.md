@@ -44,6 +44,7 @@ mitre_f3:
     name: Access with Stolen Session Cookie
     tactic: initial-access
     source: f3
+author: mahipal
 ---
 # Performing Cryptographic Audit of Application
 

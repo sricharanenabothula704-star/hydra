@@ -62,6 +62,7 @@ mitre_f3:
     name: Steal Web Session Cookie
     tactic: positioning
     source: attack
+author: mahipal
 ---
 
 # Detecting Anomalous Authentication Patterns

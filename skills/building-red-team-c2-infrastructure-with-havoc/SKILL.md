@@ -37,6 +37,7 @@ mitre_attack:
 - T1090.002
 - T1105
 - T1055
+author: mahipal
 ---
 
 # Building Red Team C2 Infrastructure with Havoc

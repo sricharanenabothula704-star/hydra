@@ -25,6 +25,7 @@ mitre_attack:
 - T1078
 - T1098
 - T1069
+author: mahipal
 ---
 
 # Building Role Mining for RBAC Optimization

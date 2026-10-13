@@ -31,6 +31,7 @@ mitre_attack:
 - T1552.004
 - T1555
 - T1078
+author: mahipal
 ---
 # Configuring HSM for Key Storage
 

@@ -52,6 +52,7 @@ mitre_f3:
     name: 'Account Manipulation: Account Linking'
     tactic: defense-impairment
     source: f3
+author: mahipal
 ---
 # Detecting AWS CloudTrail Anomalies
 

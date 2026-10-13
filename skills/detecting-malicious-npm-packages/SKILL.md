@@ -18,6 +18,7 @@ nist_csf:
 - DE.CM-09
 mitre_attack:
 - T1195.002
+author: mahipal
 ---
 # Detecting Malicious npm Packages
 

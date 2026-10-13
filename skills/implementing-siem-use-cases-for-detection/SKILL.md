@@ -45,6 +45,7 @@ mitre_attack:
 - T1685.005
 - T1566
 - T0816
+author: mahipal
 ---
 # Implementing SIEM Use Cases for Detection
 

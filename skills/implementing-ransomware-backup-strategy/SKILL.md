@@ -61,6 +61,7 @@ mitre_f3:
     name: 'Conversion to Physical Monetary Instruments: Cash'
     tactic: monetization
     source: f3
+author: mahipal
 ---
 # Implementing Ransomware Backup Strategy
 

@@ -64,6 +64,7 @@ mitre_f3:
     name: Phishing for Information
     tactic: reconnaissance
     source: attack
+author: mahipal
 ---
 
 # Implementing Identity Verification for Zero Trust

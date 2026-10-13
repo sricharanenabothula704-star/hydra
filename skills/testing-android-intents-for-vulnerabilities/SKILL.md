@@ -30,6 +30,7 @@ mitre_attack:
 - T1036
 - T1078
 - T1055
+author: mahipal
 ---
 # Testing Android Intents for Vulnerabilities
 

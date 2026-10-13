@@ -30,6 +30,7 @@ mitre_attack:
 - T1190
 - T1059
 - T1059.007
+author: mahipal
 ---
 
 # Implementing Runtime Application Self-Protection

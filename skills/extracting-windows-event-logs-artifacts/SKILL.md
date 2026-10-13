@@ -24,6 +24,7 @@ mitre_attack:
 - T1119
 - T1070
 - T1021
+author: mahipal
 ---
 
 # Extracting Windows Event Logs Artifacts

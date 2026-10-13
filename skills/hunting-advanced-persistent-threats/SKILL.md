@@ -39,6 +39,7 @@ mitre_attack:
 - T1593
 - T1589
 - T1005
+author: mahipal
 ---
 # Hunting Advanced Persistent Threats
 

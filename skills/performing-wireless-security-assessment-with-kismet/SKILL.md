@@ -28,6 +28,7 @@ mitre_attack:
 - T1557
 - T1071
 - T1573
+author: mahipal
 ---
 
 # Performing Wireless Security Assessment with Kismet

@@ -18,6 +18,7 @@ nist_csf:
 - RS.AN-03
 mitre_attack:
 - T1059.001
+author: mahipal
 ---
 # Generating Forensic Timelines with Hayabusa
 

@@ -26,6 +26,7 @@ mitre_attack:
 - T1557
 - T1071
 - T1685.002
+author: mahipal
 ---
 
 # Performing Network Traffic Analysis with Zeek

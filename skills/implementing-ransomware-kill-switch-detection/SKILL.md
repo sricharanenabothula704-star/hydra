@@ -51,6 +51,7 @@ mitre_f3:
     name: Transfer of funds
     tactic: monetization
     source: f3
+author: mahipal
 ---
 
 # Implementing Ransomware Kill Switch Detection

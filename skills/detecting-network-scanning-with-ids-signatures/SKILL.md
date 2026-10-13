@@ -28,6 +28,7 @@ mitre_attack:
 - T1557
 - T1071
 - T1595
+author: mahipal
 ---
 
 # Detecting Network Scanning with IDS Signatures

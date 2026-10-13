@@ -34,6 +34,7 @@ mitre_attack:
 - T1140
 - T1497
 - T1070
+author: mahipal
 ---
 
 # Detecting Process Injection Techniques

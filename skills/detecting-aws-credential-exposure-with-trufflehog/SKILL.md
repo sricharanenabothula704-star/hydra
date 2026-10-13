@@ -55,6 +55,7 @@ mitre_f3:
     name: 'Use Alternate Authentication Material: Application Access Token'
     tactic: initial-access
     source: attack
+author: mahipal
 ---
 
 # Detecting AWS Credential Exposure with TruffleHog

@@ -25,6 +25,7 @@ mitre_attack:
 - T1014
 - T1547.006
 - T1564.001
+author: mahipal
 ---
 
 # Analyzing Linux Kernel Rootkits

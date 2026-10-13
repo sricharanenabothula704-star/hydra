@@ -28,6 +28,7 @@ mitre_attack:
 - T1572
 - T1210
 - T1048
+author: mahipal
 ---
 # Configuring Snort IDS for Intrusion Detection
 

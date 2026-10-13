@@ -31,6 +31,7 @@ mitre_attack:
 - T0831
 - T0809
 - T0807
+author: mahipal
 ---
 
 # Detecting Stuxnet-Style Attacks

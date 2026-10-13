@@ -33,6 +33,7 @@ mitre_attack:
 - T1568
 - T1583.001
 - T1102
+author: mahipal
 ---
 # Analyzing Threat Intelligence Feeds
 

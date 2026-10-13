@@ -46,6 +46,7 @@ mitre_f3:
     name: 'Electronic Funds Transfer: Wire Transfer'
     tactic: monetization
     source: f3
+author: mahipal
 ---
 # Analyzing Ransomware Leak Site Intelligence
 

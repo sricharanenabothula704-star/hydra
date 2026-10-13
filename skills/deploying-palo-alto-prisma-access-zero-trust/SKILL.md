@@ -27,6 +27,7 @@ mitre_attack:
 - T1078
 - T1071.001
 - T1572
+author: mahipal
 ---
 
 # Deploying Palo Alto Prisma Access Zero Trust

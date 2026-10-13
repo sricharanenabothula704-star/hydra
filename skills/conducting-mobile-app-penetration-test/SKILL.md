@@ -39,6 +39,7 @@ mitre_attack:
 - T1633
 - T1417
 - T1422
+author: mahipal
 ---
 # Conducting Mobile App Penetration Test
 

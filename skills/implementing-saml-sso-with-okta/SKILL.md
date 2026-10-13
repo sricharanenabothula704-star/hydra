@@ -55,6 +55,7 @@ mitre_f3:
     name: 'Account Takeover: Password Reset'
     tactic: initial-access
     source: f3
+author: mahipal
 ---
 # Implementing SAML SSO with Okta
 

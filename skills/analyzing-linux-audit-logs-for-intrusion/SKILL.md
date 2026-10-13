@@ -30,6 +30,7 @@ mitre_attack:
 - T1070
 - T1548.003
 - T1543.002
+author: mahipal
 ---
 
 # Analyzing Linux Audit Logs for Intrusion

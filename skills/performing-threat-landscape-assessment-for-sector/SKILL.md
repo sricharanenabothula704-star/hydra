@@ -36,6 +36,7 @@ mitre_attack:
 - T1593
 - T1589
 - T1566
+author: mahipal
 ---
 # Performing Threat Landscape Assessment for Sector
 

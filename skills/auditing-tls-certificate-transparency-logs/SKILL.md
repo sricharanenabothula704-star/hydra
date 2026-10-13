@@ -31,6 +31,7 @@ mitre_attack:
 - T1587.003
 - T1593
 - T1566.002
+author: mukul975
 ---
 # Auditing TLS Certificate Transparency Logs
 

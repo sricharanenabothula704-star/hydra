@@ -22,6 +22,7 @@ mitre_attack:
 - T1553
 - T1078.004
 - T1530
+author: mahipal
 ---
 # Implementing Envelope Encryption with AWS KMS
 

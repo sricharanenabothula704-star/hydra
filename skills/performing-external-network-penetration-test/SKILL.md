@@ -28,6 +28,7 @@ mitre_attack:
 - T1059
 - T1078
 - T1592
+author: mahipal
 ---
 
 # Performing External Network Penetration Test

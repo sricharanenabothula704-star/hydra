@@ -72,6 +72,7 @@ mitre_f3:
     name: Delete Relevant Emails
     tactic: stealth
     source: f3
+author: mahipal
 ---
 # Detecting Business Email Compromise
 

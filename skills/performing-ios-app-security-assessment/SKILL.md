@@ -34,6 +34,7 @@ mitre_attack:
 - T1036
 - T1078
 - T1003
+author: mukul975
 ---
 # Performing iOS App Security Assessment
 

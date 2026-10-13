@@ -50,6 +50,7 @@ mitre_f3:
     name: 'Account Manipulation: Add Authorized User'
     tactic: defense-impairment
     source: f3
+author: mahipal
 ---
 
 # Implementing Azure AD Privileged Identity Management

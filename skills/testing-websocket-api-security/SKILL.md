@@ -27,6 +27,7 @@ mitre_attack:
 - T1552.001
 - T1055
 - T1059
+author: mahipal
 ---
 # Testing WebSocket API Security
 

@@ -18,6 +18,7 @@ nist_csf:
 - ID.AM-08
 mitre_attack:
 - T1195.001
+author: mahipal
 ---
 # Generating and Analyzing SBOMs
 

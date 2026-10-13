@@ -29,6 +29,7 @@ mitre_attack:
 - T1105
 - T1590.005
 - T1588.001
+author: mahipal
 ---
 # Building IOC Enrichment Pipeline with OpenCTI
 

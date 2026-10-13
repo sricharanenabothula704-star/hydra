@@ -28,6 +28,7 @@ mitre_attack:
 - T1059
 - T1036
 - T1048
+author: mahipal
 ---
 # Implementing USB Device Control Policy
 

@@ -27,6 +27,7 @@ mitre_attack:
 - T1021.007
 - T1098.003
 - T1528
+author: mahipal
 ---
 
 # Detecting Azure Lateral Movement

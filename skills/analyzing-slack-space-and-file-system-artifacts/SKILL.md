@@ -23,6 +23,7 @@ mitre_attack:
 - T1070.004
 - T1005
 - T1006
+author: mahipal
 ---
 
 # Analyzing Slack Space and File System Artifacts

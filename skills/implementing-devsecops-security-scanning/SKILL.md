@@ -33,6 +33,7 @@ mitre_attack:
 - T1059
 - T1610
 - T1611
+author: mahipal
 ---
 
 # Implementing DevSecOps Security Scanning

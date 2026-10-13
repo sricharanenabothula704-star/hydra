@@ -57,6 +57,7 @@ mitre_f3:
     name: 'Brute Force: Password Cracking'
     tactic: initial-access
     source: attack
+author: mahipal
 ---
 
 # Detecting Credential Dumping Techniques

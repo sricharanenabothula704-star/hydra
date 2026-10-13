@@ -18,6 +18,7 @@ nist_csf:
 - DE.CM-01
 mitre_attack:
 - T1021.002
+author: mahipal
 ---
 # Moving Laterally with NetExec
 

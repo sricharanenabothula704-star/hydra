@@ -22,6 +22,7 @@ nist_csf:
 - DE.CM-01
 mitre_attack:
 - T1078
+author: mahipal
 ---
 # Emulating Cloud Attacks with Stratus Red Team
 

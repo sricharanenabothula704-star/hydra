@@ -28,6 +28,7 @@ mitre_attack:
 - T1542.002
 - T1014
 - T1547.006
+author: mahipal
 ---
 
 # Analyzing Bootkit and Rootkit Samples

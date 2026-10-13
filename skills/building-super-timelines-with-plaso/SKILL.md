@@ -22,6 +22,7 @@ nist_csf:
 - RS.AN-03
 mitre_attack:
 - T1070
+author: mahipal
 ---
 # Building Super Timelines with Plaso
 

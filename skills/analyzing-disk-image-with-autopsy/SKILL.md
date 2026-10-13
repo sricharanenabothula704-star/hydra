@@ -21,6 +21,7 @@ mitre_attack:
 - T1074.001
 - T1070.004
 - T1083
+author: mahipal
 ---
 
 # Analyzing Disk Image with Autopsy

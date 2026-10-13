@@ -28,6 +28,7 @@ mitre_attack:
 - T1070.004
 - T1070.006
 - T1005
+author: mahipal
 ---
 
 # Analyzing MFT for Deleted File Recovery

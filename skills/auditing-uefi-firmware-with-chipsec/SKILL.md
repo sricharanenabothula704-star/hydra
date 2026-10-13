@@ -18,6 +18,7 @@ nist_csf:
 - ID.AM-02
 mitre_attack:
 - T1542.001
+author: mahipal
 ---
 # Auditing UEFI Firmware with CHIPSEC
 

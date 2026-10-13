@@ -34,6 +34,7 @@ mitre_attack:
 - T1140
 - T1497
 - T1591
+author: mahipal
 ---
 
 # Performing Dynamic Analysis with ANY.RUN

@@ -38,6 +38,7 @@ mitre_attack:
 - T1078.004
 - T1619
 - T1580
+author: mahipal
 ---
 
 # Detecting Azure Storage Account Misconfigurations

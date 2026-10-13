@@ -40,6 +40,7 @@ mitre_attack:
 - T1204
 - T1588.007
 - T1565
+author: mukul975
 ---
 # Detecting AI Model Prompt Injection Attacks
 

@@ -27,6 +27,7 @@ mitre_attack:
 - T1059
 - T1078
 - T1558.003
+author: mahipal
 ---
 
 # Performing Active Directory Forest Trust Attack

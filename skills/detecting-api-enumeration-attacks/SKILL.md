@@ -30,6 +30,7 @@ mitre_attack:
 - T1046
 - T1190
 - T1087
+author: mahipal
 ---
 
 # Detecting API Enumeration Attacks

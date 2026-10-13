@@ -30,6 +30,7 @@ mitre_attack:
 - T1021
 - T1219
 - T1190
+author: mahipal
 ---
 
 # Configuring Zscaler Private Access for ZTNA

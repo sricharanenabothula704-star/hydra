@@ -58,6 +58,7 @@ mitre_f3:
     name: Email Spoofing
     tactic: stealth
     source: attack
+author: mahipal
 ---
 # Performing Brand Monitoring for Impersonation
 

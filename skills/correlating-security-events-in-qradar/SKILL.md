@@ -30,6 +30,7 @@ mitre_attack:
 - T1021
 - T1071.001
 - T1041
+author: mahipal
 ---
 # Correlating Security Events in QRadar
 

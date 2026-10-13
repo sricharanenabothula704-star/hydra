@@ -25,6 +25,7 @@ mitre_attack:
 - T1570
 - T1046
 - T1018
+author: mahipal
 ---
 
 # Configuring Microsegmentation for Zero Trust

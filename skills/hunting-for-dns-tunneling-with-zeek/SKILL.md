@@ -34,6 +34,7 @@ mitre_attack:
 - T1082
 - T1083
 - T1048
+author: mahipal
 ---
 
 # Hunting for DNS Tunneling with Zeek

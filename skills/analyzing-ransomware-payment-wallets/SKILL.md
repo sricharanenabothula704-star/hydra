@@ -48,6 +48,7 @@ mitre_f3:
     name: Structuring
     tactic: stealth
     source: f3
+author: mahipal
 ---
 
 # Analyzing Ransomware Payment Wallets

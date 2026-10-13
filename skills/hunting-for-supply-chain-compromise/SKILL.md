@@ -29,6 +29,7 @@ mitre_attack:
 - T1082
 - T1083
 - T1195
+author: mahipal
 ---
 
 # Hunting For Supply Chain Compromise

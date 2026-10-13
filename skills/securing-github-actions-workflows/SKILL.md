@@ -29,6 +29,7 @@ mitre_attack:
 - T1059.004
 - T1068
 - T1548
+author: mahipal
 ---
 
 # Securing GitHub Actions Workflows

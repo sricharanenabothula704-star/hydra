@@ -28,6 +28,7 @@ mitre_attack:
 - T1082
 - T1083
 - T1021
+author: mahipal
 ---
 # Hunting for Lateral Movement via WMI
 

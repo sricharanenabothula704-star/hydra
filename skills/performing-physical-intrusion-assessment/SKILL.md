@@ -29,6 +29,7 @@ mitre_attack:
 - T1059
 - T1078
 - T1027
+author: mahipal
 ---
 
 # Performing Physical Intrusion Assessment

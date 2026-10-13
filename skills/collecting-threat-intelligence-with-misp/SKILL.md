@@ -25,6 +25,7 @@ mitre_attack:
 - T1583.001
 - T1566.001
 - T1587.001
+author: mahipal
 ---
 # Collecting Threat Intelligence with MISP
 

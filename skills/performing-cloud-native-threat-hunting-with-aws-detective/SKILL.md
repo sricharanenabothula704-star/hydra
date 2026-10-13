@@ -30,6 +30,7 @@ mitre_attack:
 - T1537
 - T1580
 - T1071
+author: juliosuas
 ---
 
 # Performing Cloud-Native Threat Hunting with AWS Detective

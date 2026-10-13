@@ -30,6 +30,7 @@ mitre_attack:
 - T1059
 - T1078
 - T1078.004
+author: mahipal
 ---
 # Performing IoT Security Assessment
 

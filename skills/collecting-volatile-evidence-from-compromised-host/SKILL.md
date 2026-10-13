@@ -23,6 +23,7 @@ nist_csf:
 - RS.MA-02
 - RS.AN-03
 - RC.RP-01
+author: mahipal
 ---
 
 # Collecting Volatile Evidence from Compromised Hosts

@@ -24,6 +24,7 @@ mitre_attack:
 - T1573.002
 - T1539
 - T1556.004
+author: mahipal
 ---
 # Configuring TLS 1.3 for Secure Communications
 

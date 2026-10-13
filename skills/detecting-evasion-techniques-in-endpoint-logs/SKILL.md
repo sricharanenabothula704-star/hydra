@@ -36,6 +36,7 @@ mitre_attack:
 - T1059
 - T1036
 - T1027
+author: mahipal
 ---
 # Detecting Evasion Techniques in Endpoint Logs
 

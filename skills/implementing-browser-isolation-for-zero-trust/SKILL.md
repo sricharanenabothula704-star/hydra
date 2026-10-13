@@ -63,6 +63,7 @@ mitre_f3:
     name: 'Adversary-in-the-Browser: Malicious JavaScript Injection'
     tactic: execution
     source: f3
+author: mukul975
 ---
 
 # Implementing Browser Isolation for Zero Trust

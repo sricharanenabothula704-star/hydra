@@ -57,6 +57,7 @@ mitre_f3:
     name: Account Manipulation
     tactic: positioning
     source: f3
+author: mahipal
 ---
 
 # Implementing Google Workspace Admin Security

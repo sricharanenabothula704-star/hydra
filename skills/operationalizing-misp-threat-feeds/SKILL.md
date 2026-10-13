@@ -18,6 +18,7 @@ nist_csf:
 - ID.RA-02
 mitre_attack:
 - T1589
+author: mahipal
 ---
 # Operationalizing MISP Threat Feeds
 

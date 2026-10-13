@@ -53,6 +53,7 @@ mitre_f3:
     name: Indicator Removal
     tactic: stealth
     source: attack
+author: mahipal
 ---
 
 # Detecting Ransomware Encryption Behavior

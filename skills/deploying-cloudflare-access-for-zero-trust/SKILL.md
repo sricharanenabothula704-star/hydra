@@ -32,6 +32,7 @@ mitre_attack:
 - T1078
 - T1190
 - T1021
+author: mahipal
 ---
 
 # Deploying Cloudflare Access for Zero Trust

@@ -28,6 +28,7 @@ mitre_attack:
 - T1583.001
 - T1105
 - T1566.002
+author: mahipal
 ---
 # Building IOC Defanging and Sharing Pipeline
 

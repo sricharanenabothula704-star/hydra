@@ -35,6 +35,7 @@ mitre_attack:
 - T1059.004
 - T1610
 - T1611
+author: mahipal
 ---
 
 # Implementing Policy as Code with Open Policy Agent

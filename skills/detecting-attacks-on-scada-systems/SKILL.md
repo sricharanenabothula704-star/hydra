@@ -40,6 +40,7 @@ mitre_attack:
 - T0831
 - T0814
 - T0832
+author: mahipal
 ---
 
 # Detecting Attacks on SCADA Systems

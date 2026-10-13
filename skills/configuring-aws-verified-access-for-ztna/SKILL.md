@@ -29,6 +29,7 @@ mitre_attack:
 - T1078.004
 - T1133
 - T1021.007
+author: mahipal
 ---
 
 # Configuring AWS Verified Access for ZTNA

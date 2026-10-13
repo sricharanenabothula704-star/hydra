@@ -38,6 +38,7 @@ mitre_attack:
 - T1580
 - T1530
 - T1619
+author: andrewibrah
 ---
 
 # Deploying Cloud Deception with Decoy Resources

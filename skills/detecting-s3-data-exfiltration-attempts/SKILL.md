@@ -28,6 +28,7 @@ mitre_attack:
 - T1567.002
 - T1537
 - T1119
+author: mahipal
 ---
 
 # Detecting S3 Data Exfiltration Attempts

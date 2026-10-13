@@ -28,6 +28,7 @@ mitre_attack:
 - T1069.002
 - T1482
 - T1018
+author: mahipal
 ---
 # Conducting Internal Reconnaissance with BloodHound CE
 

@@ -54,6 +54,7 @@ mitre_f3:
     name: 'Account Manipulation: Change Account Details'
     tactic: positioning
     source: f3
+author: mahipal
 ---
 
 # Securing AWS IAM Permissions

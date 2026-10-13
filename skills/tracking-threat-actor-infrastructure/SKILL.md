@@ -61,6 +61,7 @@ mitre_f3:
     name: 'Stage Capabilities: SEO Poisoning'
     tactic: resource-development
     source: attack
+author: mahipal
 ---
 # Tracking Threat Actor Infrastructure
 

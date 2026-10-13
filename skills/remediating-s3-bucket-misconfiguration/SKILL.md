@@ -29,6 +29,7 @@ mitre_attack:
 - T1537
 - T1580
 - T1573
+author: mahipal
 ---
 
 # Remediating S3 Bucket Misconfiguration

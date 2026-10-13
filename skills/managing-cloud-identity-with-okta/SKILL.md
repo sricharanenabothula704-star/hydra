@@ -57,6 +57,7 @@ mitre_f3:
     name: 'Use Alternate Authentication Material: Application Access Token'
     tactic: initial-access
     source: attack
+author: mahipal
 ---
 
 # Managing Cloud Identity with Okta

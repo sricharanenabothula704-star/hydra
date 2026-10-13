@@ -25,6 +25,7 @@ mitre_attack:
 - T1556
 - T1098
 - T1069
+author: mahipal
 ---
 # Performing Service Account Audit
 

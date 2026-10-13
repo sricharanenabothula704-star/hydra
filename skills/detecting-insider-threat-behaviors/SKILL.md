@@ -32,6 +32,7 @@ mitre_attack:
 - T1057
 - T1082
 - T1083
+author: mahipal
 ---
 
 # Detecting Insider Threat Behaviors

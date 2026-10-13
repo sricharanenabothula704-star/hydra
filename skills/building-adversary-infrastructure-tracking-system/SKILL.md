@@ -25,6 +25,7 @@ mitre_attack:
 - T1596.001
 - T1590.002
 - T1071.001
+author: mahipal
 ---
 # Building Adversary Infrastructure Tracking System
 

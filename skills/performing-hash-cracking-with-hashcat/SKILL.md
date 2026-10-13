@@ -22,6 +22,7 @@ mitre_attack:
 - T1600
 - T1573
 - T1553
+author: mahipal
 ---
 # Performing Hash Cracking with Hashcat
 

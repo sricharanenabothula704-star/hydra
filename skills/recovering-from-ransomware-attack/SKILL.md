@@ -52,6 +52,7 @@ mitre_f3:
     name: Remote Access Tools
     tactic: positioning
     source: attack
+author: mahipal
 ---
 # Recovering from Ransomware Attack
 

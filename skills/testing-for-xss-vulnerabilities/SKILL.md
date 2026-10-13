@@ -26,6 +26,7 @@ mitre_attack:
 - T1059
 - T1078
 - T1055
+author: mahipal
 ---
 # Testing for XSS Vulnerabilities
 

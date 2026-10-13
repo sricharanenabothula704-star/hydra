@@ -27,6 +27,7 @@ mitre_attack:
 - T1055
 - T1140
 - T1497
+author: mahipal
 ---
 # Performing YARA Rule Development for Detection
 

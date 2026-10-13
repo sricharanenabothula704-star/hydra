@@ -30,6 +30,7 @@ mitre_attack:
 - T1082
 - T1083
 - T1486
+author: mahipal
 ---
 
 # Hunting For Shadow Copy Deletion

@@ -24,6 +24,7 @@ mitre_attack:
 - T1573
 - T1553
 - T1486
+author: mahipal
 ---
 # Implementing RSA Key Pair Management
 

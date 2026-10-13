@@ -29,6 +29,7 @@ mitre_attack:
 - T1059
 - T1055
 - T1005
+author: mahipal
 ---
 
 # Extracting Memory Artifacts with Rekall

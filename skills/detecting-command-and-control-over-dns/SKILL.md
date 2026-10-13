@@ -29,6 +29,7 @@ mitre_attack:
 - T1557
 - T1071
 - T1095
+author: mukul975
 ---
 
 # Detecting Command and Control Over DNS

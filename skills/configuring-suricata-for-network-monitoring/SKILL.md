@@ -28,6 +28,7 @@ mitre_attack:
 - T1572
 - T1048
 - T1573.001
+author: mahipal
 ---
 # Configuring Suricata for Network Monitoring
 

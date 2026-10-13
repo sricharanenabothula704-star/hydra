@@ -19,6 +19,7 @@ mitre_attack:
 - T1600
 - T1573
 - T1553
+author: mahipal
 ---
 # Implementing Zero-Knowledge Proof for Authentication
 

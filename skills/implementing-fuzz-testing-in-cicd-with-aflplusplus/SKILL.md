@@ -32,6 +32,7 @@ mitre_attack:
 - T1059.004
 - T1005
 - T1059
+author: mahipal
 ---
 
 # Implementing Fuzz Testing in CI/CD with AFL++

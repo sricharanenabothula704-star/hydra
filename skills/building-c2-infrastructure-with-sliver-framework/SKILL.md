@@ -30,6 +30,7 @@ mitre_attack:
 - T1090.002
 - T1105
 - T1572
+author: mahipal
 ---
 # Building C2 Infrastructure with Sliver Framework
 

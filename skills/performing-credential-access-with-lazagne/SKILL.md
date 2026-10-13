@@ -62,6 +62,7 @@ mitre_f3:
     name: Account Takeover
     tactic: initial-access
     source: f3
+author: mahipal
 ---
 # Performing Credential Access with LaZagne
 

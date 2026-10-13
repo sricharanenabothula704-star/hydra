@@ -18,6 +18,7 @@ nist_ai_rmf:
 - MEASURE-2.6
 atlas_techniques:
 - AML.T0024
+author: mahipal
 ---
 # Detecting Model Extraction Attacks
 

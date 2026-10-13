@@ -29,6 +29,7 @@ mitre_attack:
 - T1082
 - T1083
 - T1547
+author: mahipal
 ---
 
 # Hunting For Scheduled Task Persistence

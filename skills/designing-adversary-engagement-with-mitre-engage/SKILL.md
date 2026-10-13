@@ -37,6 +37,7 @@ mitre_attack:
 - T1021
 - T1552
 - T1046
+author: andrewibrah
 ---
 
 # Designing Adversary Engagement with MITRE Engage

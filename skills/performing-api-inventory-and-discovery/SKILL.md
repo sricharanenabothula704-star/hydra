@@ -31,6 +31,7 @@ mitre_attack:
 - T1552.001
 - T1078.004
 - T1530
+author: mahipal
 ---
 # Performing API Inventory and Discovery
 

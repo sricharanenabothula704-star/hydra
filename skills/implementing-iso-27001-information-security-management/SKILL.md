@@ -28,6 +28,7 @@ mitre_attack:
 - T1078
 - T1530
 - T1685.002
+author: mahipal
 ---
 # Implementing ISO 27001 Information Security Management
 

@@ -30,6 +30,7 @@ mitre_attack:
 - T1059
 - T1685.002
 - T1685.005
+author: mahipal
 ---
 
 # Performing S7comm Protocol Security Analysis

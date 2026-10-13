@@ -30,6 +30,7 @@ mitre_attack:
 - T1552.001
 - T1027
 - T1055
+author: mahipal
 ---
 # Performing API Rate Limiting Bypass
 

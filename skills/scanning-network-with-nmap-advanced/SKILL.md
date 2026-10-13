@@ -29,6 +29,7 @@ mitre_attack:
 - T1557
 - T1071
 - T1595
+author: mahipal
 ---
 # Scanning Network with Nmap Advanced Techniques
 

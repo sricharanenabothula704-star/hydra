@@ -27,6 +27,7 @@ mitre_attack:
 - T1537
 - T1580
 - T1068
+author: mahipal
 ---
 
 # Performing AWS Privilege Escalation Assessment

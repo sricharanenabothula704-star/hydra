@@ -23,6 +23,7 @@ mitre_attack:
 - T1119
 - T1070
 - T1685.002
+author: mahipal
 ---
 
 # Performing Log Analysis for Forensic Investigation

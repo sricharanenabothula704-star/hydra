@@ -56,6 +56,7 @@ mitre_f3:
     name: Account Manipulation
     tactic: defense-impairment
     source: f3
+author: mahipal
 ---
 
 # Detecting Compromised Cloud Credentials

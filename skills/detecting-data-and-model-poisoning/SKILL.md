@@ -19,6 +19,7 @@ nist_ai_rmf:
 atlas_techniques:
 - AML.T0020
 - AML.T0018
+author: mahipal
 ---
 # Detecting Data and Model Poisoning
 

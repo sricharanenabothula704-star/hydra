@@ -23,6 +23,7 @@ mitre_attack:
 - T1071
 - T1105
 - T1588.001
+author: mahipal
 ---
 # Building Threat Feed Aggregation with MISP
 

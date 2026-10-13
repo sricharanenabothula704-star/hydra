@@ -61,6 +61,7 @@ mitre_f3:
     name: Indicator Removal
     tactic: stealth
     source: attack
+author: mukul975
 ---
 # Implementing Sigstore for Software Signing
 

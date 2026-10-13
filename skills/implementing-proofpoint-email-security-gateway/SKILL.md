@@ -59,6 +59,7 @@ mitre_f3:
     name: 'Account Manipulation: Change of Payment Details'
     tactic: positioning
     source: f3
+author: mahipal
 ---
 # Implementing Proofpoint Email Security Gateway
 

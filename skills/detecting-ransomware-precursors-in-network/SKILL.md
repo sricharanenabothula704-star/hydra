@@ -54,6 +54,7 @@ mitre_f3:
     name: Convert to Cryptocurrency
     tactic: monetization
     source: f3
+author: mahipal
 ---
 # Detecting Ransomware Precursors in Network Traffic
 

@@ -20,6 +20,7 @@ mitre_attack:
 - T1573
 - T1553
 - T1486
+author: mahipal
 ---
 # Implementing End-to-End Encryption for Messaging
 

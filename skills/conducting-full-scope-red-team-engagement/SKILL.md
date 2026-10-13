@@ -28,6 +28,7 @@ mitre_attack:
 - T1059.001
 - T1078
 - T1071.001
+author: mahipal
 ---
 
 # Conducting Full-Scope Red Team Engagement

@@ -51,6 +51,7 @@ mitre_f3:
     name: Remote Access Tools
     tactic: positioning
     source: attack
+author: mahipal
 ---
 # Reverse Engineering Ransomware Encryption Routine
 

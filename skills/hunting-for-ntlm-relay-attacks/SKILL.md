@@ -36,6 +36,7 @@ mitre_attack:
 - T1082
 - T1083
 - T1003
+author: mahipal
 ---
 
 # Hunting for NTLM Relay Attacks

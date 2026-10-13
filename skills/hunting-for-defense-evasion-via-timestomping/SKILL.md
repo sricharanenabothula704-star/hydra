@@ -31,6 +31,7 @@ mitre_attack:
 - T1082
 - T1083
 - T1027
+author: mahipal
 ---
 
 # Hunting for Defense Evasion via Timestomping

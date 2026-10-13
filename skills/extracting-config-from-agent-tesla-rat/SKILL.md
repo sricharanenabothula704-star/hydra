@@ -36,6 +36,7 @@ mitre_attack:
 - T1140
 - T1497
 - T1003
+author: mahipal
 ---
 # Extracting Config from Agent Tesla RAT
 

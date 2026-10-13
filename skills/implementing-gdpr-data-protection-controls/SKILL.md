@@ -32,6 +32,7 @@ mitre_attack:
 - T1078
 - T1530
 - T1685.002
+author: mahipal
 ---
 # Implementing GDPR Data Protection Controls
 

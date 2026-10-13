@@ -40,6 +40,7 @@ mitre_attack:
 - T1071.001
 - T1547.001
 - T1053.005
+author: mahipal
 ---
 # Analyzing Threat Actor TTPs with MITRE Navigator
 

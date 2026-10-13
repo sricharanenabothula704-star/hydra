@@ -27,6 +27,7 @@ mitre_attack:
 - T1547.006
 - T1564.001
 - T1574.006
+author: mahipal
 ---
 
 # Detecting Rootkit Activity

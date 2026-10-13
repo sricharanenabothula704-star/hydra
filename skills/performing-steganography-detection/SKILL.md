@@ -28,6 +28,7 @@ mitre_attack:
 - T1119
 - T1070
 - T1059
+author: mahipal
 ---
 
 # Performing Steganography Detection

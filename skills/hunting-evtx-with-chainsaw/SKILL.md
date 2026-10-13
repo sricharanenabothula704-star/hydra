@@ -18,6 +18,7 @@ nist_csf:
 - DE.AE-02
 mitre_attack:
 - T1059.001
+author: mahipal
 ---
 # Hunting EVTX with Chainsaw
 

@@ -29,6 +29,7 @@ mitre_attack:
 - T1537
 - T1580
 - T1003
+author: mahipal
 ---
 
 # Performing Cloud Forensics with AWS CloudTrail

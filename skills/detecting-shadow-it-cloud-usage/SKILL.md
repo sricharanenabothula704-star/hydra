@@ -28,6 +28,7 @@ mitre_attack:
 - T1526
 - T1078.004
 - T1213
+author: mahipal
 ---
 
 # Detecting Shadow IT Cloud Usage

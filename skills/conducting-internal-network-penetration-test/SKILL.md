@@ -31,6 +31,7 @@ mitre_attack:
 - T1018
 - T1021
 - T1210
+author: mahipal
 ---
 
 # Conducting Internal Network Penetration Test

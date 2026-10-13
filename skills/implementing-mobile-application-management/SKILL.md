@@ -31,6 +31,7 @@ mitre_attack:
 - T1036
 - T1078
 - T1610
+author: mahipal
 ---
 # Implementing Mobile Application Management
 

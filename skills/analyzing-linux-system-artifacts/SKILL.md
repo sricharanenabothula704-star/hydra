@@ -25,6 +25,7 @@ mitre_attack:
 - T1059.004
 - T1543.002
 - T1053.003
+author: mahipal
 ---
 
 # Analyzing Linux System Artifacts

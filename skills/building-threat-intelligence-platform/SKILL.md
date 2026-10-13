@@ -23,6 +23,7 @@ mitre_attack:
 - T1071
 - T1588.001
 - T1591
+author: mahipal
 ---
 # Building Threat Intelligence Platform
 

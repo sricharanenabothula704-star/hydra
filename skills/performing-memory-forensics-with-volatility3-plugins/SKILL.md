@@ -32,6 +32,7 @@ mitre_attack:
 - T1140
 - T1497
 - T1003
+author: mahipal
 ---
 # Performing Memory Forensics with Volatility3 Plugins
 

@@ -33,6 +33,7 @@ mitre_attack:
 - T1021.001
 - T1098.001
 - T1550.002
+author: mahipal
 ---
 
 # Detecting Service Account Abuse

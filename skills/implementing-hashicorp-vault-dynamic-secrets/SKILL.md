@@ -62,6 +62,7 @@ mitre_f3:
     name: Insider Access Abuse
     tactic: initial-access
     source: f3
+author: mahipal
 ---
 
 # Implementing HashiCorp Vault Dynamic Secrets

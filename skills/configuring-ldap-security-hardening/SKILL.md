@@ -49,6 +49,7 @@ mitre_f3:
     name: Adversary-in-the-Middle
     tactic: positioning
     source: attack
+author: mahipal
 ---
 # Configuring LDAP Security Hardening
 

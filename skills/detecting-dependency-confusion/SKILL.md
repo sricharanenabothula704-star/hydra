@@ -18,6 +18,7 @@ nist_csf:
 - ID.RA-09
 mitre_attack:
 - T1195.001
+author: mahipal
 ---
 # Detecting Dependency Confusion
 

@@ -26,6 +26,7 @@ mitre_attack:
 - T1090.004
 - T1105
 - T1027
+author: mahipal
 ---
 # Analyzing Cobalt Strike Beacon Configuration
 

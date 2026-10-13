@@ -27,6 +27,7 @@ mitre_attack:
 - T1528
 - T1548.005
 - T1580
+author: mahipal
 ---
 
 # Auditing GCP IAM Permissions

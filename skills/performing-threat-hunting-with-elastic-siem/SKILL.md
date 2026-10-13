@@ -45,6 +45,7 @@ mitre_attack:
 - T1685.005
 - T1566
 - T1027
+author: mahipal
 ---
 # Performing Threat Hunting with Elastic SIEM
 

@@ -32,6 +32,7 @@ mitre_attack:
 - T1059
 - T0816
 - T0836
+author: mahipal
 ---
 
 # Detecting DNP3 Protocol Anomalies

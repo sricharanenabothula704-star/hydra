@@ -31,6 +31,7 @@ mitre_attack:
 - T1059
 - T1071
 - T1095
+author: mukul975
 ---
 
 # Performing SOC 2 Type II Audit Preparation
