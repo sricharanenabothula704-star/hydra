@@ -206,10 +206,112 @@ class ToolGuardTest(unittest.TestCase):
             else:
                 os.environ["HYDRA_ALLOW_PRIVATE"] = previous
 
-    def test_proxy_flag_is_not_a_target(self):
-        self.assertAllowed(["-x", "socks5://127.0.0.1:9050", "-u", "example.com"])
+    def test_proxy_host_is_checked_as_a_target(self):
+        # Traffic goes to the proxy, not to the named target, so the proxy host
+        # is checked in its own right. A loopback proxy is denied as a literal
+        # address; an external one is denied because it is not allowlisted.
+        self.assertDenied(["-x", "socks5://127.0.0.1:9050", "-u", "example.com"])
+        self.assertDenied(["-x", "http://evil-proxy.net:8080", "-u", "example.com"])
+        self.assertDenied(
+            ["--proxy", "socks5://evil-proxy.net:1080", "-u", "example.com"]
+        )
 
-    # -- interposition policy ---------------------------------------------
+    # -- ways a tool reaches a host without it being the target argument ----
+    # Each of these is a documented route to an unscanned target. They are the
+    # cases that make argv guarding an arms race rather than a boundary, so they
+    # are pinned here; anything that regresses must fail loudly.
+
+    def _write(self, name: str, lines: list[str]) -> str:
+        path = pathlib.Path(self.tmp.name) / name
+        path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        return str(path)
+
+    def test_request_file_host_header_is_checked(self):
+        # sqlmap -r / ffuf -request: the host lives in a Host: header, never in
+        # an argument. The document scanner must find it.
+        bad = self._write(
+            "req_bad.txt",
+            [
+                "POST /admin HTTP/1.1",
+                "Host: evil.com",
+                "User-Agent: curl",
+            ],
+        )
+        good = self._write(
+            "req_ok.txt",
+            [
+                "POST /admin HTTP/1.1",
+                "Host: example.com",
+                "User-Agent: curl",
+            ],
+        )
+        self.assertDenied(["-r", bad])
+        self.assertDenied(["-request", bad])
+        self.assertAllowed(["-r", good])
+        # Absolute request URI rather than a Host header.
+        uri = self._write("req_uri.txt", ["GET https://evil.com/admin HTTP/1.1"])
+        self.assertDenied(["-r", uri])
+
+    def test_missing_request_file_denied(self):
+        self.assertDenied(["-r", str(pathlib.Path(self.tmp.name) / "nope.txt")])
+
+    def test_config_file_targets_are_checked(self):
+        # nuclei -c: a profile embeds targets in YAML. Previously the config was
+        # skipped as a non-target flag value, so its targets were never checked
+        # -- a config plus an in-scope -u bypassed the gate entirely.
+        bad = self._write(
+            "bad.yaml",
+            [
+                "targets:",
+                "  - https://evil.com/login",
+                "  - https://other-evil.net/",
+            ],
+        )
+        good = self._write("good.yaml", ["targets:", "  - https://example.com/login"])
+        self.assertDenied(["-c", bad])
+        self.assertDenied(["-c", bad, "-u", "example.com"])
+        self.assertAllowed(["-c", good])
+        self.assertDenied(["--config", bad])
+
+    def test_connection_override_destination_is_checked(self):
+        # curl --resolve host:port:addr sends the bytes to addr while the
+        # command line only ever names host. Both ends must be judged, so a
+        # private or metadata destination denies even though the host is fine.
+        self.assertDenied(
+            ["--resolve", "example.com:443:10.0.0.1", "https://example.com"]
+        )
+        self.assertDenied(
+            ["--resolve", "example.com:443:169.254.169.254", "https://example.com"]
+        )
+        # A literal address is not allowlisted, so this denies too. That is the
+        # deliberate policy: an IP must be authorized explicitly, which is the
+        # same human gate hunter.md applies to origin-IP scanning.
+        self.assertDenied(
+            ["--resolve", "example.com:443:9.9.9.9", "https://example.com"]
+        )
+
+    def test_connect_to_destination_is_checked(self):
+        self.assertDenied(
+            ["--connect-to", "::example.com:evil.com:443", "https://example.com"]
+        )
+
+    def test_redirect_flag_is_not_a_list_flag(self):
+        # Regression: _norm_flag lowercased, so curl -L (follow redirects) was
+        # indistinguishable from nuclei -l (target list) and the URL was read
+        # as a filename. Short options are case-sensitive.
+        self.assertAllowed(["-L", "https://example.com"])
+        self.assertDenied(["-L", "https://evil.com"])
+        self.assertAllowed(["--location", "https://example.com"])
+        # The lowercase form is still a real list flag.
+        self.assertDenied(["-l", self._write("lst.txt", ["evil.com"])])
+
+    def test_short_option_case_is_preserved(self):
+        # -p and -P differ, -t and -T differ, -H and -h differ.
+        self.assertAllowed(["-sV", "-p", "80", "443", "example.com"])
+        self.assertAllowed(["-P", "80", "example.com"])
+        self.assertAllowed(["-T", "50", "-severity", "high", "-u", "example.com"])
+        self.assertAllowed(["-H", "Cookie: a=1", "-u", "example.com"])
+
     def test_should_interpose(self):
         self.assertTrue(should_interpose("nmap"))
         self.assertTrue(should_interpose("sqlmap"))
@@ -284,6 +386,59 @@ class ToolGuardFuzzTest(unittest.TestCase):
                     self.assertFalse(allowed, f"evil.com allowed in {argv!r}")
         finally:
             tmp.cleanup()
+
+
+class OracleScopeTest(unittest.TestCase):
+    """Oracles issue real HTTP requests, so they must obey the same gate.
+
+    Before this was wired, `core/oracles.py` had no caller at all and made nine
+    unscoped requests with `verify=False`. Dead code that can still send traffic
+    is an authorisation hole waiting to be used by accident.
+    """
+
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory()
+        self.allowlist = pathlib.Path(self.tmp.name) / "SCOPE_ALLOWLIST.txt"
+        self.allowlist.write_text("example.com\n", encoding="utf-8")
+        import core.scope_policy as scope_policy
+        import core.tool_guard as tool_guard
+
+        self._saved = (scope_policy.DEFAULT_ALLOWLIST, tool_guard.DEFAULT_ALLOWLIST)
+        scope_policy.DEFAULT_ALLOWLIST = self.allowlist
+        tool_guard.DEFAULT_ALLOWLIST = self.allowlist
+
+    def tearDown(self) -> None:
+        import core.scope_policy as scope_policy
+        import core.tool_guard as tool_guard
+
+        scope_policy.DEFAULT_ALLOWLIST, tool_guard.DEFAULT_ALLOWLIST = self._saved
+        self.tmp.cleanup()
+
+    def test_oracle_refuses_out_of_scope_url(self):
+        from core import oracles
+
+        with self.assertRaises(oracles.ScopeViolation):
+            oracles._require_scope("https://evil.com/x?id=1")
+
+    def test_oracle_refuses_metadata_endpoint(self):
+        from core import oracles
+
+        with self.assertRaises(oracles.ScopeViolation):
+            oracles._require_scope("http://169.254.169.254/latest/meta-data/")
+
+    def test_oracle_permits_in_scope_url(self):
+        from core import oracles
+
+        oracles._require_scope("https://example.com/x?id=1")  # must not raise
+
+    def test_oracle_source_has_no_disabled_tls(self):
+        source = (
+            pathlib.Path(__file__).resolve().parent.parent / "core" / "oracles.py"
+        ).read_text(encoding="utf-8")
+        code = "\n".join(
+            line for line in source.splitlines() if not line.lstrip().startswith("#")
+        )
+        self.assertNotIn("verify=False", code)
 
 
 if __name__ == "__main__":

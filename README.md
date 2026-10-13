@@ -335,6 +335,13 @@ helped. A gate that is a language model is not a gate.
 | **Report contract** | Would a triager close this as N/A? | `core/report_contract.py` |
 | **Audit trail** | What did we do, and when? | `core/audit_trail.py` |
 
+> **Not yet active:** `core/tool_guard.py` extends the scope check to the
+> argument vector of the external tools themselves (`sqlmap`, `nuclei`, `curl`,
+> …), so it holds even when a helper script or an agent skips the CLI. It is
+> shipped **unwired** — there are no `PATH` shims — pending review of its
+> parsing accuracy, and it would remain a guardrail rather than a boundary
+> even once enabled. See `docs/ENFORCEMENT.md`.
+
 Endpoint protection is the part most agents in this space lack. Scope
 allowlisting says a host is authorized; it says nothing about whether
 `/delete-account`, `/logout`, or `/reset-password` will destroy the account

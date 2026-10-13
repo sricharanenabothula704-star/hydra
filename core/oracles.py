@@ -10,6 +10,37 @@ from abc import ABC, abstractmethod
 from typing import Optional
 
 
+class ScopeViolation(RuntimeError):
+    """Raised when an oracle is asked to probe something out of authorization."""
+
+
+def _require_scope(url: str) -> None:
+    """Refuse to probe a target that the deterministic gate would not allow.
+
+    Oracles issue real HTTP requests. Before this module had a caller it made
+    them with no scope check and with TLS verification disabled, which is both
+    an authorisation hole and a way to be fed forged responses. Routing every
+    request through :func:`core.tool_guard.guard_argv` means an oracle obeys
+    exactly the same policy as the CLI and the tool shims, including the
+    cloud-metadata, private-address and unparseable-target denials.
+    """
+    from core.tool_guard import guard_argv
+
+    allowed, reason = guard_argv([url])
+    if not allowed:
+        raise ScopeViolation(f"oracle refused to probe {url}: {reason}")
+
+
+def _scoped_get(url: str, **kwargs):
+    """``requests.get`` behind the scope gate, with TLS verification on."""
+    import requests
+
+    _require_scope(url)
+    kwargs.pop("verify", None)          # certificate checking is never disabled here
+    return requests.get(url, **kwargs)
+
+
+
 class OracleResult:
     """Result of an oracle verification."""
 
@@ -110,7 +141,7 @@ class SQLErrorOracle(BaseOracle):
         for payload in self.payloads:
             try:
                 url = f"{target_url}{endpoint}{payload}"
-                resp = requests.get(url, timeout=10, verify=False)
+                resp = _scoped_get(url, timeout=10)
                 for pattern in self.error_patterns:
                     if re.search(pattern, resp.text, re.IGNORECASE):
                         return {
@@ -129,7 +160,7 @@ class SQLErrorOracle(BaseOracle):
         import requests
         try:
             url = f"{target_url}{endpoint}1"
-            resp = requests.get(url, timeout=10, verify=False)
+            resp = _scoped_get(url, timeout=10)
             has_error = any(re.search(p, resp.text, re.IGNORECASE) for p in self.error_patterns)
             return {
                 "success": not has_error,  # success = no error (control passed)
@@ -155,7 +186,7 @@ class XSSReflectedOracle(BaseOracle):
         for payload in self.test_payloads:
             try:
                 url = f"{target_url}{endpoint}"
-                resp = requests.get(url, params={param: payload}, timeout=10, verify=False)
+                resp = _scoped_get(url, params={param: payload}, timeout=10)
                 if payload in resp.text:
                     return {
                         "success": True,
@@ -173,7 +204,7 @@ class XSSReflectedOracle(BaseOracle):
         import requests
         try:
             url = f"{target_url}{endpoint}"
-            resp = requests.get(url, timeout=10, verify=False)
+            resp = _scoped_get(url, timeout=10)
             has_payload = any(p in resp.text for p in self.test_payloads)
             return {
                 "success": not has_payload,
@@ -197,7 +228,7 @@ class IDOROracle(BaseOracle):
         for id_val in self.ids_to_test:
             try:
                 url = f"{target_url}{endpoint.replace('{id}', str(id_val))}"
-                resp = requests.get(url, timeout=10, verify=False)
+                resp = _scoped_get(url, timeout=10)
                 if resp.status_code == 200:
                     responses[id_val] = resp.text[:200]
             except Exception:
@@ -219,8 +250,8 @@ class IDOROracle(BaseOracle):
         import requests
         try:
             url = f"{target_url}{endpoint.replace('{id}', '1')}"
-            r1 = requests.get(url, timeout=10, verify=False)
-            r2 = requests.get(url, timeout=10, verify=False)
+            r1 = _scoped_get(url, timeout=10)
+            r2 = _scoped_get(url, timeout=10)
             return {
                 "success": r1.text == r2.text,  # Same response = control passes
                 "response_code": r1.status_code,
@@ -241,7 +272,7 @@ class AuthBypassOracle(BaseOracle):
         import requests
         try:
             # Send without any auth
-            resp = requests.get(f"{target_url}{endpoint}", timeout=10, verify=False)
+            resp = _scoped_get(f"{target_url}{endpoint}", timeout=10)
             if resp.status_code == 200:
                 return {
                     "success": True,
@@ -257,8 +288,8 @@ class AuthBypassOracle(BaseOracle):
         """Send WITH auth headers — should return 200 (control passes)."""
         import requests
         try:
-            resp = requests.get(f"{target_url}{endpoint}", headers=headers or {},
-                              timeout=10, verify=False)
+            resp = _scoped_get(f"{target_url}{endpoint}", headers=headers or {},
+                              timeout=10)
             return {
                 "success": resp.status_code == 200,
                 "response_code": resp.status_code,

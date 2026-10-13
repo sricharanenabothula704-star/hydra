@@ -111,13 +111,41 @@ LIST_FLAGS = frozenset(
     {
         "l",
         "list",
-        "L",
         "list-file",
         "targets",
         "target-file",
         "domain-list",
     }
 )
+
+#: Flags whose value is a *document* that carries targets in free-form text:
+#: an HTTP request file (sqlmap ``-r``), or a tool config/profile that embeds a
+#: target list. These are the documented way to reach a host without it ever
+#: appearing as a target argument, so the file is read and every host in it is
+#: checked.
+DOCUMENT_FILE_FLAGS = frozenset(
+    {
+        "r",
+        "request",
+        "request-file",
+        "c",
+        "config",
+        "conf",
+        "profile",
+    }
+)
+
+#: Connection-override flags that name one host but send the traffic somewhere
+#: else. ``curl --resolve host:port:addr`` sends to ``addr`` while the command
+#: line only ever mentions ``host``; checking the host alone misses the
+#: destination entirely. Both ends are therefore extracted.
+RESOLVE_FLAGS = frozenset({"resolve", "resolve6", "connect-to"})
+
+#: Transport flags. Traffic is sent to these hosts rather than to the target,
+#: so they are checked as targets in their own right. An external proxy in a
+#: bug bounty command line is usually either unauthorised infrastructure or a
+#: way to move traffic somewhere the program never agreed to.
+PROXY_FLAGS = frozenset({"proxy", "x", "proxysocks5", "socks5-hostname"})
 
 #: Flags whose value must never be mistaken for a target. Templates, wordlists,
 #: output paths, ports, rates, header strings and severity keywords all sit next
@@ -132,7 +160,6 @@ NON_TARGET_VALUE_FLAGS = frozenset(
         "timeout",
         "retries",
         "max-rate",
-        "c",
         "concurrency",
         "threads",
         "t",
@@ -154,9 +181,6 @@ NON_TARGET_VALUE_FLAGS = frozenset(
         "headers",
         "s",
         "sni",
-        "proxy",
-        "x",
-        "config",
         "e",
         "engine",
         "payload",
@@ -246,8 +270,22 @@ _BARE_IPV6 = re.compile(r"^\[[0-9A-Fa-f:.]+\](?:/\d{1,3})?$")
 
 
 def _norm_flag(token: str) -> str:
-    """Normalise a flag token to its bare name: ``--max-rate`` -> ``max-rate``."""
-    return token.lstrip("-").lower()
+    """Normalise a flag token to a lookup key.
+
+    Case is preserved for single-dash short options and folded for long
+    options. This distinction is load-bearing: curl's ``-L`` (follow
+    redirects) shares a letter with nuclei's ``-l`` (target list), nmap's
+    ``-p`` (ports) shares with ``-P``, and ``-H``/``-h`` and ``-t``/``-T``
+    differ the same way. Lowercasing everything made ``curl -L https://host``
+    parse as "read this target list, https://host", which failed closed for
+    the wrong reason and made a redirect flag look like a list argument.
+
+    Unknown single-dash options deliberately fall through rather than being
+    treated as "skip the next token", so their value is parsed as a candidate
+    and checked. That is the safe direction for a control that fails closed.
+    """
+    body = token.lstrip("-")
+    return body.lower() if token.startswith("--") else body
 
 
 def _is_flag(token: str) -> bool:
@@ -383,6 +421,63 @@ def _targets_from_list(path_text: str) -> tuple[list[str], bool]:
     return targets, bool(entries)
 
 
+def _targets_from_document(path_text: str) -> tuple[list[str], bool]:
+    """Extract hosts from a free-form document that carries targets.
+
+    Covers the documented ways to reach a host without naming it as a target
+    argument:
+
+    * an HTTP request file (``sqlmap -r req.txt``) names the host in a
+      ``Host:`` header or an absolute request URI, never in a bare argument;
+    * a tool config or profile (``nuclei -c conf.yaml``) embeds a target list
+      in YAML, TOML or JSON.
+
+    Scans every whitespace-separated token in the file rather than trying to
+    parse the format, because a format-specific parser would be one more thing
+    to get wrong in a security control. A document that yields no host is
+    reported as unreadable, so it denies rather than passing through.
+    """
+    path = pathlib.Path(path_text)
+    entries = _read_list_file(path)
+    targets: list[str] = []
+    for entry in entries:
+        for token in entry.replace(",", " ").split():
+            bare = token.strip("'\"{}[]()")
+            if not bare or bare.startswith("-"):
+                continue
+            # "Host:example.com" and "Host: example.com" both reach here.
+            if ":" in bare and "://" not in bare:
+                head, _, tail = bare.partition(":")
+                if head.strip().lower() == "host" and tail.strip():
+                    bare = tail.strip()
+            host = _candidate_from_token(bare)
+            if host:
+                targets.append(host)
+    return targets, bool(entries)
+
+
+def _targets_from_resolve(value: str) -> list[str]:
+    """Extract both ends of a connection override.
+
+    ``curl --resolve example.com:443:9.9.9.9`` names one host and sends the
+    bytes to another. Checking only the named host misses the actual
+    destination, so both the reg-name and each supplied address are returned.
+    """
+    found: list[str] = []
+    for entry in value.split(","):
+        parts = [p.strip() for p in entry.split(":") if p.strip()]
+        if not parts:
+            continue
+        host = _candidate_from_token(parts[0])
+        if host:
+            found.append(host)
+        for part in parts[1:]:
+            addr = _candidate_from_token(part)
+            if addr:
+                found.append(addr)
+    return found
+
+
 def extract_targets(argv: Sequence[str]) -> tuple[list[str], list[str]]:
     """Return ``(targets, unreadable_lists)`` for a tool argument vector."""
     targets: list[str] = []
@@ -402,10 +497,36 @@ def extract_targets(argv: Sequence[str]) -> tuple[list[str], list[str]]:
                     inline if sep else (tokens[i + 1] if i + 1 < len(tokens) else "")
                 )
                 if path_text:
-                    found, readable = _targets_from_list(path_text)
+                    found, readable = _targets_from_document(path_text)
                     targets.extend(found)
                     if not readable:
                         unreadable.append(path_text)
+                i += 1 if sep else 2
+                continue
+
+            if norm in DOCUMENT_FILE_FLAGS:
+                path_text = (
+                    inline if sep else (tokens[i + 1] if i + 1 < len(tokens) else "")
+                )
+                if path_text:
+                    found, readable = _targets_from_document(path_text)
+                    targets.extend(found)
+                    if not readable:
+                        unreadable.append(path_text)
+                i += 1 if sep else 2
+                continue
+
+            if norm in RESOLVE_FLAGS or norm in PROXY_FLAGS:
+                value = (
+                    inline if sep else (tokens[i + 1] if i + 1 < len(tokens) else "")
+                )
+                if value:
+                    if norm in RESOLVE_FLAGS:
+                        targets.extend(_targets_from_resolve(value))
+                    else:
+                        host = _candidate_from_token(value)
+                        if host:
+                            targets.append(host)
                 i += 1 if sep else 2
                 continue
 
@@ -428,7 +549,7 @@ def extract_targets(argv: Sequence[str]) -> tuple[list[str], list[str]]:
 
         # Positional token.
         if token.lower().endswith(LIST_SUFFIXES):
-            found, readable = _targets_from_list(token)
+            found, readable = _targets_from_document(token)
             targets.extend(found)
             if not readable:
                 unreadable.append(token)
@@ -493,6 +614,7 @@ def _literal_address_verdict(host: str) -> str | None:
 INFORMATIONAL_FLAGS = frozenset(
     {
         "version",
+        "V",
         "v",
         "h",
         "help",

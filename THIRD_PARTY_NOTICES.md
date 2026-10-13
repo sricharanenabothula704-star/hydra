@@ -27,7 +27,7 @@ The upstream project ships no `NOTICE` file, so Apache-2.0 §4(d) does not apply
 | Requirement | How it is met |
 |---|---|
 | §4(a) — recipients receive a copy of the License | [`LICENSES/Apache-2.0.txt`](LICENSES/Apache-2.0.txt) is a verbatim byte-for-byte copy of the upstream `LICENSE`, including the `Copyright 2026 mukul975` line |
-| §4(b) — modified files carry prominent notices | Not triggered: the 808 modules are byte-identical to upstream, so there are no modified files. See "Modifications" for the drift that was reverted |
+| §4(b) — modified files carry prominent notices | Not triggered: the 808 modules are byte-identical to upstream at the pinned commit, so there are no modified files. See "Modifications" for the drift that was reverted |
 | §4(c) — retain source attribution notices | The upstream `author:` frontmatter field had been stripped from all 808 modules during import. It has been restored in every one of them, and `scripts/verify_skill_attribution.py` fails the build if any is removed again |
 | §4(d) — carry a NOTICE file | Not applicable: upstream ships no `NOTICE` |
 
@@ -57,8 +57,14 @@ At that commit:
 - **818** upstream skill directories, **1,179** here. **808** names match
   exactly, and those 808 are precisely the modules declaring
   `license: Apache-2.0`.
-- **808 of 808 are byte-identical** to upstream once line endings are
-  normalised. The copies are faithful, not adapted.
+- **808 of 808 are byte-identical** to upstream **at commit `54a7988`** once
+  line endings are normalised. The copies are faithful, not adapted.
+
+That claim is pinned to that commit and is deliberately **not** phrased as
+"identical to upstream", which would silently become false the moment upstream
+moves. If the commit is force-pushed, rewritten or deleted, the claim has to be
+re-established, not assumed — which is why
+`scripts/verify_skill_provenance.py` runs on a schedule.
 - All 808 carry the upstream `author:` value; the 808:818 gap and the exact
   author distribution are consistent with an earlier snapshot of a repository
   that has since grown.

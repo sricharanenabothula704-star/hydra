@@ -132,12 +132,58 @@ retired its CTF benchmark at roughly 100% because the underlying
 vulnerabilities entered model training. Treat any accuracy number here as
 covering the gates only.
 
+## Argv-level tool guard — built, NOT active
+
+`core/tool_guard.py` enforces scope on the **argument vector of the tool
+itself**, rather than trusting the caller to ask first. An audit found 21
+network-touching helper scripts that never consulted the scope gate, and inside
+an agent session scope was a prompt instruction rather than a control. Moving
+the check into the invocation means it survives a careless script, a new
+script nobody audited, or an agent calling `sqlmap` directly.
+
+**It is not wired to `PATH`.** The `bin/guard-bin/` shims do not exist, so
+nothing is intercepted at runtime. The module is shipped unexposed, on
+purpose, until its parsing accuracy has been reviewed by someone who did not
+write the parser.
+
+What it does, when enabled:
+
+* **Fails closed.** No identifiable target in a non-informational invocation is
+  a *denial*, not a pass — an argv parser that cannot recognise a target must
+  not become a bypass.
+* Reads targets out of request files (`sqlmap -r`), tool configs (`nuclei -c`)
+  and list files, and refuses an unreadable or hostless list rather than
+  running blind.
+* Checks both ends of a connection override (`curl --resolve host:port:addr`),
+  and treats the proxy host as a target in its own right.
+* Denies cloud instance metadata (`169.254.169.254`), private, loopback and
+  link-local literals, and any IP or CIDR not explicitly allowlisted.
+* Refuses URL userinfo outright, because `http://evil.com\@example.com` is host
+  `example.com` to a strict parser and `evil.com` to a lenient one.
+
+### Why it is a guardrail and not a boundary
+
+It covers tools launched through the shimmed `PATH`. It does **not** cover
+`/usr/bin/nmap` invoked by absolute path, `python -c "requests.get(...)"`, or a
+raw socket. Redirects are the clearest irreducible gap: a host reached by
+following a redirect never appears in any argument vector, at any parser.
+
+Treat it as a large reduction in *accidental* out-of-scope work, and as
+incomplete. The control that actually survives a compromised agent is the
+egress proxy listed under Known limits below.
+
+Tests: `tests/test_tool_guard.py` (42 cases, including a fuzz pass asserting
+the guard never raises and never permits an explicitly out-of-scope host).
+Each case documents a bug that was live during development.
+
 ## Known limits
 
-* No egress proxy. A determined agent with shell access can bypass a
+* **No egress proxy.** A determined agent with shell access can bypass a
   library-level gate by using another tool. Network-layer enforcement (DNS
   or proxy chokepoint) is the only control that survives a fully compromised
-  agent, and is not implemented.
+  agent, and is not implemented. This is the single largest gap.
+* **Argv guard is not active** (above) and would not be a boundary even if it
+  were.
 * No independent guardian reviewing proposed actions outside the agent's own
   reasoning chain.
 * Some standalone helper scripts in `scripts/` do not call these gates; they

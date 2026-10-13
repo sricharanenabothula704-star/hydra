@@ -4,6 +4,18 @@ on:
   push:
     branches: [main]
   pull_request:
+  schedule:
+    # Monthly. The offline attribution checks below run on every build and are
+    # blocking. This job needs network access to re-clone upstream, so it is
+    # advisory: continue-on-error is deliberate, because a failing provenance
+    # check must not be able to fail an ordinary build or block a release.
+    #
+    # What it actually catches: an upstream force-push or deletion of the pinned
+    # commit, an upstream licence change, and accidental local edits that make
+    # the "byte-identical to 54a7988" claim false. Treat a red run here as a
+    # signal to investigate, not as a build failure.
+    - cron: '37 5 1 * *'
+  workflow_dispatch:
 
 jobs:
   scan:
@@ -99,3 +111,29 @@ jobs:
           echo "$OUT" | grep -q "OVERALL     43/43" \
             || { echo "::error::expected 43/43; update docs/ENFORCEMENT.md if intentionally changed"; exit 1; }
           echo "✅ Enforcement gates at published baseline."
+
+  # Advisory only. Needs network access to re-clone upstream, so it runs on a
+  # schedule and cannot fail a normal build.
+  provenance:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compare skill corpus against pinned upstream commit
+        continue-on-error: true
+        run: |
+          set +e
+          python3 scripts/verify_skill_provenance.py
+          STATUS=$?
+          set -e
+          if [ "$STATUS" -eq 2 ]; then
+            echo "::warning::could not reach upstream (network or pinned commit gone). Investigate: was 54a7988 force-pushed or deleted?"
+          elif [ "$STATUS" -ne 0 ]; then
+            echo "::error::provenance drift: the 808 modules are no longer byte-identical to the pinned upstream commit"
+            echo "::error::either a local edit or an upstream history rewrite. See THIRD_PARTY_NOTICES.md before changing the claim."
+          else
+            echo "✅ Provenance holds at the pinned commit."
+          fi
+          exit 0

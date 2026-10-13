@@ -9,7 +9,8 @@
     "verified_against_commit": "54a798831d2266a3ca61ce68a7acb80b81160d57",
     "verified_on": "2026-10-13",
     "pinned_commit": "54a798831d2266a3ca61ce68a7acb80b81160d57",
-    "provenance_check": "scripts/verify_skill_provenance.py"
+    "provenance_check": "scripts/verify_skill_provenance.py",
+    "claim_is_pinned_to_commit": true
   },
   "modules_total": 808,
   "body_identical": 808,
@@ -5683,5 +5684,11 @@
   "modifications": {
     "content_modified": 0,
     "note": "All 808 SKILL.md files are byte-identical to upstream at the pinned commit (line endings normalised). No local content edits remain."
+  },
+  "claim": {
+    "statement": "The 808 listed modules are byte-identical, modulo line endings, to the SKILL.md files in https://github.com/mukul975/Anthropic-Cybersecurity-Skills at commit 54a798831d2266a3ca61ce68a7acb80b81160d57.",
+    "scope": "This claim is pinned to that commit. It is NOT a claim about upstream HEAD, which moves; if upstream rewrites history, force-pushes, or deletes the commit, this claim must be re-established rather than assumed.",
+    "verify_offline": "scripts/verify_skill_attribution.py",
+    "verify_online": "python scripts/verify_skill_provenance.py"
   }
 }
