@@ -12,6 +12,7 @@ tags:
 - threat-hunting
 - dlp
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - File Metadata Consistency Validation
@@ -30,7 +31,6 @@ mitre_attack:
 - T1082
 - T1083
 - T1048
-author: mahipal
 ---
 
 # Hunting for Data Staging Before Exfiltration

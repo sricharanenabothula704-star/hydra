@@ -17,6 +17,7 @@ tags:
 - breach-simulation
 - attack-surface
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - ID.RA-01
@@ -27,7 +28,6 @@ mitre_attack:
 - T1190
 - T1203
 - T1068
-author: mahipal
 ---
 # Implementing Attack Path Analysis with XM Cyber
 

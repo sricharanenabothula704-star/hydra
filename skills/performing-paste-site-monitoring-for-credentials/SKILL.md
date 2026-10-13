@@ -14,6 +14,7 @@ tags:
 - osint
 - early-warning
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - ID.RA-01
@@ -57,7 +58,6 @@ mitre_f3:
     name: Gather Customer Information
     tactic: reconnaissance
     source: f3
-author: mahipal
 ---
 # Performing Paste Site Monitoring for Credentials
 

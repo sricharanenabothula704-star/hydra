@@ -13,6 +13,7 @@ tags:
 - detection-gap
 - threat-intelligence
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Executable Denylisting
@@ -31,7 +32,6 @@ mitre_attack:
 - T1003.001
 - T1486
 - T1547.001
-author: mahipal
 ---
 # Analyzing APT Group with MITRE ATT&CK Navigator
 

@@ -14,6 +14,7 @@ tags:
 - data-exfiltration
 - device-history
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - RS.AN-03
@@ -25,7 +26,6 @@ mitre_attack:
 - T1091
 - T1005
 - T1074.001
-author: mahipal
 ---
 
 # Analyzing USB Device Connection History

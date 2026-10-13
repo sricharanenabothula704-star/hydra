@@ -1,5 +1,5 @@
 {
-  "schema": "hydra.skill-attribution/1",
+  "schema": "hydra.skill-attribution/2",
   "upstream": {
     "project": "Anthropic-Cybersecurity-Skills",
     "repository": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
@@ -7,22 +7,13 @@
     "license": "Apache-2.0",
     "license_text": "LICENSES/Apache-2.0.txt",
     "verified_against_commit": "54a798831d2266a3ca61ce68a7acb80b81160d57",
-    "verified_on": "2026-10-13"
+    "verified_on": "2026-10-13",
+    "pinned_commit": "54a798831d2266a3ca61ce68a7acb80b81160d57",
+    "provenance_check": "scripts/verify_skill_provenance.py"
   },
   "modules_total": 808,
-  "body_identical": 798,
-  "body_modified": [
-    "analyzing-email-headers-for-phishing-investigation",
-    "analyzing-macro-malware-in-office-documents",
-    "auditing-mcp-servers-for-tool-poisoning",
-    "building-detection-rules-with-sigma",
-    "continuous-llm-red-teaming-with-promptfoo",
-    "detecting-fileless-malware-techniques",
-    "detecting-living-off-the-land-attacks",
-    "implementing-kubernetes-pod-security-standards",
-    "implementing-pod-security-admission-controller",
-    "performing-ai-driven-osint-correlation"
-  ],
+  "body_identical": 808,
+  "body_modified": [],
   "authors": {
     "andrewibrah": 7,
     "devredious": 1,
@@ -184,7 +175,7 @@
       "author": "mahipal",
       "license": "Apache-2.0",
       "path": "skills/analyzing-email-headers-for-phishing-investigation/SKILL.md",
-      "body_identical": false
+      "body_identical": true
     },
     {
       "skill": "analyzing-ethereum-smart-contract-vulnerabilities",
@@ -268,7 +259,7 @@
       "author": "mahipal",
       "license": "Apache-2.0",
       "path": "skills/analyzing-macro-malware-in-office-documents/SKILL.md",
-      "body_identical": false
+      "body_identical": true
     },
     {
       "skill": "analyzing-malicious-pdf-with-peepdf",
@@ -674,7 +665,7 @@
       "author": "mahipal",
       "license": "Apache-2.0",
       "path": "skills/auditing-mcp-servers-for-tool-poisoning/SKILL.md",
-      "body_identical": false
+      "body_identical": true
     },
     {
       "skill": "auditing-terraform-infrastructure-for-security",
@@ -765,7 +756,7 @@
       "author": "mahipal",
       "license": "Apache-2.0",
       "path": "skills/building-detection-rules-with-sigma/SKILL.md",
-      "body_identical": false
+      "body_identical": true
     },
     {
       "skill": "building-devsecops-pipeline-with-gitlab-ci",
@@ -1290,7 +1281,7 @@
       "author": "mahipal",
       "license": "Apache-2.0",
       "path": "skills/continuous-llm-red-teaming-with-promptfoo/SKILL.md",
-      "body_identical": false
+      "body_identical": true
     },
     {
       "skill": "correlating-security-events-in-qradar",
@@ -1689,7 +1680,7 @@
       "author": "mahipal",
       "license": "Apache-2.0",
       "path": "skills/detecting-fileless-malware-techniques/SKILL.md",
-      "body_identical": false
+      "body_identical": true
     },
     {
       "skill": "detecting-golden-ticket-attacks-in-kerberos-logs",
@@ -1766,7 +1757,7 @@
       "author": "mahipal",
       "license": "Apache-2.0",
       "path": "skills/detecting-living-off-the-land-attacks/SKILL.md",
-      "body_identical": false
+      "body_identical": true
     },
     {
       "skill": "detecting-living-off-the-land-with-lolbas",
@@ -3306,7 +3297,7 @@
       "author": "mahipal",
       "license": "Apache-2.0",
       "path": "skills/implementing-kubernetes-pod-security-standards/SKILL.md",
-      "body_identical": false
+      "body_identical": true
     },
     {
       "skill": "implementing-llm-guardrails-for-security",
@@ -3516,7 +3507,7 @@
       "author": "mahipal",
       "license": "Apache-2.0",
       "path": "skills/implementing-pod-security-admission-controller/SKILL.md",
-      "body_identical": false
+      "body_identical": true
     },
     {
       "skill": "implementing-policy-as-code-with-open-policy-agent",
@@ -4090,7 +4081,7 @@
       "author": "juliosuas",
       "license": "Apache-2.0",
       "path": "skills/performing-ai-driven-osint-correlation/SKILL.md",
-      "body_identical": false
+      "body_identical": true
     },
     {
       "skill": "performing-alert-triage-with-elastic-siem",
@@ -5688,5 +5679,9 @@
       "path": "skills/verifying-build-provenance-with-slsa-sigstore/SKILL.md",
       "body_identical": true
     }
-  ]
+  ],
+  "modifications": {
+    "content_modified": 0,
+    "note": "All 808 SKILL.md files are byte-identical to upstream at the pinned commit (line endings normalised). No local content edits remain."
+  }
 }

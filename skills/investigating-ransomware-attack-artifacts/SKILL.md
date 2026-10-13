@@ -11,6 +11,7 @@ tags:
 - encryption-recovery
 - evidence-collection
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - RS.AN-03
@@ -49,7 +50,6 @@ mitre_f3:
     name: 'Conversion to Physical Monetary Instruments: Cash'
     tactic: monetization
     source: f3
-author: mahipal
 ---
 
 # Investigating Ransomware Attack Artifacts

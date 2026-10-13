@@ -12,6 +12,7 @@ tags:
 - vulnerability-discovery
 - afl
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - MEASURE-2.7
@@ -32,7 +33,6 @@ mitre_attack:
 - T1059.004
 - T1005
 - T1059
-author: mahipal
 ---
 
 # Implementing Fuzz Testing in CI/CD with AFL++

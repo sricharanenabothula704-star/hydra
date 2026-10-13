@@ -19,6 +19,7 @@ tags:
 - passwordless-authentication
 - CTAP2
 version: 1.0.0
+author: mukul975
 license: Apache-2.0
 atlas_techniques:
 - AML.T0051
@@ -39,7 +40,6 @@ mitre_attack:
 - T1059
 - T1003
 - T1110
-author: mukul975
 ---
 # Implementing Hardware Security Key Authentication
 

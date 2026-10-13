@@ -18,6 +18,7 @@ tags:
 - network-segmentation
 - vlan
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.IR-01
@@ -30,7 +31,6 @@ mitre_attack:
 - T1059
 - T0816
 - T0836
-author: mahipal
 ---
 
 # Implementing Network Segmentation for OT

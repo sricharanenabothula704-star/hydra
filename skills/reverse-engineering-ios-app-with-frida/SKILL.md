@@ -11,6 +11,7 @@ description: 'Reverse engineers iOS applications using Frida dynamic instrumenta
   '
 domain: cybersecurity
 subdomain: mobile-security
+author: mahipal
 tags:
 - mobile-security
 - ios
@@ -31,7 +32,6 @@ mitre_attack:
 - T1036
 - T1078
 - T1573
-author: mahipal
 ---
 # Reverse Engineering iOS App with Frida
 

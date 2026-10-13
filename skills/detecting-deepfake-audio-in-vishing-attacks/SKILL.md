@@ -11,6 +11,7 @@ tags:
 - spectral-analysis
 - voice-cloning
 version: 1.0.0
+author: mukul975
 license: Apache-2.0
 atlas_techniques:
 - AML.T0088
@@ -67,7 +68,6 @@ mitre_f3:
     name: 'Electronic Funds Transfer: Wire Transfer'
     tactic: monetization
     source: f3
-author: mukul975
 ---
 
 # Detecting Deepfake Audio in Vishing Attacks

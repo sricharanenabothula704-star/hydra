@@ -13,12 +13,12 @@ tags:
 - post-exploitation
 - sleep-obfuscation
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.CM-01
 mitre_attack:
 - T1071.001
-author: mahipal
 ---
 # Operating Havoc C2
 

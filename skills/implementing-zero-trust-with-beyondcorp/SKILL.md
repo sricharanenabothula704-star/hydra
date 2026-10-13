@@ -12,6 +12,7 @@ tags:
 - device-trust
 - identity
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.AA-01
@@ -23,7 +24,6 @@ mitre_attack:
 - T1021
 - T1556
 - T1078.004
-author: mahipal
 ---
 
 # Implementing Zero Trust with BeyondCorp

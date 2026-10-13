@@ -18,6 +18,7 @@ tags:
 - access-control
 - rate-limiting
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
@@ -30,7 +31,6 @@ mitre_attack:
 - T1046
 - T1190
 - T1087
-author: mahipal
 ---
 
 # Detecting API Enumeration Attacks

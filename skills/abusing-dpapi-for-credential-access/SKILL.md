@@ -13,12 +13,12 @@ tags:
 - windows
 - mimikatz
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.CM-01
 mitre_attack:
 - T1555.004
-author: mahipal
 ---
 # Abusing DPAPI for Credential Access
 

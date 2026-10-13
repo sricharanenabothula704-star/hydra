@@ -16,6 +16,7 @@ tags:
 - ntlm-spray
 - network-forensics
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.IR-01
@@ -28,7 +29,6 @@ mitre_attack:
 - T1557
 - T1071
 - T1021
-author: mahipal
 ---
 
 # Detecting Lateral Movement with Zeek

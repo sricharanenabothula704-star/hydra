@@ -11,6 +11,7 @@ tags:
 - network-analysis
 - proactive-detection
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 atlas_techniques:
 - AML.T0024
@@ -36,7 +37,6 @@ mitre_attack:
 - T1082
 - T1083
 - T1048
-author: mahipal
 ---
 
 # Hunting for Data Exfiltration Indicators

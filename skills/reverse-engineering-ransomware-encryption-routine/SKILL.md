@@ -15,6 +15,7 @@ tags:
 - decryption
 - malware-analysis
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - File Metadata Consistency Validation
@@ -51,7 +52,6 @@ mitre_f3:
     name: Remote Access Tools
     tactic: positioning
     source: attack
-author: mahipal
 ---
 # Reverse Engineering Ransomware Encryption Routine
 

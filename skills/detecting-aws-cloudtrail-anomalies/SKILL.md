@@ -13,6 +13,7 @@ tags:
 - threat-detection
 - boto3
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.IR-01
@@ -52,7 +53,6 @@ mitre_f3:
     name: 'Account Manipulation: Account Linking'
     tactic: defense-impairment
     source: f3
-author: mahipal
 ---
 # Detecting AWS CloudTrail Anomalies
 

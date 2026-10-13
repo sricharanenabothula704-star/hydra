@@ -12,6 +12,7 @@ tags:
 - ttp-analysis
 - threat-actors
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Executable Denylisting
@@ -30,7 +31,6 @@ mitre_attack:
 - T1071.001
 - T1547.001
 - T1053.005
-author: mahipal
 ---
 # Analyzing Threat Actor TTPs with MITRE ATT&CK
 

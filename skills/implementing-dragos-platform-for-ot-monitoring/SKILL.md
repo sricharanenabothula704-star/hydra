@@ -13,6 +13,7 @@ tags:
 - threat-intelligence
 - ndr
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - MEASURE-2.7
@@ -33,7 +34,6 @@ mitre_attack:
 - T1059
 - T0816
 - T0836
-author: mahipal
 ---
 
 # Implementing Dragos Platform for OT Monitoring

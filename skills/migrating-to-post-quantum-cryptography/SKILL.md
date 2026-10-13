@@ -13,12 +13,12 @@ tags:
 - tls
 - quantum-readiness
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.DS-02
 mitre_attack:
 - T1573
-author: mahipal
 ---
 # Migrating to Post-Quantum Cryptography
 

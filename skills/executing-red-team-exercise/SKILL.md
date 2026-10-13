@@ -17,6 +17,7 @@ tags:
 - Cobalt-Strike
 - detection-assessment
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - File Metadata Consistency Validation
@@ -35,7 +36,6 @@ mitre_attack:
 - T1059
 - T1078
 - T1592
-author: mahipal
 ---
 # Executing Red Team Exercise
 

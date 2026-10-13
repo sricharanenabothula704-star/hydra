@@ -10,6 +10,7 @@ tags:
 - network-access
 - ztna
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.AA-01
@@ -22,7 +23,6 @@ mitre_attack:
 - T1021
 - T1046
 - T1190
-author: mahipal
 ---
 
 # Deploying Software-Defined Perimeter

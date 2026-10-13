@@ -19,6 +19,7 @@ tags:
 - TLS-monitoring
 - RFC-6962
 version: 1.0.0
+author: mukul975
 license: Apache-2.0
 nist_csf:
 - ID.RA-01
@@ -31,7 +32,6 @@ mitre_attack:
 - T1587.003
 - T1593
 - T1566.002
-author: mukul975
 ---
 # Auditing TLS Certificate Transparency Logs
 

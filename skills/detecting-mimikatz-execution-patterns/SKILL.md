@@ -12,6 +12,7 @@ tags:
 - t1003
 - proactive-detection
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Execution Isolation
@@ -30,7 +31,6 @@ mitre_attack:
 - T1082
 - T1083
 - T1003
-author: mahipal
 ---
 
 # Detecting Mimikatz Execution Patterns

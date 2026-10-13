@@ -1,6 +1,13 @@
 ---
 name: hardening-docker-daemon-configuration
-description: Harden the Docker daemon (dockerd) by configuring /etc/docker/daemon.json with user namespace remapping, TLS client authentication, seccomp profiles, and CIS Docker Benchmark controls such as icc, no-new-privileges, and live-restore. Use when securing a Docker host's daemon configuration to prevent privilege escalation, container breakout, or lateral movement, or when auditing daemon settings against CIS benchmark requirements.
+description: >-
+  Hardens the Docker daemon (dockerd) through /etc/docker/daemon.json with user namespace
+  remapping, TLS client authentication, seccomp profiles, and CIS Docker Benchmark controls
+  such as icc, no-new-privileges, and live-restore. Use when securing a Docker host's daemon
+  to prevent privilege escalation, breakout, or lateral movement, or when auditing daemon
+  settings against CIS requirements. Keywords: dockerd, daemon.json, userns-remap,
+  no-new-privileges, icc, live-restore, TLS socket. Do not use for hardening images and
+  per-container runtime flags - use hardening-docker-containers-for-production.
 domain: cybersecurity
 subdomain: container-security
 tags:
@@ -11,6 +18,7 @@ tags:
 - rootless
 - userns-remap
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
@@ -23,7 +31,6 @@ mitre_attack:
 - T1609
 - T1525
 - T1553
-author: mahipal
 ---
 
 # Hardening Docker Daemon Configuration

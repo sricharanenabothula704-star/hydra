@@ -16,6 +16,7 @@ tags:
 - access-analyzer
 - cloud-identity
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.IR-01
@@ -54,7 +55,6 @@ mitre_f3:
     name: 'Account Manipulation: Change Account Details'
     tactic: positioning
     source: f3
-author: mahipal
 ---
 
 # Securing AWS IAM Permissions

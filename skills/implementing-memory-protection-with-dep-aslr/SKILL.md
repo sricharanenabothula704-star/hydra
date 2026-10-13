@@ -18,6 +18,7 @@ tags:
 - exploit-mitigation
 - CFG
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
@@ -30,7 +31,6 @@ mitre_attack:
 - T1059
 - T1036
 - T1190
-author: mahipal
 ---
 # Implementing Memory Protection with DEP and ASLR
 

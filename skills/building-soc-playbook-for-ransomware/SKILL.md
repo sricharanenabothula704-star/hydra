@@ -46,6 +46,7 @@ mitre_f3:
     tactic: monetization
     source: f3
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Platform Hardening
@@ -58,7 +59,6 @@ nist_csf:
 - DE.AE-02
 - RS.MA-01
 - DE.AE-06
-author: mahipal
 ---
 # Building SOC Playbook for Ransomware
 

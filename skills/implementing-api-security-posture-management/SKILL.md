@@ -18,6 +18,7 @@ tags:
 - continuous-monitoring
 - api-inventory
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
@@ -28,7 +29,6 @@ mitre_attack:
 - T1190
 - T1059.007
 - T1552.001
-author: mahipal
 ---
 
 # Implementing API Security Posture Management

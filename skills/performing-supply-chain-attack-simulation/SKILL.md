@@ -18,6 +18,7 @@ tags:
 - PyPI
 - software-composition-analysis
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
@@ -30,7 +31,6 @@ mitre_attack:
 - T1059
 - T1195
 - T1554
-author: mahipal
 ---
 
 # Performing Supply Chain Attack Simulation

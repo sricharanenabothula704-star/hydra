@@ -11,6 +11,7 @@ description: 'Performs runtime dynamic analysis of Android applications using Fr
   '
 domain: cybersecurity
 subdomain: mobile-security
+author: mahipal
 tags:
 - mobile-security
 - android
@@ -31,7 +32,6 @@ mitre_attack:
 - T1036
 - T1078
 - T1027
-author: mahipal
 ---
 # Performing Dynamic Analysis of Android App
 

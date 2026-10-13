@@ -19,6 +19,7 @@ tags:
 - cloud-misconfiguration
 - azure-mgmt-storage
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - MEASURE-2.7
@@ -38,7 +39,6 @@ mitre_attack:
 - T1078.004
 - T1619
 - T1580
-author: mahipal
 ---
 
 # Detecting Azure Storage Account Misconfigurations

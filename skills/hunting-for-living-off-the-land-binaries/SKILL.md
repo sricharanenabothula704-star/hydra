@@ -16,6 +16,7 @@ tags:
 - proactive-detection
 - defense-evasion
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Executable Denylisting
@@ -34,7 +35,6 @@ mitre_attack:
 - T1082
 - T1083
 - T1027
-author: mahipal
 ---
 
 # Hunting for Living-off-the-Land Binaries (LOLBins)

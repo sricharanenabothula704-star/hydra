@@ -18,6 +18,7 @@ tags:
 - file-integrity-monitoring
 - intrusion-detection
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
@@ -30,7 +31,6 @@ mitre_attack:
 - T1547
 - T1070
 - T1055
-author: mahipal
 ---
 # Configuring Host-Based Intrusion Detection
 

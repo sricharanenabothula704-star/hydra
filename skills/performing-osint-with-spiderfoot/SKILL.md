@@ -11,6 +11,7 @@ tags:
 - attack-surface
 - target-profiling
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - ID.RA-01
@@ -23,7 +24,6 @@ mitre_attack:
 - T1593
 - T1589
 - T1595
-author: mahipal
 ---
 
 # Performing OSINT with SpiderFoot

@@ -19,6 +19,7 @@ tags:
 - nuclei
 - asset-discovery
 version: '1.0'
+author: mukul975
 license: Apache-2.0
 nist_csf:
 - ID.RA-01
@@ -30,7 +31,6 @@ mitre_attack:
 - T1059
 - T1595
 - T1592
-author: mukul975
 ---
 
 # Implementing Attack Surface Management

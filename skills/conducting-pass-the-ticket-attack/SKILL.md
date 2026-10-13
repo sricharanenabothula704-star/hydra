@@ -13,6 +13,7 @@ tags:
 - pass-the-ticket
 - lateral-movement
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Token Binding
@@ -28,7 +29,6 @@ mitre_attack:
 - T1550.003
 - T1558.003
 - T1078
-author: mahipal
 ---
 # Conducting Pass-the-Ticket Attack
 

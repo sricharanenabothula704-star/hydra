@@ -11,6 +11,7 @@ description: 'Tests authentication and authorization mechanisms in mobile applic
   '
 domain: cybersecurity
 subdomain: mobile-security
+author: mahipal
 tags:
 - mobile-security
 - android
@@ -31,7 +32,6 @@ mitre_attack:
 - T1036
 - T1078
 - T1068
-author: mahipal
 ---
 # Testing Mobile API Authentication
 

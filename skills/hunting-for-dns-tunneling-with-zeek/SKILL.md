@@ -16,6 +16,7 @@ tags:
 - mitre-t1071-004
 - network-monitoring
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Application Protocol Command Analysis
@@ -34,7 +35,6 @@ mitre_attack:
 - T1082
 - T1083
 - T1048
-author: mahipal
 ---
 
 # Hunting for DNS Tunneling with Zeek

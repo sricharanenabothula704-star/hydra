@@ -15,6 +15,7 @@ tags:
 - impersonation
 - fraud-detection
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 atlas_techniques:
 - AML.T0073
@@ -75,7 +76,6 @@ mitre_f3:
     name: 'Electronic Funds Transfer: Wire Transfer'
     tactic: monetization
     source: f3
-author: mahipal
 ---
 # Detecting Business Email Compromise with AI
 

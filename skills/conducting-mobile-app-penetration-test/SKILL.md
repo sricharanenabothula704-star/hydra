@@ -18,6 +18,7 @@ tags:
 - iOS-security
 - mobile-application-security
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - MEASURE-2.7
@@ -39,7 +40,6 @@ mitre_attack:
 - T1633
 - T1417
 - T1422
-author: mahipal
 ---
 # Conducting Mobile App Penetration Test
 

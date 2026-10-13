@@ -10,6 +10,7 @@ tags:
 - footprinting
 - passive-recon
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - ID.RA-01
@@ -21,7 +22,6 @@ mitre_attack:
 - T1592
 - T1589
 - T1590
-author: mahipal
 ---
 # Conducting External Reconnaissance with OSINT
 

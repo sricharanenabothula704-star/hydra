@@ -19,6 +19,7 @@ tags:
 - evtx
 - obfuscation
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.CM-01
@@ -31,7 +32,6 @@ mitre_attack:
 - T1082
 - T1083
 - T1003
-author: mahipal
 ---
 # Hunting for Anomalous PowerShell Execution
 

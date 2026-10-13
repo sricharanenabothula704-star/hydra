@@ -14,6 +14,7 @@ tags:
 - cloud-security
 - application-permissions
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.IR-01
@@ -25,7 +26,6 @@ mitre_attack:
 - T1550.001
 - T1098.001
 - T1566.002
-author: mahipal
 ---
 
 # Detecting Suspicious OAuth Application Consent

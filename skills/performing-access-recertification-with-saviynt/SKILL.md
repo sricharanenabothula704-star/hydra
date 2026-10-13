@@ -15,6 +15,7 @@ tags:
 - certification-campaign
 - iga
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.AA-01
@@ -55,7 +56,6 @@ mitre_f3:
     name: 'Account Manipulation: Enable Account Features'
     tactic: defense-impairment
     source: f3
-author: mahipal
 ---
 
 # Performing Access Recertification with Saviynt

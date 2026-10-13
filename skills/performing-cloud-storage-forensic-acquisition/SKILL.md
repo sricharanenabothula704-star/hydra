@@ -20,6 +20,7 @@ tags:
 - endpoint-artifacts
 - magnet-axiom
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - MEASURE-2.7
@@ -39,7 +40,6 @@ mitre_attack:
 - T1119
 - T1070
 - T1059
-author: mahipal
 ---
 
 # Performing Cloud Storage Forensic Acquisition

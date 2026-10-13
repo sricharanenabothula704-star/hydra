@@ -16,6 +16,7 @@ tags:
 - token-bucket
 - abuse-prevention
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
@@ -28,7 +29,6 @@ mitre_attack:
 - T1552.001
 - T1003
 - T1110
-author: mahipal
 ---
 # Implementing API Rate Limiting and Throttling
 

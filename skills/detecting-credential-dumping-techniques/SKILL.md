@@ -12,6 +12,7 @@ tags:
 - windows-security
 - defense-evasion
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Token Binding
@@ -57,7 +58,6 @@ mitre_f3:
     name: 'Brute Force: Password Cracking'
     tactic: initial-access
     source: attack
-author: mahipal
 ---
 
 # Detecting Credential Dumping Techniques

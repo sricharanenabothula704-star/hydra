@@ -21,6 +21,7 @@ tags:
 - NIST-CSF
 - EDR
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - File Metadata Consistency Validation
@@ -39,7 +40,6 @@ mitre_attack:
 - T1593
 - T1589
 - T1005
-author: mahipal
 ---
 # Hunting Advanced Persistent Threats
 

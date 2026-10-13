@@ -23,13 +23,13 @@ mitre_attack:
 - T1057
 - T1071.001
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
 - PR.PS-02
 - DE.CM-01
 - PR.IR-01
-author: mahipal
 ---
 # Deploying Osquery for Endpoint Monitoring
 

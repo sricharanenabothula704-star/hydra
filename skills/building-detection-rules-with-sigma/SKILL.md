@@ -19,6 +19,7 @@ tags:
 - elastic
 - sentinel
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Execution Isolation
@@ -37,7 +38,6 @@ mitre_attack:
 - T1055
 - T1053.005
 - T1547.001
-author: mahipal
 ---
 # Building Detection Rules with Sigma
 
@@ -73,6 +73,7 @@ description: Detects process accessing lsass.exe memory, indicative of credentia
 references:
     - https://attack.mitre.org/techniques/T1003/001/
     - https://github.com/gentilkiwi/mimikatz
+author: mahipal
 date: 2024/03/15
 modified: 2024/03/15
 tags:

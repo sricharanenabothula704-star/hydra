@@ -13,6 +13,7 @@ tags:
 - fileless-attacks
 - process-monitoring
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Application Protocol Command Analysis
@@ -29,7 +30,6 @@ mitre_attack:
 - T1078
 - T1190
 - T1059
-author: mahipal
 ---
 
 # Detecting Living Off the Land Attacks
@@ -144,6 +144,7 @@ description: >
 references:
   - https://lolbas-project.github.io/lolbas/Binaries/Certutil/
   - https://attack.mitre.org/techniques/T1105/
+author: Threat Detection Team
 date: 2026/01/20
 logsource:
   category: process_creation

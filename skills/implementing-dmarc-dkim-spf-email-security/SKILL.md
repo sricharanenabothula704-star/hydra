@@ -13,6 +13,7 @@ tags:
 - spf
 - dns
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.AT-01
@@ -24,7 +25,6 @@ mitre_attack:
 - T1598
 - T1534
 - T1036
-author: mahipal
 ---
 # Implementing DMARC, DKIM, and SPF Email Security
 

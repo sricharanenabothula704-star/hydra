@@ -15,6 +15,7 @@ tags:
 - openssl
 - x509
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.DS-01
@@ -25,7 +26,6 @@ mitre_attack:
 - T1553.004
 - T1557
 - T1587.003
-author: mahipal
 ---
 # Configuring Certificate Authority with OpenSSL
 

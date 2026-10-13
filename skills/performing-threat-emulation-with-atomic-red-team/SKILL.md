@@ -16,6 +16,7 @@ tags:
 - atomic-operator
 - purple-team
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - MEASURE-2.7
@@ -42,7 +43,6 @@ mitre_attack:
 - T1593
 - T1589
 - T1685.002
-author: mahipal
 ---
 
 # Performing Threat Emulation with Atomic Red Team

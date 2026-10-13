@@ -14,6 +14,7 @@ tags:
 - T1059.001
 - forensics
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Executable Denylisting
@@ -36,7 +37,6 @@ mitre_attack:
 - T1003.001
 - T1558.003
 - T1027.010
-author: mahipal
 ---
 
 # Analyzing PowerShell Empire Artifacts

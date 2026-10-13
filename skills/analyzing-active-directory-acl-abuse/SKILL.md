@@ -10,6 +10,7 @@ tags:
 - ldap
 - privilege-escalation
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.AA-01
@@ -21,7 +22,6 @@ mitre_attack:
 - T1484.001
 - T1222.001
 - T1078.002
-author: mahipal
 ---
 
 

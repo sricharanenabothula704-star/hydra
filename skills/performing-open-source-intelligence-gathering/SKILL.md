@@ -14,6 +14,7 @@ tags:
 - osint
 - reconnaissance
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - ID.RA-01
@@ -25,7 +26,6 @@ mitre_attack:
 - T1059
 - T1078
 - T1592
-author: mahipal
 ---
 # Performing Open Source Intelligence Gathering
 

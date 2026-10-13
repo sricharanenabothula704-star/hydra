@@ -18,12 +18,12 @@ tags:
 - keyless-signing
 - code-signing
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.DS-01
 mitre_attack:
 - T1195
-author: mahipal
 ---
 # Verifying Build Provenance with SLSA and Sigstore
 

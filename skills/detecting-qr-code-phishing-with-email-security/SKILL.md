@@ -17,6 +17,7 @@ tags:
 - ocr
 - mobile-security
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 atlas_techniques:
 - AML.T0052
@@ -63,7 +64,6 @@ mitre_f3:
     name: 'Account Takeover: Exposed Login Credential'
     tactic: initial-access
     source: f3
-author: mahipal
 ---
 # Detecting QR Code Phishing with Email Security
 

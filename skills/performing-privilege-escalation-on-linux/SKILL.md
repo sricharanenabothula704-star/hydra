@@ -16,6 +16,7 @@ tags:
 - privilege-escalation
 - linux
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Restore Object
@@ -33,7 +34,6 @@ mitre_attack:
 - T1059
 - T1078
 - T1068
-author: mahipal
 ---
 # Performing Privilege Escalation on Linux
 

@@ -11,6 +11,7 @@ tags:
 - envelope-encryption
 - key-management
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.DS-01
@@ -22,7 +23,6 @@ mitre_attack:
 - T1553
 - T1078.004
 - T1530
-author: mahipal
 ---
 # Implementing Envelope Encryption with AWS KMS
 

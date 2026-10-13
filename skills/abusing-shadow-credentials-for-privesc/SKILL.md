@@ -13,12 +13,12 @@ tags:
 - key-credential-link
 - privilege-escalation
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.AA-05
 mitre_attack:
 - T1098.005
-author: mahipal
 ---
 # Abusing Shadow Credentials for Privilege Escalation
 

@@ -19,6 +19,7 @@ tags:
 - censys
 - passive-dns
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - ID.RA-01
@@ -61,7 +62,6 @@ mitre_f3:
     name: 'Stage Capabilities: SEO Poisoning'
     tactic: resource-development
     source: attack
-author: mahipal
 ---
 # Tracking Threat Actor Infrastructure
 

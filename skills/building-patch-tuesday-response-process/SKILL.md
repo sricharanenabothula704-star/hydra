@@ -16,6 +16,7 @@ tags:
 - vulnerability-remediation
 - windows-update
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - ID.RA-01
@@ -28,7 +29,6 @@ mitre_attack:
 - T1068
 - T1210
 - T1588.006
-author: mahipal
 ---
 # Building Patch Tuesday Response Process
 

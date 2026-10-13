@@ -16,6 +16,7 @@ tags:
 - indicator-lifecycle
 - ioc-management
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - ID.RA-01
@@ -27,7 +28,6 @@ mitre_attack:
 - T1592
 - T1593
 - T1589
-author: mahipal
 ---
 # Performing Indicator Lifecycle Management
 

@@ -25,12 +25,13 @@ tags:
   - invariant-testing
   - audit
 version: "1.0"
+author: devredious
 license: Apache-2.0
+based_on: mukul975/analyzing-ethereum-smart-contract-vulnerabilities
 swc_registry: https://swcregistry.io/
 mitre_attack:
   - T1190
   - T1059
-author: devredious
 ---
 
 # Auditing Foundry Smart Contract Security

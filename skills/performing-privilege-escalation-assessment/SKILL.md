@@ -17,6 +17,7 @@ tags:
 - Windows-privesc
 - local-exploitation
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Executable Denylisting
@@ -35,7 +36,6 @@ mitre_attack:
 - T1059
 - T1078
 - T1068
-author: mahipal
 ---
 # Performing Privilege Escalation Assessment
 

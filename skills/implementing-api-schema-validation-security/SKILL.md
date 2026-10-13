@@ -17,6 +17,7 @@ tags:
 - mass-assignment
 - api-gateway
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
@@ -29,7 +30,6 @@ mitre_attack:
 - T1552.001
 - T1055
 - T1059
-author: mahipal
 ---
 
 # Implementing API Schema Validation Security

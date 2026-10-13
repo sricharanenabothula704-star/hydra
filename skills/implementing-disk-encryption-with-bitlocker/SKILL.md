@@ -18,6 +18,7 @@ tags:
 - data-protection
 - windows-security
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
@@ -30,7 +31,6 @@ mitre_attack:
 - T1059
 - T1036
 - T1573
-author: mahipal
 ---
 # Implementing Disk Encryption with BitLocker
 

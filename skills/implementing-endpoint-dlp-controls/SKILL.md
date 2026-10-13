@@ -17,6 +17,7 @@ tags:
 - data-protection
 - content-inspection
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 atlas_techniques:
 - AML.T0024
@@ -38,7 +39,6 @@ mitre_attack:
 - T1059
 - T1036
 - T1048
-author: mahipal
 ---
 # Implementing Endpoint DLP Controls
 

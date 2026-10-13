@@ -12,6 +12,7 @@ tags:
 - ztna
 - cloudflare-one
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 atlas_techniques:
 - AML.T0051
@@ -32,7 +33,6 @@ mitre_attack:
 - T1078
 - T1190
 - T1021
-author: mahipal
 ---
 
 # Deploying Cloudflare Access for Zero Trust

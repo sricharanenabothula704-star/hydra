@@ -18,12 +18,12 @@ tags:
 - dfir
 - windows-forensics
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - RS.AN-03
 mitre_attack:
 - T1005
-author: mahipal
 ---
 # Triaging Windows with KAPE
 

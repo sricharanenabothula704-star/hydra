@@ -11,6 +11,7 @@ tags:
 - pcap
 - traffic-analysis
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.IR-01
@@ -22,7 +23,6 @@ mitre_attack:
 - T1071
 - T1046
 - T1557
-author: mahipal
 ---
 
 # Analyzing Network Packets with Scapy

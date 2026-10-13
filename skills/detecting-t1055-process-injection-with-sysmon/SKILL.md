@@ -17,6 +17,7 @@ tags:
 - dll-injection
 - process-hollowing
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Executable Denylisting
@@ -34,7 +35,6 @@ mitre_attack:
 - T1055.002
 - T1055.003
 - T1055.012
-author: mahipal
 ---
 
 # Detecting T1055 Process Injection with Sysmon

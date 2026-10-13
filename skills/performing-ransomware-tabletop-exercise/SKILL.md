@@ -16,6 +16,7 @@ tags:
 - defense
 - preparedness
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.DS-11
@@ -50,7 +51,6 @@ mitre_f3:
     name: 'Conversion to Physical Monetary Instruments: Cash'
     tactic: monetization
     source: f3
-author: mahipal
 ---
 # Performing Ransomware Tabletop Exercise
 

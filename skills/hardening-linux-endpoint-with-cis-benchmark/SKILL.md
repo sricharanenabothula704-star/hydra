@@ -18,6 +18,7 @@ tags:
 - Ubuntu
 - RHEL
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
@@ -29,7 +30,6 @@ mitre_attack:
 - T1547
 - T1059
 - T1036
-author: mahipal
 ---
 # Hardening Linux Endpoint with CIS Benchmark
 

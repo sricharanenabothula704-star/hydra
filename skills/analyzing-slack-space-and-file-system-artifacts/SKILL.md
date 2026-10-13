@@ -12,6 +12,7 @@ tags:
 - alternate-data-streams
 - file-system-analysis
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - RS.AN-03
@@ -23,7 +24,6 @@ mitre_attack:
 - T1070.004
 - T1005
 - T1006
-author: mahipal
 ---
 
 # Analyzing Slack Space and File System Artifacts

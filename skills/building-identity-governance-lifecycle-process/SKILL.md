@@ -11,6 +11,7 @@ tags:
 - RBAC
 - IGA
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - GOVERN-1.1
@@ -54,7 +55,6 @@ mitre_f3:
     name: Account Takeover
     tactic: initial-access
     source: f3
-author: mahipal
 ---
 
 # Building Identity Governance Lifecycle Process

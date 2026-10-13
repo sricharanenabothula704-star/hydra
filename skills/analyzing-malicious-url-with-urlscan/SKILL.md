@@ -14,6 +14,7 @@ tags:
 - url-analysis
 - threat-intelligence
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 atlas_techniques:
 - AML.T0052
@@ -26,7 +27,6 @@ mitre_attack:
 - T1566.002
 - T1204.001
 - T1598.003
-author: mahipal
 ---
 # Analyzing Malicious URL with URLScan
 

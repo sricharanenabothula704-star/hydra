@@ -17,12 +17,12 @@ tags:
 - primary-refresh-token
 - identity-attack
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - ID.AM-03
 mitre_attack:
 - T1087.004
-author: mahipal
 ---
 # Attacking Entra ID with ROADtools
 

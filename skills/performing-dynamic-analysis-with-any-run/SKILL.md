@@ -16,6 +16,7 @@ tags:
 - ANY.RUN
 - interactive-analysis
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - File Metadata Consistency Validation
@@ -34,7 +35,6 @@ mitre_attack:
 - T1140
 - T1497
 - T1591
-author: mahipal
 ---
 
 # Performing Dynamic Analysis with ANY.RUN

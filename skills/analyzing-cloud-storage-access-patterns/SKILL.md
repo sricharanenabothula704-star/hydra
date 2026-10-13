@@ -12,6 +12,7 @@ tags:
 - data-access-anomaly
 - exfiltration-detection
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 atlas_techniques:
 - AML.T0024
@@ -31,7 +32,6 @@ mitre_attack:
 - T1619
 - T1078.004
 - T1048
-author: mahipal
 ---
 
 

@@ -18,6 +18,7 @@ tags:
 - splunk
 - sentinel
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Token Binding
@@ -36,7 +37,6 @@ mitre_attack:
 - T1528
 - T1550.001
 - T1098.003
-author: mahipal
 ---
 
 # Detecting Azure Service Principal Abuse

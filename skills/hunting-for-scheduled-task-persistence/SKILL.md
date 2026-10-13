@@ -11,6 +11,7 @@ tags:
 - t1053
 - proactive-detection
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Execution Isolation
@@ -29,7 +30,6 @@ mitre_attack:
 - T1082
 - T1083
 - T1547
-author: mahipal
 ---
 
 # Hunting For Scheduled Task Persistence

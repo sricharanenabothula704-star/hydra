@@ -18,6 +18,7 @@ tags:
 - exploit-protection
 - MDE
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
@@ -30,7 +31,6 @@ mitre_attack:
 - T1059.001
 - T1055
 - T1547.001
-author: mahipal
 ---
 # Configuring Windows Defender Advanced Settings
 

@@ -17,6 +17,7 @@ tags:
 - threat-hunting
 - account-takeover
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.CM-01
@@ -51,7 +52,6 @@ mitre_f3:
     name: Account Takeover
     tactic: initial-access
     source: f3
-author: mahipal
 ---
 
 # Hunting Credential Stuffing Attacks

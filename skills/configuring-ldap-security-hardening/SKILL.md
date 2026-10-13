@@ -15,6 +15,7 @@ tags:
 - directory-services
 - hardening
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.AA-01
@@ -49,7 +50,6 @@ mitre_f3:
     name: Adversary-in-the-Middle
     tactic: positioning
     source: attack
-author: mahipal
 ---
 # Configuring LDAP Security Hardening
 

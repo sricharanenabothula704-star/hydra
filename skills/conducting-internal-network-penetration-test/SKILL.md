@@ -14,6 +14,7 @@ tags:
 - assumed-breach
 - network-security
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Application Protocol Command Analysis
@@ -31,7 +32,6 @@ mitre_attack:
 - T1018
 - T1021
 - T1210
-author: mahipal
 ---
 
 # Conducting Internal Network Penetration Test

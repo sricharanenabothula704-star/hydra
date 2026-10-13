@@ -13,12 +13,12 @@ tags:
 - jailbreak
 - regression-testing
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - MANAGE-4.1
 atlas_techniques:
 - AML.T0051
-author: mahipal
 ---
 # Continuous LLM Red Teaming with Promptfoo
 
@@ -26,7 +26,7 @@ author: mahipal
 
 ## Overview
 
-Promptfoo is an open-source LLM evaluation and red-teaming framework (used by OpenAI and the AI vendor per its README) that generates adversarial test cases, runs them against your model/agent, and grades the responses. DeepTeam (by Confident AI) is a complementary open-source framework offering 50+ ready-to-use vulnerabilities and 10+ research-backed attack methods. Together they let you treat LLM security as a **regression test**: every commit re-runs the same adversarial suite, and the pipeline fails when a previously-safe behavior regresses.
+Promptfoo is an open-source LLM evaluation and red-teaming framework (used by OpenAI and Anthropic per its README) that generates adversarial test cases, runs them against your model/agent, and grades the responses. DeepTeam (by Confident AI) is a complementary open-source framework offering 50+ ready-to-use vulnerabilities and 10+ research-backed attack methods. Together they let you treat LLM security as a **regression test**: every commit re-runs the same adversarial suite, and the pipeline fails when a previously-safe behavior regresses.
 
 This matters because LLM applications change constantly — prompts, models, RAG sources, tools, and guardrails all drift. A jailbreak that was patched last sprint can silently return after a prompt edit or a model upgrade. Promptfoo maps its plugins directly onto the **OWASP LLM Top 10** (`owasp:llm`) and **OWASP Agentic** (`owasp:agentic`) presets, and onto MITRE ATLAS, so the suite tracks recognized risk taxonomies. The core threat addressed here is **AML.T0051 — LLM Prompt Injection** (MITRE ATLAS): adversarial instructions that override the application's intended behavior. This skill follows the Promptfoo red-team docs (https://www.promptfoo.dev/docs/red-team/) and DeepTeam docs (https://www.trydeepteam.com/docs/getting-started), and aligns to NIST AI RMF MANAGE-4.1 (post-deployment monitoring and feedback to manage AI risk).
 
@@ -75,6 +75,7 @@ Initialize an interactive config; it writes `promptfooconfig.yaml` where targets
 
 ```bash
 promptfoo redteam init
+# choose your target type (HTTP endpoint, openai:..., anthropic:..., custom provider)
 ```
 
 ### 2. Define targets, OWASP presets, and attack strategies

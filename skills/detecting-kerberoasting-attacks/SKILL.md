@@ -16,6 +16,7 @@ tags:
 - t1558
 - proactive-detection
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Application Protocol Command Analysis
@@ -34,7 +35,6 @@ mitre_attack:
 - T1082
 - T1083
 - T1003
-author: mahipal
 ---
 
 # Detecting Kerberoasting Attacks

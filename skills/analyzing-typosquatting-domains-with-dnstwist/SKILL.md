@@ -16,6 +16,7 @@ tags:
 - dns
 - threat-intelligence
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 atlas_techniques:
 - AML.T0073
@@ -57,7 +58,6 @@ mitre_f3:
     name: Phishing
     tactic: initial-access
     source: attack
-author: mahipal
 ---
 # Analyzing Typosquatting Domains with DNSTwist
 

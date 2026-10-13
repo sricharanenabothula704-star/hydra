@@ -16,6 +16,7 @@ tags:
 - dependency-pinning
 - devsecops
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 atlas_techniques:
 - AML.T0010
@@ -33,7 +34,6 @@ mitre_attack:
 - T1195.001
 - T1199
 - T1554
-author: mahipal
 ---
 
 # Detecting Supply Chain Attacks in CI/CD

@@ -20,6 +20,7 @@ tags:
 - data-integrity
 - lateral-movement
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.IR-01
@@ -32,7 +33,6 @@ mitre_attack:
 - T0888
 - T0846
 - T0859
-author: mahipal
 ---
 
 # Detecting Attacks on Historian Servers

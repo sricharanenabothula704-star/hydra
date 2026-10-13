@@ -18,12 +18,12 @@ tags:
 - integrity-verification
 - trusted-computing
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
 mitre_attack:
 - T1542
-author: mahipal
 ---
 # Validating TPM Measured Boot and Attestation
 

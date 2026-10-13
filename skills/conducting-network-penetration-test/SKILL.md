@@ -18,6 +18,7 @@ tags:
 - vulnerability-exploitation
 - infrastructure-security
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - ID.RA-01
@@ -31,7 +32,6 @@ mitre_attack:
 - T1210
 - T1021
 - T1078
-author: mahipal
 ---
 # Conducting Network Penetration Test
 

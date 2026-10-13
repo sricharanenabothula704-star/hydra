@@ -12,6 +12,7 @@ tags:
 - spearphishing
 - social-engineering
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - File Metadata Consistency Validation
@@ -61,7 +62,6 @@ mitre_f3:
     name: 'Account Takeover: Exposed Login Credential'
     tactic: initial-access
     source: f3
-author: mahipal
 ---
 # Conducting Spearphishing Simulation Campaign
 

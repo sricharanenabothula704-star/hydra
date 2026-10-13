@@ -20,6 +20,7 @@ tags:
 - applications
 - data-security
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - GOVERN-1.1
@@ -36,7 +37,6 @@ mitre_attack:
 - T1078
 - T1190
 - T1059
-author: mahipal
 ---
 
 # Implementing CISA Zero Trust Maturity Model

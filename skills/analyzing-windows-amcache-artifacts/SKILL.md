@@ -18,6 +18,7 @@ tags:
 - timeline-analysis
 - DFIR
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - RS.AN-03
@@ -29,7 +30,6 @@ mitre_attack:
 - T1036.005
 - T1014
 - T1005
-author: mahipal
 ---
 
 # Analyzing Windows Amcache Artifacts

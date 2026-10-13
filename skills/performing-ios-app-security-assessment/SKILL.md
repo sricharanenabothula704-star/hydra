@@ -12,6 +12,7 @@ description: 'Performs comprehensive iOS application security assessments using 
   '
 domain: cybersecurity
 subdomain: mobile-security
+author: mukul975
 tags:
 - mobile-security
 - ios
@@ -34,7 +35,6 @@ mitre_attack:
 - T1036
 - T1078
 - T1003
-author: mukul975
 ---
 # Performing iOS App Security Assessment
 

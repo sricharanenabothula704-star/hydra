@@ -12,6 +12,7 @@ tags:
 - compliance
 - vulnerability-assessment
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.DS-01
@@ -44,7 +45,6 @@ mitre_f3:
     name: Access with Stolen Session Cookie
     tactic: initial-access
     source: f3
-author: mahipal
 ---
 # Performing Cryptographic Audit of Application
 

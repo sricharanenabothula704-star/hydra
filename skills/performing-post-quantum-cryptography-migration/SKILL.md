@@ -22,6 +22,7 @@ tags:
 - hybrid-TLS
 - crypto-agility
 version: '1.0'
+author: mukul975
 license: Apache-2.0
 nist_csf:
 - PR.DS-01
@@ -32,7 +33,6 @@ mitre_attack:
 - T1573
 - T1553
 - T1040
-author: mukul975
 ---
 
 # Performing Post-Quantum Cryptography Migration

@@ -16,6 +16,7 @@ tags:
 - detection-engineering
 - adversary-emulation
 version: 1.0.0
+author: mukul975
 license: Apache-2.0
 nist_ai_rmf:
 - MEASURE-2.7
@@ -39,7 +40,6 @@ mitre_attack:
 - T1078
 - T1190
 - T1059
-author: mukul975
 ---
 
 # Performing Purple Team Atomic Testing

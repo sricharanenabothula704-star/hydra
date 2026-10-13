@@ -14,6 +14,7 @@ tags:
 - brand-protection
 - threat-intelligence
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - ID.RA-01
@@ -58,7 +59,6 @@ mitre_f3:
     name: Email Spoofing
     tactic: stealth
     source: attack
-author: mahipal
 ---
 # Performing Brand Monitoring for Impersonation
 

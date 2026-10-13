@@ -17,12 +17,12 @@ tags:
 - active-directory
 - privilege-escalation
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.CM-01
 mitre_attack:
 - T1557.001
-author: mahipal
 ---
 # Relaying NTLM for ADCS ESC8
 

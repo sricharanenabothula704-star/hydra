@@ -15,6 +15,7 @@ tags:
 - windows-forensics
 - endpoint-security
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.CM-01
@@ -26,7 +27,6 @@ mitre_attack:
 - T1027.010
 - T1140
 - T1105
-author: mahipal
 ---
 
 

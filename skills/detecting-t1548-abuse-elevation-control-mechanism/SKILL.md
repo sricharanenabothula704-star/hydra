@@ -15,6 +15,7 @@ tags:
 - elevation-control
 - windows-security
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Executable Denylisting
@@ -32,7 +33,6 @@ mitre_attack:
 - T1548.001
 - T1548.003
 - T1548.004
-author: mahipal
 ---
 
 # Detecting T1548 Abuse Elevation Control Mechanism

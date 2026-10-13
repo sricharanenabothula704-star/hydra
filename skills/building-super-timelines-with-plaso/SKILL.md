@@ -17,12 +17,12 @@ tags:
 - timeline-analysis
 - incident-response
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - RS.AN-03
 mitre_attack:
 - T1070
-author: mahipal
 ---
 # Building Super Timelines with Plaso
 

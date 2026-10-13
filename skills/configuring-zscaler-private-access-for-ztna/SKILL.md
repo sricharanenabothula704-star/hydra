@@ -18,6 +18,7 @@ tags:
 - access-policy
 - sase
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.AA-01
@@ -30,7 +31,6 @@ mitre_attack:
 - T1021
 - T1219
 - T1190
-author: mahipal
 ---
 
 # Configuring Zscaler Private Access for ZTNA

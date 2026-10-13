@@ -18,6 +18,7 @@ tags:
 - data-classification
 - compliance
 version: 1.0.0
+author: mukul975
 license: Apache-2.0
 nist_csf:
 - PR.DS-01
@@ -30,7 +31,6 @@ mitre_attack:
 - T1537
 - T1048
 - T1573
-author: mukul975
 ---
 # Implementing Data Loss Prevention with Microsoft Purview
 

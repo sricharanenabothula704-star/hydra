@@ -16,6 +16,7 @@ tags:
 - redirect-bypass
 - unvalidated-redirect
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
@@ -28,7 +29,6 @@ mitre_attack:
 - T1505.003
 - T1083
 - T1566
-author: mahipal
 ---
 
 # Testing for Open Redirect Vulnerabilities

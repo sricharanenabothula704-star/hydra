@@ -25,6 +25,7 @@ tags:
 - nist-800-39
 - compliance
 version: "1.0"
+author: andrewibrah
 license: Apache-2.0
 nist_csf:
 - GV.RM-01
@@ -38,7 +39,6 @@ mitre_attack:
 - T1190
 - T1486
 - T1021
-author: andrewibrah
 ---
 
 # Conducting a Cyber Risk Assessment with NIST SP 800-30

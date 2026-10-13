@@ -19,6 +19,7 @@ tags:
 - spiderfoot
 - maltego
 version: '1.0'
+author: juliosuas
 license: Apache-2.0
 atlas_techniques:
 - AML.T0051
@@ -46,7 +47,6 @@ mitre_attack:
 - T1593
 - T1589
 - T1595
-author: juliosuas
 ---
 
 # Performing AI-Driven OSINT Correlation
@@ -64,7 +64,7 @@ author: juliosuas
 - [Sherlock](https://github.com/sherlock-project/sherlock) installed (`pip install sherlock-project`)
 - [theHarvester](https://github.com/laramies/theHarvester) installed (`pip install theHarvester`)
 - [SpiderFoot](https://github.com/smicallef/spiderfoot) 4.0+ running on localhost:5001
-- Access to an LLM API (OpenAI, the AI vendor, or local model via Ollama)
+- Access to an LLM API (OpenAI, Anthropic, or local model via Ollama)
 - Optional: Maltego CE for graph visualization of correlation results
 - Optional: API keys for Shodan, VirusTotal, HaveIBeenPwned, Hunter.io
 
@@ -196,6 +196,7 @@ author: juliosuas
    ```bash
    cat > /tmp/osint/correlate.py << 'PYEOF'
    import json, os
+   from openai import OpenAI  # or anthropic, ollama, etc.
 
    client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 
@@ -346,7 +347,7 @@ author: juliosuas
 | theHarvester | Email, subdomain, and host discovery from public sources |
 | SpiderFoot | Automated OSINT collection across 200+ modules |
 | Maltego | Graph-based visualization of entity relationships |
-| LLM API (GPT-4, the AI agent, Ollama) | Cross-source reasoning, pattern detection, and confidence scoring |
+| LLM API (GPT-4, Claude, Ollama) | Cross-source reasoning, pattern detection, and confidence scoring |
 | HaveIBeenPwned | Breach exposure and credential leak detection |
 
 ## Common Scenarios

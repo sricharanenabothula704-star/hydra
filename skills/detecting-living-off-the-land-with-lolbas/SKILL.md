@@ -16,6 +16,7 @@ tags:
 - endpoint-detection
 - threat-hunting
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Executable Denylisting
@@ -32,7 +33,6 @@ mitre_attack:
 - T1078
 - T1190
 - T1059
-author: mahipal
 ---
 
 # Detecting Living Off the Land with LOLBAS

@@ -18,12 +18,12 @@ tags:
 - chipsec
 - firmware-integrity
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.CM-01
 mitre_attack:
 - T1542.003
-author: mahipal
 ---
 # Detecting Secure Boot Bypass
 

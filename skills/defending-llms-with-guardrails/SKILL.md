@@ -13,12 +13,12 @@ tags:
 - content-moderation
 - runtime-defense
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - MANAGE-2.1
 atlas_techniques:
 - AML.T0054
-author: mahipal
 ---
 # Defending LLMs with Guardrails
 

@@ -16,6 +16,7 @@ tags:
 - iam-audit
 - conditional-access
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.IR-01
@@ -28,7 +29,6 @@ mitre_attack:
 - T1556.006
 - T1069.003
 - T1526
-author: mahipal
 ---
 
 # Auditing Azure Active Directory Configuration

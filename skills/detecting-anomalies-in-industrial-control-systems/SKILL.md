@@ -12,6 +12,7 @@ tags:
 - anomaly-detection
 - machine-learning
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 atlas_techniques:
 - AML.T0043
@@ -31,7 +32,6 @@ mitre_attack:
 - T0832
 - T0814
 - T0801
-author: mahipal
 ---
 
 # Detecting Anomalies in Industrial Control Systems

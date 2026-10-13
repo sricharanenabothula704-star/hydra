@@ -16,6 +16,7 @@ tags:
 - guardduty-crypto
 - cost-anomaly
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.IR-01
@@ -51,7 +52,6 @@ mitre_f3:
     name: Convert to Cryptocurrency
     tactic: monetization
     source: f3
-author: mahipal
 ---
 
 # Detecting Cryptomining in Cloud

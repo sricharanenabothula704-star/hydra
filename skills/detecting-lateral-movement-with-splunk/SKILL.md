@@ -15,6 +15,7 @@ tags:
 - proactive-detection
 - ta0008
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Application Protocol Command Analysis
@@ -33,7 +34,6 @@ mitre_attack:
 - T1082
 - T1083
 - T1021
-author: mahipal
 ---
 
 # Detecting Lateral Movement with Splunk

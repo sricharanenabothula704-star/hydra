@@ -16,6 +16,7 @@ tags:
 - certificate-management
 - microservices-security
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.CM-01
@@ -28,7 +29,6 @@ mitre_attack:
 - T1059
 - T1553
 - T1573
-author: mahipal
 ---
 
 # Implementing mTLS for Zero Trust Services

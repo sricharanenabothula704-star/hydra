@@ -16,6 +16,7 @@ tags:
 - PetitPotam
 - Active-Directory
 version: '1.0'
+author: mukul975
 license: Apache-2.0
 atlas_techniques:
 - AML.T0051
@@ -44,7 +45,6 @@ mitre_attack:
 - T1082
 - T1083
 - T1069
-author: mukul975
 ---
 
 # Detecting NTLM Relay with Event Correlation

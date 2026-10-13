@@ -22,6 +22,7 @@ tags:
 - CTI
 - NIST-CSF
 version: 1.0.0
+author: team-cybersecurity
 license: Apache-2.0
 nist_csf:
 - ID.RA-01
@@ -34,7 +35,6 @@ mitre_attack:
 - T1588.001
 - T1590.005
 - T1596
-author: team-cybersecurity
 ---
 # Automating IOC Enrichment
 

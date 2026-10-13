@@ -19,6 +19,7 @@ tags:
 - session-monitoring
 - compliance
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.AA-01
@@ -30,7 +31,6 @@ mitre_attack:
 - T1110
 - T1556
 - T1098
-author: mahipal
 ---
 
 # Implementing Privileged Session Monitoring

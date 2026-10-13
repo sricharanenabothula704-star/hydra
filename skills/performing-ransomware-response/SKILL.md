@@ -49,13 +49,13 @@ mitre_f3:
     tactic: initial-access
     source: f3
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - RS.MA-01
 - RS.MA-02
 - RS.AN-03
 - RC.RP-01
-author: mahipal
 ---
 
 # Performing Ransomware Response

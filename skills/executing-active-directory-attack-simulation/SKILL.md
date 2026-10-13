@@ -18,6 +18,7 @@ tags:
 - Kerberoasting
 - domain-compromise
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Application Protocol Command Analysis
@@ -36,7 +37,6 @@ mitre_attack:
 - T1059
 - T1078
 - T1003
-author: mahipal
 ---
 # Executing Active Directory Attack Simulation
 

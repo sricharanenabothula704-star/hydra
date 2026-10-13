@@ -18,6 +18,7 @@ tags:
 - least-privilege
 - execution-roles
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.IR-01
@@ -29,7 +30,6 @@ mitre_attack:
 - T1530
 - T1537
 - T1580
-author: mahipal
 ---
 
 # Securing AWS Lambda Execution Roles

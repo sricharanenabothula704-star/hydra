@@ -13,6 +13,7 @@ tags:
 - secret-detection
 - cicd-security
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
@@ -25,7 +26,6 @@ mitre_attack:
 - T1552.001
 - T1190
 - T1610
-author: mahipal
 ---
 
 # Building DevSecOps Pipeline with GitLab CI

@@ -15,6 +15,7 @@ tags:
 - t1114
 - proactive-detection
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Restore Object
@@ -33,7 +34,6 @@ mitre_attack:
 - T1082
 - T1083
 - T1547
-author: mahipal
 ---
 
 # Detecting Email Forwarding Rules Attack

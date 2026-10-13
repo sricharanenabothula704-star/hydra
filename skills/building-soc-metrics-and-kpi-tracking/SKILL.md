@@ -19,6 +19,7 @@ tags:
 - reporting
 - continuous-improvement
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - MEASURE-2.7
@@ -36,7 +37,6 @@ nist_csf:
 mitre_attack:
 - T1078
 - T1071
-author: mahipal
 ---
 # Building SOC Metrics and KPI Tracking
 

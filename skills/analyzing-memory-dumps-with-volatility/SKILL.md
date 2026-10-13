@@ -20,13 +20,13 @@ mitre_attack:
 - T1059
 - T1620
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.AE-02
 - RS.AN-03
 - ID.RA-01
 - DE.CM-01
-author: mahipal
 ---
 
 # Analyzing Memory Dumps with Volatility

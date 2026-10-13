@@ -13,6 +13,7 @@ tags:
 - network-analysis
 - proactive-detection
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - File Metadata Consistency Validation
@@ -31,7 +32,6 @@ mitre_attack:
 - T1082
 - T1083
 - T1071
-author: mahipal
 ---
 
 # Hunting for Command and Control Beaconing

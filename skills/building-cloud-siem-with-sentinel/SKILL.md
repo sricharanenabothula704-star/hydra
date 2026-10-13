@@ -10,6 +10,7 @@ tags:
 - soar-automation
 - threat-detection
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - MEASURE-2.7
@@ -30,7 +31,6 @@ mitre_attack:
 - T1485
 - T1530
 - T1021.007
-author: mahipal
 ---
 
 # Building Cloud SIEM with Sentinel

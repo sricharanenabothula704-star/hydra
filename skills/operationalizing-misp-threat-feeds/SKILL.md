@@ -13,12 +13,12 @@ tags:
 - sigma
 - detection-engineering
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - ID.RA-02
 mitre_attack:
 - T1589
-author: mahipal
 ---
 # Operationalizing MISP Threat Feeds
 

@@ -17,6 +17,7 @@ tags:
 - beacon
 - protocol-analysis
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.AE-02
@@ -29,7 +30,6 @@ mitre_attack:
 - T1571
 - T1008
 - T1095
-author: mahipal
 ---
 
 # Analyzing Command-and-Control Communication

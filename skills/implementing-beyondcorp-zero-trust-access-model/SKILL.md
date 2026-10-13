@@ -19,6 +19,7 @@ tags:
 - ztna
 - access-context-manager
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.AA-01
@@ -31,7 +32,6 @@ mitre_attack:
 - T1059
 - T1078.004
 - T1530
-author: mahipal
 ---
 
 # Implementing BeyondCorp Zero Trust Access Model

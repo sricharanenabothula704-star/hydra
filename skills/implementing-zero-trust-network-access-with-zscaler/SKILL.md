@@ -10,6 +10,7 @@ tags:
 - network-access
 - vpn-replacement
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.AA-01
@@ -20,7 +21,6 @@ mitre_attack:
 - T1078
 - T1190
 - T1059
-author: mahipal
 ---
 
 # Implementing Zero Trust Network Access with Zscaler

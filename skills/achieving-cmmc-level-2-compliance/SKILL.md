@@ -26,6 +26,7 @@ tags:
 - governance
 - defense-industrial-base
 version: "1.0"
+author: andrewibrah
 license: Apache-2.0
 nist_csf:
 - GV.OC-03
@@ -40,7 +41,6 @@ mitre_attack:
 - T1041
 - T1048
 - T1567
-author: andrewibrah
 ---
 
 # Achieving CMMC Level 2 Compliance

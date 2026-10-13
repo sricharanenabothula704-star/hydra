@@ -1,9 +1,13 @@
 ---
 name: analyzing-kubernetes-audit-logs
-description: 'Parses Kubernetes API server audit logs (JSON lines) to detect exec-into-pod,
-  secret access, RBAC modifications, privileged pod creation, and anonymous API access.
-  Builds threat detection rules from audit event patterns. Use when investigating
-  Kubernetes cluster compromise or building k8s-specific SIEM detection rules.
+description: >-
+  Parses Kubernetes API server audit logs (JSON lines) to detect exec-into-pod, secret access,
+  RBAC modifications, privileged pod creation, and anonymous API access, and builds SIEM
+  detection rules from the event patterns. Use when investigating a suspected cluster
+  compromise, reconstructing what an attacker did through the API server, or writing
+  Kubernetes-specific detection content. Keywords: audit policy, audit log, kube-apiserver,
+  exec into pod, RBAC change, anonymous access, detection rules. Do not use for syscall-level
+  detection inside a running container - use detecting-container-runtime-threats-with-falco.
 
   '
 domain: cybersecurity
@@ -17,6 +21,7 @@ tags:
 - k8s-api-server
 - threat-detection
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
@@ -28,7 +33,6 @@ mitre_attack:
 - T1613
 - T1078
 - T1552.007
-author: mahipal
 ---
 
 # Analyzing Kubernetes Audit Logs

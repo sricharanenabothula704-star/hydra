@@ -16,6 +16,7 @@ tags:
 - UEFI
 - MBR-analysis
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.AE-02
@@ -28,7 +29,6 @@ mitre_attack:
 - T1542.002
 - T1014
 - T1547.006
-author: mahipal
 ---
 
 # Analyzing Bootkit and Rootkit Samples

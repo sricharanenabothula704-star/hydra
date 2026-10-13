@@ -16,6 +16,7 @@ tags:
 - memory-forensics
 - defense-evasion
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Executable Denylisting
@@ -34,7 +35,6 @@ mitre_attack:
 - T1140
 - T1497
 - T1070
-author: mahipal
 ---
 
 # Detecting Process Injection Techniques

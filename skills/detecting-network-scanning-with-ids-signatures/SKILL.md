@@ -16,6 +16,7 @@ tags:
 - signature-detection
 - threshold-rules
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.IR-01
@@ -28,7 +29,6 @@ mitre_attack:
 - T1557
 - T1071
 - T1595
-author: mahipal
 ---
 
 # Detecting Network Scanning with IDS Signatures

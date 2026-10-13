@@ -15,6 +15,7 @@ tags:
 - bec
 - email-filtering
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.AT-01
@@ -59,7 +60,6 @@ mitre_f3:
     name: 'Account Manipulation: Change of Payment Details'
     tactic: positioning
     source: f3
-author: mahipal
 ---
 # Implementing Proofpoint Email Security Gateway
 

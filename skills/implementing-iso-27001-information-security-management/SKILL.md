@@ -23,12 +23,12 @@ nist_csf:
 - ID.RA-01
 - PR.DS-01
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 mitre_attack:
 - T1078
 - T1530
 - T1685.002
-author: mahipal
 ---
 # Implementing ISO 27001 Information Security Management
 

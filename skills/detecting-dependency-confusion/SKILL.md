@@ -13,12 +13,12 @@ tags:
 - devsecops
 - namespace-hijacking
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - ID.RA-09
 mitre_attack:
 - T1195.001
-author: mahipal
 ---
 # Detecting Dependency Confusion
 

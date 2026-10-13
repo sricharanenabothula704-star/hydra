@@ -15,6 +15,7 @@ tags:
 - ueba
 - proactive-detection
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Restore Access
@@ -32,7 +33,6 @@ mitre_attack:
 - T1057
 - T1082
 - T1083
-author: mahipal
 ---
 
 # Detecting Insider Threat Behaviors

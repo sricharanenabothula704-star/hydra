@@ -1,10 +1,13 @@
 ---
 name: performing-container-security-scanning-with-trivy
-description: Scan container images, filesystems, Git repositories, and Kubernetes manifests
-  for OS and language-dependency vulnerabilities, IaC misconfigurations, exposed secrets,
-  and license issues using Aqua Security's Trivy, generating CycloneDX/SPDX SBOMs. Use
-  when integrating vulnerability scanning into CI/CD pipelines, deploying the Trivy
-  Kubernetes operator, or triaging scan results for security operations.
+description: >-
+  Runs Trivy across every target type it supports - container images, filesystems, Git
+  repositories, and Kubernetes clusters - for OS and dependency vulnerabilities, IaC
+  misconfiguration, exposed secrets, and licences, generating CycloneDX or SPDX SBOMs. Use
+  when integrating Trivy into CI/CD, deploying the Trivy Kubernetes operator, scanning
+  non-image targets, or triaging results at scale. Keywords: Trivy, trivy k8s, operator, SBOM,
+  CycloneDX, SPDX, misconfig, secret scanning. Do not use for a single Docker image scan - use
+  scanning-docker-images-with-trivy.
 domain: cybersecurity
 subdomain: container-security
 tags:
@@ -17,6 +20,7 @@ tags:
 - devsecops
 - supply-chain
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
@@ -29,7 +33,6 @@ mitre_attack:
 - T1609
 - T1525
 - T1195
-author: mahipal
 ---
 
 # Performing Container Security Scanning with Trivy

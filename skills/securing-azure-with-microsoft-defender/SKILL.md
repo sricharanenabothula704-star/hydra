@@ -16,6 +16,7 @@ tags:
 - secure-score
 - cloud-workload-protection
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - MEASURE-2.7
@@ -36,7 +37,6 @@ mitre_attack:
 - T1537
 - T1580
 - T1610
-author: mahipal
 ---
 
 # Securing Azure with Microsoft Defender

@@ -20,6 +20,7 @@ tags:
 - SpiderFoot
 - CTI
 version: 1.0.0
+author: team-cybersecurity
 license: Apache-2.0
 nist_ai_rmf:
 - MEASURE-2.7
@@ -67,7 +68,6 @@ mitre_f3:
     name: 'Brute Force:  Credential Stuffing'
     tactic: initial-access
     source: attack
-author: team-cybersecurity
 ---
 # Monitoring Dark Web Sources
 

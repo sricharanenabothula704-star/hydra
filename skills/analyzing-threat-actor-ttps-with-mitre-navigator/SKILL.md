@@ -14,6 +14,7 @@ tags:
 - stix
 - attackcti
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - MEASURE-2.7
@@ -40,7 +41,6 @@ mitre_attack:
 - T1071.001
 - T1547.001
 - T1053.005
-author: mahipal
 ---
 # Analyzing Threat Actor TTPs with MITRE Navigator
 

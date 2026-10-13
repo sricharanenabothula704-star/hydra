@@ -21,6 +21,7 @@ tags:
 - dfir
 - artifact-analysis
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - RS.AN-03
@@ -32,7 +33,6 @@ mitre_attack:
 - T1119
 - T1070
 - T1059
-author: mahipal
 ---
 
 # Performing Windows Artifact Analysis with Eric Zimmerman Tools

@@ -13,12 +13,12 @@ tags:
 - static-analysis
 - threat-detection
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.CM-09
 mitre_attack:
 - T1195.002
-author: mahipal
 ---
 # Detecting Malicious npm Packages
 

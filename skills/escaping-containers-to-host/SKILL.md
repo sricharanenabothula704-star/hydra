@@ -1,6 +1,13 @@
 ---
 name: escaping-containers-to-host
-description: Exploit privileged pods, host mounts, runC CVEs, and exposed Docker sockets to break out of a container and reach the underlying host during authorized container-security assessments.
+description: >-
+  Exploits privileged pods, host mounts, runC CVEs, and exposed Docker sockets to break out of
+  a container and reach the underlying host during an authorized container-security
+  assessment. Use when executing an approved breakout test, demonstrating the real impact of a
+  privileged or hostPath workload, or validating that escape mitigations actually hold.
+  Keywords: container breakout, privileged, hostPath, docker.sock, runC CVE-2019-5736,
+  CVE-2024-21626, release_agent, nsenter. Do not use for defensive detection of these
+  techniques - use detecting-container-escape-attempts.
 domain: cybersecurity
 subdomain: container-security
 tags:
@@ -13,12 +20,12 @@ tags:
 - privilege-escalation
 - breakout
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
 mitre_attack:
 - T1611
-author: mahipal
 ---
 # Escaping Containers to Host
 

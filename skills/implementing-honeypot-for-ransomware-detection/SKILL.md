@@ -19,6 +19,7 @@ tags:
 - defense
 - deception
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - File Metadata Consistency Validation
@@ -65,7 +66,6 @@ mitre_f3:
     name: Insider Access Abuse
     tactic: initial-access
     source: f3
-author: mahipal
 ---
 # Implementing Honeypot for Ransomware Detection
 

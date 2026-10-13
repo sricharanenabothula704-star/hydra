@@ -18,6 +18,7 @@ tags:
 - investigation
 - hr-correlation
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.CM-01
@@ -30,7 +31,6 @@ mitre_attack:
 - T1685.005
 - T1566
 - T1048
-author: mahipal
 ---
 # Investigating Insider Threat Indicators
 

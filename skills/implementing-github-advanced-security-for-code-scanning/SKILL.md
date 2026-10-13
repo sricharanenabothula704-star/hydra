@@ -12,6 +12,7 @@ tags:
 - devops-security
 - shift-left
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
@@ -22,7 +23,6 @@ mitre_attack:
 - T1195
 - T1554
 - T1059.004
-author: mahipal
 ---
 
 # Implementing GitHub Advanced Security for Code Scanning

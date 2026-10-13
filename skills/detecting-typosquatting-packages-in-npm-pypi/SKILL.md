@@ -23,6 +23,7 @@ tags:
 - dependency-confusion
 - malicious-packages
 version: 1.0.0
+author: mukul975
 license: Apache-2.0
 nist_csf:
 - GV.SC-01
@@ -34,7 +35,6 @@ mitre_attack:
 - T1195.002
 - T1608.001
 - T1554
-author: mukul975
 ---
 # Detecting Typosquatting Packages in npm and PyPI
 

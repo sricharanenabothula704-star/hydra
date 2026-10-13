@@ -17,6 +17,7 @@ tags:
 - esql
 - kibana
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Token Binding
@@ -34,7 +35,6 @@ mitre_attack:
 - T1685.002
 - T1685.005
 - T1566
-author: mahipal
 ---
 
 # Performing Alert Triage with Elastic SIEM

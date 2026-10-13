@@ -1,11 +1,14 @@
 ---
 name: securing-container-registry-with-harbor
-description: Configures the Harbor open-source container registry's security features
-  — integrated Trivy vulnerability scanning, Notary/Cosign image signing and content
-  trust policies, project-level RBAC, immutable tag retention rules, and OIDC authentication
-  — to enforce image provenance and block vulnerable image deployment. Use when deploying
-  or hardening a Harbor registry, or when access control and compliance requirements
-  call for signed, scanned images.
+description: >-
+  Configures the security features of the Harbor open-source container registry - integrated
+  Trivy scanning, Cosign and Notary content trust policies, project-level RBAC, immutable tag
+  and retention rules, and OIDC authentication - to enforce provenance and block deployment of
+  vulnerable images. Use when deploying or hardening Harbor, or when compliance requires that
+  only signed and scanned images can be pulled. Keywords: Harbor, project policy, content
+  trust, immutable tag, retention, robot account, OIDC, replication. Do not use for signing
+  images with Cosign outside a registry - use
+  implementing-image-provenance-verification-with-cosign.
 domain: cybersecurity
 subdomain: container-security
 tags:
@@ -16,6 +19,7 @@ tags:
 - registry
 - harbor
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
@@ -28,7 +32,6 @@ mitre_attack:
 - T1609
 - T1525
 - T1190
-author: mahipal
 ---
 # Securing Container Registry with Harbor
 

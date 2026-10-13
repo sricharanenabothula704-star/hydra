@@ -16,6 +16,7 @@ tags:
 - keylogger
 - credential-theft
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 atlas_techniques:
 - AML.T0024
@@ -36,7 +37,6 @@ mitre_attack:
 - T1140
 - T1497
 - T1003
-author: mahipal
 ---
 # Extracting Config from Agent Tesla RAT
 

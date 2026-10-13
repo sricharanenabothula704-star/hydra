@@ -13,6 +13,7 @@ tags:
 - dlp
 - compliance
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 atlas_techniques:
 - AML.T0043
@@ -34,7 +35,6 @@ mitre_attack:
 - T1537
 - T1580
 - T1003
-author: mahipal
 ---
 
 # Implementing AWS Macie for Data Classification

@@ -15,6 +15,7 @@ tags:
 - defi
 - audit
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.DS-01
@@ -23,7 +24,6 @@ nist_csf:
 mitre_attack:
 - T1190
 - T1059
-author: mahipal
 ---
 
 # Analyzing Ethereum Smart Contract Vulnerabilities

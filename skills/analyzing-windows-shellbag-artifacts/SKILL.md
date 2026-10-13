@@ -19,6 +19,7 @@ tags:
 - bagmru
 - dfir
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - RS.AN-03
@@ -30,7 +31,6 @@ mitre_attack:
 - T1135
 - T1025
 - T1070.004
-author: mahipal
 ---
 
 # Analyzing Windows Shellbag Artifacts

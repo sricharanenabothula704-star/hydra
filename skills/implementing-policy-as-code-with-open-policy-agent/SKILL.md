@@ -19,6 +19,7 @@ tags:
 - kubernetes
 - secure-sdlc
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - GOVERN-1.1
@@ -35,7 +36,6 @@ mitre_attack:
 - T1059.004
 - T1610
 - T1611
-author: mahipal
 ---
 
 # Implementing Policy as Code with Open Policy Agent

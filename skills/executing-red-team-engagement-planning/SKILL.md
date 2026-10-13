@@ -16,6 +16,7 @@ tags:
 - engagement-planning
 - rules-of-engagement
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - ID.RA-01
@@ -26,7 +27,6 @@ mitre_attack:
 - T1190
 - T1059
 - T1078
-author: mahipal
 ---
 # Executing Red Team Engagement Planning
 

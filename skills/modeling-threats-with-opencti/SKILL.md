@@ -13,12 +13,12 @@ tags:
 - mitre-attack
 - cti
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - ID.RA-03
 mitre_attack:
 - T1589
-author: mahipal
 ---
 # Modeling Threats with OpenCTI
 

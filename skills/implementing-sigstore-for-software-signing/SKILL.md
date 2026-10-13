@@ -22,6 +22,7 @@ tags:
 - OIDC
 - transparency-log
 version: 1.0.0
+author: mukul975
 license: Apache-2.0
 nist_csf:
 - GV.SC-01
@@ -61,7 +62,6 @@ mitre_f3:
     name: Indicator Removal
     tactic: stealth
     source: attack
-author: mukul975
 ---
 # Implementing Sigstore for Software Signing
 

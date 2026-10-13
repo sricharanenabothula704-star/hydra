@@ -18,6 +18,7 @@ tags:
 - centralized-logging
 - observability
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.CM-01
@@ -30,7 +31,6 @@ mitre_attack:
 - T1059
 - T1685.002
 - T1685.005
-author: mahipal
 ---
 
 # Implementing Log Forwarding with Fluentd

@@ -10,6 +10,7 @@ description: 'Tests Android inter-process communication (IPC) through intents fo
   '
 domain: cybersecurity
 subdomain: mobile-security
+author: mahipal
 tags:
 - mobile-security
 - android
@@ -30,7 +31,6 @@ mitre_attack:
 - T1036
 - T1078
 - T1055
-author: mahipal
 ---
 # Testing Android Intents for Vulnerabilities
 

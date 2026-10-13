@@ -15,6 +15,7 @@ tags:
 - mfa
 - identity-verification
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 atlas_techniques:
 - AML.T0052
@@ -64,7 +65,6 @@ mitre_f3:
     name: Phishing for Information
     tactic: reconnaissance
     source: attack
-author: mahipal
 ---
 
 # Implementing Identity Verification for Zero Trust

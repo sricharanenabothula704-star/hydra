@@ -17,6 +17,7 @@ tags:
 - api-testing
 - penetration-testing
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
@@ -27,7 +28,6 @@ mitre_attack:
 - T1190
 - T1213
 - T1212
-author: mahipal
 ---
 
 # Detecting Broken Object Property Level Authorization

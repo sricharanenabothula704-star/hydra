@@ -16,6 +16,7 @@ tags:
 - tfsec
 - policy-as-code
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.IR-01
@@ -28,7 +29,6 @@ mitre_attack:
 - T1190
 - T1552.001
 - T1580
-author: mahipal
 ---
 
 # Auditing Terraform Infrastructure for Security

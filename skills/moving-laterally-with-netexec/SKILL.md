@@ -13,12 +13,12 @@ tags:
 - winrm
 - post-exploitation
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.CM-01
 mitre_attack:
 - T1021.002
-author: mahipal
 ---
 # Moving Laterally with NetExec
 

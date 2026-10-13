@@ -17,6 +17,7 @@ tags:
 - incident-response
 - anomaly-detection
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.IR-01
@@ -56,7 +57,6 @@ mitre_f3:
     name: Account Manipulation
     tactic: defense-impairment
     source: f3
-author: mahipal
 ---
 
 # Detecting Compromised Cloud Credentials

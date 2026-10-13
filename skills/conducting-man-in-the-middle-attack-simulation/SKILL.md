@@ -14,6 +14,7 @@ tags:
 - ettercap
 - mitmproxy
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.IR-01
@@ -24,7 +25,6 @@ mitre_attack:
 - T1557.001
 - T1557.002
 - T1040
-author: mahipal
 ---
 # Conducting Man-in-the-Middle Attack Simulation
 

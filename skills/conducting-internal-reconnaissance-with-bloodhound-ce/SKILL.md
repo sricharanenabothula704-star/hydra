@@ -12,6 +12,7 @@ tags:
 - privilege-escalation
 - graph-analysis
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Restore Access
@@ -28,7 +29,6 @@ mitre_attack:
 - T1069.002
 - T1482
 - T1018
-author: mahipal
 ---
 # Conducting Internal Reconnaissance with BloodHound CE
 

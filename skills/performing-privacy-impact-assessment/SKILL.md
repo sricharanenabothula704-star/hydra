@@ -21,6 +21,7 @@ tags:
 - data-flow-mapping
 - risk-scoring
 version: '1.0'
+author: mukul975
 license: Apache-2.0
 nist_csf:
 - GV.PO-01
@@ -30,7 +31,6 @@ mitre_attack:
 - T1078
 - T1190
 - T1059
-author: mukul975
 ---
 
 # Performing Privacy Impact Assessment

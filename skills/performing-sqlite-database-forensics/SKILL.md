@@ -20,6 +20,7 @@ tags:
 - b-tree
 - unallocated-space
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - RS.AN-03
@@ -31,7 +32,6 @@ mitre_attack:
 - T1119
 - T1070
 - T1059
-author: mahipal
 ---
 
 # Performing SQLite Database Forensics

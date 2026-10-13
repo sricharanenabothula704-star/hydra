@@ -12,6 +12,7 @@ tags:
 - infrastructure
 - post-exploitation
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - File Metadata Consistency Validation
@@ -30,7 +31,6 @@ mitre_attack:
 - T1090.002
 - T1105
 - T1572
-author: mahipal
 ---
 # Building C2 Infrastructure with Sliver Framework
 

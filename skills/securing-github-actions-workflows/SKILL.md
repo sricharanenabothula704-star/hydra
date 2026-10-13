@@ -17,6 +17,7 @@ tags:
 - workflow-security
 - secure-sdlc
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
@@ -29,7 +30,6 @@ mitre_attack:
 - T1059.004
 - T1068
 - T1548
-author: mahipal
 ---
 
 # Securing GitHub Actions Workflows

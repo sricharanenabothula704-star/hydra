@@ -14,6 +14,7 @@ tags:
 - api-keys
 - secrets
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - MEASURE-2.7
@@ -33,7 +34,6 @@ mitre_attack:
 - T1059.007
 - T1505.003
 - T1083
-author: mahipal
 ---
 
 # Testing for Sensitive Data Exposure

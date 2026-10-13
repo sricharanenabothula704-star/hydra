@@ -17,6 +17,7 @@ tags:
 - macie
 - threat-detection
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.IR-01
@@ -28,7 +29,6 @@ mitre_attack:
 - T1567.002
 - T1537
 - T1119
-author: mahipal
 ---
 
 # Detecting S3 Data Exfiltration Attempts

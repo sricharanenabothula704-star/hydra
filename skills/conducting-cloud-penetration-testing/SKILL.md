@@ -17,6 +17,7 @@ tags:
 - shared-responsibility
 - mitre-attack-cloud
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - MEASURE-2.7
@@ -42,7 +43,6 @@ mitre_attack:
 - T1580
 - T1530
 - T1538
-author: mahipal
 ---
 
 # Conducting Cloud Penetration Testing

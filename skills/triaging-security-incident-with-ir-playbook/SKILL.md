@@ -19,13 +19,13 @@ mitre_attack:
 - T1070
 - T1078
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - RS.MA-01
 - RS.MA-02
 - RS.AN-03
 - RC.RP-01
-author: mahipal
 ---
 
 # Triaging Security Incidents with IR Playbooks

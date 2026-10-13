@@ -16,6 +16,7 @@ tags:
 - rkhunter
 - forensics
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - RS.AN-03
@@ -25,7 +26,6 @@ mitre_attack:
 - T1014
 - T1547.006
 - T1564.001
-author: mahipal
 ---
 
 # Analyzing Linux Kernel Rootkits

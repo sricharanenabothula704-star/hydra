@@ -13,6 +13,7 @@ tags:
 - t1566
 - proactive-detection
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - File Metadata Consistency Validation
@@ -58,7 +59,6 @@ mitre_f3:
     name: 'Create Fake Materials: Fake Website'
     tactic: resource-development
     source: f3
-author: mahipal
 ---
 
 # Hunting For Spearphishing Indicators

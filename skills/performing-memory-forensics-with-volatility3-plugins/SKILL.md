@@ -14,6 +14,7 @@ tags:
 - rootkit-detection
 - dfir
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Executable Denylisting
@@ -32,7 +33,6 @@ mitre_attack:
 - T1140
 - T1497
 - T1003
-author: mahipal
 ---
 # Performing Memory Forensics with Volatility3 Plugins
 

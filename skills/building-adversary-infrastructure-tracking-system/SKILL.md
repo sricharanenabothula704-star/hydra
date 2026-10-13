@@ -13,6 +13,7 @@ tags:
 - threat-intelligence
 - domain-analysis
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - ID.RA-01
@@ -25,7 +26,6 @@ mitre_attack:
 - T1596.001
 - T1590.002
 - T1071.001
-author: mahipal
 ---
 # Building Adversary Infrastructure Tracking System
 

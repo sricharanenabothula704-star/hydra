@@ -18,12 +18,12 @@ tags:
 - identity-binding
 - owasp-agentic
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - GOVERN-1.3
 atlas_techniques:
 - AML.T0053
-author: mahipal
 ---
 # Securing Agentic AI Tool Invocation
 

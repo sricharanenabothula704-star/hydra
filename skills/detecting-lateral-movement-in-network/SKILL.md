@@ -14,6 +14,7 @@ tags:
 - siem
 - pass-the-hash
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Application Protocol Command Analysis
@@ -32,7 +33,6 @@ mitre_attack:
 - T1557
 - T1071
 - T1021
-author: mahipal
 ---
 # Detecting Lateral Movement in Network
 

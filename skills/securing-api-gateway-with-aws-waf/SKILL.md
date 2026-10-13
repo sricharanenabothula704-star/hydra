@@ -18,6 +18,7 @@ tags:
 - bot-protection
 - owasp
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.IR-01
@@ -30,7 +31,6 @@ mitre_attack:
 - T1537
 - T1580
 - T0816
-author: mahipal
 ---
 
 # Securing API Gateway with AWS WAF

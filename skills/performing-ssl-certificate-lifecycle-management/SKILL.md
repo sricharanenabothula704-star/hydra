@@ -15,6 +15,7 @@ tags:
 - tls
 - key-management
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.DS-01
@@ -25,7 +26,6 @@ mitre_attack:
 - T1573
 - T1553
 - T1040
-author: mahipal
 ---
 # Performing SSL Certificate Lifecycle Management
 

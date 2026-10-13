@@ -12,6 +12,7 @@ tags:
 - deception
 - defense
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.DS-11
@@ -40,7 +41,6 @@ mitre_f3:
     name: 'Electronic Funds Transfer: Wire Transfer'
     tactic: monetization
     source: f3
-author: mahipal
 ---
 # Deploying Ransomware Canary Files
 

@@ -17,6 +17,7 @@ tags:
 - incident-response
 - security-operations
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.CM-01
@@ -29,7 +30,6 @@ mitre_attack:
 - T1059
 - T1055
 - T1005
-author: mahipal
 ---
 
 # Extracting Memory Artifacts with Rekall

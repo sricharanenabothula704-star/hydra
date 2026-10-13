@@ -20,13 +20,13 @@ mitre_attack:
 - T1041
 - T1078
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - RS.MA-01
 - RS.MA-02
 - RS.AN-03
 - RC.RP-01
-author: mahipal
 ---
 
 # Building Incident Response Playbooks

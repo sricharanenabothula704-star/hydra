@@ -18,6 +18,7 @@ tags:
 - threat-hunting
 - statistical-analysis
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.CM-01
@@ -30,7 +31,6 @@ mitre_attack:
 - T1573
 - T1008
 - T1095
-author: mahipal
 ---
 
 # Detecting Beaconing Patterns with Zeek

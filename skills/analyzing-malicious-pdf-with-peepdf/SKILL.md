@@ -17,6 +17,7 @@ tags:
 - reverse-engineering
 - dfir
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.AE-02
@@ -28,7 +29,6 @@ mitre_attack:
 - T1059.007
 - T1027
 - T1106
-author: mahipal
 ---
 
 # Analyzing Malicious PDF with peepdf

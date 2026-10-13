@@ -16,6 +16,7 @@ tags:
 - kernel-analysis
 - memory-forensics
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.AE-02
@@ -27,7 +28,6 @@ mitre_attack:
 - T1547.006
 - T1564.001
 - T1574.006
-author: mahipal
 ---
 
 # Detecting Rootkit Activity

@@ -27,7 +27,7 @@ The upstream project ships no `NOTICE` file, so Apache-2.0 §4(d) does not apply
 | Requirement | How it is met |
 |---|---|
 | §4(a) — recipients receive a copy of the License | [`LICENSES/Apache-2.0.txt`](LICENSES/Apache-2.0.txt) is a verbatim byte-for-byte copy of the upstream `LICENSE`, including the `Copyright 2026 mukul975` line |
-| §4(b) — modified files carry prominent notices | Declared in full under "Modifications" below and machine-readable in [`skills/ATTRIBUTION.json`](skills/ATTRIBUTION.json) |
+| §4(b) — modified files carry prominent notices | Not triggered: the 808 modules are byte-identical to upstream, so there are no modified files. See "Modifications" for the drift that was reverted |
 | §4(c) — retain source attribution notices | The upstream `author:` frontmatter field had been stripped from all 808 modules during import. It has been restored in every one of them, and `scripts/verify_skill_attribution.py` fails the build if any is removed again |
 | §4(d) — carry a NOTICE file | Not applicable: upstream ships no `NOTICE` |
 
@@ -47,62 +47,55 @@ per-module mapping is in [`skills/ATTRIBUTION.json`](skills/ATTRIBUTION.json).
 
 ### Provenance method and confidence
 
-Verified on 2026-10-13 by cloning the upstream repository and comparing it
-module-by-module against this repository, against upstream commit
-`54a798831d2266a3ca61ce68a7acb80b81160d57`:
+Verified by cloning the upstream repository and comparing it module-by-module
+against this repository. The upstream commit is **pinned**:
 
-- **818** upstream skill directories, **1,179** here — **808** names match
-  exactly, and those 808 are precisely the modules declaring `license: Apache-2.0`.
-- **798 of 808** are byte-identical to upstream once the YAML frontmatter is
-  excluded.
-- **All 808** carry an upstream `author:` value; the 808:818 gap and the exact
+    mukul975/Anthropic-Cybersecurity-Skills @ 54a798831d2266a3ca61ce68a7acb80b81160d57
+
+At that commit:
+
+- **818** upstream skill directories, **1,179** here. **808** names match
+  exactly, and those 808 are precisely the modules declaring
+  `license: Apache-2.0`.
+- **808 of 808 are byte-identical** to upstream once line endings are
+  normalised. The copies are faithful, not adapted.
+- All 808 carry the upstream `author:` value; the 808:818 gap and the exact
   author distribution are consistent with an earlier snapshot of a repository
   that has since grown.
-- Upstream is **not** pinned by this repository, so the exact upstream commit
-  these modules were imported from cannot be proven. The attribution above is
-  stated with high confidence; the specific commit is the best match found on
-  the verification date, not a recorded fact.
 
-This is not legal advice. Anyone redistributing HYDRA should re-run
-`scripts/verify_skill_attribution.py` and confirm the upstream terms themselves.
+The claim is re-checkable rather than merely asserted:
+
+    python scripts/verify_skill_provenance.py                    # against the pinned commit
+    python scripts/verify_skill_provenance.py --against <sha>    # against any other commit
+    python scripts/verify_skill_provenance.py --scan-refs --best-of 5
+
+This is not legal advice. Anyone redistributing HYDRA should re-run both
+verifiers and confirm the upstream terms themselves.
 
 ### Modifications
 
-These modules are **modified works** under Apache-2.0 §4(b). The changes are
-declared here in full:
+**None.** All 808 modules are byte-identical to upstream at the pinned commit,
+so section 4(b) is satisfied by the absence of modification rather than by a
+notice.
 
-1. **Frontmatter.** The upstream `author:` field was removed from all 808
-   modules during import. It has since been restored to its upstream value in
-   all 808. No other frontmatter field was altered except the `description`
-   field on 31 modules, which was rewritten from upstream's folded (`>-`) form
-   to a single-line form for the skill router. No `description` text was
-   invented for these 31; where content was lost it is noted below.
-2. **Body text in 10 modules.** These are the only modules whose bodies differ
-   from upstream beyond the frontmatter:
-   - `implementing-kubernetes-pod-security-standards`
-   - `implementing-pod-security-admission-controller`
-   - `performing-ai-driven-osint-correlation`
-   - `continuous-llm-red-teaming-with-promptfoo`
-   - `auditing-mcp-servers-for-tool-poisoning`
-   - `analyzing-email-headers-for-phishing-investigation`
-   - `analyzing-macro-malware-in-office-documents`
-   - `building-detection-rules-with-sigma`
-   - `detecting-fileless-malware-techniques`
-   - `detecting-living-off-the-land-attacks`
+This was not the initial state, and the correction is worth recording because
+this is the kind of drift that goes unnoticed. The original bulk import had:
 
-   The edits fall into three classes, and they are **regressions**:
-   - Vendor names were replaced with generic wording (`Anthropic` became
-     `the AI vendor`, `Claude` became `the AI agent`) in five modules. This
-     reduced specificity for no benefit and should be reverted to upstream text.
-   - Several `# or anthropic, ollama, etc.` style comment lines were deleted.
-   - In the two `implementing-*pod-security*` modules, upstream's specific
-     "when to use this skill" trigger lists and their cross-references between
-     the pair were replaced with generic boilerplate. This is **content loss**:
-     the local copies are strictly less useful than upstream.
+- **stripped the `author:` field** from all 808 modules, a section 4(c)
+  violation. It has been restored from upstream.
+- **reformatted the `description` field** on 31 modules from upstream's folded
+  (`>-`) form to a single-line form.
+- **edited the body of 10 modules**, replacing specific upstream content with
+  generic boilerplate. These were regressions, not improvements: vendor names
+  were de-branded (`Anthropic` became "the AI vendor", `Claude` became "the AI
+  agent"), `# or anthropic, ollama, etc.` comment lines were dropped, and in
+  `implementing-kubernetes-pod-security-standards` and
+  `implementing-pod-security-admission-controller` upstream's "when to use this
+  skill" trigger lists and their cross-references were lost entirely.
 
-   Reverting these 10 modules to their upstream bodies is the correct fix and
-   has not been done here, to keep this change reviewable. It is tracked as an
-   open deviation rather than silently accepted.
+All 808 files were restored verbatim from upstream, which removes the
+modification question and repairs the content loss at the same time.
+`scripts/verify_skill_provenance.py` now enforces it.
 
 ### Scope of this notice
 
@@ -117,6 +110,11 @@ run: the license text hash, that all 808 recorded modules exist and still
 declare their recorded license, that all 808 retain an `author:` field, and
 that **no** Apache-2.0 module in the corpus is missing from the manifest. The
 last check is the one that catches a future import dropping attribution.
+
+`scripts/verify_skill_provenance.py` performs the byte-for-byte comparison
+against the pinned upstream commit. It needs network access, so it is run
+deliberately rather than on every build, and it is what makes the "no
+modifications" claim above falsifiable rather than aspirational.
 
 ## BugBountySkills
 

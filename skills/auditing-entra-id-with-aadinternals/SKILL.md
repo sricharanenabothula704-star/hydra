@@ -13,12 +13,12 @@ tags:
 - adfs
 - red-team
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - ID.AM-03
 mitre_attack:
 - T1606.002
-author: mahipal
 ---
 # Auditing Entra ID with AADInternals
 

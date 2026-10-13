@@ -1,11 +1,13 @@
 ---
 name: implementing-image-provenance-verification-with-cosign
-description: Signs and verifies container image provenance using Sigstore Cosign,
-  covering key-based and keyless OIDC-based signing (Fulcio, Rekor transparency log),
-  SLSA attestations, and enforcing signature verification via Kubernetes admission
-  control. Use when signing container images for supply chain security, setting
-  up keyless OIDC signing, attaching attestations, or enforcing verified-image-only
-  policies at admission in a Kubernetes cluster.
+description: >-
+  Signs and verifies container image provenance with Sigstore Cosign, covering key-based and
+  keyless OIDC signing (Fulcio, Rekor transparency log), SLSA attestations, and enforcing
+  signature verification through Kubernetes admission control. Use when signing images for
+  supply chain security, setting up keyless OIDC signing, attaching attestations, or enforcing
+  a verified-images-only policy at admission. Keywords: Cosign, Sigstore, Fulcio, Rekor,
+  keyless, attestation, cosign verify, admission policy. Do not use for in-toto layout-based
+  pipeline attestation - use implementing-supply-chain-security-with-in-toto.
 domain: cybersecurity
 subdomain: container-security
 tags:
@@ -17,6 +19,7 @@ tags:
 - keyless
 - slsa
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
@@ -29,7 +32,6 @@ mitre_attack:
 - T1609
 - T1525
 - T1195
-author: mahipal
 ---
 
 # Implementing Image Provenance Verification with Cosign

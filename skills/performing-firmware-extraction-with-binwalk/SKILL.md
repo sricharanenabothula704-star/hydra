@@ -19,6 +19,7 @@ tags:
 - IoT-security
 - reverse-engineering
 version: 1.0.0
+author: mukul975
 license: Apache-2.0
 nist_csf:
 - ID.RA-01
@@ -56,7 +57,6 @@ mitre_f3:
     name: 'Account Takeover: Exposed Login Credential'
     tactic: initial-access
     source: f3
-author: mukul975
 ---
 
 # Performing Firmware Extraction with Binwalk

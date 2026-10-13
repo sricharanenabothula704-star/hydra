@@ -15,6 +15,7 @@ tags:
 - rce
 - devsecops
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - GOVERN-1.1
@@ -30,7 +31,6 @@ mitre_attack:
 - T1190
 - T1059
 - T1059.007
-author: mahipal
 ---
 
 # Implementing Runtime Application Self-Protection

@@ -15,6 +15,7 @@ tags:
 - mitre-t1558-001
 - credential-abuse
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.CM-01
@@ -27,7 +28,6 @@ mitre_attack:
 - T1082
 - T1083
 - T1003
-author: mahipal
 ---
 
 # Detecting Golden Ticket Attacks in Kerberos Logs

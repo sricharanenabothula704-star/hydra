@@ -13,12 +13,12 @@ tags:
 - supply-chain
 - rug-pull
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - MANAGE-2.2
 atlas_techniques:
 - AML.T0010
-author: mahipal
 ---
 # Auditing MCP Servers for Tool Poisoning
 
@@ -32,7 +32,7 @@ Beyond poisoning, MCP servers introduce classic infrastructure risks: **tool sha
 
 ## When to Use
 
-- Before adding a new MCP server to an agent stack (the AI agent Desktop, Cursor, VS Code, Windsurf, custom agents).
+- Before adding a new MCP server to an agent stack (Claude Desktop, Cursor, VS Code, Windsurf, custom agents).
 - During a security review of an internally developed MCP server.
 - When validating that approved tools have not silently changed (rug-pull detection).
 - As a CI/CD gate that scans MCP configs and SKILL/tool definitions on every change.
@@ -41,7 +41,7 @@ Beyond poisoning, MCP servers introduce classic infrastructure risks: **tool sha
 ## Prerequisites
 
 - Python 3.10+ and `uv` (for `uvx`), or pip.
-- The MCP config file(s) you want to scan (e.g. `~/.cursor/mcp.json`, `~/.vscode/mcp.json`, the AI agent Desktop config).
+- The MCP config file(s) you want to scan (e.g. `~/.cursor/mcp.json`, `~/.vscode/mcp.json`, Claude Desktop config).
 - Install the tooling:
 
 ```bash

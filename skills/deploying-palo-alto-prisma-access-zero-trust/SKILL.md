@@ -12,6 +12,7 @@ tags:
 - strata-cloud-manager
 - zero-trust
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - GOVERN-1.1
@@ -27,7 +28,6 @@ mitre_attack:
 - T1078
 - T1071.001
 - T1572
-author: mahipal
 ---
 
 # Deploying Palo Alto Prisma Access Zero Trust

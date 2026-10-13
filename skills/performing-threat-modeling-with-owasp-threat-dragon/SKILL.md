@@ -18,6 +18,7 @@ tags:
 - dfd
 - data-flow
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - MEASURE-2.7
@@ -36,7 +37,6 @@ mitre_attack:
 - T1195
 - T1554
 - T1059.004
-author: mahipal
 ---
 
 # Performing Threat Modeling with OWASP Threat Dragon

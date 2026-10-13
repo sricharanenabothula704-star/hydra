@@ -19,6 +19,7 @@ tags:
 - defense-in-depth
 - NIST-CSF
 version: 1.0.0
+author: team-cybersecurity
 license: Apache-2.0
 nist_csf:
 - ID.RA-01
@@ -31,7 +32,6 @@ mitre_attack:
 - T1547.001
 - T1071.001
 - T1486
-author: team-cybersecurity
 ---
 # Analyzing Cyber Kill Chain
 

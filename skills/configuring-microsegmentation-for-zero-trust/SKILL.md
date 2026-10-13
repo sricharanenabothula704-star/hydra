@@ -13,6 +13,7 @@ tags:
 - lateral-movement
 - network-security
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.AA-01
@@ -25,7 +26,6 @@ mitre_attack:
 - T1570
 - T1046
 - T1018
-author: mahipal
 ---
 
 # Configuring Microsegmentation for Zero Trust

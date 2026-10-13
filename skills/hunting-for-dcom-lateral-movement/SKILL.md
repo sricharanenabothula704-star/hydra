@@ -22,6 +22,7 @@ tags:
 - WMI
 - RPC
 version: '1.0'
+author: mukul975
 license: Apache-2.0
 d3fend_techniques:
 - Application Protocol Command Analysis
@@ -40,7 +41,6 @@ mitre_attack:
 - T1082
 - T1083
 - T1021
-author: mukul975
 ---
 
 # Hunting for DCOM Lateral Movement

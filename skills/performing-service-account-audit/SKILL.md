@@ -13,6 +13,7 @@ tags:
 - audit
 - governance
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.AA-01
@@ -25,7 +26,6 @@ mitre_attack:
 - T1556
 - T1098
 - T1069
-author: mahipal
 ---
 # Performing Service Account Audit
 

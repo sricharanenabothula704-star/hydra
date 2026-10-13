@@ -17,6 +17,7 @@ tags:
 - incident-response
 - kernel-modules
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.CM-01
@@ -28,7 +29,6 @@ mitre_attack:
 - T1003.001
 - T1620
 - T1564.001
-author: mahipal
 ---
 
 # Analyzing Memory Forensics with LiME and Volatility

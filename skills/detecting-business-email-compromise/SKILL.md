@@ -16,6 +16,7 @@ tags:
 - bec
 - fraud
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 atlas_techniques:
 - AML.T0052
@@ -72,7 +73,6 @@ mitre_f3:
     name: Delete Relevant Emails
     tactic: stealth
     source: f3
-author: mahipal
 ---
 # Detecting Business Email Compromise
 

@@ -18,6 +18,7 @@ tags:
 - data-classification
 - privacy
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - MEASURE-2.7
@@ -39,7 +40,6 @@ mitre_attack:
 - T1530
 - T1537
 - T1580
-author: mahipal
 ---
 
 # Implementing Cloud DLP for Data Protection

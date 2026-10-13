@@ -13,13 +13,13 @@ tags:
 - prompt-injection
 - mitre-atlas
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - MEASURE-2.7
 atlas_techniques:
 - AML.T0051
 - AML.T0054
-author: mahipal
 ---
 # Orchestrating LLM Attacks with PyRIT
 

@@ -17,6 +17,7 @@ tags:
 - credential-stuffing
 - behavioral-analytics
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 atlas_techniques:
 - AML.T0043
@@ -62,7 +63,6 @@ mitre_f3:
     name: Steal Web Session Cookie
     tactic: positioning
     source: attack
-author: mahipal
 ---
 
 # Detecting Anomalous Authentication Patterns

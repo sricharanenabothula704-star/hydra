@@ -16,6 +16,7 @@ tags:
 - security-standards
 - finding-aggregation
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.IR-01
@@ -27,7 +28,6 @@ mitre_attack:
 - T1530
 - T1537
 - T1580
-author: mahipal
 ---
 
 # Implementing AWS Security Hub

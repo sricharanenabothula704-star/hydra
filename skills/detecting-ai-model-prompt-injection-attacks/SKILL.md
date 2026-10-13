@@ -10,6 +10,7 @@ tags:
 - NLP-classification
 - input-validation
 version: 1.0.0
+author: mukul975
 license: Apache-2.0
 atlas_techniques:
 - AML.T0051
@@ -40,7 +41,6 @@ mitre_attack:
 - T1204
 - T1588.007
 - T1565
-author: mukul975
 ---
 # Detecting AI Model Prompt Injection Attacks
 

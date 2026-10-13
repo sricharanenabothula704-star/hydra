@@ -13,12 +13,12 @@ tags:
 - opsec
 - traffic-filtering
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.CM-01
 mitre_attack:
 - T1090.002
-author: mahipal
 ---
 # Building C2 Redirector Infrastructure
 

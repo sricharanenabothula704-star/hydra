@@ -17,6 +17,7 @@ tags:
 - paw
 - esae
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.AA-01
@@ -29,7 +30,6 @@ mitre_attack:
 - T1550.003
 - T1003.001
 - T1021
-author: mahipal
 ---
 # Configuring Active Directory Tiered Model
 

@@ -21,6 +21,7 @@ tags:
 - continuous-monitoring
 - governance
 version: "1.0"
+author: andrewibrah
 license: Apache-2.0
 nist_csf:
 - GV.SC-01
@@ -35,7 +36,6 @@ mitre_attack:
 - T1078
 - T1190
 - T1567
-author: andrewibrah
 ---
 
 # Managing Third-Party Vendor Risk

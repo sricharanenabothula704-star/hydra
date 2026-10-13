@@ -16,6 +16,7 @@ tags:
 - delegation
 - cloud-security
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.AA-01
@@ -28,7 +29,6 @@ mitre_attack:
 - T1556
 - T1098
 - T1078.004
-author: mahipal
 ---
 
 # Implementing AWS IAM Permission Boundaries

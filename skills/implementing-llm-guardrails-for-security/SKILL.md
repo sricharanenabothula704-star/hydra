@@ -17,6 +17,7 @@ tags:
 - output-filtering
 - AI-safety
 version: 1.0.0
+author: mukul975
 license: Apache-2.0
 atlas_techniques:
 - AML.T0051
@@ -46,7 +47,6 @@ mitre_attack:
 - T1190
 - T1059
 - T1055
-author: mukul975
 ---
 # Implementing LLM Guardrails for Security
 

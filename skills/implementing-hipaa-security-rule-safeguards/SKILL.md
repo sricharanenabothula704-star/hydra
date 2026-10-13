@@ -28,6 +28,7 @@ tags:
 - compliance
 - governance
 version: "1.0"
+author: andrewibrah
 license: Apache-2.0
 nist_csf:
 - GV.OC-03
@@ -43,7 +44,6 @@ mitre_attack:
 - T1486
 - T1530
 - T1048
-author: andrewibrah
 ---
 
 # Implementing HIPAA Security Rule Safeguards

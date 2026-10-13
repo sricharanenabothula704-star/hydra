@@ -14,6 +14,7 @@ tags:
 - phishing
 - human-risk
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 atlas_techniques:
 - AML.T0088
@@ -68,7 +69,6 @@ mitre_f3:
     name: 'Phone Number Spoofing: Official Phone Number Spoofing'
     tactic: stealth
     source: f3
-author: mahipal
 ---
 
 # Conducting Social Engineering Pretext Call

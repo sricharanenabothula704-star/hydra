@@ -11,6 +11,7 @@ description: 'Implements Mobile Application Management (MAM) policies to protect
   '
 domain: cybersecurity
 subdomain: mobile-security
+author: mahipal
 tags:
 - mobile-security
 - android
@@ -31,7 +32,6 @@ mitre_attack:
 - T1036
 - T1078
 - T1610
-author: mahipal
 ---
 # Implementing Mobile Application Management
 

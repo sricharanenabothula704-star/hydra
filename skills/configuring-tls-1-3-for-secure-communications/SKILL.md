@@ -13,6 +13,7 @@ tags:
 - transport-security
 - network-security
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.DS-01
@@ -24,7 +25,6 @@ mitre_attack:
 - T1573.002
 - T1539
 - T1556.004
-author: mahipal
 ---
 # Configuring TLS 1.3 for Secure Communications
 

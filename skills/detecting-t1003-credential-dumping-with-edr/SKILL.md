@@ -17,6 +17,7 @@ tags:
 - ntds
 - sam-database
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Token Binding
@@ -61,7 +62,6 @@ mitre_f3:
     name: 'Account Takeover: Exposed Login Credential'
     tactic: initial-access
     source: f3
-author: mahipal
 ---
 
 # Detecting T1003 Credential Dumping with EDR

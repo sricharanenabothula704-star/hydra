@@ -12,6 +12,7 @@ tags:
 - Sysmon
 - Windows-services
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Platform Hardening
@@ -30,7 +31,6 @@ mitre_attack:
 - T1082
 - T1083
 - T1547
-author: mahipal
 ---
 
 # Hunting for Unusual Service Installations

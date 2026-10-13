@@ -12,6 +12,7 @@ tags:
 - threat-hunting
 - red-team-tools
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.AE-02
@@ -24,7 +25,6 @@ mitre_attack:
 - T1001.003
 - T1090.004
 - T1102
-author: mahipal
 ---
 # Analyzing CobaltStrike Malleable C2 Profiles
 

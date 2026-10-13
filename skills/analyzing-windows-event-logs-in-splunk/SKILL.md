@@ -18,6 +18,7 @@ tags:
 - mitre-attack
 - active-directory
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Restore Access
@@ -37,7 +38,6 @@ mitre_attack:
 - T1021.002
 - T1558.003
 - T1003.006
-author: mahipal
 ---
 # Analyzing Windows Event Logs in Splunk
 

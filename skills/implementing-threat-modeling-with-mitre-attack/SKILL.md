@@ -18,6 +18,7 @@ tags:
 - attack-navigator
 - risk-assessment
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - MEASURE-2.7
@@ -43,7 +44,6 @@ mitre_attack:
 - T1685.002
 - T1685.005
 - T1566
-author: mahipal
 ---
 # Implementing Threat Modeling with MITRE ATT&CK
 

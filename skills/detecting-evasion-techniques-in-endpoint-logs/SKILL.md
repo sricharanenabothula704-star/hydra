@@ -18,6 +18,7 @@ tags:
 - MITRE-ATT&CK
 - detection-engineering
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - File Metadata Consistency Validation
@@ -36,7 +37,6 @@ mitre_attack:
 - T1059
 - T1036
 - T1027
-author: mahipal
 ---
 # Detecting Evasion Techniques in Endpoint Logs
 

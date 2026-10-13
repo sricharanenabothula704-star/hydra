@@ -17,12 +17,12 @@ tags:
 - enumeration
 - offensive-security
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - ID.AM-03
 mitre_attack:
 - T1526
-author: mahipal
 ---
 # Enumerating Cloud with CloudFox
 

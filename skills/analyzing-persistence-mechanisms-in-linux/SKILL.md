@@ -18,6 +18,7 @@ mitre_attack:
 - T1546.004
 - T1098.004
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Executable Denylisting
@@ -30,7 +31,6 @@ nist_csf:
 - DE.AE-02
 - DE.AE-07
 - ID.RA-05
-author: mahipal
 ---
 
 # Analyzing Persistence Mechanisms in Linux

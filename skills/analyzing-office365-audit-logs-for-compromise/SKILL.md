@@ -14,6 +14,7 @@ tags:
 - OAuth
 - BEC
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.IR-01
@@ -25,7 +26,6 @@ mitre_attack:
 - T1098.002
 - T1556.006
 - T1078.004
-author: mahipal
 ---
 
 # Analyzing Office 365 Audit Logs for Compromise

@@ -17,6 +17,7 @@ tags:
 - cloud-security
 - pandas
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.IR-01
@@ -28,7 +29,6 @@ mitre_attack:
 - T1526
 - T1078.004
 - T1213
-author: mahipal
 ---
 
 # Detecting Shadow IT Cloud Usage

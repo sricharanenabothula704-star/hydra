@@ -14,6 +14,7 @@ tags:
 - timeline-reconstruction
 - evidence-collection
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - RS.AN-03
@@ -25,7 +26,6 @@ mitre_attack:
 - T1005
 - T1025
 - T1074.001
-author: mahipal
 ---
 
 # Analyzing Windows LNK Files for Artifacts

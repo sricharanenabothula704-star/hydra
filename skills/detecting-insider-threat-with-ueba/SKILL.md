@@ -16,6 +16,7 @@ tags:
 - machine-learning
 - siem
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.CM-01
@@ -28,7 +29,6 @@ mitre_attack:
 - T1059
 - T1048
 - T1041
-author: mahipal
 ---
 
 # Detecting Insider Threat with UEBA

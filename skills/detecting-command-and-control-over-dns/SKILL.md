@@ -17,6 +17,7 @@ tags:
 - network-forensics
 - threat-detection
 version: 1.0.0
+author: mukul975
 license: Apache-2.0
 nist_csf:
 - PR.IR-01
@@ -29,7 +30,6 @@ mitre_attack:
 - T1557
 - T1071
 - T1095
-author: mukul975
 ---
 
 # Detecting Command and Control Over DNS

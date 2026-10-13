@@ -24,6 +24,7 @@ tags:
 - threat-intelligence
 - detection-engineering
 version: "1.0"
+author: andrewibrah
 license: Apache-2.0
 nist_csf:
 - GV.RM-01
@@ -37,7 +38,6 @@ mitre_attack:
 - T1021
 - T1552
 - T1046
-author: andrewibrah
 ---
 
 # Designing Adversary Engagement with MITRE Engage

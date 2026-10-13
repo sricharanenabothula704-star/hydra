@@ -17,6 +17,7 @@ tags:
 - WannaCry
 - malware-analysis
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.DS-11
@@ -51,7 +52,6 @@ mitre_f3:
     name: Transfer of funds
     tactic: monetization
     source: f3
-author: mahipal
 ---
 
 # Implementing Ransomware Kill Switch Detection

@@ -18,6 +18,7 @@ tags:
 - offense-management
 - ibm
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.CM-01
@@ -30,7 +31,6 @@ mitre_attack:
 - T1021
 - T1071.001
 - T1041
-author: mahipal
 ---
 # Correlating Security Events in QRadar
 

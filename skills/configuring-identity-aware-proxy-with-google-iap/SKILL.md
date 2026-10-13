@@ -19,6 +19,7 @@ tags:
 - cloud-run
 - app-engine
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.AA-01
@@ -51,7 +52,6 @@ mitre_f3:
     name: Steal Web Session Cookie
     tactic: positioning
     source: attack
-author: mahipal
 ---
 
 # Configuring Identity-Aware Proxy with Google IAP

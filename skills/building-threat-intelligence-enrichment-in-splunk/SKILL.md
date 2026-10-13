@@ -13,6 +13,7 @@ tags:
 - soc
 - enterprise-security
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.CM-01
@@ -23,7 +24,6 @@ mitre_attack:
 - T1071
 - T1105
 - T1041
-author: mahipal
 ---
 
 # Building Threat Intelligence Enrichment in Splunk

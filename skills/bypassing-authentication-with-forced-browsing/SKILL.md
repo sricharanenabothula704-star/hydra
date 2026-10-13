@@ -13,6 +13,7 @@ tags:
 - directory-enumeration
 - owasp
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
@@ -23,7 +24,6 @@ mitre_attack:
 - T1190
 - T1083
 - T1087
-author: mahipal
 ---
 
 # Bypassing Authentication with Forced Browsing

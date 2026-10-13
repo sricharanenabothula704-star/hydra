@@ -16,6 +16,7 @@ tags:
 - owasp
 - web-security
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
@@ -27,7 +28,6 @@ mitre_attack:
 - T1059.007
 - T1505.003
 - T1083
-author: mahipal
 ---
 
 # Performing Directory Traversal Testing

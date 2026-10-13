@@ -21,6 +21,7 @@ mitre_attack:
 - T1078
 - T1021
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Application Protocol Command Analysis
@@ -33,7 +34,6 @@ nist_csf:
 - RS.MA-02
 - RS.AN-03
 - RC.RP-01
-author: mahipal
 ---
 
 # Performing Active Directory Compromise Investigation

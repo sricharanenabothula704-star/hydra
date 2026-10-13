@@ -13,6 +13,7 @@ tags:
 - nlp
 - extraction
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - File Metadata Consistency Validation
@@ -31,7 +32,6 @@ mitre_attack:
 - T1003.001
 - T1558.003
 - T1550.002
-author: mahipal
 ---
 # Building Attack Pattern Library from CTI Reports
 

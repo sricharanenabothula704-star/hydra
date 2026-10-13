@@ -14,6 +14,7 @@ tags:
 - adversary-in-the-middle
 - credential-theft
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - File Metadata Consistency Validation
@@ -66,7 +67,6 @@ mitre_f3:
     name: Account Takeover
     tactic: initial-access
     source: f3
-author: mahipal
 ---
 # Performing Initial Access with EvilGinx3
 

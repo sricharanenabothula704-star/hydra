@@ -23,6 +23,7 @@ mitre_attack:
 - T1059.001
 - T1003.001
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 atlas_techniques:
 - AML.T0070
@@ -45,7 +46,6 @@ nist_csf:
 - RS.MA-02
 - RS.AN-03
 - RC.RP-01
-author: mahipal
 ---
 
 # Analyzing Security Logs with Splunk

@@ -19,6 +19,7 @@ tags:
 - device-posture
 - aws-ram
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.AA-01
@@ -29,7 +30,6 @@ mitre_attack:
 - T1078.004
 - T1133
 - T1021.007
-author: mahipal
 ---
 
 # Configuring AWS Verified Access for ZTNA

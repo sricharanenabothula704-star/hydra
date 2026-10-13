@@ -18,6 +18,7 @@ tags:
 - splunk
 - threat-detection
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 atlas_techniques:
 - AML.T0024
@@ -32,7 +33,6 @@ mitre_attack:
 - T1048.003
 - T1071.004
 - T1567
-author: mahipal
 ---
 # Analyzing DNS Logs for Exfiltration
 

@@ -22,6 +22,7 @@ mitre_attack:
 - T1053.005
 - T1070.006
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Executable Denylisting
@@ -34,7 +35,6 @@ nist_csf:
 - RS.MA-02
 - RS.AN-03
 - RC.RP-01
-author: mahipal
 ---
 
 # Building Incident Timeline with Timesketch

@@ -14,6 +14,7 @@ tags:
 - privacy
 - encrypted-dns
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.AA-01
@@ -26,7 +27,6 @@ mitre_attack:
 - T1059
 - T1573
 - T1486
-author: mahipal
 ---
 
 # Implementing Zero Trust DNS with NextDNS

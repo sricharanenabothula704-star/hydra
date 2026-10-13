@@ -18,6 +18,7 @@ tags:
 - attack-surface-management
 - api-governance
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
@@ -29,7 +30,6 @@ mitre_attack:
 - T1133
 - T1526
 - T1213
-author: mahipal
 ---
 
 # Detecting Shadow API Endpoints

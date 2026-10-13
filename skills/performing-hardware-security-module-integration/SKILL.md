@@ -15,6 +15,7 @@ tags:
 - cryptographic-operations
 - hardware-security
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - MEASURE-2.7
@@ -34,7 +35,6 @@ mitre_attack:
 - T1553
 - T1078.004
 - T1530
-author: mahipal
 ---
 
 # Performing Hardware Security Module Integration

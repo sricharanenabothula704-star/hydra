@@ -19,6 +19,7 @@ tags:
 - audit-preparation
 - governance-risk-compliance
 version: '1.0'
+author: mukul975
 license: Apache-2.0
 nist_csf:
 - GV.OC-01
@@ -31,7 +32,6 @@ mitre_attack:
 - T1059
 - T1071
 - T1095
-author: mukul975
 ---
 
 # Performing SOC 2 Type II Audit Preparation

@@ -13,6 +13,7 @@ tags:
 - taxii
 - threat-sharing
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - ID.RA-01
@@ -25,7 +26,6 @@ mitre_attack:
 - T1583.001
 - T1566.001
 - T1587.001
-author: mahipal
 ---
 # Collecting Threat Intelligence with MISP
 

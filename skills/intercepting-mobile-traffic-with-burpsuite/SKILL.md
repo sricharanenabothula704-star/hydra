@@ -10,6 +10,7 @@ description: 'Intercepts and analyzes HTTP/HTTPS traffic from mobile application
   '
 domain: cybersecurity
 subdomain: mobile-security
+author: mahipal
 tags:
 - mobile-security
 - android
@@ -29,7 +30,6 @@ mitre_attack:
 - T1056
 - T1036
 - T1078
-author: mahipal
 ---
 # Intercepting Mobile Traffic with Burp Suite
 

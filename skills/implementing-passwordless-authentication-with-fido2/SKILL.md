@@ -17,6 +17,7 @@ tags:
 - webauthn
 - passwordless
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 atlas_techniques:
 - AML.T0051
@@ -37,7 +38,6 @@ mitre_attack:
 - T1110
 - T1556
 - T1098
-author: mahipal
 ---
 # Implementing Passwordless Authentication with FIDO2
 

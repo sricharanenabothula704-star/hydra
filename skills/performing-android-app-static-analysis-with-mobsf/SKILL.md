@@ -11,6 +11,7 @@ description: 'Performs automated static analysis of Android applications using M
   '
 domain: cybersecurity
 subdomain: mobile-security
+author: mahipal
 tags:
 - mobile-security
 - android
@@ -30,7 +31,6 @@ mitre_attack:
 - T1056
 - T1036
 - T1078
-author: mahipal
 ---
 # Performing Android App Static Analysis with MobSF
 

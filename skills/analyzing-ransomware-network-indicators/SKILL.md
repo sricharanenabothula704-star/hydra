@@ -12,6 +12,7 @@ tags:
 - exfiltration
 - network-forensics
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - File Metadata Consistency Validation
@@ -48,7 +49,6 @@ mitre_f3:
     name: Transfer of funds
     tactic: monetization
     source: f3
-author: mahipal
 ---
 
 # Analyzing Ransomware Network Indicators

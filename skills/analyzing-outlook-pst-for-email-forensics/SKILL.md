@@ -15,6 +15,7 @@ tags:
 - libpff
 - eml-extraction
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - MANAGE-2.4
@@ -28,7 +29,6 @@ mitre_attack:
 - T1114.001
 - T1564.008
 - T1070.008
-author: mahipal
 ---
 
 # Analyzing Outlook PST for Email Forensics

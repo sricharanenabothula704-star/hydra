@@ -15,6 +15,7 @@ tags:
 - persistence-detection
 - incident-investigation
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - RS.AN-03
@@ -25,7 +26,6 @@ mitre_attack:
 - T1059.004
 - T1543.002
 - T1053.003
-author: mahipal
 ---
 
 # Analyzing Linux System Artifacts

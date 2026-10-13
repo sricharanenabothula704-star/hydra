@@ -17,6 +17,7 @@ nist_csf:
 - PR.AA-01
 - ID.AM-02
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - MEASURE-2.7
@@ -32,7 +33,6 @@ mitre_attack:
 - T1078
 - T1530
 - T1685.002
-author: mahipal
 ---
 # Implementing GDPR Data Protection Controls
 

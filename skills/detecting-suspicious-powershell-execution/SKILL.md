@@ -16,6 +16,7 @@ tags:
 - amsi
 - proactive-detection
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Executable Denylisting
@@ -33,7 +34,6 @@ mitre_attack:
 - T1027.010
 - T1620
 - T1105
-author: mahipal
 ---
 
 # Detecting Suspicious Powershell Execution

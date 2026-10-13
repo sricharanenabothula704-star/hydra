@@ -20,6 +20,7 @@ tags:
 - anomaly-detection
 - OT-monitoring
 version: 1.0.0
+author: mukul975
 license: Apache-2.0
 nist_csf:
 - PR.IR-01
@@ -30,7 +31,6 @@ mitre_attack:
 - T0836
 - T0830
 - T1595
-author: mukul975
 ---
 # Monitoring SCADA Modbus Traffic Anomalies
 

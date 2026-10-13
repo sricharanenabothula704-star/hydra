@@ -19,6 +19,7 @@ tags:
 - threat-hunting
 - windows-security
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Execution Isolation
@@ -37,7 +38,6 @@ mitre_attack:
 - T1082
 - T1083
 - T1021
-author: mahipal
 ---
 # Detecting Malicious Scheduled Tasks with Sysmon
 

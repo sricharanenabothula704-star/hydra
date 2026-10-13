@@ -16,6 +16,7 @@ tags:
 - directory-traversal
 - intrusion-detection
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.CM-01
@@ -28,7 +29,6 @@ mitre_attack:
 - T1110
 - T1595.002
 - T1505.003
-author: mahipal
 ---
 
 

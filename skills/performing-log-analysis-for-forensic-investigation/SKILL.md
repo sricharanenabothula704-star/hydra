@@ -12,6 +12,7 @@ tags:
 - timeline-analysis
 - evidence-collection
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - RS.AN-03
@@ -23,7 +24,6 @@ mitre_attack:
 - T1119
 - T1070
 - T1685.002
-author: mahipal
 ---
 
 # Performing Log Analysis for Forensic Investigation

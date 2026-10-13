@@ -12,6 +12,7 @@ tags:
 - credential-theft
 - windows-security
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Token Binding
@@ -30,7 +31,6 @@ mitre_attack:
 - T1059
 - T1003
 - T1110
-author: mahipal
 ---
 
 # Detecting Pass-the-Ticket Attacks

@@ -16,6 +16,7 @@ tags:
 - threat-hunting
 - activity-logs
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.CM-01
@@ -28,7 +29,6 @@ mitre_attack:
 - T1538
 - T1556.009
 - T1580
-author: mahipal
 ---
 
 # Analyzing Azure Activity Logs for Threats

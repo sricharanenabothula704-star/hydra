@@ -12,6 +12,7 @@ description: 'Detects and analyzes Bluetooth Low Energy (BLE) security attacks i
   '
 domain: cybersecurity
 subdomain: wireless-security
+author: mukul975
 tags:
 - ble
 - bluetooth
@@ -32,7 +33,6 @@ mitre_attack:
 - T1557
 - T1040
 - T1200
-author: mukul975
 ---
 # Detecting Bluetooth Low Energy Attacks
 

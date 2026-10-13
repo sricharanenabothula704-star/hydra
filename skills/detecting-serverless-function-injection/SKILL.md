@@ -21,6 +21,7 @@ tags:
 - IAM-escalation
 - CloudTrail
 version: 1.0.0
+author: mukul975
 license: Apache-2.0
 nist_csf:
 - PR.IR-01
@@ -33,7 +34,6 @@ mitre_attack:
 - T1648
 - T1078.004
 - T1068
-author: mukul975
 ---
 # Detecting Serverless Function Injection
 

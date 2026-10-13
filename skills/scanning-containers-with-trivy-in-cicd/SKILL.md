@@ -18,6 +18,7 @@ tags:
 - vulnerability-scanning
 - secure-sdlc
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
@@ -30,7 +31,6 @@ mitre_attack:
 - T1059.004
 - T1610
 - T1611
-author: mahipal
 ---
 
 # Scanning Containers with Trivy in CI/CD

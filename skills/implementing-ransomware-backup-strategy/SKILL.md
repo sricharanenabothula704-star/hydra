@@ -17,6 +17,7 @@ tags:
 - recovery
 - immutable-storage
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - MEASURE-2.7
@@ -61,7 +62,6 @@ mitre_f3:
     name: 'Conversion to Physical Monetary Instruments: Cash'
     tactic: monetization
     source: f3
-author: mahipal
 ---
 # Implementing Ransomware Backup Strategy
 

@@ -18,6 +18,7 @@ tags:
 - pod-security-standards
 - container-runtime
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.IR-01
@@ -30,7 +31,6 @@ mitre_attack:
 - T1537
 - T1580
 - T1610
-author: mahipal
 ---
 
 # Securing Kubernetes on Cloud

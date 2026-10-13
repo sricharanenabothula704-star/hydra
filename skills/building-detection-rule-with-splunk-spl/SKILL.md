@@ -14,6 +14,7 @@ tags:
 - threat-detection
 - enterprise-security
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Executable Denylisting
@@ -33,7 +34,6 @@ mitre_attack:
 - T1110.003
 - T1053.005
 - T1048
-author: mahipal
 ---
 
 # Building Detection Rules with Splunk SPL

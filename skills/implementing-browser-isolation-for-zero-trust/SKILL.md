@@ -20,6 +20,7 @@ tags:
 - content-disarming
 - secure-web-gateway
 version: '1.0'
+author: mukul975
 license: Apache-2.0
 nist_csf:
 - PR.IR-01
@@ -63,7 +64,6 @@ mitre_f3:
     name: 'Adversary-in-the-Browser: Malicious JavaScript Injection'
     tactic: execution
     source: f3
-author: mukul975
 ---
 
 # Implementing Browser Isolation for Zero Trust

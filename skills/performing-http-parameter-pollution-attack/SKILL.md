@@ -16,6 +16,7 @@ tags:
 - parameter-injection
 - server-parsing
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
@@ -28,7 +29,6 @@ mitre_attack:
 - T1505.003
 - T1083
 - T1055
-author: mahipal
 ---
 
 # Performing HTTP Parameter Pollution Attack

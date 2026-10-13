@@ -15,6 +15,7 @@ tags:
 - graph-theory
 - privilege-escalation
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Restore Access
@@ -32,7 +33,6 @@ mitre_attack:
 - T1059
 - T1078
 - T1068
-author: mahipal
 ---
 
 # Performing Active Directory BloodHound Analysis

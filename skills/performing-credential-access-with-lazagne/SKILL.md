@@ -14,6 +14,7 @@ tags:
 - credential-dumping
 - lateral-movement
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - File Metadata Consistency Validation
@@ -62,7 +63,6 @@ mitre_f3:
     name: Account Takeover
     tactic: initial-access
     source: f3
-author: mahipal
 ---
 # Performing Credential Access with LaZagne
 

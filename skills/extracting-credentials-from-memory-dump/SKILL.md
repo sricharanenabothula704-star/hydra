@@ -53,12 +53,12 @@ mitre_f3:
     tactic: initial-access
     source: f3
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - RS.AN-03
 - DE.AE-02
 - RS.MA-01
-author: mahipal
 ---
 
 # Extracting Credentials from Memory Dump

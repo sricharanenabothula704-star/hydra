@@ -15,6 +15,7 @@ tags:
 - registry-explorer
 - evidence-collection
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - RS.AN-03
@@ -26,7 +27,6 @@ mitre_attack:
 - T1112
 - T1003.002
 - T1025
-author: mahipal
 ---
 
 # Analyzing Windows Registry for Artifacts

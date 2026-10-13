@@ -17,6 +17,7 @@ tags:
 - windows
 - dfir
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Application Protocol Command Analysis
@@ -33,7 +34,6 @@ mitre_attack:
 - T1546.003
 - T1047
 - T1059.001
-author: mahipal
 ---
 
 # Detecting WMI Persistence

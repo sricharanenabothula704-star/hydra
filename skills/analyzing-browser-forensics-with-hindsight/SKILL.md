@@ -15,6 +15,7 @@ tags:
 - cache
 - web-artifacts
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - RS.AN-03
@@ -25,7 +26,6 @@ mitre_attack:
 - T1539
 - T1555.003
 - T1185
-author: mahipal
 ---
 
 # Analyzing Browser Forensics with Hindsight

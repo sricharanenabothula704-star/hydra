@@ -21,12 +21,12 @@ nist_csf:
 - DE.CM-01
 - ID.RA-01
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 mitre_attack:
 - T1078
 - T1530
 - T1685.002
-author: mahipal
 ---
 # Implementing PCI DSS Compliance Controls
 

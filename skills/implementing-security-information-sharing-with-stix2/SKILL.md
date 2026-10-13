@@ -15,6 +15,7 @@ tags:
 - threat-sharing
 - intelligence-exchange
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - File Metadata Consistency Validation
@@ -33,7 +34,6 @@ mitre_attack:
 - T1593
 - T1589
 - T1027
-author: mahipal
 ---
 
 # Implementing Security Information Sharing with STIX 2.1

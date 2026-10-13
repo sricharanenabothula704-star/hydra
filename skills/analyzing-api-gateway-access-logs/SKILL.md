@@ -18,6 +18,7 @@ tags:
 - rate-limit-bypass
 - security-operations
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.CM-01
@@ -29,7 +30,6 @@ mitre_attack:
 - T1110.004
 - T1078.004
 - T1119
-author: mahipal
 ---
 
 # Analyzing API Gateway Access Logs

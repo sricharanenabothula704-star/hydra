@@ -27,6 +27,7 @@ tags:
 - continuous-monitoring
 - governance
 version: "1.0"
+author: andrewibrah
 license: Apache-2.0
 nist_csf:
 - GV.OC-03
@@ -40,7 +41,6 @@ mitre_attack:
 - T1068
 - T1210
 - T1486
-author: andrewibrah
 ---
 
 # Executing the NIST RMF to an Authorization to Operate (ATO)

@@ -16,6 +16,7 @@ tags:
 - network-security
 - credentialed-scan
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - ID.RA-01
@@ -28,7 +29,6 @@ mitre_attack:
 - T1068
 - T1003
 - T1110
-author: mahipal
 ---
 
 # Performing Authenticated Scan with OpenVAS

@@ -16,6 +16,7 @@ tags:
 - cryptanalysis
 - reverse-engineering
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.AE-02
@@ -45,7 +46,6 @@ mitre_f3:
     name: Remote Access Tools
     tactic: positioning
     source: attack
-author: mahipal
 ---
 
 # Analyzing Ransomware Encryption Mechanisms

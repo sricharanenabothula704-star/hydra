@@ -13,6 +13,7 @@ tags:
 - misp
 - opencti
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - ID.RA-01
@@ -23,7 +24,6 @@ mitre_attack:
 - T1071
 - T1588.001
 - T1591
-author: mahipal
 ---
 # Building Threat Intelligence Platform
 

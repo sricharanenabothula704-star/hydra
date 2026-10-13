@@ -16,6 +16,7 @@ tags:
 - red-team
 - trust-enumeration
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - ID.RA-01
@@ -27,7 +28,6 @@ mitre_attack:
 - T1059
 - T1078
 - T1558.003
-author: mahipal
 ---
 
 # Performing Active Directory Forest Trust Attack

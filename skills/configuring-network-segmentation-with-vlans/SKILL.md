@@ -16,6 +16,7 @@ tags:
 - switch-security
 - 802.1q
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.IR-01
@@ -28,7 +29,6 @@ mitre_attack:
 - T1557.002
 - T1021
 - T1018
-author: mahipal
 ---
 # Configuring Network Segmentation with VLANs
 

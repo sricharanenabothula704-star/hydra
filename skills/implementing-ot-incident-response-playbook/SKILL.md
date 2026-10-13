@@ -20,6 +20,7 @@ tags:
 - nist
 - safety-critical
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.IR-01
@@ -32,7 +33,6 @@ mitre_attack:
 - T1059
 - T0816
 - T0836
-author: mahipal
 ---
 
 # Implementing OT Incident Response Playbook

@@ -17,6 +17,7 @@ tags:
 - third-party-risk
 - token-audit
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.AA-01
@@ -59,7 +60,6 @@ mitre_f3:
     name: Device Fingerprint Spoofing
     tactic: stealth
     source: f3
-author: mahipal
 ---
 
 # Performing OAuth Scope Minimization Review

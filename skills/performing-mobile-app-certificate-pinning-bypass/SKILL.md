@@ -10,6 +10,7 @@ description: 'Bypasses SSL/TLS certificate pinning implementations in Android an
   '
 domain: cybersecurity
 subdomain: mobile-security
+author: mahipal
 tags:
 - mobile-security
 - android
@@ -30,7 +31,6 @@ mitre_attack:
 - T1036
 - T1078
 - T1027
-author: mahipal
 ---
 # Performing Mobile App Certificate Pinning Bypass
 

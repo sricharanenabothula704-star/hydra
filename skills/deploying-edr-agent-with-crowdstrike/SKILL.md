@@ -18,6 +18,7 @@ tags:
 - threat-detection
 - sensor-deployment
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - GOVERN-1.1
@@ -40,7 +41,6 @@ mitre_attack:
 - T1059.001
 - T1486
 - T1071.001
-author: mahipal
 ---
 # Deploying EDR Agent with CrowdStrike
 

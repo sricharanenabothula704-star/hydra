@@ -16,6 +16,7 @@ tags:
 - blue-team
 - siem
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.CM-01
@@ -27,7 +28,6 @@ mitre_attack:
 - T1110.001
 - T1110.003
 - T1078
-author: mahipal
 ---
 # Detecting RDP Brute Force Attacks
 

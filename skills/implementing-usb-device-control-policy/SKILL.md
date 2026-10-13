@@ -16,6 +16,7 @@ tags:
 - data-loss-prevention
 - removable-media
 version: 1.0.0
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.PS-01
@@ -28,7 +29,6 @@ mitre_attack:
 - T1059
 - T1036
 - T1048
-author: mahipal
 ---
 # Implementing USB Device Control Policy
 

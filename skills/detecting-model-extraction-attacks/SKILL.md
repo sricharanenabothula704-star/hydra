@@ -13,12 +13,12 @@ tags:
 - query-monitoring
 - mlsecops
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_ai_rmf:
 - MEASURE-2.6
 atlas_techniques:
 - AML.T0024
-author: mahipal
 ---
 # Detecting Model Extraction Attacks
 

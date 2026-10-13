@@ -23,13 +23,13 @@ mitre_attack:
 - T1685.005
 - T1566
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.CM-01
 - DE.AE-02
 - RS.MA-01
 - DE.AE-06
-author: mahipal
 ---
 # Performing SOC Tabletop Exercise
 

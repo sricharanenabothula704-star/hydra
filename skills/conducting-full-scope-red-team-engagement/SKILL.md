@@ -12,6 +12,7 @@ tags:
 - purple-team
 - ttp-mapping
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - File Metadata Consistency Validation
@@ -28,7 +29,6 @@ mitre_attack:
 - T1059.001
 - T1078
 - T1071.001
-author: mahipal
 ---
 
 # Conducting Full-Scope Red Team Engagement

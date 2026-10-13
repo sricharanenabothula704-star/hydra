@@ -13,6 +13,7 @@ tags:
 - owasp
 - x-frame-options
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 atlas_techniques:
 - AML.T0024
@@ -30,7 +31,6 @@ mitre_attack:
 - T1059.007
 - T1505.003
 - T1083
-author: mahipal
 ---
 
 # Performing Clickjacking Attack Test

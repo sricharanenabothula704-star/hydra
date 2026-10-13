@@ -22,6 +22,7 @@ tags:
 - CTI-program
 - procurement
 version: 1.0.0
+author: team-cybersecurity
 license: Apache-2.0
 nist_csf:
 - ID.RA-01
@@ -33,7 +34,6 @@ mitre_attack:
 - T1592
 - T1593
 - T1589
-author: team-cybersecurity
 ---
 # Evaluating Threat Intelligence Platforms
 

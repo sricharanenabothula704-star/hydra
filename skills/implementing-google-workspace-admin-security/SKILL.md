@@ -18,6 +18,7 @@ tags:
 - OAuth
 - cloud-security
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.AA-01
@@ -57,7 +58,6 @@ mitre_f3:
     name: Account Manipulation
     tactic: positioning
     source: f3
-author: mahipal
 ---
 
 # Implementing Google Workspace Admin Security

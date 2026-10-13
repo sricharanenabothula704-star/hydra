@@ -12,6 +12,7 @@ tags:
 - training
 - security-culture
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - PR.AT-01
@@ -50,7 +51,6 @@ mitre_f3:
     name: Impersonate Account Holder
     tactic: initial-access
     source: f3
-author: mahipal
 ---
 # Implementing Anti-Phishing Training Program
 

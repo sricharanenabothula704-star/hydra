@@ -16,6 +16,7 @@ tags:
 - t1078
 - proactive-detection
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 d3fend_techniques:
 - Restore Access
@@ -33,7 +34,6 @@ mitre_attack:
 - T1021.001
 - T1098.001
 - T1550.002
-author: mahipal
 ---
 
 # Detecting Service Account Abuse

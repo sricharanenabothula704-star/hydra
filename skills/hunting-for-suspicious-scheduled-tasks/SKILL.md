@@ -11,6 +11,7 @@ tags:
 - windows
 - endpoint-detection
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.CM-01
@@ -23,7 +24,6 @@ mitre_attack:
 - T1082
 - T1083
 - T1547
-author: mahipal
 ---
 
 # Hunting for Suspicious Scheduled Tasks

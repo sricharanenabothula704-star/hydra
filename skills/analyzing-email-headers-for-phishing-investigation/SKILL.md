@@ -16,6 +16,7 @@ tags:
 - dmarc
 - header-analysis
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 atlas_techniques:
 - AML.T0052
@@ -59,7 +60,6 @@ mitre_f3:
     name: 'Create Fake Materials: Fake Website'
     tactic: resource-development
     source: f3
-author: mahipal
 ---
 
 # Analyzing Email Headers for Phishing Investigation
@@ -339,7 +339,7 @@ Attacker uses a legitimate email marketing service to send phishing, SPF and DKI
 Email Header Analysis Report:
   Subject:     "Urgent: Invoice Payment Required"
   From:        accounting@examp1e-corp.com (SPOOFED)
-  Reply-To:    payments.urgent@example-phish.example (MISMATCH)
+  Reply-To:    payments.urgent@gmail.com (MISMATCH)
   Return-Path: <bounce@mail-server.xyz>
   Date:        2024-01-15 09:23:45 UTC
 

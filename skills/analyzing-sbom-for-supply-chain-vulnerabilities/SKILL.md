@@ -22,6 +22,7 @@ tags:
 - syft
 - grype
 version: 1.0.0
+author: mukul975
 license: Apache-2.0
 atlas_techniques:
 - AML.T0010
@@ -41,7 +42,6 @@ mitre_attack:
 - T1195.002
 - T1554
 - T1190
-author: mukul975
 ---
 
 # Analyzing SBOM for Supply Chain Vulnerabilities

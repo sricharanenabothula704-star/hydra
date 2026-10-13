@@ -16,6 +16,7 @@ tags:
 - yara-x
 - indicator-development
 version: '1.0'
+author: mahipal
 license: Apache-2.0
 nist_csf:
 - DE.AE-02
@@ -27,7 +28,6 @@ mitre_attack:
 - T1055
 - T1140
 - T1497
-author: mahipal
 ---
 # Performing YARA Rule Development for Detection
 
