@@ -17,6 +17,12 @@
 
 <br>
 
+<img src="assets/hydra-cli.svg" alt="Hydra CLI — doctor, scope gate, providers" width="700">
+
+_The `hydra` CLI: a single cross-platform binary (Go + Bubble Tea) that drives opencode, with a fail-closed scope gate on every target._
+
+<br>
+
 <a href="https://sricharan996.github.io"><img src="https://img.shields.io/badge/🌐_WEBSITE-LIVE-00E5FF?style=for-the-badge&logo=githubpages&logoColor=white"></a>
 <a href="#-quickstart"><img src="https://img.shields.io/badge/SETUP-ONE%20COMMAND-00FF41?style=for-the-badge"></a>
 <a href="#-the-agent-pipeline"><img src="https://img.shields.io/badge/AGENTS-7-FF003C?style=for-the-badge"></a>
@@ -279,3 +285,57 @@ export OPENROUTER_API_KEY=sk-or-...   # any OpenAI-compatible provider
 **⭐ Star this repo if it helps you find your next critical!**
 
 </div>
+
+---
+
+## 🖥️ Hydra CLI (Go binary)
+
+A single cross-platform binary that becomes Hydra's front-end. It drives **opencode**'s
+v2 server API, manages AI providers, and enforces scope. **Authorized testing only.**
+
+### Install / build
+
+```bash
+# from the repo root (Go 1.26+)
+go build -o dist/hydra ./cmd/hydra
+# or cross-platform release artifacts
+goreleaser build --snapshot --clean
+```
+
+Pre-built targets: `linux/amd64`, `linux/arm64`, `windows/amd64`, `darwin/amd64`, `darwin/arm64`.
+
+### Commands
+
+| Command | Purpose |
+|---|---|
+| `hydra` | Launch the interactive TUI |
+| `hydra doctor` | Pre-flight environment + safety-gate checks |
+| `hydra guard <host>` | Show the scope decision for a host (no network contact) |
+| `hydra providers list` | List the 14-provider catalog and what's configured |
+| `hydra providers connect <id>` | Configure a provider in a repo-owned `opencode.json` |
+| `hydra providers models` | List models from a running opencode server |
+| `hydra oc {info,providers,models,sessions}` | Low-level opencode server calls |
+| `hydra hunt <target>` / `scan <url>` | Scope-gated actions (fail closed) |
+| `hydra validate · chains · pipeline · history · stats · skills` | Backend commands |
+
+### Safety: the scope gate
+
+Every target-touching action is checked against `~/.config/opencode/SCOPE_ALLOWLIST.txt`
+by `scripts/scope_check.sh`, and **fails closed** — if the gate can't run, the host isn't
+on the allowlist, or the allowlist is missing, the action is denied.
+
+```
+$ hydra guard bugbase.ai       # on allowlist
+[SCOPE-ALLOW] bugbase.ai
+
+$ hydra guard evil.invalid     # not authorized
+[SCOPE-DENY] evil.invalid
+```
+
+### Providers
+
+`hydra providers connect <id>` writes a provider block into a repo-owned `opencode.json`
+that opencode merges with your global config — your `~/.config/opencode/*` files are left
+untouched. API keys are referenced as `{env:VAR}`; the CLI never stores or handles the key.
+
+See [docs/HYDRA_CLI.md](docs/HYDRA_CLI.md) for the full reference.
