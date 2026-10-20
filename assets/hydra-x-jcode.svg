@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1000" viewBox="0 0 720 1000" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b0f17"/><stop offset="1" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="hydra" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00e5ff"/><stop offset="1" stop-color="#00ff88"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="1000" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="360" y="58" text-anchor="middle" font-size="34" font-weight="800" fill="#e6edf3">🐉 HYDRA <tspan fill="#8b949e">×</tspan> jcode</text>
+  <text x="360" y="88" text-anchor="middle" font-size="15" fill="#8b949e">Hydra's authorized-testing layer riding on the jcode Rust harness</text>
+
+  <!-- HYDRA layer -->
+  <rect x="40" y="120" width="640" height="250" rx="16" fill="#0e1b17" stroke="#00ff88" stroke-width="1.5"/>
+  <text x="64" y="152" font-size="18" font-weight="700" fill="#00ff88">HYDRA  ·  the 7 heads</text>
+
+  <!-- 7 agent heads -->
+  <g font-size="13" font-weight="600" text-anchor="middle">
+    <g>
+      <rect x="64" y="172" width="130" height="40" rx="8" fill="#14301f" stroke="#2ea043"/><text x="129" y="197" fill="#d6ffe6">HUNTER</text>
+      <rect x="206" y="172" width="130" height="40" rx="8" fill="#14301f" stroke="#2ea043"/><text x="271" y="197" fill="#d6ffe6">VERIFIER</text>
+      <rect x="348" y="172" width="130" height="40" rx="8" fill="#14301f" stroke="#2ea043"/><text x="413" y="197" fill="#d6ffe6">REPORTER</text>
+      <rect x="490" y="172" width="126" height="40" rx="8" fill="#14301f" stroke="#2ea043"/><text x="553" y="197" fill="#d6ffe6">RECON</text>
+      <rect x="120" y="222" width="130" height="40" rx="8" fill="#14301f" stroke="#2ea043"/><text x="185" y="247" fill="#d6ffe6">PLAN</text>
+      <rect x="262" y="222" width="130" height="40" rx="8" fill="#14301f" stroke="#2ea043"/><text x="327" y="247" fill="#d6ffe6">AUDITOR</text>
+      <rect x="404" y="222" width="130" height="40" rx="8" fill="#14301f" stroke="#2ea043"/><text x="469" y="247" fill="#d6ffe6">DEBUG</text>
+    </g>
+  </g>
+  <rect x="64" y="286" width="270" height="60" rx="10" fill="#101826" stroke="#30363d"/>
+  <text x="80" y="312" font-size="13" fill="#8b949e">skills / methodology</text>
+  <text x="80" y="333" font-size="16" font-weight="700" fill="#e6edf3">928 skill playbooks</text>
+  <rect x="346" y="286" width="270" height="60" rx="10" fill="#101826" stroke="#30363d"/>
+  <text x="362" y="312" font-size="13" fill="#8b949e">authorized scope</text>
+  <text x="362" y="333" font-size="15" font-weight="700" fill="#e6edf3">SCOPE_ALLOWLIST.txt</text>
+
+  <!-- arrow down -->
+  <text x="360" y="398" text-anchor="middle" font-size="14" fill="#8b949e">every shell / recon command ↓</text>
+
+  <!-- SCOPE GATE -->
+  <rect x="120" y="416" width="480" height="92" rx="14" fill="#1a1205" stroke="#d29922" stroke-width="2"/>
+  <text x="360" y="448" text-anchor="middle" font-size="19" font-weight="800" fill="#ffd33d">⛬  SCOPE GATE  (fail-closed)</text>
+  <text x="360" y="474" text-anchor="middle" font-size="13" fill="#c9a227">checks the target host against the allowlist before anything runs</text>
+  <g font-size="13" font-weight="700" text-anchor="middle">
+    <rect x="150" y="482" width="180" height="18" rx="4" fill="#238636"/><text x="240" y="495" fill="#fff">ALLOW → run</text>
+    <rect x="390" y="482" width="180" height="18" rx="4" fill="#da3633"/><text x="480" y="495" fill="#fff">DENY → blocked</text>
+  </g>
+
+  <!-- arrow -->
+  <path d="M360 508 L360 540" stroke="#8b949e" stroke-width="2" marker-end="url(#a)"/>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#8b949e"/></marker></defs>
+
+  <!-- jcode layer -->
+  <rect x="40" y="556" width="640" height="300" rx="16" fill="#0e1622" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="64" y="588" font-size="18" font-weight="700" fill="#58a6ff">jcode  ·  Rust multi-agent harness</text>
+
+  <rect x="64" y="606" width="270" height="70" rx="10" fill="#101826" stroke="#30363d"/>
+  <text x="80" y="632" font-size="13" fill="#8b949e">execution seam</text>
+  <text x="80" y="655" font-size="15" font-weight="700" fill="#e6edf3">bash tool → command-risk</text>
+  <text x="80" y="670" font-size="11" fill="#6e7681">(where the scope gate hooks in)</text>
+
+  <rect x="346" y="606" width="270" height="70" rx="10" fill="#101826" stroke="#30363d"/>
+  <text x="362" y="632" font-size="13" fill="#8b949e">swarm-core</text>
+  <text x="362" y="655" font-size="15" font-weight="700" fill="#e6edf3">many agents, one repo</text>
+  <text x="362" y="670" font-size="11" fill="#6e7681">coordinate &amp; message each other</text>
+
+  <text x="64" y="712" font-size="13" fill="#8b949e">providers (built in)</text>
+  <g font-size="12" font-weight="600" text-anchor="middle" fill="#cdd9e5">
+    <rect x="64" y="724" width="120" height="34" rx="7" fill="#15203250" stroke="#30363d"/><text x="124" y="746">Anthropic</text>
+    <rect x="196" y="724" width="120" height="34" rx="7" fill="#15203250" stroke="#30363d"/><text x="256" y="746">OpenAI</text>
+    <rect x="328" y="724" width="120" height="34" rx="7" fill="#15203250" stroke="#30363d"/><text x="388" y="746">OpenRouter</text>
+    <rect x="460" y="724" width="100" height="34" rx="7" fill="#15203250" stroke="#30363d"/><text x="510" y="746">Copilot</text>
+    <rect x="572" y="724" width="44" height="34" rx="7" fill="#15203250" stroke="#30363d"/><text x="594" y="746">…</text>
+  </g>
+
+  <rect x="64" y="776" width="552" height="60" rx="10" fill="#071a12" stroke="#2ea043"/>
+  <text x="360" y="802" text-anchor="middle" font-size="13" fill="#7ee2a8">status on this machine</text>
+  <text x="360" y="824" text-anchor="middle" font-size="15" font-weight="700" fill="#d6ffe6">builds + tests run · scope gate reverted (you'll build yours)</text>
+
+  <!-- footer -->
+  <text x="360" y="900" text-anchor="middle" font-size="15" fill="#e6edf3">The Go <tspan font-weight="700" fill="#00ff88">hydra</tspan> CLI already ships this gate for opencode.</text>
+  <text x="360" y="926" text-anchor="middle" font-size="14" fill="#8b949e">Same idea drops into jcode at the bash → command-risk seam.</text>
+  <text x="360" y="968" text-anchor="middle" font-size="12" fill="#6e7681">Concept diagram · authorized security testing only</text>
+</svg>

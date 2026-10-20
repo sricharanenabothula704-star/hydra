@@ -293,6 +293,12 @@ export OPENROUTER_API_KEY=sk-or-...   # any OpenAI-compatible provider
 A single cross-platform binary that becomes Hydra's front-end. It drives **opencode**'s
 v2 server API, manages AI providers, and enforces scope. **Authorized testing only.**
 
+<div align="center">
+<img src="assets/hydra-cli.svg" alt="Hydra CLI — doctor, scope gate, providers" width="680">
+<br><br>
+<img src="assets/hydra-x-jcode.svg" alt="HYDRA × jcode — scope gate at the bash → command-risk seam" width="520">
+</div>
+
 ### Install / build
 
 ```bash
