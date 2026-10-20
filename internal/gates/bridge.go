@@ -11,6 +11,7 @@ package gates
 import (
 	"bytes"
 	"context"
+	"os"
 	"os/exec"
 	"runtime"
 	"strings"
@@ -90,24 +91,37 @@ func checkScopeCtx(parent context.Context, target string) Decision {
 }
 
 // findBash locates a bash interpreter. scope_check.sh is a bash script; on
-// Windows this resolves Git Bash / WSL bash from PATH.
+// Windows this prefers Git Bash, because a bare `bash` on PATH there usually
+// resolves to C:\Windows\System32\bash.exe (the WSL launcher), which fails when
+// no WSL distro is installed and would make the gate fail closed on every host.
 func findBash() (string, error) {
-	candidates := []string{"bash"}
+	var candidates []string
 	if runtime.GOOS == "windows" {
-		candidates = append(candidates,
+		// Git Bash first (absolute paths and env-based install location),
+		// then fall back to whatever `bash` is on PATH.
+		candidates = []string{
 			`C:\Program Files\Git\bin\bash.exe`,
 			`C:\Program Files\Git\usr\bin\bash.exe`,
-		)
+			`C:\Program Files (x86)\Git\bin\bash.exe`,
+		}
+		if pf := os.Getenv("ProgramFiles"); pf != "" {
+			candidates = append(candidates, pf+`\Git\bin\bash.exe`)
+		}
+		candidates = append(candidates, "bash")
+	} else {
+		candidates = []string{"bash"}
 	}
 	for _, c := range candidates {
-		if p, err := exec.LookPath(c); err == nil {
-			return p, nil
-		}
-		// Absolute candidate that LookPath rejected (no PATH entry) — probe directly.
+		// Absolute candidate: probe the file directly so a WSL `bash` on PATH
+		// can't win over a real Git Bash install.
 		if strings.ContainsAny(c, `\/`) {
-			if _, err := exec.Command(c, "-c", "exit 0").Output(); err == nil {
+			if _, err := os.Stat(c); err == nil {
 				return c, nil
 			}
+			continue
+		}
+		if p, err := exec.LookPath(c); err == nil {
+			return p, nil
 		}
 	}
 	return "", errNoBash
