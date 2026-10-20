@@ -46,3 +46,7 @@ session-ses_*.md
 sessions/
 *.db
 .hydra_data/
+/dist/
+hydra.exe
+*.test
+probe.go

@@ -1,0 +1,45 @@
+# GoReleaser configuration for the hydra CLI.
+# Build locally:   goreleaser build --snapshot --clean
+# Cut a release:   goreleaser release --clean   (needs a git tag)
+version: 2
+
+project_name: hydra
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - id: hydra
+    main: ./cmd/hydra
+    binary: hydra
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - windows
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    ldflags:
+      - -s -w
+      - -X github.com/sricharanenabothula704-star/hydra/internal/version.Version={{.Version}}
+      - -X github.com/sricharanenabothula704-star/hydra/internal/version.Commit={{.ShortCommit}}
+      - -X github.com/sricharanenabothula704-star/hydra/internal/version.Date={{.Date}}
+
+archives:
+  - id: hydra
+    name_template: "hydra_{{ .Os }}_{{ .Arch }}"
+    format_overrides:
+      - goos: windows
+        format: zip
+
+checksum:
+  name_template: "checksums.txt"
+
+snapshot:
+  version_template: "{{ incpatch .Version }}-dev"
+
+changelog:
+  disable: true

@@ -21,13 +21,21 @@ fi
 
 match(){ case "$D" in $1) return 0;; *) return 1;; esac; }
 while IFS= read -r line; do
-  line="${line%%#*}"; line="$(echo "$line" | tr -d '[:space:]')"
+  line="${line%%#*}"; line="${line//[[:space:]]/}"   # strip comment + all whitespace (pure bash; no subshell)
   [ -z "$line" ] && continue
   line="${line,,}"
   # strip leading *. for glob matching (*.dev.example matches foo.dev.example)
-  if [[ "$line" == \** ]]; then pat="${line#\*.}"; case "$D" in *"$pat") echo "PASS: '$D' matches wildcard '$line'"; exit 0;; esac
+  if [[ "$line" == \** ]]; then
+    pat="${line#\*.}"
+    # Require a '.' boundary so '*.ackodrive.com' matches 'a.ackodrive.com'
+    # but NOT 'xackodrive.com'. Apex is covered by a separate exact line.
+    case "$D" in *."$pat") echo "PASS: '$D' matches wildcard '$line'"; exit 0;; esac
   fi
-  if match "$line" || match "*.$line" && [ "${D%."$line"}" != "$D" ]; then
+  # Exact match: an apex/exact domain on the allowlist authorizes itself.
+  if match "$line"; then
+    echo "PASS: '$D' == '$line'"; exit 0
+  # Subdomain match: allowlist 'line' also covers any *.line host.
+  elif match "*.$line" && [ "${D%."$line"}" != "$D" ]; then
     echo "PASS: '$D' is covered by '$line'"; exit 0
   fi
 done < "$AL"
